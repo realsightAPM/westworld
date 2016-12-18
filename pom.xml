@@ -32,6 +32,7 @@
     <modules>
 		<module>timeseries</module>
 		<module>apmDBServer</module>
+        <module>simulationVisit</module>
     </modules>
 
 </project>

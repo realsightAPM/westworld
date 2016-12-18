@@ -30,7 +30,6 @@ public class DataParse {
 			switch(part){
 				case HEAPHISTORY:{
 					Gson gson = new Gson();
-				//	System.out.println(data.message);
 					HeapHistory heapHistory = gson.fromJson(data.message, HeapHistory.class);
 					Cache.add(data.part, heapHistory);
 					System.out.println("add heapHistory");
