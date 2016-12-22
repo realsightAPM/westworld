@@ -3,7 +3,7 @@ package apm.http;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentLinkedQueue;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -17,9 +17,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import Parse.DataParse;
 import apm.globalinfo.HttpMethod;
-import apm.globalinfo.Part;
 
 public class DataProducer implements Runnable{
 	
@@ -31,16 +29,16 @@ public class DataProducer implements Runnable{
 	
 	private HttpMethod methodType;
 	
-	private DataParse parse;
+	private DataProcess process;
 	
 	private volatile boolean stop = false;
 	
 	private ScheduledExecutorService scheduledThreadPool;
 	
-	public DataProducer(String url,HttpMethod methodType,Map<String,String> params,DataParse parse){
+	public DataProducer(String url,HttpMethod methodType,Map<String,String> params,DataProcess process){
 		httpClient = HttpClients.createDefault();
 		this.params = params;
-		this.parse = parse;
+		this.process = process;
 		this.methodType = methodType;
 		this.url = url;
 	}
@@ -84,7 +82,7 @@ public class DataProducer implements Runnable{
 					if(params.containsKey("part"))
 					{
 						HttpData data = new HttpData(params.get("part"),message);
-						parse.parse(data);
+						process.process(data);
 					}
 				} catch (ClientProtocolException e) {
 					//e.printStackTrace();

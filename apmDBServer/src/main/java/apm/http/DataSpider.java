@@ -3,7 +3,7 @@ package apm.http;
 import java.util.HashMap;
 import java.util.Map;
 
-import Parse.DataParse;
+
 import apm.globalinfo.DataType;
 import apm.globalinfo.HttpMethod;
 import apm.globalinfo.Part;
@@ -18,8 +18,8 @@ public class DataSpider {
 		params.put("period", Period.JOUR.getName());
 		params.put("format", DataType.JSON.getName());
 		
-		DataParse parse = new DataParse();
-		DataProducer dataProducer = new DataProducer(URL,HttpMethod.GET, params,parse);
+		DataProcess process = new DataProcess();
+		DataProducer dataProducer = new DataProducer(URL,HttpMethod.GET, params,process);
 		System.out.println("dataProducer start ");
 		dataProducer.start();
 		
