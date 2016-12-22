@@ -1,4 +1,4 @@
-package apm.http;
+package Parse;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -6,11 +6,15 @@ import java.util.concurrent.Executors;
 import com.google.gson.Gson;
 
 import apm.cache.Cache;
+import apm.db.DBServer;
 import apm.globalinfo.Part;
+import apm.http.HttpData;
 import apm.mode.HeapHistory;
 
 public class DataParse {
 	private final ExecutorService threadPool = Executors.newFixedThreadPool(5);
+	
+	
 	
 	public void parse(HttpData data){
 		ParseWork work = new ParseWork(data);
@@ -29,10 +33,9 @@ public class DataParse {
 			Part part = Part.PartofString(data.part);
 			switch(part){
 				case HEAPHISTORY:{
-					Gson gson = new Gson();
-				//	System.out.println(data.message);
-					HeapHistory heapHistory = gson.fromJson(data.message, HeapHistory.class);
-					Cache.add(data.part, heapHistory);
+					HeapDataParse parse = new HeapDataParse();
+					HeapHistory heapHistory = parse.parse(data.message);
+					DBServer.saveHeapData(heapHistory);
 					System.out.println("add heapHistory");
 				}
 			}

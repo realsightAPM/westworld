@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
@@ -14,6 +17,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+import Parse.DataParse;
 import apm.globalinfo.HttpMethod;
 import apm.globalinfo.Part;
 
@@ -30,6 +34,8 @@ public class DataProducer implements Runnable{
 	private DataParse parse;
 	
 	private volatile boolean stop = false;
+	
+	private ScheduledExecutorService scheduledThreadPool;
 	
 	public DataProducer(String url,HttpMethod methodType,Map<String,String> params,DataParse parse){
 		httpClient = HttpClients.createDefault();
@@ -93,11 +99,15 @@ public class DataProducer implements Runnable{
 	}
 	
 	public void start(){
-		Thread thread = new Thread(this);
-		thread.start();
+		//Thread thread = new Thread(this);
+		//thread.start();
+		scheduledThreadPool	= Executors.newScheduledThreadPool(1);
+		scheduledThreadPool.scheduleWithFixedDelay(this, 0, 10, TimeUnit.SECONDS);
+		
 	}
 	
 	public void stop(){
+		scheduledThreadPool.shutdownNow();
 		this.stop=true;
 	}
 	

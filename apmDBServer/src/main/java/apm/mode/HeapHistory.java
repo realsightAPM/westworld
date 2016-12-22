@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 public class HeapHistory {
-	private List<ClassInfo> classesList;
-	private List<ClassInfo> perGenClassesList;
+	public List<ClassInfo> classes;
+	public List<ClassInfo> permGenClasses;
 	private String time;
 	private long totalHeapBytes;
 	private long totalHeapInstances;
@@ -15,4 +15,6 @@ public class HeapHistory {
 	private int totalPermgenInstances;
 	private boolean sourceDisplayed;
 	private boolean deltaDisplayed;
+	
+	
 }
