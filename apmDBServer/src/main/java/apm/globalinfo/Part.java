@@ -3,8 +3,9 @@ package apm.globalinfo;
  * 获取哪一种监控数据
  */
 public enum Part implements EnumInfo{
-	HEAPHISTORY("heaphisto");
+	HEAPHISTORY("heaphisto"),
 	
+	SYSTEMINFO("lastValue");
 	private final String name;
 	
 	public String getName(){

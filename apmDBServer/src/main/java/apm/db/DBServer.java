@@ -5,15 +5,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.List;
 
+import apm.globalinfo.Save;
 import apm.mode.ClassInfo;
 import apm.mode.HeapHistory;
+import apm.mode.SystemInfo;
 
 public class DBServer {
 	public static void saveHeapData(HeapHistory heapHistory){
-		
-		
 		try {
 			int id = saveHeapInfo(heapHistory);
 			if(id>0){
@@ -31,6 +32,26 @@ public class DBServer {
 		}
 		 
 	}
+	
+	public static void saveSystemInfo(SystemInfo systemInfo) throws SQLException{
+		String insertSystemInfo = "INSERT INTO `systeminfo_table` "
+				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`) "
+				+ "VALUES (?, ?, ?, ?, ?, ?);";
+		 Connection connection = ConnectorFactory.getConnection();
+		 PreparedStatement preStatement = connection.prepareStatement(insertSystemInfo);
+		 Timestamp nowTime = new Timestamp(System.currentTimeMillis());
+		 preStatement.setTimestamp(1, nowTime);
+		 preStatement.setFloat(2, systemInfo.getCpu());
+		 preStatement.setFloat(3, systemInfo.getHttpTime());
+		 preStatement.setInt(4,systemInfo.getSessionCount());
+		 //preStatement.setInt(5,systemInfo.getHttpCount());
+		 preStatement.setInt(5,systemInfo.getThreadCount());
+		 preStatement.setInt(6, systemInfo.getUsedMemory());
+		 preStatement.executeUpdate();
+		 preStatement.close();
+		 connection.close();
+	}
+	
 	
 	private static int saveHeapInfo(HeapHistory heapHistory) throws SQLException{
 		 String insertHeapSql = "INSERT INTO `heaphistory_table` (`time`, `totalheapbytes`, `totalpermgenbytes`, `sourcedisplayed`, `deltadisplayed`)"
@@ -62,14 +83,17 @@ public class DBServer {
 		 int index=0;
 		 for(ClassInfo classInfo : list)
 		 {
-			 	preHeapClass.setInt(1,fk);
-				preHeapClass.setInt(2, classInfo.getBytes());
-				preHeapClass.setString(3, classInfo.getJvmName());
-				preHeapClass.setString(4,classInfo.getName());
-				preHeapClass.setInt(5, classInfo.getInstances());
-				preHeapClass.setInt(6,classInfo.isPerGen()?1:0);
-				preHeapClass.addBatch();
-				index++;
+			 	if(Filter.filter(classInfo).equals(Save.SAVE)){
+			 		preHeapClass.setInt(1,fk);
+					preHeapClass.setInt(2, classInfo.getBytes());
+					preHeapClass.setString(3, classInfo.getJvmName());
+					preHeapClass.setString(4,classInfo.getName());
+					preHeapClass.setInt(5, classInfo.getInstances());
+					preHeapClass.setInt(6,classInfo.isPerGen()?1:0);
+					preHeapClass.addBatch();
+					index++;
+			 	}
+				
 				if(index==100){
 					 preHeapClass.executeBatch();
 					size-=100;
@@ -90,5 +114,7 @@ public class DBServer {
 		 preHeapClass.close();
 		 connection.close();
 	}
+	
+	
 	
 }

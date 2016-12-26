@@ -3,15 +3,16 @@ package apm.Process;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import apm.db.DBServer;
+
 import apm.globalinfo.Part;
 import apm.http.HttpData;
-import apm.mode.HeapHistory;
 
 public class DataProcess {
 	private final ExecutorService threadPool = Executors.newFixedThreadPool(5);
 	
+	private HeapDataProcesser heapDataProcesser = new HeapDataProcesser();
 	
+	private SystemInfoProcesser systemInfoProcess = new SystemInfoProcesser();
 	
 	public void process(HttpData data){
 		ProcessWork work = new ProcessWork(data);
@@ -30,11 +31,11 @@ public class DataProcess {
 			Part part = Part.PartofString(data.part);
 			switch(part){
 				case HEAPHISTORY:{
-					HeapDataParse parse = new HeapDataParse();
-					HeapHistory heapHistory = parse.parse(data.message);
-					DBServer.saveHeapData(heapHistory);
-					System.out.println("add heapHistory");
-				}
+					heapDataProcesser.process(data);
+				}break;
+				case SYSTEMINFO:{
+					systemInfoProcess.process(data);
+				}break;
 			}
 		}
 	}

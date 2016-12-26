@@ -3,7 +3,6 @@ package apm.http;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +16,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+import apm.Process.DataProcess;
 import apm.globalinfo.HttpMethod;
 
 public class DataProducer implements Runnable{
@@ -55,13 +55,20 @@ public class DataProducer implements Runnable{
 			case GET:
 			{
 				StringBuffer getParams = new StringBuffer();
-				for(Entry<String,String> entry : params.entrySet()){
-					getParams.append(entry.getKey());
-					getParams.append("=");
-					getParams.append(entry.getValue());
-					getParams.append("&");
+				if(params!=null)
+				{
+					int index=0;
+					for(Entry<String,String> entry : params.entrySet()){
+						index++;
+						getParams.append(entry.getKey());
+						getParams.append("=");
+						getParams.append(entry.getValue());
+						if(index<params.size())
+							getParams.append("&");
+					}
+					url = url+"?"+getParams.toString();
 				}
-				url = url+"?"+getParams.toString();
+				
 				HttpGet get = new HttpGet(url);
 				request = get;
 			}break;
