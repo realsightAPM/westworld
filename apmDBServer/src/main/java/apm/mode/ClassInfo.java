@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class ClassInfo {
 	private int instances;//又多少个实例
-	private int bytes;//占内存多少字节
+	private int bytes;//占内存多少字节 这些实例一共占多少内存
 	private String jvmName;//
 	private String name;
 	private boolean perGen;

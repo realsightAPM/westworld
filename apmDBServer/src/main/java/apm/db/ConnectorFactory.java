@@ -5,12 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectorFactory {
-	private final static String url = "jdbc:mysql://10.4.55.167:3306/apmdata?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false";
+	private final static String url = "jdbc:mysql://127.0.0.1:3306/apmdata?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false";
 	
-	private final static String dbDriver="com.mysql.jdbc.Driver";   
+	private final static String dbDriver="com.mysql.jc.jdbc.Driver";   
 	
 	private static String dbUser="root";  
-	private static String dbPass="root"; 
+	private static String dbPass="21424019"; 
 	
 	static{
 		try {

@@ -1,4 +1,4 @@
-package apm.Parse;
+package apm.Process;
 
 import com.google.gson.Gson;
 
@@ -17,7 +17,7 @@ public class HeapDataParse implements Parse {
 			JsonHeapData data = gson.fromJson(json, JsonHeapData.class);
 			//Cache.add(data.part, heapHistory);
 			HeapHistory  heapHistory =data.heapHisto;
-			System.out.println("  $$$$$$$$$ time  "+heapHistory.getTime());
+			//System.out.println("  $$$$$$$$$ time  "+heapHistory.getTime());
 		
 		return heapHistory;
 	}
