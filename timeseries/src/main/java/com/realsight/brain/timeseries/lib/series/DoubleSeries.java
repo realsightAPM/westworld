@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.realsight.brain.timeseries.lib.util.Util;
+
 public class DoubleSeries extends TimeSeries<Double> {
     String mName;
 
@@ -339,7 +341,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         	fullValueRange = numNormValue;
         }
 		double minValueStep = fullValueRange / numNormValue;
-		double[] pro = new double[numNormValue];
+		double[] pro = new double[numNormValue+1];
 		for(int i = 0; i < this.size(); i++){
 			double value = this.get(i).getItem();
 			int bit = (int) ((value-minValue)/minValueStep);
@@ -363,6 +365,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     public DoubleSeries subSeries(int l, int r){
     	if(l<0) l = 0;
     	if(r>size()) r = size();
+    	Util.check(l<=r, "DoubleSeries.subSeries error l > r,"+"l="+l+",r="+r);
     	List<Entry<Double>> newEntries = new ArrayList<>();
     	for(int i = l; i < r; i++){
     		newEntries.add(new Entry<Double>(mData.get(i).getItem(), this.mData.get(i).getInstant()));

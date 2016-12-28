@@ -1,5 +1,8 @@
 package com.realsight.brain.timeseries.lib.model.segment;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
 import com.realsight.brain.timeseries.lib.util.Util;
@@ -7,22 +10,32 @@ import com.realsight.brain.timeseries.lib.util.Util;
 public class AnormalySegment {
 	private double maxScore = 0.0;
 	private DoubleSeries nSeries = new DoubleSeries("series");
-	private DoubleSeries anormlySeriesSegment = new DoubleSeries("anormly Segment");
+	private DoubleSeries anormalySeriesSegment = new DoubleSeries("anormaly Segment");
 	private int step = 1;
-	private final int finishStep = 2000;
+	private final int finishStep = 100;
 	private final int windowsLen = 50;
 	private final double threshold = 8.0;
 	private double minValue;
 	private double maxValue;
 	private final int numBit = 3;
-	private final int numNormValue = (1<<numBit);
 	private double fullValueRange;
 	private double minValueStep;
-	private double[] pro = null;
+	private Map<Integer, Double> pro = null;
+	
+	private void addPro(Map<Integer, Double> map, int bit){
+		double key = this.getPro(map, bit);
+		map.put(bit, key+1);
+	}
+	
+	private double getPro(Map<Integer, Double> map, int bit) {
+		if(map.containsKey(bit))
+			return map.get(bit);
+		return 0.1;
+	}
 	
 	private AnormalySegment(DoubleSeries nSeries, double minValue, double maxValue) {
 		this.nSeries = new DoubleSeries("series");
-		this.anormlySeriesSegment = new DoubleSeries("anormly Segment");
+		this.anormalySeriesSegment = new DoubleSeries("anormaly Segment");
 		this.minValue = minValue;
 		this.maxValue = maxValue;
 		this.fullValueRange = this.maxValue - this.minValue;
@@ -31,14 +44,11 @@ public class AnormalySegment {
         	this.fullValueRange = numNormValue;
         }
 		this.minValueStep = this.fullValueRange / numNormValue;
-		this.pro = new double[this.numNormValue];
-		for ( int i = 0; i < this.numNormValue; i++ ) {
-			this.pro[i] += 0.1;
-		}
+		this.pro = new HashMap<Integer, Double>();
 		for(int i = 0; i < nSeries.size(); i++){
 			double value = nSeries.get(i).getItem();
 			int bit = getBit(value);
-			this.pro[bit] += 1.0;
+			this.addPro(this.pro, bit);
 		}
 		this.nSeries = nSeries;
 	}
@@ -54,26 +64,27 @@ public class AnormalySegment {
 	
 	private double mutual(DoubleSeries Q){
 		double res = 0.0, sumP = 0.0, sumQ = 0;
-		double[] q = new double[numNormValue];
-		for(int i = 0; i < numNormValue; i++){
-			sumP += this.pro[i];
+		Map<Integer, Double> q = new HashMap<Integer, Double>();
+		for(Map.Entry<Integer, Double> entry : this.pro.entrySet()){
+			sumP += entry.getValue();
 		}
 		for(int i = 0; i < Q.size(); i++){
 			int bit = getBit(Q.get(i).getItem());
-			q[bit] += 1.0;
+			this.addPro(q, bit);
 			sumQ += 1.0;
 		}
-		for(int i = 0; i < numNormValue; i++) {
-			if(q[i] == 0) continue;
-			res += q[i]*Math.log(q[i]/sumQ);
-			res -= q[i]*Math.log(this.pro[i]/sumP);
+		for(Map.Entry<Integer, Double> entry : q.entrySet()){
+			int bit = entry.getKey();
+			double value = entry.getValue();
+			res += value*Math.log(value/sumQ);
+			res -= value*Math.log(this.getPro(this.pro, bit)/sumP);
 		}
 		return res;
 	}
 	
 	public double detectorAnomaly(Double value, Long timestamp) {
 		int bit = getBit(value);
-		this.pro[bit] += 1.0;
+		this.addPro(this.pro, bit);
 		nSeries.add(new Entry<Double>(value, timestamp));
 		if (nSeries.size() > windowsLen){
 			int n = nSeries.size();
@@ -83,16 +94,16 @@ public class AnormalySegment {
 		if(step<finishStep || score<maxScore*threshold){
 			step += 1;
 			maxScore = Math.max(score, maxScore);
-			anormlySeriesSegment.add(new Entry<Double>(score, timestamp));
+			anormalySeriesSegment.add(new Entry<Double>(score, timestamp));
 		}
-		double res = score/Math.sqrt(anormlySeriesSegment.variance()+1e-4)/10;
+		double res = score/Math.sqrt(anormalySeriesSegment.variance()+1e-4)/10;
 		return Util.Sigma(res);
 	}
 	
-	public double detectorAnomaly(Double value, Long timestamp, boolean anormly) {
-		if(anormly == false) {
+	public double detectorAnomaly(Double value, Long timestamp, boolean anormaly) {
+		if(anormaly == false) {
 			int bit = getBit(value);
-			this.pro[bit] += 1.0;
+			this.addPro(this.pro, bit);
 		}
 		nSeries.add(new Entry<Double>(value, timestamp));
 		if (nSeries.size() > windowsLen){
@@ -100,20 +111,20 @@ public class AnormalySegment {
 			nSeries = nSeries.subSeries(n-windowsLen, n);
 		}
 		double score = mutual(nSeries);
-		if(anormly == false){
+		if(anormaly == false){
 			step += 1;
 			maxScore = Math.max(score, maxScore);
-			anormlySeriesSegment.add(new Entry<Double>(score, timestamp));
+			anormalySeriesSegment.add(new Entry<Double>(score, timestamp));
 		}
-		double res = score/Math.sqrt(anormlySeriesSegment.variance()+1e-4)/10;
+		double res = score/Math.sqrt(anormalySeriesSegment.variance()+1e-4)/10;
 		return Util.Sigma(res);
 	}
 	
 	public DoubleSeries detectorSeriesAnomaly(DoubleSeries nSeries) {
-		DoubleSeries res = new DoubleSeries("anormly value");
+		DoubleSeries res = new DoubleSeries("anormaly value");
 		for ( int i = 0; i < nSeries.size(); i++ ) {
-			double anormly = detectorAnomaly(nSeries.get(i).getItem(), nSeries.get(i).getInstant());
-			res.add(new Entry<Double>(anormly, nSeries.get(i).getInstant()));
+			double anormaly = detectorAnomaly(nSeries.get(i).getItem(), nSeries.get(i).getInstant());
+			res.add(new Entry<Double>(anormaly, nSeries.get(i).getInstant()));
 		}
 		return res;
 	}

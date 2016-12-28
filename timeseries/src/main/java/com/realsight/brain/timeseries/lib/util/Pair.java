@@ -49,4 +49,10 @@ public class Pair <T,S> implements Comparable<Pair<Double, String>>{
 		}
 		return false;  
 	}
+	
+	@Override
+	public String toString() {
+		String str = "a->" + a.toString() + ", b->" + b.toString();
+		return str;
+	}
 }

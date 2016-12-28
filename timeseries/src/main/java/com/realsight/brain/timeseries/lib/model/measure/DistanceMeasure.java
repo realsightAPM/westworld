@@ -1,6 +1,6 @@
 package com.realsight.brain.timeseries.lib.model.measure;
 
-import javax.validation.UnexpectedTypeException;
+import javax.activation.UnsupportedDataTypeException;
 
 import com.realsight.brain.timeseries.lib.model.measure.algorithm.KullbackLeibleer;
 import com.realsight.brain.timeseries.lib.model.measure.algorithm.MeasureAlgorithm;
@@ -18,10 +18,23 @@ public class DistanceMeasure {
 		if ( measureAlgorithm == MeasureAlgorithm.KULLBACK_LEIBLEER){
 			return KullbackLeibleer.distance(lSeries, rSeries, numBit);
 		}
-		throw new UnexpectedTypeException("no this method.");
+		try {
+			throw new UnsupportedDataTypeException("no this method.");
+		} catch (UnsupportedDataTypeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0.0;
 	}
 	
 	public static DistanceMeasure build(MeasureAlgorithm measureAlgorithm) {
+		if ( measureAlgorithm == null )
+			measureAlgorithm = MeasureAlgorithm.KULLBACK_LEIBLEER;
+		return new DistanceMeasure(measureAlgorithm);
+	}
+	
+	public static DistanceMeasure build() {
+		MeasureAlgorithm measureAlgorithm = MeasureAlgorithm.KULLBACK_LEIBLEER;
 		return new DistanceMeasure(measureAlgorithm);
 	}
 }

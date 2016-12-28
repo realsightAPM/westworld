@@ -78,7 +78,7 @@ public class NAB {
 			//if(Double.parseDouble(file.get(i).get(anomaly_score_c))>=threshold)
 			//System.out.println(i + "," + pre_label + "," + scores + "," + file.get(i).get(label_c) + "," + file.get(i).get(anomaly_score_c));
 		}
-		System.out.println(dir+","+"scores="+scores+","+"count="+cnt+",tp="+tp+",fp="+fp);
+		System.out.println(dir+","+"count="+cnt+",tp="+tp+",fp="+fp);
 		return scores;
 	}
 	public static double SA(String root_dir, double threshold) throws IOException{
@@ -96,9 +96,8 @@ public class NAB {
 		return Totals_scores;
 	}
 	public static void main(String[] args) throws IOException{
-		System.out.println(SA("D:/MyEclipse/results/realsight_base/",0.75));
-//		System.out.println(SA("D:/MyEclipse/results/CAD-201610082131-Set1/",0.7655));
-//		System.out.println(SA("C:/Users/star/git/NAB/results/realsight/", 0.83));
+		System.out.println(SA("D:/workspace/NAB/results/realsight/",0.85));
+//		System.out.println(SA("D:/workspace/NAB/results/contextOSE/", 0.76552734376));
 //		System.out.println(SDA("D:/workspace/NAB/src/results/neusoft/realTweets/neusoft_Twitter_volume_UPS.csv", 1.1));
 //		System.out.println(SDA("D:/workspace/NAB/src/results/neusoft/realAWSCloudwatch/neusoft_ec2_cpu_utilization_53ea38.csv", 3.9));
 	}

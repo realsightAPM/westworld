@@ -104,6 +104,8 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     }
 
     public Entry<T> get(int index) {
+    	if (index < 0)
+    		index = 0;
         return mData.get(index);
     }
 
