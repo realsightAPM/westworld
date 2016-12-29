@@ -1,5 +1,6 @@
 package com.realsight.brain.timeseries.lib.util.plot;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,7 +108,7 @@ public class Plot {
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
     	for(int i = 0; i < s.size(); i++){
-    		x.add((0.0+i));
+    		x.add(s.get(i).getInstant()+0.0);
     		y.add(s.get(i).getItem());
     	}
     	
@@ -125,7 +126,7 @@ public class Plot {
         }
 
         final JFreeChart chart = ChartFactory.createXYLineChart(
-                "SBSBSB SBSBSB",      // chart title
+                "Coal Price",      // chart title
                 "Time",                     // x axis label
                 "Number of Sunspot", 		// y axis label
                 dataSet,                    // data

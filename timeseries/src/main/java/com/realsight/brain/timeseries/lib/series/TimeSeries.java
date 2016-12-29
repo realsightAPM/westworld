@@ -245,6 +245,10 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         return new TimeSeries<>(newEntries);
     }
     
+    public void sort() {
+    	Collections.sort(this.getData());
+    }
+    
     @Override public String toString() {
         return mData.isEmpty() ? "TimeSeries{empty}" :
             "TimeSeries{" +

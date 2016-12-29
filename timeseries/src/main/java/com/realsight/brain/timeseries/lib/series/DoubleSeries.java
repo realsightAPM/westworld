@@ -9,7 +9,9 @@ import java.util.List;
 import com.realsight.brain.timeseries.lib.util.Util;
 
 public class DoubleSeries extends TimeSeries<Double> {
-    String mName;
+
+	private static final double eps = 1e-6;
+	String mName;
 
     public DoubleSeries(List<Entry<Double>> data, String name) {
         super(data);
@@ -436,6 +438,17 @@ public class DoubleSeries extends TimeSeries<Double> {
     		else r = k_value;
     	}
     	return (l+r)/2.0;
+    }
+    
+    public void normly() {
+    	double max_value = this.max();
+    	double min_value = this.min();
+    	double scope_value = max_value - min_value;
+    	if ( scope_value < eps )
+    		scope_value = 1.0;
+    	for ( Entry<Double> entry : this.getData()) {
+    		entry.mT = (entry.mT-min_value) / scope_value;
+    	}
     }
     
     @Override public String toString() {
