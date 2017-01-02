@@ -12,7 +12,7 @@ import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries;
 import com.realsight.brain.timeseries.lib.util.plot.Plot;
 
-/* @author sunmuxin
+/* @author Sun Muxin
  * 
  */
 

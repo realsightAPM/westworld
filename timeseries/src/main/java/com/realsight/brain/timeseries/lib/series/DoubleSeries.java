@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.realsight.brain.timeseries.lib.util.Util;
+
 public class DoubleSeries extends TimeSeries<Double> {
-    String mName;
+
+	private static final double eps = 1e-6;
+	String mName;
 
     public DoubleSeries(List<Entry<Double>> data, String name) {
         super(data);
@@ -339,7 +343,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         	fullValueRange = numNormValue;
         }
 		double minValueStep = fullValueRange / numNormValue;
-		double[] pro = new double[numNormValue];
+		double[] pro = new double[numNormValue+1];
 		for(int i = 0; i < this.size(); i++){
 			double value = this.get(i).getItem();
 			int bit = (int) ((value-minValue)/minValueStep);
@@ -363,6 +367,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     public DoubleSeries subSeries(int l, int r){
     	if(l<0) l = 0;
     	if(r>size()) r = size();
+    	Util.check(l<=r, "DoubleSeries.subSeries error l > r,"+"l="+l+",r="+r);
     	List<Entry<Double>> newEntries = new ArrayList<>();
     	for(int i = l; i < r; i++){
     		newEntries.add(new Entry<Double>(mData.get(i).getItem(), this.mData.get(i).getInstant()));
@@ -433,6 +438,17 @@ public class DoubleSeries extends TimeSeries<Double> {
     		else r = k_value;
     	}
     	return (l+r)/2.0;
+    }
+    
+    public void normly() {
+    	double max_value = this.max();
+    	double min_value = this.min();
+    	double scope_value = max_value - min_value;
+    	if ( scope_value < eps )
+    		scope_value = 1.0;
+    	for ( Entry<Double> entry : this.getData()) {
+    		entry.mT = (entry.mT-min_value) / scope_value;
+    	}
     }
     
     @Override public String toString() {

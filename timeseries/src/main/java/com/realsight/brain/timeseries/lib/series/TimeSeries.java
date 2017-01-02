@@ -104,6 +104,8 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     }
 
     public Entry<T> get(int index) {
+    	if (index < 0)
+    		index = 0;
         return mData.get(index);
     }
 
@@ -241,6 +243,10 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         }
 
         return new TimeSeries<>(newEntries);
+    }
+    
+    public void sort() {
+    	Collections.sort(this.getData());
     }
     
     @Override public String toString() {
