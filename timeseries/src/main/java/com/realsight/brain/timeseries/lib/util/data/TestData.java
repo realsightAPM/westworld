@@ -2,50 +2,52 @@ package com.realsight.brain.timeseries.lib.util.data;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import com.realsight.brain.timeseries.lib.csv.CsvReader;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries;
 
-public class Coal {
+public class TestData extends BaseData{
 	private Character delimiter = null;
 	private Charset charset = null;
 	private String coalFilePath = null;
 	
-	public Coal(char delimiter, Charset charset, String coalFilePath){
+	public TestData(char delimiter, Charset charset, String coalFilePath){
 		this.delimiter = delimiter;
 		this.charset = charset;
 		this.coalFilePath = coalFilePath;
 	}
 	
-	public Coal(String coalFilePath){
+	public TestData(String coalFilePath){
 		this(',', Charset.forName("ISO-8859-1"), coalFilePath);
 	}
 
 	public DoubleSeries getPropertySeries(String name){
-		return getPropertySeries(name, 0);
-	}
-	public DoubleSeries getPropertySeries(String name, int delay){
-		DoubleSeries res = new DoubleSeries(name+"-"+delay);
+		DoubleSeries res = new DoubleSeries(name);
 		try {
 			CsvReader cr = new CsvReader(coalFilePath, delimiter, charset);
 			cr.readHeaders();
-			Queue<String> que = new LinkedList<String>();
-			for(int i = 0; i < delay; i++){
-				cr.readRecord();
-				que.add(cr.get(name));
-			}
-			if(cr.getIndex("time") == -1)
+			if(cr.getIndex("times") == -1)
 				throw new IOException("File not exists timestamp.");
 			Long pre_timestamp = -1L;
 			while(cr.readRecord()){
-				que.add(cr.get(name));
-				Long timestamp = new Long(cr.get("time"));
+				String time = cr.get("times");
+				System.out.println(time);
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				Date date = null;
+				try {
+					date = sdf.parse(time);
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Long timestamp = date.getTime();
 				if (pre_timestamp.equals(timestamp)) continue;
 				pre_timestamp = timestamp;
-				Double value = new Double(que.poll());
+				Double value = new Double(cr.get(name));
 				res.add(new TimeSeries.Entry<Double>(value, timestamp));
 			}
 			cr.close();

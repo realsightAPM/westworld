@@ -270,7 +270,7 @@ public class KalmanAPI {
     			"282.1c701d3e20125b8909c8bc40aa4cc1e0.ActiveThreadsNum").toString();
     	train(localDir);
     	DoubleSeries ySeries = RealSight.getPropertySeries("value");
-    	Plot.plot(ySeries);
+    	Plot.plot("kalman", ySeries);
     	for(int i = 0; i < ySeries.size(); i++){
     		forecasting(ySeries.get(i));
     		System.out.println(getTimeStamp() + " " + getValue() + " " + getFValue() + " " + getsd() + 

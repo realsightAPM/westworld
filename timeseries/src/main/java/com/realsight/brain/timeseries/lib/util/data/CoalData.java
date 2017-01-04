@@ -7,7 +7,7 @@ import com.realsight.brain.timeseries.lib.csv.CsvReader;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries;
 
-public class CoalData {
+public class CoalData extends BaseData{
 	private Character delimiter = null;
 	private Charset charset = null;
 	private String coalFilePath = null;

@@ -267,7 +267,7 @@ public class NeuroGroupOperator {
         this.potentialNewContextList = potentialNewContextList;
         this.beActivatedList = beActivatedList;
         this.history.put(timestamp, activeContexts.size());
-        if (this.timestamp == 1466017444L) {
+        if (this.timestamp == -1L) {
         	Iterator <Long> iter = this.beActivatedList.iterator();
         	Map<Long, Integer> count = new HashMap<Long, Integer>(); 
         	while(iter.hasNext()) {
