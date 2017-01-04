@@ -45,12 +45,13 @@ public class AnormalySegment {
         }
 		this.minValueStep = this.fullValueRange / numNormValue;
 		this.pro = new HashMap<Integer, Double>();
+		if (nSeries == null) return ;
 		for(int i = 0; i < nSeries.size(); i++){
 			double value = nSeries.get(i).getItem();
 			int bit = getBit(value);
 			this.addPro(this.pro, bit);
+			this.nSeries.add(nSeries.get(i));
 		}
-		this.nSeries = nSeries;
 	}
 	
 	private AnormalySegment(DoubleSeries nSeries) {

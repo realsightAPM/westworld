@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ContextValue {
+	
 	private List<Integer> fromOrto;
 	private int lenFact;
 	private Map<Integer, Integer> contexIDs;
@@ -31,8 +32,8 @@ public class ContextValue {
 	public Map<Integer, Integer> getContexIDs() {
 		return contexIDs;
 	}
-
 	public void setContexIDs(Map<Integer, Integer> contexIDs) {
 		this.contexIDs = contexIDs;
 	}
+	
 }

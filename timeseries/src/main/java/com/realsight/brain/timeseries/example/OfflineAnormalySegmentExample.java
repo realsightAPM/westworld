@@ -9,8 +9,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.util.List;
 
+import com.realsight.brain.timeseries.api.OnlineAnormalyDetectionAPI;
 import com.realsight.brain.timeseries.lib.csv.CsvReader;
-import com.realsight.brain.timeseries.lib.model.anomaly.AnormalyDetection;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries;
 import com.realsight.brain.timeseries.lib.util.Pair;
@@ -50,7 +50,7 @@ public class OfflineAnormalySegmentExample {
 		int n = nSeries.size();
 		double minValue = nSeries.min();
 		double maxValue = nSeries.max();
-		AnormalyDetection anormalySegment = AnormalyDetection.build(nSeries.subSeries(0, n/10), minValue, maxValue);
+		OnlineAnormalyDetectionAPI anormalySegment = new OnlineAnormalyDetectionAPI(nSeries.subSeries(0, n/10), minValue, maxValue);
 		List<Pair<Long, Long>> anomalySegments = anormalySegment.detectorSeriesAnomalySegment(nSeries, 0.7);
 		for ( int i = 0; i < anomalySegments.size(); i++) {
 			System.out.println(anomalySegments.get(i).toString());

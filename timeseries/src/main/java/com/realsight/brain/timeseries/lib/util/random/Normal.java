@@ -33,8 +33,4 @@ public class Normal {
 		}
 		return Double.MAX_VALUE;
 	}
-//	
-//	public static void main(String[] args){
-//		System.out.println(qnorm(0.1, 1.0, 0));
-//	}
 }
