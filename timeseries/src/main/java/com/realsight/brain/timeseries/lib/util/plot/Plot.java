@@ -127,7 +127,7 @@ public class Plot {
         final JFreeChart chart = ChartFactory.createXYLineChart(
         		name,      // chart title
                 "Time",                     // x axis label
-                "Number of Sunspot", 		// y axis label
+                "Value", 		// y axis label
                 dataSet,                    // data
                 PlotOrientation.VERTICAL,
                 true,                       // include legend

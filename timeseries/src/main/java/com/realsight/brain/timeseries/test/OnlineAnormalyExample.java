@@ -35,12 +35,14 @@ public class OnlineAnormalyExample {
 		sessionSeries.normly();
 		threadSeries.normly();
 		memorySeries.normly();
-		Plot.plot("apm test", cpuSeries, sessionSeries, memorySeries);
-//		double minValue = nSeries.min();
-//		double maxValue = nSeries.max();
-//		OnlineAnormalyDetectionAPI detection = new OnlineAnormalyDetectionAPI(minValue, maxValue);
-//		DoubleSeries anormalys = detection.detectorSeries(nSeries.subSeries(0, 3000));
-//		String resultDir = Util.writeCsv(new MultipleDoubleSeries(nSeries, anormalys)).toString();
-//		System.out.println("anormaly result dir is : " + resultDir);
+		Plot.plot("apm test", cpuSeries, sessionSeries, memorySeries, httpSeries, threadSeries);
+		DoubleSeries series = threadSeries;
+		double minValue = series.min();
+		double maxValue = series.max();
+		OnlineAnormalyDetectionAPI detection = new OnlineAnormalyDetectionAPI(minValue, maxValue);
+		DoubleSeries anormalys = detection.detectorSeries(series);
+		Plot.plot("apm test", anormalys, httpSeries, series);
+		String resultDir = Util.writeCsv(new MultipleDoubleSeries(series, anormalys)).toString();
+		System.out.println("anormaly result dir is : " + resultDir);
 	}
 }
