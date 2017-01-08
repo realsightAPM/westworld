@@ -12,6 +12,7 @@ import apm.globalinfo.Save;
 import apm.mode.ClassInfo;
 import apm.mode.HeapHistory;
 import apm.mode.SystemInfo;
+import apm.webstress.Stress;
 
 public class DBServer {
 	public static void saveHeapData(HeapHistory heapHistory){
@@ -35,18 +36,19 @@ public class DBServer {
 	
 	public static void saveSystemInfo(SystemInfo systemInfo) throws SQLException{
 		String insertSystemInfo = "INSERT INTO `systeminfo_table` "
-				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`) "
-				+ "VALUES (?, ?, ?, ?, ?, ?);";
+				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`,`client`) "
+				+ "VALUES (?, ?, ?, ?, ?, ?,?);";
 		 Connection connection = ConnectorFactory.getConnection();
 		 PreparedStatement preStatement = connection.prepareStatement(insertSystemInfo);
-		 Timestamp nowTime = new Timestamp(System.currentTimeMillis());
-		 preStatement.setTimestamp(1, nowTime);
+		// Timestamp nowTime = new Timestamp(System.currentTimeMillis());
+		 preStatement.setTimestamp(1, systemInfo.getNowTime());
 		 preStatement.setFloat(2, systemInfo.getCpu());
 		 preStatement.setFloat(3, systemInfo.getHttpTime());
 		 preStatement.setInt(4,systemInfo.getSessionCount());
 		 //preStatement.setInt(5,systemInfo.getHttpCount());
 		 preStatement.setInt(5,systemInfo.getThreadCount());
 		 preStatement.setInt(6, systemInfo.getUsedMemory());
+		 preStatement.setInt(7,Stress.queue.size());
 		 preStatement.executeUpdate();
 		 preStatement.close();
 		 connection.close();

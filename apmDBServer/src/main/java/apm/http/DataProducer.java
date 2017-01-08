@@ -83,31 +83,36 @@ public class DataProducer implements Runnable{
 	public void run() {
 		
 		HttpUriRequest request = createHttpUriRequest(url,params,methodType);
-			while(!stop){
-				try {
-					String message = getDataFromURL(request);
-					if(params.containsKey("part"))
-					{
-						HttpData data = new HttpData(params.get("part"),message);
-						process.process(data);
-					}
-				} catch (ClientProtocolException e) {
+			
+			try {
+				String message = getDataFromURL(request);
+				if(params.containsKey("part"))
+				{
+					HttpData data = new HttpData(params.get("part"),message);
+					process.process(data);
+				}
+			} catch (ClientProtocolException e) {
 					//e.printStackTrace();
 					System.out.println("ClientProtocolException");
 					return;
-				} catch (IOException e) {
+			} catch (IOException e) {
 					//e.printStackTrace();
 					System.out.println("IOException");
 					return;
-				}
-			}
+			}catch (Throwable e) {
+                // donothing
+				e.printStackTrace();
+            }
+			
 	}
 	
 	public void start(){
 		//Thread thread = new Thread(this);
 		//thread.start();
 		scheduledThreadPool	= Executors.newScheduledThreadPool(1);
-		scheduledThreadPool.scheduleWithFixedDelay(this, 0, 10, TimeUnit.SECONDS);
+		scheduledThreadPool.scheduleAtFixedRate(this, 0, 60,TimeUnit.SECONDS);
+		//scheduledThreadPool.schedule(this, 10, TimeUnit.SECONDS);
+		//schedule(this, 0, 10, TimeUnit.SECONDS);
 		
 	}
 	

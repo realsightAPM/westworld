@@ -8,7 +8,6 @@ import apm.mode.SystemInfo;
 
 class SystemInfoProcesser implements Processer{
 	private static SystemInfoParse systemInfoParse = new SystemInfoParse();
-	@Override
 	public void process(HttpData data) {
 		SystemInfo systemInfo = systemInfoParse.parse(data.message);
 		try {
