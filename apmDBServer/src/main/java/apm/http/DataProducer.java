@@ -70,6 +70,7 @@ public class DataProducer implements Runnable{
 				}
 				
 				HttpGet get = new HttpGet(url);
+				
 				request = get;
 			}break;
 			case POST:

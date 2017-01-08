@@ -1,14 +1,11 @@
 package apm.webstress;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.concurrent.ExecutorService;
-
-
-
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -21,7 +18,6 @@ public class Client {
 	private int threadCount;
 	private ExecutorService threadPool;
 	private LinkedBlockingQueue<String> urlqueue;
-//	private AtomicInteger urlCount = new AtomicInteger(0);
 	private static final int MAX_SIZE = 100000; 
 	public Client(String url,String hostName,int threadCount){
 		this.startUrl = url;
@@ -46,6 +42,8 @@ public class Client {
 	
 	class Work implements Runnable{
 		
+		
+		
 		public void run() {
 			// TODO Auto-generated method stub
 			while(true){
@@ -54,7 +52,8 @@ public class Client {
 					try {
 						//System.out.println("url: "+url);
 						Thread.sleep(1000);//1s
-						Document doc = Jsoup.connect(url).get();
+						URI uri = URI.create(url);
+						Document doc = Jsoup.connect(uri.toASCIIString()).get();
 						Elements elements = doc.select("a");
 						for(Element element:elements){
 							String href = element.attr("abs:href");
@@ -67,10 +66,10 @@ public class Client {
 								}
 							}
 						}
-					} catch (IOException e) {
+					}catch (InterruptedException e1) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (InterruptedException e1) {
+						e1.printStackTrace();
+					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
