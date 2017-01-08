@@ -15,6 +15,4 @@ public class HeapHistory {
 	private int totalPermgenInstances;
 	private boolean sourceDisplayed;
 	private boolean deltaDisplayed;
-	
-	
 }

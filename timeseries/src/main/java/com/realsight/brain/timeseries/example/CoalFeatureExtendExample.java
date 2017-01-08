@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.realsight.brain.timeseries.lib.csv.CsvWriter;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
-import com.realsight.brain.timeseries.lib.util.data.Coal;
+import com.realsight.brain.timeseries.lib.util.data.CoalData;
 
 public class CoalFeatureExtendExample {
 	private static final Character delimiter = ',';
@@ -42,7 +42,7 @@ public class CoalFeatureExtendExample {
 			coalFileId += 1;
 			System.out.println(coalFileId + "," + coalFileName);
 			String coalFilePath = Paths.get(coalFilesDir, coalFileName).toString();
-			Coal coal = new Coal(coalFilePath);
+			CoalData coal = new CoalData(coalFilePath);
 			DoubleSeries dSeries = coal.getPropertySeries("diweijiage");
 			dSeries.sort();
 			for ( int i = 1, startId = 0; i < dSeries.size(); i++) {

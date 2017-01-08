@@ -59,7 +59,7 @@ public class MeasureExample {
 		};
 		DoubleSeries a = nSeries.subSeries(0, 100);
 		DoubleSeries b = nSeries.subSeries(1000, 1100);
-		Plot.plot(a, b);
+		Plot.plot("sbsb", a, b);
 		DistanceMeasure dm = DistanceMeasure.build();
 		System.out.println(dm.distance(a, b));
 	}

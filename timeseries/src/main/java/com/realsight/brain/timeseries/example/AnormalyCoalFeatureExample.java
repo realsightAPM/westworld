@@ -9,6 +9,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.sql.Timestamp;
 
+import com.realsight.brain.timeseries.api.OnlineAnormalyDetectionAPI;
 import com.realsight.brain.timeseries.lib.csv.CsvReader;
 import com.realsight.brain.timeseries.lib.csv.CsvWriter;
 import com.realsight.brain.timeseries.lib.model.anomaly.AnormalyDetection;
@@ -16,7 +17,7 @@ import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries;
 import com.realsight.brain.timeseries.lib.util.Util;
-import com.realsight.brain.timeseries.lib.util.data.Coal;
+import com.realsight.brain.timeseries.lib.util.data.CoalData;
 
 /**
  * @author Sun Muxin
@@ -33,18 +34,18 @@ public class AnormalyCoalFeatureExample {
     			"coal").toString();
 		File coalFiles = new File(coalFilesDir);
 		int coalFileId = 0;
-		AnormalyDetection detection = null;
+		OnlineAnormalyDetectionAPI detection = null;
 //		System.out.println("CoalFileId,CoalFileName");
 		for (String coalFileName : coalFiles.list()){
 			coalFileId += 1;
 			System.out.println(coalFileId + "," + coalFileName);
 			String coalFilePath = Paths.get(coalFilesDir, coalFileName).toString();
-			Coal coal = new Coal(coalFilePath);
+			CoalData coal = new CoalData(coalFilePath);
 			DoubleSeries dSeries = coal.getPropertySeries("diweijiage");
 			dSeries.sort();
 			dSeries.normly();
 			if (detection == (null))
-				detection = AnormalyDetection.build(dSeries, 0.0, 1.0);
+				detection = new OnlineAnormalyDetectionAPI(dSeries, 0.0, 1.0);
 			else {
 				DoubleSeries anormalys = detection.detectorSeries(dSeries);
 				String resultDir = Util.writeCsv(new MultipleDoubleSeries(dSeries, anormalys)).toString();

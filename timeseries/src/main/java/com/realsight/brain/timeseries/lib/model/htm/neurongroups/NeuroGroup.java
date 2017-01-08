@@ -27,11 +27,12 @@ public class NeuroGroup {
 		this.leftFactsGroup = new ArrayList<Integer>();
 		this.potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
 		List<Integer> currSensFacts = new ArrayList<Integer>();
-		this.activate(currSensFacts, false);
+		this.activate(currSensFacts, false, -1L);
 	}
 	
-	private double activate(List<Integer> currSensFacts, boolean rate) {
+	private double activate(List<Integer> currSensFacts, boolean rate, Long timestamp) {
 		this.neuroGroupOperator.setRate(rate);
+		this.neuroGroupOperator.setTimestamp(timestamp);
 //		for(int i = 0; i < currSensFacts.size(); i++)
 //			System.out.print(currSensFacts.get(i) + " ");
 //		System.out.print("\n");
@@ -118,12 +119,12 @@ public class NeuroGroup {
 		return (1.0 - percentSelectedContextActive + percentaddContextActive) / 2.0; 
 	}
 	
-	public double learn(List<Integer> currSensFacts) {
-		return activate(currSensFacts, true);
+	public double learn(List<Integer> currSensFacts, Long timestamp) {
+		return activate(currSensFacts, true, timestamp);
 	}
 	
-	public double predict(List<Integer> currSensFacts) {
-		return activate(currSensFacts, false);
+	public double predict(List<Integer> currSensFacts, Long timestamp) {
+		return activate(currSensFacts, false, timestamp);
 	}
 
 	public List<Integer> getActiveNeuros() {

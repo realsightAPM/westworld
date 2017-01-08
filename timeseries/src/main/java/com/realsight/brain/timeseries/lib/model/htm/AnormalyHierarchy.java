@@ -47,33 +47,33 @@ public class AnormalyHierarchy {
 		return bit;
 	}
 	
-	private double learn(List<Integer> currSensFacts){
-		return this.neuroGroup.learn(currSensFacts);
+	private double learn(List<Integer> currSensFacts, Long timestamp){
+		return this.neuroGroup.learn(currSensFacts, timestamp);
 	}
 	
-	private double predict(List<Integer> currSensFacts){
-		return this.neuroGroup.predict(currSensFacts);
+	private double predict(List<Integer> currSensFacts, Long timestamp){
+		return this.neuroGroup.predict(currSensFacts, timestamp);
 	}
 	
 	public Double detectorAnomaly(Double value, Long timestamp, boolean anormly) {
 		int bit = getBit(value);
 		List<Integer> currSensFacts = bit2SensFacts(bit);
-		if (anormly) return predict(currSensFacts);
-		return learn(currSensFacts);
+		if (anormly) return predict(currSensFacts, timestamp);
+		return learn(currSensFacts, timestamp);
 	}
 	
 	public Double detectorAnomaly(Double value, Long timestamp) {
 		int bit = getBit(value);
 		List<Integer> currSensFacts = bit2SensFacts(bit);
-		return learn(currSensFacts);
+		return learn(currSensFacts, timestamp);
 	}
 	
-	public DoubleSeries detectorSeriesAnomaly(DoubleSeries nSeries) {
+	public DoubleSeries detectorSeriesAnomaly(DoubleSeries nSeries, Long timestamp) {
 		List<Entry<Double>> newEntries = new ArrayList<>();
 		for(int i = 0; i < nSeries.size(); i += 1){
 			int bit = getBit(nSeries.get(i).getItem());
 			List<Integer> currSensFacts = bit2SensFacts(bit);
-			newEntries.add(new Entry<Double>(learn(currSensFacts), nSeries.get(i).getInstant()));
+			newEntries.add(new Entry<Double>(learn(currSensFacts, timestamp), nSeries.get(i).getInstant()));
 		}
 		return new DoubleSeries(newEntries, "anormly");
 	}
@@ -84,7 +84,7 @@ public class AnormalyHierarchy {
 			for(int i = 0; i< nSeries.size(); i += 1){
 				int bit = res.getBit(nSeries.get(i).getItem());
 				List<Integer> currSensFacts = res.bit2SensFacts(bit);
-				res.learn(currSensFacts);
+				res.learn(currSensFacts, nSeries.get(i).getInstant());
 			}
 		}
 		return res;

@@ -126,7 +126,7 @@ public class ChangePoint {
 		ChangePoint CP = new ChangePoint();
 		CP.training(nSeries.plus(-1.0*nSeries.mean()), num_changepoint);
 		List<Integer> res = CP.getChangePoints(num_changepoint);
-		Plot.plot(nSeries);
+		Plot.plot("change point", nSeries);
 		for (int i = 0; i < res.size(); i++) {
 			System.out.printf(res.get(i) + " ");
 		}

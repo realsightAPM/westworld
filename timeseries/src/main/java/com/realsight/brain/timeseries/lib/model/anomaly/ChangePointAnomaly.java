@@ -1,20 +1,17 @@
 package com.realsight.brain.timeseries.lib.model.anomaly;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+//import java.io.File;
+//import java.io.FileOutputStream;
+//import java.io.OutputStream;
+//import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 import com.realsight.brain.timeseries.lib.model.regression.*;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
-import com.realsight.brain.timeseries.lib.util.data.Anomaly;
-import com.realsight.brain.timeseries.lib.util.plot.Plot;
 
 /* @author sunmuxin
  * 
@@ -147,70 +144,70 @@ public class ChangePointAnomaly {
 		}
 		return res;
 	}
-	public static List<Double> detectorNABSeriesAnomaly(String dir) throws Exception{
-		System.out.println(dir);
-		Anomaly.setLocalDir(dir);
-		String y = "value-0";
-		List<String> x = new ArrayList<String>();
-		x.add("value-1");
-		x.add("value-2");
-		x.add("value-3");
-		x.add("value-4");
-		x.add("value-5");
-		MultipleDoubleSeries series = new MultipleDoubleSeries(Anomaly.getPropertySeries("value", 0), 
-				Anomaly.getPropertySeries("value", 1), Anomaly.getPropertySeries("value", 2), 
-				Anomaly.getPropertySeries("value", 3), Anomaly.getPropertySeries("value", 4),
-				Anomaly.getPropertySeries("value", 5));
-//		Plot.plot(series.getColumn(y));
-		return detectorSeriesAnomaly(series, y, x, 8, 60000);
-	}
-	
-	public static void main(String[] args) throws Exception{
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAWSCloudwatch/null_elb_request_count_8c0756.csv");
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpm_results.csv");
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpc_results.csv");
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialNoAnomaly/null_art_daily_no_noise.csv");
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialWithAnomaly/null_art_daily_flatmiddle.csv");
-//		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialNoAnomaly/null_art_daily_perfect_square_wave.csv");
-		File root = new File("D:/workspace/NAB/src/results/null/");
-		for(File file : root.listFiles()){
-			if(file.isDirectory()){
-				for(File dir : file.listFiles()){
-					if(dir.isDirectory())
-						continue;
-					List<String> t = new ArrayList<String>();
-					List<Double> s = new ArrayList<Double>();
-					List<String> l = new ArrayList<String>();
-					List<String> FP = new ArrayList<String>();
-					List<String> FN = new ArrayList<String>();
-					List<String> S = new ArrayList<String>();
-					Scanner sin = new Scanner(dir);
-					sin.nextLine();
-					while(sin.hasNext()){
-						String line = sin.nextLine();
-						t.add(line.split(",")[0]);
-						s.add(Double.parseDouble(line.split(",")[1]));
-						l.add(line.split(",")[3]);
-						FP.add(line.split(",")[4]);
-						FN.add(line.split(",")[5]);
-						S.add(line.split(",")[6]);
-					}
-					List<Double> a = detectorNABSeriesAnomaly(dir.getPath());
-					String resultFileName = dir.getPath().replace("null", "realsight");
-					String resultPath = new File(resultFileName).getParent();
-					if(!new File(resultPath).exists()){
-						new File(resultPath).mkdirs();
-					}
-					OutputStream os = new FileOutputStream(resultFileName);
-			        OutputStreamWriter writer = new OutputStreamWriter(os);
-			        writer.write("timestamp,value,anomaly_score,label,S(t)_reward_low_FP_rate,S(t)_reward_low_FN_rate,S(t)_standard\n");
-			        for(int i = 0; i < s.size(); i++){
-			        	writer.write(t.get(i)+","+s.get(i)+","+a.get(i)+","+l.get(i)+","+FP.get(i)+","+FN.get(i)+","+S.get(i)+"\n");
-			        }
-			        writer.close();
-				}
-			}
-		}
-		
-	}
+//	public static List<Double> detectorNABSeriesAnomaly(String dir) throws Exception{
+//		System.out.println(dir);
+//		TimeseriesData.setLocalDir(dir);
+//		String y = "value-0";
+//		List<String> x = new ArrayList<String>();
+//		x.add("value-1");
+//		x.add("value-2");
+//		x.add("value-3");
+//		x.add("value-4");
+//		x.add("value-5");
+//		MultipleDoubleSeries series = new MultipleDoubleSeries(TimeseriesData.getPropertySeries("value", 0), 
+//				TimeseriesData.getPropertySeries("value", 1), TimeseriesData.getPropertySeries("value", 2), 
+//				TimeseriesData.getPropertySeries("value", 3), TimeseriesData.getPropertySeries("value", 4),
+//				TimeseriesData.getPropertySeries("value", 5));
+////		Plot.plot(series.getColumn(y));
+//		return detectorSeriesAnomaly(series, y, x, 8, 60000);
+//	}
+//	
+//	public static void main(String[] args) throws Exception{
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAWSCloudwatch/null_elb_request_count_8c0756.csv");
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpm_results.csv");
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpc_results.csv");
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialNoAnomaly/null_art_daily_no_noise.csv");
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialWithAnomaly/null_art_daily_flatmiddle.csv");
+////		detectorNABSeriesAnomaly("D:/workspace/NAB/src/results/null/artificialNoAnomaly/null_art_daily_perfect_square_wave.csv");
+//		File root = new File("D:/workspace/NAB/src/results/null/");
+//		for(File file : root.listFiles()){
+//			if(file.isDirectory()){
+//				for(File dir : file.listFiles()){
+//					if(dir.isDirectory())
+//						continue;
+//					List<String> t = new ArrayList<String>();
+//					List<Double> s = new ArrayList<Double>();
+//					List<String> l = new ArrayList<String>();
+//					List<String> FP = new ArrayList<String>();
+//					List<String> FN = new ArrayList<String>();
+//					List<String> S = new ArrayList<String>();
+//					Scanner sin = new Scanner(dir);
+//					sin.nextLine();
+//					while(sin.hasNext()){
+//						String line = sin.nextLine();
+//						t.add(line.split(",")[0]);
+//						s.add(Double.parseDouble(line.split(",")[1]));
+//						l.add(line.split(",")[3]);
+//						FP.add(line.split(",")[4]);
+//						FN.add(line.split(",")[5]);
+//						S.add(line.split(",")[6]);
+//					}
+//					List<Double> a = detectorNABSeriesAnomaly(dir.getPath());
+//					String resultFileName = dir.getPath().replace("null", "realsight");
+//					String resultPath = new File(resultFileName).getParent();
+//					if(!new File(resultPath).exists()){
+//						new File(resultPath).mkdirs();
+//					}
+//					OutputStream os = new FileOutputStream(resultFileName);
+//			        OutputStreamWriter writer = new OutputStreamWriter(os);
+//			        writer.write("timestamp,value,anomaly_score,label,S(t)_reward_low_FP_rate,S(t)_reward_low_FN_rate,S(t)_standard\n");
+//			        for(int i = 0; i < s.size(); i++){
+//			        	writer.write(t.get(i)+","+s.get(i)+","+a.get(i)+","+l.get(i)+","+FP.get(i)+","+FN.get(i)+","+S.get(i)+"\n");
+//			        }
+//			        writer.close();
+//				}
+//			}
+//		}
+//		
+//	}
 }

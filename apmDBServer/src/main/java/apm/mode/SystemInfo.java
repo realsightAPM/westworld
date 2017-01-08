@@ -1,5 +1,7 @@
 package apm.mode;
 
+import java.sql.Timestamp;
+
 import lombok.Data;
 
 @Data
@@ -11,4 +13,5 @@ public class SystemInfo {
 	//private int httpCount;//http链接个数
 	private int sessionTime;//平均回话时间
 	private int threadCount;//线程个数
+	private Timestamp nowTime;
 }

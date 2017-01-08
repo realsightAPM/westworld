@@ -5,6 +5,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 import com.realsight.brain.timeseries.lib.model.kalman.context.KalmanContext;
+import com.realsight.brain.timeseries.lib.model.kalman.strategy.KalmanStrategy;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.util.Util;
@@ -13,7 +14,7 @@ import com.realsight.brain.timeseries.lib.util.evaluation.NMSE;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class CointegrationAction implements com.realsight.brain.timeseries.lib.model.kalman.strategy.KalmanStrategy {
+public class CointegrationAction implements KalmanStrategy {
 	
     private static Logger log = LogManager.getLogger(CointegrationAction.class);
 

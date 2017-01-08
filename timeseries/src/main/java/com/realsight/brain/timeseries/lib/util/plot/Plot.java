@@ -1,6 +1,5 @@
 package com.realsight.brain.timeseries.lib.util.plot;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -103,7 +102,7 @@ public class Plot {
         dataSet.addSeries(s);
 	}
 
-	public static void plot(DoubleSeries s, DoubleSeries ... series) {
+	public static void plot(String name, DoubleSeries s, DoubleSeries ... series) {
 		// TODO Auto-generated method stub
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
@@ -113,7 +112,7 @@ public class Plot {
     	}
     	
     	final XYSeriesCollection dataSet = new XYSeriesCollection();
-        addSeries(dataSet,x,y,"True Function (Labels)");
+        addSeries(dataSet,x,y,s.getName());
         
         for( int i=0; i<series.length; i++ ){
         	List<Double> p = new ArrayList<Double>();
@@ -122,13 +121,13 @@ public class Plot {
         			p.add(series[i].get(j).getItem());
         		else p.add(0.0);
         	}
-            addSeries(dataSet,x,p,String.valueOf(i));
+            addSeries(dataSet,x,p,series[i].getName());
         }
 
         final JFreeChart chart = ChartFactory.createXYLineChart(
-                "Coal Price",      // chart title
+        		name,      // chart title
                 "Time",                     // x axis label
-                "Number of Sunspot", 		// y axis label
+                "Value", 		// y axis label
                 dataSet,                    // data
                 PlotOrientation.VERTICAL,
                 true,                       // include legend

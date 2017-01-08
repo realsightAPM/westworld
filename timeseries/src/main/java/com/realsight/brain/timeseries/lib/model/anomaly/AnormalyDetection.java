@@ -9,13 +9,16 @@ import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
 import com.realsight.brain.timeseries.lib.util.Pair;
 
-public class AnormalyDetection {
-	private final int windowsLen = 50;
-	private AnormalyHierarchy anormalyHTM = null;
-	private AnormalySegment anormalySegment = null;
+public abstract class AnormalyDetection {
+	protected int windowsLen = 50;
+	protected AnormalyHierarchy anormalyHTM = null;
+	protected AnormalySegment anormalySegment = null;
 	DoubleSeries anormalys = new DoubleSeries("anormalys");
 	
-	private AnormalyDetection() {}
+	public AnormalyDetection(DoubleSeries nSeries, double minValue, double maxValue) {
+		anormalyHTM = AnormalyHierarchy.build(nSeries, minValue, maxValue);
+		anormalySegment = AnormalySegment.build(nSeries, minValue, maxValue);
+	}
 	
 	public Entry<Double> detection(double value, Long timestamp) {
 		double score = anormalyHTM.detectorAnomaly(value, timestamp);
@@ -67,12 +70,5 @@ public class AnormalyDetection {
 			res.add(new Pair<Long, Long>(segmentLeftTimestamp, segmentRightTimestamp));
 		}
 		return res;
-	}
-	
-	public static AnormalyDetection build(DoubleSeries nSeries, double minValue, double maxValue) {
-		AnormalyDetection AD = new AnormalyDetection();
-		AD.anormalyHTM = AnormalyHierarchy.build(nSeries, minValue, maxValue);
-		AD.anormalySegment = AnormalySegment.build(nSeries, minValue, maxValue);
-		return AD;
 	}
 }

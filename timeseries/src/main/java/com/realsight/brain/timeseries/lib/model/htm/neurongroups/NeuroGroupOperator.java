@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -24,6 +25,9 @@ public class NeuroGroupOperator {
 	private List<Pair<List<Integer>, List<Integer>>> potentialNewContextList;
 	private int numAddedContexts;
 	private boolean rate = true;
+	private List<Long> beActivatedList;
+	private Long timestamp;
+	private Map<Long, Integer> history;
 	
 	public List<ActiveContext> getActiveContexts() {
 		return activeContexts;
@@ -45,6 +49,19 @@ public class NeuroGroupOperator {
 		this.rate = rate;
 	}
 	
+	public List<Long> getBeActivatedList() {
+		return this.beActivatedList;
+	}
+	
+	public void setTimestamp(Long timestamp) {
+		this.timestamp = timestamp;
+		if ( timestamp == -1 ) {
+			for ( int i = 0; i < this.contextsValuesList.size(); i++ ) {
+				this.contextsValuesList.get(i).setMemory(new ArrayList<Long>());
+			}
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	public NeuroGroupOperator(int maxLeftSemiContextsLenght) {
 		this.maxLeftSemiContextsLenght = maxLeftSemiContextsLenght;
@@ -62,6 +79,7 @@ public class NeuroGroupOperator {
 		this.crossedSemiContextsLists[1] = new ArrayList<ContextValue>();
 		this.contextsValuesList = new ArrayList<CrossedContext>();
 		this.newContextID = -1;
+		this.history = new HashMap<Long, Integer>();
 	}
 	
 	public int getContextByFacts(List<Pair<List<Integer>, List<Integer>>> newContextsList, int zeroLevel){
@@ -198,6 +216,7 @@ public class NeuroGroupOperator {
 	public void updateContextsAndGetActive(boolean newContextFlag) {
 
         List<ActiveContext> activeContexts = new ArrayList<ActiveContext>();
+        List<Long> beActivatedList = new ArrayList<Long>();
         int numSelectedContext = 0;
         
         List<Pair<List<Integer>, List<Integer>>> potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
@@ -211,9 +230,15 @@ public class NeuroGroupOperator {
         			ContextValue rightSemiContextValue = this.semiContextValuesLists[1].get(rightSemiContextID);
         			if ( leftSemiContextValues.getFromOrto().size() == leftSemiContextValues.getLenFact() ) {
         				numSelectedContext += 1;
+        				
 //        				System.out.println(rightSemiContextValue.getFromOrto().size());
         				if ( rightSemiContextValue.getFromOrto().size() > 0 ) {
         					if ( rightSemiContextValue.getFromOrto().size() == rightSemiContextValue.getLenFact() ) {
+        						Iterator<Long> iter_memory = this.contextsValuesList.get(contextID).getMemory().iterator();
+                				while ( iter_memory.hasNext() ) {
+                					beActivatedList.add(iter_memory.next());
+                				}
+                				this.contextsValuesList.get(contextID).beActivated(timestamp);
         						int tmp = this.contextsValuesList.get(contextID).getNumActivate();
         						this.contextsValuesList.get(contextID).setNumActivate(tmp+1);
         						activeContexts.add(new ActiveContext(contextID, this.contextsValuesList.get(contextID).getNumActivate(), 
@@ -240,6 +265,24 @@ public class NeuroGroupOperator {
         this.activeContexts = activeContexts;
         this.numSelectedContext = numSelectedContext;
         this.potentialNewContextList = potentialNewContextList;
+        this.beActivatedList = beActivatedList;
+        this.history.put(timestamp, activeContexts.size());
+        if (this.timestamp == -1L) {
+        	Iterator <Long> iter = this.beActivatedList.iterator();
+        	Map<Long, Integer> count = new HashMap<Long, Integer>(); 
+        	while(iter.hasNext()) {
+        		Long t = iter.next();
+        		if ( !count.containsKey(t) )
+        			count.put(t, 1);
+        		else {
+        			int c = count.get(t);
+        			count.put(t, c+1);
+        		}
+        	}
+        	for ( Map.Entry<Long, Integer> entry : count.entrySet()) {
+        		System.out.println(entry.getKey() + "\t" + (1.0*entry.getValue()/this.history.get(entry.getKey())));
+        	}
+        }
 //        System.out.println("up - > " + activeContexts.size()+","+numSelectedContext+","+potentialNewContextList.size());
 	}
 }

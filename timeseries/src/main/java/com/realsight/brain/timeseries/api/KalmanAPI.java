@@ -1,4 +1,4 @@
-package com.realsight.brain.timeseries.main;
+package com.realsight.brain.timeseries.api;
 
 import com.realsight.brain.timeseries.lib.model.kalman.action.CointegrationAction;
 import com.realsight.brain.timeseries.lib.model.kalman.filter.KalmanFilter;
@@ -23,7 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.la4j.Matrix;
 
-public class KalmanMain {
+public class KalmanAPI {
 	
 	private static final int noise_num = 100;
 	private Domain res = null;
@@ -279,7 +279,7 @@ public class KalmanMain {
     }
     
     public static void main(String[] args) throws Exception {
-    	new KalmanMain().main();
+    	new KalmanAPI().main();
     }
 }
 

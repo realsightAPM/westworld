@@ -12,7 +12,7 @@ import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
 import com.realsight.brain.timeseries.lib.util.Util;
-import com.realsight.brain.timeseries.lib.util.data.Anomaly;
+import com.realsight.brain.timeseries.lib.util.data.TimeseriesData;
 
 public class LinearRegression {
 	
@@ -85,19 +85,19 @@ public class LinearRegression {
 	}
 	
 	public static void main(String[] args) throws IOException{
-		List<String> x = new ArrayList<String>();
-        String y = "value-0";
-        x.add("value-"+1);
-        x.add("value-"+23);
-        x.add("value-"+24);
-        x.add("value-"+25);
-        
-        String dir = "D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpc_results.csv";
-        // download historical prices
-        Anomaly.setLocalDir(dir);
-        MultipleDoubleSeries series = new MultipleDoubleSeries(Anomaly.getPropertySeries("value"), 
-        		Anomaly.getPropertySeries("value", 1), Anomaly.getPropertySeries("value", 25), 
-        		Anomaly.getPropertySeries("value", 23), Anomaly.getPropertySeries("value", 24));
-        System.out.println(Util.sd(series, x, y) + " " + (series.getColumn(y)));
+//		List<String> x = new ArrayList<String>();
+//        String y = "value-0";
+//        x.add("value-"+1);
+//        x.add("value-"+23);
+//        x.add("value-"+24);
+//        x.add("value-"+25);
+//        
+//        String dir = "D:/workspace/NAB/src/results/null/realAdExchange/null_exchange-4_cpc_results.csv";
+//        // download historical prices
+//        TimeseriesData.setLocalDir(dir);
+//        MultipleDoubleSeries series = new MultipleDoubleSeries(TimeseriesData.getPropertySeries("value"), 
+//        		TimeseriesData.getPropertySeries("value", 1), TimeseriesData.getPropertySeries("value", 25), 
+//        		TimeseriesData.getPropertySeries("value", 23), TimeseriesData.getPropertySeries("value", 24));
+//        System.out.println(Util.sd(series, x, y) + " " + (series.getColumn(y)));
 	}
 }
