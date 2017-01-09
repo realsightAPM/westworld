@@ -104,7 +104,7 @@ public class BanjoApi {
 		}
 		
 		/*** the map of ranges ***/
-		File writename3 = new File("out_model_dir/map.txt");
+		File writename3 = new File(out_model_dir+"/map.txt");
 		writename3.createNewFile(); // create file
 		BufferedWriter out3 = new BufferedWriter(new FileWriter(writename3));
 		
@@ -126,7 +126,7 @@ public class BanjoApi {
 			System.out.println(it+": "+nodeMap.get(it));
 		}
 		
-		File writename = new File("out_model_dir/tsv.txt");
+		File writename = new File(out_model_dir+"/tsv.txt");
 		writename.createNewFile(); // create file
 		BufferedWriter out = new BufferedWriter(new FileWriter(writename));
 		for (int i = 0; i < numInst; i++) {
@@ -173,7 +173,7 @@ public class BanjoApi {
 //		
 		getStructure();
 		
-		getDne();
+		getDne(out_model_dir);
 	}
 	
 	public void getStructure() throws IOException { // This function cannot be runned along
@@ -207,9 +207,9 @@ public class BanjoApi {
         br.close();
 	}
 	
-	public void getDne() throws IOException {
+	public void getDne(String out_model_dir) throws IOException {
 		long stap = System.currentTimeMillis()/1000;
-		File writename4 = new File("out_model_dir/neticaFile.dne");
+		File writename4 = new File(out_model_dir+"/neticaFile.dne");
 		writename4.createNewFile(); // create file
 		BufferedWriter out4 = new BufferedWriter(new FileWriter(writename4));
 		
@@ -246,7 +246,7 @@ public class BanjoApi {
 		// TODO Auto-generated method stub
 		
 		BanjoApi banjoApi = new BanjoApi();
-		banjoApi.train("inputjava.csv", ".");
+		banjoApi.train("inputjava.csv", "out_model_dir");
 //		banjoApi.getDne();
 		
 	}
