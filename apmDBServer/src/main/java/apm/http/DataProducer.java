@@ -111,6 +111,7 @@ public class DataProducer implements Runnable{
 		//Thread thread = new Thread(this);
 		//thread.start();
 		scheduledThreadPool	= Executors.newScheduledThreadPool(1);
+		
 		scheduledThreadPool.scheduleAtFixedRate(this, 0, 60,TimeUnit.SECONDS);
 		//scheduledThreadPool.schedule(this, 10, TimeUnit.SECONDS);
 		//schedule(this, 0, 10, TimeUnit.SECONDS);

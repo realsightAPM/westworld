@@ -23,6 +23,7 @@ public class SpectralHashing {
             {1, 2, 3, 4, 5, 6},
             {6, 5, 4, 3, 2, 1},
             {2, 2, 2, 2, 2, 2}});
+      
         PCA pca = new PCA(trainingData);
         /** Test data to be transformed. The same convention of representing
         * data points as in the training data matrix is used. */

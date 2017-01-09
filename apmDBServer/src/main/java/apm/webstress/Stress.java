@@ -3,14 +3,18 @@ package apm.webstress;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Stress {
 	static final int  NORMAL = 100;
 	static final int MAX = 600;
 	public static  Queue<Client> queue = new LinkedList<Client>();
 	
+	public static AtomicLong timeSum = new AtomicLong(0);
+	
+	public static AtomicLong timesSum = new AtomicLong(0);
 	private Client getClient(){
-		return new Client("http://202.118.67.200:18080/","http://202.118.67.200:18080/",1);
+		return new Client("http://121.42.185.24:8080/","http://121.42.185.24:8080/",1);
 	}
 	
 	 public void change() throws Exception{
@@ -50,18 +54,19 @@ public class Stress {
 				queue.add(getClient());
 			}
 		 
-		 for(int i=0;i<4*60;i++){
-				Thread.sleep(60*1000);//4小时
+		 for(int i=0;i<3*60;i++){
+			
+				Thread.sleep(60*1000);//3小时
 				change();
 			}
 			
 			for(int i=0;i<4*60;i++){
-				Thread.sleep(60*1000);//4小时
+				Thread.sleep(60*1000);//3小时
 				add();
 			}
 			
 			for(int i=0;i<3*60;i++){
-				Thread.sleep(60*1000);//3小时
+				Thread.sleep(60*1000);//2小时
 				remove();
 			}
 	 }
