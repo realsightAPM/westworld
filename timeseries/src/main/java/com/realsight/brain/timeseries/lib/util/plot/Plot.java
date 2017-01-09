@@ -102,26 +102,36 @@ public class Plot {
         dataSet.addSeries(s);
 	}
 
-	public static void plot(String name, DoubleSeries s, DoubleSeries ... series) {
+	public static void plot(String name, DoubleSeries series, DoubleSeries ... subSeries) {
 		// TODO Auto-generated method stub
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
-    	for(int i = 0; i < s.size(); i++){
-    		x.add(s.get(i).getInstant()+0.0);
-    		y.add(s.get(i).getItem());
+    	for(int i = 0; i < series.size(); i++){
+    		x.add(series.get(i).getInstant()+0.0);
+    		y.add(series.get(i).getItem());
     	}
     	
     	final XYSeriesCollection dataSet = new XYSeriesCollection();
-        addSeries(dataSet,x,y,s.getName());
+        addSeries(dataSet,x,y,series.getName());
         
-        for( int i=0; i<series.length; i++ ){
+        for( int i=0; i<subSeries.length; i++ ){
         	List<Double> p = new ArrayList<Double>();
-        	for(int j = 0; j < s.size(); j++){
-        		if(j < series[i].size())
-        			p.add(series[i].get(j).getItem());
-        		else p.add(0.0);
+        	for (int j = 0, k = 0; j < series.size(); ) {
+        		if ( k < subSeries[i].size() ) {
+        			p.add(0.0);
+        			j++;
+        		}
+        		else if ( subSeries[i].get(k).getInstant().equals(series.get(j).getInstant()) ) {
+        			p.add(subSeries[i].get(k).getItem());
+        			k++; j++;
+        		} else if ( subSeries[i].get(k).getInstant() < series.get(j).getInstant() ) {
+        			k++;
+        		} else {
+        			p.add(0.0);
+        			j++;
+        		}
         	}
-            addSeries(dataSet,x,p,series[i].getName());
+            addSeries(dataSet,x,p,subSeries[i].getName());
         }
 
         final JFreeChart chart = ChartFactory.createXYLineChart(

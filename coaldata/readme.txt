@@ -1,1 +1,1 @@
-coal_data_1: SELECT * FROM coal.coal_table where `数据周期编码` = '周度' and `数据时间` like "2015%" and 品种编码='原煤';
+运行前先删除output文件夹

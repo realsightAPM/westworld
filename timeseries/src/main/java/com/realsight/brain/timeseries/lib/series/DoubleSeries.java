@@ -406,7 +406,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     	for(int i = 0; i < this.size(); i++){
     		var += Math.pow(this.getData().get(i).getItem(), 2);
     	}
-    	return (var/this.size());
+    	return Math.sqrt(var/this.size());
     }
     
     public double min(){

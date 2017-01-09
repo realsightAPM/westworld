@@ -30,6 +30,8 @@ public class OnlineAnormalyExample {
 		DoubleSeries sessionSeries = td.getPropertySeries("session_count");
 		DoubleSeries threadSeries = td.getPropertySeries("thread_count");
 		DoubleSeries memorySeries = td.getPropertySeries("used_memory");
+		System.out.println(cpuSeries.min()+"\t"+cpuSeries.max()+"\t"+cpuSeries.mean()+"\t"+
+				cpuSeries.variance());
 		cpuSeries.normly();
 		httpSeries.normly();
 		sessionSeries.normly();
