@@ -35,9 +35,10 @@ public class DBServer {
 	}
 	
 	public static void saveSystemInfo(SystemInfo systemInfo) throws SQLException{
+		System.out.println("add systemInfo ^^^^^^^^^^ &&&&&&&&&&&&&&&&&&&&&&&&&&");
 		String insertSystemInfo = "INSERT INTO `systeminfo_table` "
-				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`,`client`) "
-				+ "VALUES (?, ?, ?, ?, ?, ?,?);";
+				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`,`client`,`nettime`) "
+				+ "VALUES (?, ?, ?, ?, ?, ?,?,?);";
 		 Connection connection = ConnectorFactory.getConnection();
 		 PreparedStatement preStatement = connection.prepareStatement(insertSystemInfo);
 		// Timestamp nowTime = new Timestamp(System.currentTimeMillis());
@@ -49,7 +50,15 @@ public class DBServer {
 		 preStatement.setInt(5,systemInfo.getThreadCount());
 		 preStatement.setInt(6, systemInfo.getUsedMemory());
 		 preStatement.setInt(7,Stress.queue.size());
+		 int time = 0;
+		 if(Stress.timesSum.get()>0)
+			 time = (int) (Stress.timeSum.get()/Stress.timesSum.get());
+		 Stress.timeSum.set(0);
+		 Stress.timesSum.set(0);
+		 System.out.println("");
+		 preStatement.setInt(8, time);
 		 preStatement.executeUpdate();
+		System.out.println("add systemInfo");
 		 preStatement.close();
 		 connection.close();
 	}

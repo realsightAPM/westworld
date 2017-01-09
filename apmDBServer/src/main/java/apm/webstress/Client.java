@@ -23,9 +23,6 @@ public class Client {
 		this.startUrl = url;
 		this.threadCount = threadCount;
 		this.hostName = hostName;
-	}
-	
-	public void start(){
 		if(threadCount <= 0) return;
 		threadPool = Executors.newFixedThreadPool(threadCount);
 		
@@ -34,6 +31,10 @@ public class Client {
 		for(int i=0;i<threadCount;i++){
 			threadPool.execute(new Work());
 		}
+	}
+	
+	public void start(){
+		
 	}
 	
 	public void stopNow(){
@@ -53,7 +54,13 @@ public class Client {
 						//System.out.println("url: "+url);
 						Thread.sleep(1000);//1s
 						URI uri = URI.create(url);
-						Document doc = Jsoup.connect(uri.toASCIIString()).get();
+						//System.out.println(uri.toASCIIString());
+						long startTime = System.currentTimeMillis();
+						Document doc = Jsoup.connect(uri.toASCIIString()).timeout(10000).get();
+						long endTime = System.currentTimeMillis();
+						Stress.timeSum.addAndGet(endTime - startTime);
+						Stress.timesSum.addAndGet(1);
+						//Stress.timesSum.
 						Elements elements = doc.select("a");
 						for(Element element:elements){
 							String href = element.attr("abs:href");
@@ -71,6 +78,7 @@ public class Client {
 						e1.printStackTrace();
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
+						System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 						e1.printStackTrace();
 					}
 				}
