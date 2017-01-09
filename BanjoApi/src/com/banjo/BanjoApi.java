@@ -99,6 +99,8 @@ public class BanjoApi {
 		saver.setFile(new File("outfile.csv"));
 		saver.writeBatch();
 
+		Banjo banjo = new Banjo();
+		banjo.execute(new String[0], "input.txt");
 	}
 
 	public static void main(String[] args) throws Exception {
@@ -107,8 +109,6 @@ public class BanjoApi {
 		BanjoApi banjoApi = new BanjoApi();
 		banjoApi.train("inputjava.csv");
 		
-		Banjo banjo = new Banjo();
-		banjo.execute(args, "input.txt");
 	}
 
 }
