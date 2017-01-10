@@ -35,13 +35,30 @@ public class BanjoApi {
 	int[][] statistic;
 
 	public void train(String csvinput, String out_model_dir) throws Exception {
-		// load csv
+		
+		File outfile = new File("wekaOut");
+		if(outfile.exists()) {
+            System.out.println("目标文件已存在！");
+            String[] file_list = outfile.list();
+            for (int i = 0; i < file_list.length; i++) {
+            	File delfile = new File(outfile+"/"+file_list[i]);
+            	delfile.delete();  
+                System.out.println("已删除" + file_list[i]);  
+            }
+        }
+		else {
+			outfile.mkdir();
+			System.out.println("创建目录成功！");
+		}
+		
+		
+		/*** load csv ***/
 		CSVLoader loader = new CSVLoader();
 		loader.setSource(new File(csvinput));
-		System.out.println(csvinput);
+		System.out.println("\n输入"+csvinput);
 		Instances data = loader.getDataSet();
 
-		// set options
+		/*** set options ***/
 		String[] opts = new String[5];
 		// choose the number of intervals
 		opts[0] = "-B";
@@ -50,7 +67,7 @@ public class BanjoApi {
 		opts[2] = "-R";
 		opts[3] = "1-5";
 		opts[4] = "-F";
-		// apply discretization
+		/*** apply discretization ***/
 		Discretize disc = new Discretize();
 		disc.setOptions(opts);
 		disc.setInputFormat(data);
@@ -94,6 +111,8 @@ public class BanjoApi {
 //			System.out.println("\n");
 //		}
 		
+		/*********************** the properties of every attribute *********************/
+		
 		for (int i = 0; i < numAttr; i++) {
 			System.out.println("\n");
 			System.out.println("Attribute " +(i)+": "+newData.attribute(i).name());
@@ -105,7 +124,7 @@ public class BanjoApi {
 			ch[i] = (char)('a'+ i);
 		}
 		
-		/*** the map of ranges ***/
+		/******************************* the map of ranges ****************************/
 		File writename3 = new File(out_model_dir+"/map.txt");
 		writename3.createNewFile(); // create file
 		BufferedWriter out3 = new BufferedWriter(new FileWriter(writename3));
@@ -133,7 +152,6 @@ public class BanjoApi {
 		BufferedWriter out = new BufferedWriter(new FileWriter(writename));
 		for (int i = 0; i < numInst; i++) {
 			Instance inst = newData.instance(i);
-//			out.write(i+": ");
 			for (int j = 0; j < numAttr; j++) {
 				int x = (int)(inst.value(j));
 //				statistic[j][x]++;
@@ -142,48 +160,43 @@ public class BanjoApi {
 			out.write("\n");
 			out.flush(); // push data in cache into file
 		}
-//		out.write("I can write it into the file\n");
-//		out.flush(); // push data in cache into file
 		out.close(); // close the file
 		
-		// output the .tsv for banjo
-		File writename2 = new File("input.txt");
+		/****************************** output the .tsv for banjo ************/
+		File writename2 = new File("wekaOut/input.txt");
 		writename.createNewFile(); // create file
 		BufferedWriter out2 = new BufferedWriter(new FileWriter(writename2));
 		for (int i = 0; i < numInst; i++) {
 			Instance inst = newData.instance(i);
-//			out.write(i+": ");
 			for (int j = 0; j < numAttr; j++) {
 				out2.write(inst.value(j) + "\t");
 			}
 			out2.write("\n");
 			out2.flush(); // push data in cache into file
 		}
-//		out.write("I can write it into the file\n");
-//		out.flush(); // push data in cache into file
 		out2.close(); // close the file
 		
 		
-		// save CSV
+		/****************************** save CSV ***************************/
 		CSVSaver saver = new CSVSaver();
 		saver.setInstances(newData);
-		saver.setFile(new File("outfile.csv"));
+		saver.setFile(new File("wekaOut/outfile.csv"));
 		saver.writeBatch();
 
 		Banjo banjo = new Banjo();
-		banjo.execute(new String[0], "input.txt");
-//		
+		banjo.execute(new String[0], "wekaOut/input.txt");
+		
 		getStructure();
 		
 		getDne(out_model_dir);
 	}
 	
 	public void getStructure() throws IOException { // This function cannot be runned along
-		String pathname = "output/topGraph.txt"; // 绝对路径或相对路径都可以，这里是绝对路径，写入文件时演示相对路径  
-        File filename = new File(pathname); // 要读取以上路径的input。txt文件  
+		String pathname = "output/topGraph.txt"; // absolute dir or relative dit  
+        File filename = new File(pathname);  
         InputStreamReader reader = new InputStreamReader(  
-                new FileInputStream(filename)); // 建立一个输入流对象reader  
-        BufferedReader br = new BufferedReader(reader); // 建立一个对象，它把文件内容转成计算机能读懂的语言  
+                new FileInputStream(filename)); // create an input stream object: reader  
+        BufferedReader br = new BufferedReader(reader); // build an object which translates the data to that computer can read
    
         parentMap = new HashMap<Integer, ArrayList<Integer>>();
         for (int i = 0; i < numAttr; i++) {
