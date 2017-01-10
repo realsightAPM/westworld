@@ -202,7 +202,7 @@ public class Settings {
      * 
      * @param _applicationParameters The list of parameters provided.
      */
-  public void processCommandLine( final String[] _applicationParameters, final String _inputData ) 
+  public void processCommandLine( final String[] _applicationParameters, final String input_data ) 
           throws Exception { 
       
       // store in case we need to report on them later
@@ -212,7 +212,7 @@ public class Settings {
       // to the "application class" that is the wrapper for executing the search (e.g.,
       // the commandline application, or a gui)
             
-      loadSettings( _applicationParameters , _inputData);
+      loadSettings( _applicationParameters, input_data );
 
       // Validate any parameter that is part of this class
       validateRequiredData();
@@ -256,7 +256,7 @@ public class Settings {
      * @param _applicationParameters The list of parameters provided by the user to the
      * Banjo application
      */
-    protected synchronized void loadSettings( final String[] _applicationParameters , final String _inputData ) 
+    protected synchronized void loadSettings( final String[] _applicationParameters, final String input_data ) 
 			throws Exception {
 		
 	  	// If any optional parameters were specified, load them here
@@ -266,7 +266,7 @@ public class Settings {
 	    }
 	    
 	    // Load the parameters from the settings file 
-		loadedSettings = loadFileBasedParameters(_inputData);
+		loadedSettings = loadFileBasedParameters(input_data);
 		
 		// Load the default parameters, allowing us to keep machine dependent
 		// or user-designated "shared" parameters separate from core search parameters
@@ -786,7 +786,7 @@ public class Settings {
 //		return loadedParameters;
 //	}
 		
-	protected Properties loadFileBasedParameters(final String _inputData) throws Exception {
+	protected Properties loadFileBasedParameters(final String input_data) throws Exception {
 
 	    Properties loadedParameters = new Properties();
 	    
@@ -840,18 +840,10 @@ public class Settings {
         
 	    // Now load the settings. The file needs to adhere to Java's convention of
 	    // listing properties and their values.
-//		System.out.println("设置文件："+settingsFileDirectory+" : "+settingsFileName);
         if ( fileUtil == null ) fileUtil = new FileUtil( this );
         loadedParameters = fileUtil.loadSettings( 
-                settingsFileDirectory, settingsFileName , _inputData );
+                settingsFileDirectory, settingsFileName, input_data );
 	    
-//        Iterator it=loadedParameters.entrySet().iterator();
-//        while(it.hasNext()){
-//            Map.Entry entry=(Map.Entry)it.next();
-//            Object key = entry.getKey();
-//            Object value = entry.getValue();
-//            System.out.println(key +":"+value);
-//        }
 	    return loadedParameters;
 	}
 	
@@ -910,15 +902,6 @@ public class Settings {
 			        strParameterName.toLowerCase(), strParameterValue );
 		}
 		
-//		System.out.println("=====================================");
-//		Iterator it=loadedParameters.entrySet().iterator();
-//		while(it.hasNext()){
-//		    Map.Entry entry=(Map.Entry)it.next();
-//		    Object key = entry.getKey();
-//		    Object value = entry.getValue();
-//		    System.out.println(key +":"+value);
-//		}
-//		System.out.println("=====================================");
 		return loadedParameters;
 	}
     
@@ -2169,8 +2152,6 @@ public class Settings {
     
             String strInputDirectory = getValidatedProcessParameter( 
                     BANJO.SETTING_XMLINPUTDIRECTORY );
-            
-//            System.out.println("输入路径："+strInputDirectory);
             File inputDirectory = new File( strInputDirectory );
             if ( !inputDirectory.isDirectory() ) {
                 

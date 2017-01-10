@@ -398,231 +398,143 @@ public class FileUtil {
     
     public Properties loadSettings( 
             String _directoryName, 
-            final String _inputFileName, final String _inputData ) throws Exception {
+            final String _inputFileName, final String input_data ) throws Exception {
                 
-    	
-    	
-//    	System.out.println("数据路径：" + _inputData);
-//        File inputFile;
+        File inputFile;
         
-//        try {
+        try {
             
             // Check if a file name has been supplied:
-//            if ( _inputFileName != null || _inputFileName.length() > 0 ) {
-//    
-//                // Check if a directory name has been supplied:
-//                if ( _directoryName != null && _directoryName.length() > 0 ) {
-//                    
-//                    inputFile = new File( _directoryName, _inputFileName );
-//                }
-//                else {
-//                
-//                    inputFile = new File( _inputFileName );
-//                }
-//                
-//                // Ccheck if the file actually exists
-//                if ( !inputFile.exists() ) {
-//                    
-//                    // Now try to find the settings file in the default input directory
-//                    _directoryName = BANJO.DEFAULT_INPUTDIRECTORY;
-//                    
-//                    processData.addToWarnings( new BanjoError( 
-//                            "Default value ('" + BANJO.DEFAULT_INPUTDIRECTORY +
-//                            "') applied to 'settingsDirectory' parameter.",
-//                            BANJO.ERRORTYPE_ALERT_DEFAULTAPPLIED,
-//                            BANJO.SETTING_CMDARG_SETTINGSFILENAME,
-//                            null ) );
-//                    
-//                    inputFile = new File( _directoryName, _inputFileName );
-//                    
-//                    if ( !inputFile.exists() ) {
-//                        
-//                        // We give up looking for the settings file and tell the
-//                        // user that the file could not be found
-//                        // Note: we don't try to recover by trying to find a file with the 
-//                        // default settings file name
-//                        throw new BanjoException( BANJO.ERROR_BANJO_USERINPUT,
-//                            "The settings file '" + _inputFileName +
-//                            "' cannot be found at '" + _directoryName + "'." );
-//                    }
-//                }
-//            }
-//            else {
-//                
-//                // No name for the settings file has been provided, so check if the default
-//                // file exists
-//                inputFile = new File( BANJO.DEFAULT_INPUTDIRECTORY, 
-//                        BANJO.DEFAULT_SETTINGSFILENAME );
-//                
-//                // If there is no settings file in the specified LoadDirectory
-//                // then try the directory from where the application is running:
-//                if ( !inputFile.exists() ) {
-//                    
-//                    String firstInputFile = inputFile.getAbsolutePath();
-//                    inputFile = new File( BANJO.DEFAULT_SETTINGSFILENAME );
-//                    
-//                    if ( !inputFile.exists() ) {
-//                        
-//                        throw new BanjoException( BANJO.ERROR_BANJO_USERINPUT, 
-//                                "\n *** Cannot find the settings file at either location: '" +
-//                                firstInputFile + "' and '" + 
-//                                inputFile.getAbsolutePath() + "'?!" );
-//                    }
-//                }
-//                else {
-//                    
-//                    if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL )
-//                        System.out.println( "Setting file '" + 
-//                                BANJO.DEFAULT_INPUTDIRECTORY + File.separator 
-//                                + BANJO.DEFAULT_SETTINGSFILENAME
-//                                + "' found." );
-//                }
-//            }
+            if ( _inputFileName != null || _inputFileName.length() > 0 ) {
+    
+                // Check if a directory name has been supplied:
+                if ( _directoryName != null && _directoryName.length() > 0 ) {
+                    
+                    inputFile = new File( _directoryName, _inputFileName );
+                }
+                else {
+                
+                    inputFile = new File( _inputFileName );
+                }
+                
+                // Ccheck if the file actually exists
+                if ( !inputFile.exists() ) {
+                    
+                    // Now try to find the settings file in the default input directory
+                    _directoryName = BANJO.DEFAULT_INPUTDIRECTORY;
+                    
+                    processData.addToWarnings( new BanjoError( 
+                            "Default value ('" + BANJO.DEFAULT_INPUTDIRECTORY +
+                            "') applied to 'settingsDirectory' parameter.",
+                            BANJO.ERRORTYPE_ALERT_DEFAULTAPPLIED,
+                            BANJO.SETTING_CMDARG_SETTINGSFILENAME,
+                            null ) );
+                    
+                    inputFile = new File( _directoryName, _inputFileName );
+                    
+                    if ( !inputFile.exists() ) {
+                        
+                        // We give up looking for the settings file and tell the
+                        // user that the file could not be found
+                        // Note: we don't try to recover by trying to find a file with the 
+                        // default settings file name
+                        throw new BanjoException( BANJO.ERROR_BANJO_USERINPUT,
+                            "The settings file '" + _inputFileName +
+                            "' cannot be found at '" + _directoryName + "'." );
+                    }
+                }
+            }
+            else {
+                
+                // No name for the settings file has been provided, so check if the default
+                // file exists
+                inputFile = new File( BANJO.DEFAULT_INPUTDIRECTORY, 
+                        BANJO.DEFAULT_SETTINGSFILENAME );
+                
+                // If there is no settings file in the specified LoadDirectory
+                // then try the directory from where the application is running:
+                if ( !inputFile.exists() ) {
+                    
+                    String firstInputFile = inputFile.getAbsolutePath();
+                    inputFile = new File( BANJO.DEFAULT_SETTINGSFILENAME );
+                    
+                    if ( !inputFile.exists() ) {
+                        
+                        throw new BanjoException( BANJO.ERROR_BANJO_USERINPUT, 
+                                "\n *** Cannot find the settings file at either location: '" +
+                                firstInputFile + "' and '" + 
+                                inputFile.getAbsolutePath() + "'?!" );
+                    }
+                }
+                else {
+                    
+                    if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL )
+                        System.out.println( "Setting file '" + 
+                                BANJO.DEFAULT_INPUTDIRECTORY + File.separator 
+                                + BANJO.DEFAULT_SETTINGSFILENAME
+                                + "' found." );
+                }
+            }
                
             // We should have a valid file now, which we try to load into the 
             // properties container
-            
-            
-            /**** This place is writed by Bin Wu to load the "src/settings.properties" ****/
-            
-//            System.out.println("打印："+(new File("src", "settings.properties")));
-            
-//            inputFile = new File(FileUtil.class.getResource("settings.properties").getFile());
-//            
-//            System.out.println("打印："+inputFile.getAbsolutePath());
-//            if ( !inputFile.exists() ) {
-//              
-//              throw new BanjoException( BANJO.ERROR_BANJO_USERINPUT, 
-//                      "\n *** Cannot find the settings file at either location: '" +
-//                      inputFile + "' and '" + 
-//                      inputFile.getAbsolutePath() + "'?!" );
-//            }
-            
-            /**************************************END*************************************/
-            
-//            FileInputStream cmdParameterFile = new FileInputStream( inputFile );
+            FileInputStream cmdParameterFile = new FileInputStream( inputFile );
             
             // (Marker only) This is the place where we can add support for
             // other input file formats
             
             // Load the properties from the settings file to a temporary properties object,
             // then add them all in lower case to their final container
-//            Properties tmpSettings = new Properties();
-//            tmpSettings.load( this.getClass().getResourceAsStream("settings.properties") );
-//
-//            Set parameterSet;
-//            Iterator parameterIterator;
-//            String strNextProperty;
-//            String strPropertyValue;
-//            String strParameterName;
-//            String strParameterValue;
-//            // Need to convert all parameters to lowercase
-//            parameterSet = tmpSettings.keySet();
-//            parameterIterator = parameterSet.iterator();
-//            while (parameterIterator.hasNext()) {
-//                
-//                strParameterName = (String) parameterIterator.next();
-//                strParameterName = strParameterName.trim();
-//
-//                strParameterValue = 
-//                    tmpSettings.getProperty( strParameterName ).trim();
-//                strParameterValue = StringUtil.removeTrailingComment( strParameterValue );
-//                
-//                settings.setProperty( 
-//                        strParameterName.toLowerCase(), strParameterValue );
-//            }
-//        }
-//        catch (BanjoException e){
-//            
-//            throw new BanjoException( e );
-//        }
-//        catch (Exception e){
-//            
-//            // May not want the internal error message displayed to the end user
-//            if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL )
-//                System.out.println( "\n(FileUtil.LoadSettings) " + e.toString() + "\n" );
-//            
-//            if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL ) 
-//                e.printStackTrace();
-//            
-//            // Pass the message on to the caller for final handling
-//            throw new BanjoException( e, BANJO.ERROR_BANJO_DEV,
-//                    "(Development issue?) Error(s) trying to load the settings file." );
-//        }   
+            Properties tmpSettings = new Properties();
+            tmpSettings.load( cmdParameterFile );
+
+            Set parameterSet;
+            Iterator parameterIterator;
+            String strNextProperty;
+            String strPropertyValue;
+            String strParameterName;
+            String strParameterValue;
+            // Need to convert all parameters to lowercase
+            parameterSet = tmpSettings.keySet();
+            parameterIterator = parameterSet.iterator();
+            while (parameterIterator.hasNext()) {
+                
+                strParameterName = (String) parameterIterator.next();
+                strParameterName = strParameterName.trim();
+
+                strParameterValue = 
+                    tmpSettings.getProperty( strParameterName ).trim();
+                strParameterValue = StringUtil.removeTrailingComment( strParameterValue );
+                
+                settings.setProperty( 
+                        strParameterName.toLowerCase(), strParameterValue );
+            }
+        }
+        catch (BanjoException e){
+            
+            throw new BanjoException( e );
+        }
+        catch (Exception e){
+            
+            // May not want the internal error message displayed to the end user
+            if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL )
+                System.out.println( "\n(FileUtil.LoadSettings) " + e.toString() + "\n" );
+            
+            if ( BANJO.DEBUG && BANJO.TRACE_FILEUTIL ) 
+                e.printStackTrace();
+            
+            // Pass the message on to the caller for final handling
+            throw new BanjoException( e, BANJO.ERROR_BANJO_DEV,
+                    "(Development issue?) Error(s) trying to load the settings file." );
+        }   
         
         // Add the input file to the just loaded settings
-        
-        
-        settings.setProperty( "precomputeLogGamma", "yes");
-        settings.setProperty( "initialStructureFile", "");
-        settings.setProperty( "project", "banjo apm data");
-        settings.setProperty( "coolingFactor", "0.7");
-        settings.setProperty( "fileNameForConsensusGraph", "consensus.graph.@TS@");
-        settings.setProperty( "reportFile", "static.report.@TS@.txt");
-        settings.setProperty( "reannealingTemperature", "800");
-        settings.setProperty( "dotFileExtension", "txt");
-        settings.setProperty( "minProposedNetworksBeforeRestart", "3000");
-        settings.setProperty( "maxProposedNetworksBeforeRestart", "5000");
-        settings.setProperty( "maxTime", "1 m");
-        settings.setProperty( "computeInfluenceScores", "yes");
-        settings.setProperty( "defaultMaxParentCount", "10");
-        settings.setProperty( "maxAcceptedNetworksBeforeCooling", "2500");
-        settings.setProperty( "mustNotBePresentEdgesFile", "");
-        settings.setProperty( "askToVerifySettings", "no");
-        settings.setProperty( "minProposedNetworksAfterHighScore", "1000");
-        settings.setProperty( "restartWithRandomNetwork", "yes");
-        settings.setProperty( "discretizationExceptions", "");
-        settings.setProperty( "createDotOutput", "yes");
-        settings.setProperty( "minNetworksBeforeChecking", "1000");
-        settings.setProperty( "cycleCheckingMethod", "dfs  ");
-        settings.setProperty( "createConsensusGraphAsHtml", "yes");
-        settings.setProperty( "maxParentCount", "3");
-        settings.setProperty( "maxMarkovLag", "0");
-        settings.setProperty( "htmlFileExtension", "html");
-        settings.setProperty( "displayStructures", "yes");
-        settings.setProperty( "createDiscretizationReport", "withMappedValues");
-        settings.setProperty( "deciderChoice", "default");
-        settings.setProperty( "variableCount", "5");
-        settings.setProperty( "initialTemperature", "10000");
-        settings.setProperty( "minAcceptedNetworksBeforeReannealing", "500");
-        settings.setProperty( "maxProposedNetworks", "");
-        settings.setProperty( "user", "wubin");
-        settings.setProperty( "useCache", "fastLevel2");
-        settings.setProperty( "maxProposedNetworksBeforeCooling", "10000");
-//        settings.setProperty( "variableNames", "cpu http session thread memory");
-        settings.setProperty( "fileNameForTopGraph", "topGraph"); //top.graph.@TS@
-        settings.setProperty( "maxParentCountForRestart", "3");
-        settings.setProperty( "maxRestarts", "10000");
-        settings.setProperty( "computeConsensusGraph", "yes");
-        settings.setProperty( "equivalentSampleSize", "1.0");
-        settings.setProperty( "fullPathToDotExecutable", "D:/graphviz/bin/dot.exe");
-        settings.setProperty( "dotGraphicsFormat", "jpg");
-        settings.setProperty( "fileReportingInterval", "10 m");
-        settings.setProperty( "proposerChoice", "RandomLocalMove");
-        settings.setProperty( "dbnMandatoryIdentityLags", "");
-        settings.setProperty( "bestNetworksAre", "");
-        settings.setProperty( "discretizationPolicy", "none  ");
-        settings.setProperty( "evaluatorChoice", "default");
-        settings.setProperty( "timeStampFormat", "yyyy.MM.dd.HH.mm.ss");
-        settings.setProperty( "notes", "static bayesian network inference");
-        settings.setProperty( "minMarkovLag", "0");
-        settings.setProperty( "outputDirectory", "output");
-        settings.setProperty( "dataset", "5-vars-898-observations");
-        settings.setProperty( "displayMemoryInfo", "yes ");
-        settings.setProperty( "searcherChoice", "SimAnneal  ");
-        settings.setProperty( "mustBePresentEdgesFile", "");
-        settings.setProperty( "nBestNetworks", "1");
-        settings.setProperty( "screenReportingInterval", "20 s");
-        
         settings.setProperty( BANJO.SETTING_CMDARG_SETTINGSFILENAME.toLowerCase(),
-                "settingsFile" );
-        
+                inputFile.toString() );
         settings.setProperty( BANJO.SETTING_INPUTDIRECTORY.toLowerCase(),
                 "." );
         settings.setProperty( BANJO.SETTING_OBSERVATIONSFILE.toLowerCase(),
-        		_inputData);
-        
-        
+        		input_data);
         return settings;
     }
     

@@ -51,9 +51,9 @@ public class RunBasicSearchExample {
         try {
 
             // Load and validate the parameters for running the application
-        	String inputData = "";
             settings = new Settings();
-            settings.processCommandLine( args , inputData);
+            String input_data = "";
+            settings.processCommandLine( args, input_data );
             
             // Setup the error handler so it knows about the (loaded) settings
             errorHandler = new BanjoErrorHandler( settings );

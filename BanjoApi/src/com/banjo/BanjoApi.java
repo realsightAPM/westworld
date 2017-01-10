@@ -34,7 +34,7 @@ public class BanjoApi {
 	public Map<Integer, ArrayList<Integer>> parentMap;
 	int[][] statistic;
 
-	public void train(String csvinput, String out_model_dir) throws Exception {
+	public void train( String csvinput, String out_model_dir, int num_thread ) throws Exception {
 		
 		File outfile = new File("wekaOut");
 		if(outfile.exists()) {
@@ -58,14 +58,18 @@ public class BanjoApi {
 		System.out.println("\n ‰»Î"+csvinput);
 		Instances data = loader.getDataSet();
 
+		numAttr = data.numAttributes();
+		numInst = data.numInstances();
+		nodeMap = new HashMap<Integer, String>();
+		
 		/*** set options ***/
 		String[] opts = new String[5];
 		// choose the number of intervals
 		opts[0] = "-B";
-		opts[1] = "5";
+		opts[1] = "6";
 		// choose the range of attributes on which to apply hte filter:
 		opts[2] = "-R";
-		opts[3] = "1-5";
+		opts[3] = "1-"+numAttr;
 		opts[4] = "-F";
 		/*** apply discretization ***/
 		Discretize disc = new Discretize();
@@ -75,41 +79,10 @@ public class BanjoApi {
 //		System.out.println(newData.attribute(0).value(4));
 
 		/*** set the variables of this class ***/
-		numAttr = newData.numAttributes();
-		numInst = newData.numInstances();
-		nodeMap = new HashMap<Integer, String>();
-		int tmp = 5;//Integer.parseInt(opts[1]);
-//		statistic = new int[numAttr][tmp];
-		
-//		for (int i =0 ;i < numAttr; i++) {
-//			for (int j = 0; j < tmp; j++) {
-//				statistic[i][j] = 0;
-//			}
-//		}
 		
 		for (int i = 0; i < numAttr; i++) {
 			nodeMap.put(i, newData.attribute(i).name());
 		}
-//		Map<String, Integer> set = new HashMap<String, Integer>();
-//		List<HashMap<String, Integer>> list = new ArrayList<HashMap<String, Integer>>();
-//
-//		for (int i = 0; i < numAttr; i++) {
-//			list.add(new HashMap<String, Integer>());
-//			for (int j = 0; j < newData.attribute(i).numValues(); j++) {
-//				list.get(i).put(newData.attribute(i).value(j), j);
-//			}
-//		}
-		
-
-		// System.out.println(newData.numInstances());
-		// System.out.println(newData.instance(6).toString(1));
-
-//		for (int i = 0; i < list.size(); i++) {
-//			for (Object it : list.get(i).keySet()) {
-//				System.out.println(it + ": " + list.get(i).get(it));
-//			}
-//			System.out.println("\n");
-//		}
 		
 		/*********************** the properties of every attribute *********************/
 		
@@ -142,29 +115,10 @@ public class BanjoApi {
 		out3.flush(); // push data in cache into file
 		out3.close(); // close the file
 		
-		// output the .tsv for netica
-		for (Object it : nodeMap.keySet()) {
-			System.out.println(it+": "+nodeMap.get(it));
-		}
-		
-		File writename = new File(out_model_dir+"/tsv.txt");
-		writename.createNewFile(); // create file
-		BufferedWriter out = new BufferedWriter(new FileWriter(writename));
-		for (int i = 0; i < numInst; i++) {
-			Instance inst = newData.instance(i);
-			for (int j = 0; j < numAttr; j++) {
-				int x = (int)(inst.value(j));
-//				statistic[j][x]++;
-				out.write(ch[x] + "\t");
-			}
-			out.write("\n");
-			out.flush(); // push data in cache into file
-		}
-		out.close(); // close the file
 		
 		/****************************** output the .tsv for banjo ************/
 		File writename2 = new File("wekaOut/input.txt");
-		writename.createNewFile(); // create file
+		writename2.createNewFile(); // create file
 		BufferedWriter out2 = new BufferedWriter(new FileWriter(writename2));
 		for (int i = 0; i < numInst; i++) {
 			Instance inst = newData.instance(i);
@@ -182,9 +136,33 @@ public class BanjoApi {
 		saver.setInstances(newData);
 		saver.setFile(new File("wekaOut/outfile.csv"));
 		saver.writeBatch();
+		
+		/****************************** output the .tsv for netica ************/
+		
+		File writename = new File(out_model_dir+"/tsv.txt");
+		writename.createNewFile(); // create file
+		BufferedWriter out = new BufferedWriter(new FileWriter(writename));
+		for (int i = 0; i < numInst; i++) {
+			Instance inst = newData.instance(i);
+			for (int j = 0; j < numAttr; j++) {
+				int x = (int)(inst.value(j));
+				out.write(ch[x] + "\t");
+			}
+			out.write("\n");
+			out.flush(); // push data in cache into file
+		}
+		out.close(); // close the file
 
+		
+		for (Object it : nodeMap.keySet()) {
+			System.out.println(it+": "+nodeMap.get(it));
+		}
+		
+		/*** run Banjo.jar ***/
 		Banjo banjo = new Banjo();
-		banjo.execute(new String[0], "wekaOut/input.txt");
+		String[] args = new String[1];
+		args[0] = "threads="+num_thread;
+		banjo.execute(args, "wekaOut/input.txt");
 		
 		getStructure();
 		
@@ -209,7 +187,6 @@ public class BanjoApi {
             int pos = line.indexOf("->");
             if (pos > -1) {
             	int sta = Integer.parseInt(line.substring(0, pos));
-//            	System.out.println(line);
             	int end = Integer.parseInt(line.substring(pos+2, line.length()-1));
             	System.out.println(sta+"->"+end);
             	parentMap.get(end).add(sta);
@@ -228,7 +205,7 @@ public class BanjoApi {
 		writename4.createNewFile(); // create file
 		BufferedWriter out4 = new BufferedWriter(new FileWriter(writename4));
 		
-		//begin
+		/*** begin ***/
 		out4.write("bnet APM {" + "\n" +
                    "autoupdate = FALSE;" + "\n" +
                    "whenchanged = "+stap+");\n\n"
@@ -240,10 +217,8 @@ public class BanjoApi {
 			out4.write("discrete = TRUE;\n");
 			out4.write("states = (a, b, c, d, e);\n");
 			out4.write("parents = (");
-//			System.out.println(parentMap.size());
 			for (Integer it : parentMap.get(i)) {
 				out4.write(nodeMap.get(it)+", ");
-//				System.out.println(it);
 			}
 			out4.write(");\n");
 			out4.write("whenchanged = "+stap+";\n\n");
@@ -251,7 +226,7 @@ public class BanjoApi {
 		
 		
 		
-		//end
+		/*** end ***/
 		out4.write("\n\n};");
 		out4.flush(); // push data in cache into file
 		out4.close(); // close the file
@@ -261,8 +236,7 @@ public class BanjoApi {
 		// TODO Auto-generated method stub
 		
 		BanjoApi banjoApi = new BanjoApi();
-		banjoApi.train("inputjava.csv", "out_model_dir");
-//		banjoApi.getDne();
+		banjoApi.train("inputjava_7.csv", "out_model_dir", 10);
 		
 	}
 

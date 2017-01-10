@@ -95,7 +95,7 @@ public class Banjo {
         }
     }
     
-    public void execute( String _args[], String inputData ) throws Exception {
+    public void execute( String _args[], String input_data ) throws Exception {
 
         BanjoErrorHandler errorHandler = new BanjoErrorHandler();
         XMLProcessor xmlProcessor;
@@ -104,9 +104,16 @@ public class Banjo {
             
             String[] fileList;
             
+            // create output dir
             File outfile = new File("output");
     		if(outfile.exists()) {
                 System.out.println("目标文件已存在！");
+                String[] file_list = outfile.list();
+                for (int i = 0; i < file_list.length; i++) {
+                	File delfile = new File(outfile+"/"+file_list[i]);
+                	delfile.delete();  
+                    System.out.println("已删除" + file_list[i]);  
+                }
             }
     		else {
     			outfile.mkdir();
@@ -118,21 +125,19 @@ public class Banjo {
             // Update the error handler to know about settings
             errorHandler = new BanjoErrorHandler( settings );
             // Load and validate the parameters for running the application 
-            settings.processCommandLine( _args , inputData);
-            
+            settings.processCommandLine( _args, input_data );
+
             // Get the (optional) list of XML files
             fileList = settings.validateXMLresultFiles();
             
             // If XML files are specified, we go into "result harvest" mode
             if ( fileList.length > 0 && !fileList[0].equalsIgnoreCase("") ) {
                 
-//            	System.out.println("在这里1");
                 // Process and combine the set of files with XML-formatted data                
                 xmlProcessor = new XMLProcessor( settings );
                 xmlProcessor.processXMLResultFiles( fileList );
             }
             else {
-//            	System.out.println("在这里2");
                 //----------------------
                 //    "search" mode
                 //----------------------
@@ -144,7 +149,7 @@ public class Banjo {
                 // in version 2.1, we still need to make sure that we didn't run into 
                 // any problems
                 if ( settings.wereThereProblems() ) {
-//                	System.out.println("在这里3");
+                    
                     throw new BanjoException( BANJO.ERROR_CHECKPOINTTRIGGER,
                             "(Checkpoint) Banjo performed a set of validation checks, " +
                             "and discovered the following issues " +
@@ -156,10 +161,10 @@ public class Banjo {
                 // Find out how many threads to use
                 maxThreads = Integer.parseInt( 
                         settings.getDynamicProcessParameter( BANJO.DATA_MAXTHREADS ));
+            
                 if ( maxThreads > 0 ) {
-//                	System.out.println("在这里4");
+                    
                     runMultipleInstances( _args );
-//                    System.out.println("在这里5");
                 }
             }
         }
@@ -229,9 +234,7 @@ public class Banjo {
             for ( int i=0; i < maxThreads; i++ ) {
                 
                 try {
-//                  System.out.println("++++++找到+++++++");
                   arrThreads[i].join();
-//                  System.out.println("++++++了吗+++++++++");
                 }
                 catch (InterruptedException e) {
     
@@ -240,7 +243,7 @@ public class Banjo {
                             "Join (of threads after completion) interrupted" );
                 }
             }
-            
+    
             // "Re-import" the settings that were used in the first thread (note: down the 
             // road it may not hold true that all the threads have very similar settings,
             // but it is the case for now)
@@ -263,7 +266,7 @@ public class Banjo {
     
                 equivalenceChecker = new EquivalenceCheckerSkip( settings );
             }
-            
+    
             // set up access to cycle-checker data (note: the "global" settings object
             // does not know about many of the "internal" settings choices, so we need
             // to pass some info along from one of the threads [we pick the first one])
@@ -277,7 +280,7 @@ public class Banjo {
                     .getSettings().getDynamicProcessParameter( 
                             BANJO.CONFIG_CYCLECHECKER_ACTIONORDER ));
 
-            
+
             // Set up a collection used for directing the results printing
             Collection outputResultsOnly = new HashSet(
                     BANJO.MAXOUTPUTFILES );
@@ -395,7 +398,7 @@ public class Banjo {
                             " threads." );
                 }
             }
-            
+
             settings.writeToFile( outputResultsOnly , nBestNetworks );
             settings.prepareXMLOutput();
             settings.writeToFile( xmlResults , 
@@ -457,7 +460,7 @@ public class Banjo {
     public static void main( String _args[] ) throws Exception {
 
         Banjo banjoAppWithThreads =  new Banjo();
-        String inputData = "input.txt";
-        banjoAppWithThreads.execute( _args,  inputData);
+        
+        banjoAppWithThreads.execute( _args , "data.txt");
     }
 }

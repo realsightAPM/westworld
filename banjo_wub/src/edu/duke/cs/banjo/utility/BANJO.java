@@ -530,7 +530,7 @@ public final class BANJO {
 	public static final String SETTING_CMDARG_SETTINGSFILENAME = "settingsFile";
 	public static final String SETTING_CMDARG_SETTINGSFILENAME_DESCR = "Settings file";
 	public static final String SETTING_CMDARG_SETTINGSFILENAME_DISP = "Settings file:";
-	public static final String DEFAULT_SETTINGSFILENAME = "src/settings.properties";
+	public static final String DEFAULT_SETTINGSFILENAME = "banjo.properties"; // the pre-value is "banjo.txt"
 	//
 	public static final String SETTING_CMDARG_SETTINGSDIRECTORY = "settingsDirectory";
 	public static final String SETTING_CMDARG_SETTINGSDIRECTORY_DESCR = "Settings directory";
