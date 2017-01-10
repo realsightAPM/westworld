@@ -1,0 +1,1773 @@
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:21:30]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:22:48]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:22:48]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:22:48]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:22:48]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 14:22:48]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Controller]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:39:12]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Invalid setting choice) The supplied value 'yes' is not a valid option for the setting 'createDiscretizationReport'.
+
+(Invalid setting choice) The supplied value 'yes' is not a valid option for the setting 'createDiscretizationReport'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:136)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Controller]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Controller]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:39:33]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Invalid setting choice) The supplied value 'yes' is not a valid option for the setting 'createDiscretizationReport'.
+
+(Invalid setting choice) The supplied value 'yes' is not a valid option for the setting 'createDiscretizationReport'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:136)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Controller]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:41:17]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:41:17]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:41:17]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:41:17]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-5 15:41:17]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:200)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:150)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:447)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:58:42]
+The following info is provided to assist in trouble-shooting: 
+The settings file 'data/apptest/app.setting.txt' cannot be found at 'input'.
+
+(Alert: default applied.) Default value ('input') applied to 'settingsDirectory' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:515)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:844)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:111)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:59:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:202)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:152)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:59:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:202)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:152)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:59:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:202)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:152)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:59:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:202)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:152)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 19:59:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:202)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:152)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:449)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:02:07]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:205)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:155)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:452)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:02:08]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:205)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:155)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:452)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:02:08]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:205)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:155)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:452)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:02:08]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:205)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:155)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:452)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:02:08]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:205)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:155)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:452)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:04:35]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:04:35]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:04:35]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:04:35]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:04:35]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 1]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:06:40]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 1]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 2]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:06:40]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 2]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 3]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:06:40]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 3]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 4]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:06:40]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 4]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+[Thread 5]                       ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-7 20:06:40]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Although Banjo was able to perform all validation checks, the following issues prevented further program execution:
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+(Invalid setting choice) The supplied value 'AllLocalMove' is not a valid option for the setting 'proposerChoice'.
+
+
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.BanjoThreadHandler.<init>(BanjoThreadHandler.java:161)
+edu.duke.cs.banjo.application.Banjo.runMultipleInstances(Banjo.java:213)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:163)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:460)
+
+-----------------------------------------------------------------------------
+[Thread 5]                 End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 11:12:56]
+The following info is provided to assist in trouble-shooting: 
+The settings file 'banjo.txt' cannot be found at 'input'.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('input') applied to 'settingsDirectory' parameter.
+(Alert: default applied.) Default value ('banjo.txt') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:523)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:111)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:464)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 11:17:13]
+The following info is provided to assist in trouble-shooting: 
+The settings file 'banjo.txt' cannot be found at 'input'.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('input') applied to 'settingsDirectory' parameter.
+(Alert: default applied.) Default value ('banjo.txt') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:523)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:111)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:464)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 14:31:54]
+The following info is provided to assist in trouble-shooting: 
+'input.txt' is not a valid (input) directory.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.data.observations.ObservationsAsArray.loadData(ObservationsAsArray.java:154)
+edu.duke.cs.banjo.utility.FileUtil.loadObservations(FileUtil.java:571)
+edu.duke.cs.banjo.data.settings.Settings.loadObservations(Settings.java:3206)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:141)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 14:37:31]
+The following info is provided to assist in trouble-shooting: 
+'' is not a valid (input) directory.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.data.observations.ObservationsAsArray.loadData(ObservationsAsArray.java:154)
+edu.duke.cs.banjo.utility.FileUtil.loadObservations(FileUtil.java:572)
+edu.duke.cs.banjo.data.settings.Settings.loadObservations(Settings.java:3206)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:141)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 15:56:48]
+The following info is provided to assist in trouble-shooting: 
+
+ *** Cannot find the settings file at either location: '.\file:\D:\workspace\banjo2.0\bin\edu\duke\cs\banjo\utility' and 'D:\workspace\banjo2.0\.\file:\D:\workspace\banjo2.0\bin\edu\duke\cs\banjo\utility'?!
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:537)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 15:58:16]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.D:\workspace\banjo2.0\bin\edu\duke\cs\banjo\utility (¾Ü¾ø·ÃÎÊ¡£)
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 16:24:33]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.java.io.BufferedInputStream cannot be cast to java.io.FileInputStream
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 16:42:16]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 16:42:53]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 16:47:38]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 18:07:19]
+[Development-related error: This message may be generated to remind the Banjo developers to complete or restructure a section of code] 
+Error details -- Please notify the developer that Banjo provided the following info: 
+(Development issue?) Error(s) trying to load the settings file.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:549)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:845)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:121)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                            5-vars-898-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-1-8 18:10:08]
+The following info is provided to assist in trouble-shooting: 
+'data/apptest/input' is not a valid (input) directory.
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+(Alert: default applied.) Default value ('src/settings.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.data.observations.ObservationsAsArray.loadData(ObservationsAsArray.java:154)
+edu.duke.cs.banjo.utility.FileUtil.loadObservations(FileUtil.java:641)
+edu.duke.cs.banjo.data.settings.Settings.loadObservations(Settings.java:3206)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:141)
+edu.duke.cs.banjo.application.Banjo.main(Banjo.java:461)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+

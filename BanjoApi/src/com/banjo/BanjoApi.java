@@ -1,8 +1,10 @@
 package com.banjo;
 
+/*** BinWu 2017/1/8 ***/
+
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-/*** BinWu 2017/1/8 ***/
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -207,7 +209,7 @@ public class BanjoApi {
         br.close();
 	}
 	
-	public void getDne(String out_model_dir) throws IOException {
+	public void getDne(String out_model_dir) throws IOException { // This function cannot be runned along
 		long stap = System.currentTimeMillis()/1000;
 		File writename4 = new File(out_model_dir+"/neticaFile.dne");
 		writename4.createNewFile(); // create file
