@@ -15,7 +15,7 @@ import com.realsight.brain.timeseries.lib.util.plot.Plot;
  * @author Sun Muxin
  * 
  */ 
-public class OnlineAnormalyExample {
+public class OnlineAnormalyExample1 {
 	/**
 	 * @param args
 	 * @throws Exception 
@@ -23,28 +23,31 @@ public class OnlineAnormalyExample {
 	
 	public static void main(String[] args) throws Exception {
 		String root = new File(System.getProperty("user.dir")).getPath();
-		String localPath = Paths.get(root, "target", "data", "test.csv").toString();
+		String localPath = Paths.get(root, "target", "data", "1_9_test_data.csv").toString();
 		TestData td = new TestData(localPath);
 		DoubleSeries cpuSeries = td.getPropertySeries("cpu");
 		DoubleSeries httpSeries = td.getPropertySeries("http_times");
 		DoubleSeries sessionSeries = td.getPropertySeries("session_count");
 		DoubleSeries threadSeries = td.getPropertySeries("thread_count");
 		DoubleSeries memorySeries = td.getPropertySeries("used_memory");
-		System.out.println(cpuSeries.min()+"\t"+cpuSeries.max()+"\t"+cpuSeries.mean()+"\t"+
-				cpuSeries.variance());
+		DoubleSeries clientSeries = td.getPropertySeries("client");
+		System.out.println(httpSeries.min()+"\t"+memorySeries.max()+"\t"+memorySeries.mean()+"\t"+
+				memorySeries.variance());
+		System.out.println(clientSeries);
+		clientSeries.normly();
 		cpuSeries.normly();
 		httpSeries.normly();
 		sessionSeries.normly();
 		threadSeries.normly();
 		memorySeries.normly();
-		Plot.plot("apm test", cpuSeries, sessionSeries, memorySeries, httpSeries, threadSeries);
-		DoubleSeries series = threadSeries;
+		MultipleDoubleSeries tmp = new MultipleDoubleSeries(cpuSeries, httpSeries, sessionSeries, threadSeries, memorySeries);
+		DoubleSeries series = cpuSeries;
 		double minValue = series.min();
 		double maxValue = series.max();
 		OnlineAnormalyDetectionAPI detection = new OnlineAnormalyDetectionAPI(minValue, maxValue);
-		DoubleSeries anormalys = detection.detectorSeries(series);
-		Plot.plot("apm test", anormalys, httpSeries, series);
-		String resultDir = Util.writeCsv(new MultipleDoubleSeries(series, anormalys)).toString();
+		DoubleSeries anormalys = detection.detectorSeries(series, 0.85);
+		Plot.plot("anormalys and cpu", anormalys, clientSeries, series);
+		String resultDir = Util.writeCsv(tmp).toString();
 		System.out.println("anormaly result dir is : " + resultDir);
 	}
 }

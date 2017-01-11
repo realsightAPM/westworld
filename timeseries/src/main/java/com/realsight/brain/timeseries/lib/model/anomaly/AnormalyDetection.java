@@ -37,6 +37,21 @@ public abstract class AnormalyDetection {
 		return scores;
 	}
 	
+	public DoubleSeries detectorSeries(DoubleSeries nSeries, double baseThreshold) {
+		DoubleSeries scores = new DoubleSeries("anormalys");
+		for ( int i = 0; i < nSeries.size(); i++ ) {
+			double value = nSeries.get(i).getItem();
+			Long timestamp = nSeries.get(i).getInstant();
+			Entry<Double> score = detection(value, timestamp);
+			if ( score.getItem()>baseThreshold && i>200 ) {
+				scores.add(new Entry<Double>(score.getItem(), score.getInstant()));
+			} else {
+				scores.add(new Entry<Double>(0.0, score.getInstant()));
+			}
+		}
+		return scores;
+	}
+	
 	public List<Pair<Long, Long>> detectorSeriesAnomalySegment(DoubleSeries nSeries) {
 		return detectorSeriesAnomalySegment(nSeries, 0.81);
 	}

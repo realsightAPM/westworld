@@ -1,4 +1,4 @@
-package com.realsight.brain.timeseries.example;
+package com.realsight.brain.timeseries.test;
 
 
 import java.io.File;
@@ -8,13 +8,14 @@ import com.realsight.brain.timeseries.api.OnlineAnormalyDetectionAPI;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.util.Util;
-import com.realsight.brain.timeseries.lib.util.data.TimeseriesData;
+import com.realsight.brain.timeseries.lib.util.data.ArtificialData;
+import com.realsight.brain.timeseries.lib.util.plot.Plot;
 
 /**
  * @author Sun Muxin
  * 
  */ 
-public class OnlineAnormalyExample {
+public class OnlineAnormalyExample2 {
 	/**
 	 * @param args
 	 * @throws Exception 
@@ -22,15 +23,17 @@ public class OnlineAnormalyExample {
 	
 	public static void main(String[] args) throws Exception {
 		String root = new File(System.getProperty("user.dir")).getPath();
-		String localPath = Paths.get(root, "target", "data", 
-				"315.1c701d3e20125b8909c8bc40aa4cc1e0.ActiveThreadsNum.train").toString();
-		TimeseriesData td = new TimeseriesData(localPath);
+		String localPath = Paths.get(root, "target", "data", "TS_a.csv").toString();
+		ArtificialData td = new ArtificialData(localPath);
 		DoubleSeries nSeries = td.getPropertySeries("value");
+		nSeries.normly();
 		double minValue = nSeries.min();
 		double maxValue = nSeries.max();
 		OnlineAnormalyDetectionAPI detection = new OnlineAnormalyDetectionAPI(minValue, maxValue);
-		DoubleSeries anormalys = detection.detectorSeries(nSeries.subSeries(0, 3000));
+		
+		DoubleSeries anormalys = detection.detectorSeries(nSeries.subSeries(0,  20), 0.05);
 		String resultDir = Util.writeCsv(new MultipleDoubleSeries(nSeries, anormalys)).toString();
 		System.out.println("anormaly result dir is : " + resultDir);
+		Plot.plot("Artificial Dataset TS_b", anormalys, nSeries);
 	}
 }

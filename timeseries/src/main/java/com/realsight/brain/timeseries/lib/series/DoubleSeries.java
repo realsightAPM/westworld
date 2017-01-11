@@ -403,8 +403,9 @@ public class DoubleSeries extends TimeSeries<Double> {
     	if(this.size() == 0)
     		return 1.0;
     	double var = 0.0;
+    	double m = mean();
     	for(int i = 0; i < this.size(); i++){
-    		var += Math.pow(this.getData().get(i).getItem(), 2);
+    		var += Math.pow(this.getData().get(i).getItem()-m, 2);
     	}
     	return Math.sqrt(var/this.size());
     }

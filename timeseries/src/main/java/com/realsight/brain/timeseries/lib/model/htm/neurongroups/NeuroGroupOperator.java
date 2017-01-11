@@ -133,6 +133,13 @@ public class NeuroGroupOperator {
 			    int contextID = this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().get(rightSemiContextID);
 			    if (contextID == nextFreeContextIDNumber){
 	//		    	System.out.println(contextID);
+			    	System.out.print((contextID+(1<<30)) + " : ");
+			    	for(int ii = 0; ii < leftFacts.size(); ii++)
+						System.out.print(leftFacts.get(ii) + " ");
+					System.out.print("-> ");
+					for(int ii = 0; ii < rightFacts.size(); ii++)
+						System.out.print(rightFacts.get(ii) + " ");
+					System.out.print("\n");
 			    	numAddedContexts += 1;
 			    	CrossedContext crossedContexts = new CrossedContext(0, zeroLevel, leftHash, rightHash);
 			    	this.contextsValuesList.add(crossedContexts);
