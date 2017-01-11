@@ -1,55 +1,41 @@
 bnet APM {
 autoupdate = FALSE;
-whenchanged = 1484047579);
+whenchanged = 1484117392);
 
 node cpu{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (nettime, );
-whenchanged = 1484047579;
+parents = (session_count, used_memory, );
+whenchanged = 1484117392;
 
 node http_times{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (thread_count, );
-whenchanged = 1484047579;
+parents = (cpu, session_count, thread_count, );
+whenchanged = 1484117392;
 
 node session_count{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (client, );
-whenchanged = 1484047579;
+parents = ();
+whenchanged = 1484117392;
 
 node thread_count{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (nettime, );
-whenchanged = 1484047579;
+parents = (cpu, session_count, used_memory, );
+whenchanged = 1484117392;
 
 node used_memory{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (client, );
-whenchanged = 1484047579;
-
-node client{
-kind = NATURE;
-discrete = TRUE;
-states = (a, b, c, d, e);
-parents = (nettime, );
-whenchanged = 1484047579;
-
-node nettime{
-kind = NATURE;
-discrete = TRUE;
-states = (a, b, c, d, e);
-parents = ();
-whenchanged = 1484047579;
+parents = (session_count, );
+whenchanged = 1484117392;
 
 
 

@@ -236,7 +236,7 @@ public class BanjoApi {
 		// TODO Auto-generated method stub
 		
 		BanjoApi banjoApi = new BanjoApi();
-		banjoApi.train("inputjava_7.csv", "out_model_dir", 10);
+		banjoApi.train("inputjava_data1.csv", "out_model_dir", 10);
 		
 	}
 
