@@ -51,13 +51,23 @@ public class Stress {
 	 public void run() throws Exception{
 		 for(int i=0;i<10;i++)
 			{
+			 System.out.println(" client add ");
 				queue.add(getClient());
 			}
 		 
 		 for(int i=0;i<3*60;i++){
-			
 				Thread.sleep(60*1000);//3小时
 				change();
+			}
+			
+			for(int i=0;i<4*60;i++){
+				Thread.sleep(60*1000);//3小时
+				add();
+			}
+			
+			for(int i=0;i<3*60;i++){
+				Thread.sleep(60*1000);//2小时
+				remove();
 			}
 			
 			for(int i=0;i<4*60;i++){

@@ -8,6 +8,10 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+
 import apm.globalinfo.Save;
 import apm.mode.ClassInfo;
 import apm.mode.HeapHistory;
@@ -35,8 +39,8 @@ public class DBServer {
 	}
 	
 	public static void saveSystemInfo(SystemInfo systemInfo) throws SQLException{
-		System.out.println("add systemInfo ^^^^^^^^^^ &&&&&&&&&&&&&&&&&&&&&&&&&&");
-		String insertSystemInfo = "INSERT INTO `systeminfo_table` "
+		//System.out.println("add systemInfo ^^^^^^^^^^ &&&&&&&&&&&&&&&&&&&&&&&&&&");
+		/*String insertSystemInfo = "INSERT INTO `systeminfo_table` "
 				+ "(`times`, `cpu`, `http_times`, `session_count`, `thread_count`,`used_memory`,`client`,`nettime`) "
 				+ "VALUES (?, ?, ?, ?, ?, ?,?,?);";
 		 Connection connection = ConnectorFactory.getConnection();
@@ -60,7 +64,12 @@ public class DBServer {
 		 preStatement.executeUpdate();
 		System.out.println("add systemInfo");
 		 preStatement.close();
-		 connection.close();
+		 connection.close();*/
+		Session session = SessionFactory.getSession();
+		org.hibernate.Transaction trans = session.beginTransaction();
+		session.save(systemInfo);
+		trans.commit();
+		session.close();
 	}
 	
 	
