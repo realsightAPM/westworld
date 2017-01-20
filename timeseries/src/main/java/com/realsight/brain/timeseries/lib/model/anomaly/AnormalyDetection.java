@@ -22,7 +22,7 @@ public abstract class AnormalyDetection {
 	
 	public Entry<Double> detection(double value, Long timestamp) {
 		double score = anormalyHTM.detectorAnomaly(value, timestamp);
-		score += anormalySegment.detectorAnomaly(value, timestamp)/2;
+//		score += anormalySegment.detectorAnomaly(value, timestamp)/2;
 //		System.out.println(timestamp + ", " + value + ", " + score);
 		return (new Entry<Double>(score, timestamp));
 	}
