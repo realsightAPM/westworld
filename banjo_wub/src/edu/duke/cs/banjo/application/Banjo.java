@@ -106,7 +106,7 @@ public class Banjo {
             String[] fileList;
             
             // create output dir
-            File outfile = new File("output");
+            File outfile = new File("banjo_out_dir");
     		if(outfile.exists()) {
                 System.out.println("目标文件已存在！");
                 String[] file_list = outfile.list();

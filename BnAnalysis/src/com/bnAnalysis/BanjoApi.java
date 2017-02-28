@@ -81,7 +81,7 @@ public class BanjoApi {
 	
 	private void buildStructure() throws IOException { // This function cannot be runned along
 		
-		String pathname = "output/topGraph.txt"; // absolute dir or relative dit
+		String pathname = "banjo_out_dir/topGraph.txt"; // absolute dir or relative dit
         File filename = new File(pathname);  
         InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // create an input stream object: reader  
         BufferedReader br = new BufferedReader(reader); // build an object which translates the data to that computer can read
