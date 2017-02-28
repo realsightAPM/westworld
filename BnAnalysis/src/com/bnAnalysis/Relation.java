@@ -17,6 +17,7 @@ public class Relation {
 		Pearson pearson = new Pearson();
 		
 		pearson.writeMatrixCSV();
+		pearson.normal.writeCSV();
 	}
 	
 }
