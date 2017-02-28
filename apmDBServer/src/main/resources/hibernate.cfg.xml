@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+  <property name="hibernate.c3p0.max_size">20</property>
+  <property name="hibernate.c3p0.min_size">5</property>
+  <property name="hibernate.c3p0.timeout">120</property>
+  <property name="automaticTestTable">Test</property>
+  <property name="hibernate.c3p0.max_statements">100</property>
+  <property name="hibernate.c3p0.idle_test_period">120</property>
+  <property name="hibernate.c3p0.acquire_increment">1</property>
+  <property name="c3p0.testConnectionOnCheckout">true</property>
+  <property name="c3p0.idleConnectionTestPeriod">18000</property>
+  <property name="c3p0.maxIdleTime">25000</property>
+  <property name="c3p0.idle_test_period">120</property>
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+  <!-- 		部署的服务器使用本地数据库 -->
+  <property name="connection.url">jdbc:mysql://127.0.0.1:3306/apmdata?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false</property>
+  <!-- <property name="connection.url"> jdbc:mysql://localhost:3306/lncxcyw?autoReconnect=true&amp;autoReconnectForPools=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</property> -->
+  <property name="connection.username">root</property>
+  <property name="connection.password">21424019</property>
+  <!--         <property name="format_sql">true</property> 
+         <property name="connection.autocommit">true</property> -->
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="show_sql">true</property>
+  <!--         <property name="hbm2ddl.auto">create-drop</property> -->
+  <property name="hbm2ddl.auto">update</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="connection.autoReconnect">true</property>
+  <property name="connection.autoReconnectForPools">true</property>
+  <property name="connection.is-connection-validation-required">true</property>
+  <mapping class="apm.mode.SystemInfo"/>
+ </session-factory>
+</hibernate-configuration>

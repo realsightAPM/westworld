@@ -133,6 +133,13 @@ public class NeuroGroupOperator {
 			    int contextID = this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().get(rightSemiContextID);
 			    if (contextID == nextFreeContextIDNumber){
 	//		    	System.out.println(contextID);
+//			    	System.out.print((contextID+(1<<30)) + " : ");
+//			    	for(int ii = 0; ii < leftFacts.size(); ii++)
+//						System.out.print(leftFacts.get(ii) + " ");
+//					System.out.print("-> ");
+//					for(int ii = 0; ii < rightFacts.size(); ii++)
+//						System.out.print(rightFacts.get(ii) + " ");
+//					System.out.print("\n");
 			    	numAddedContexts += 1;
 			    	CrossedContext crossedContexts = new CrossedContext(0, zeroLevel, leftHash, rightHash);
 			    	this.contextsValuesList.add(crossedContexts);
@@ -267,22 +274,22 @@ public class NeuroGroupOperator {
         this.potentialNewContextList = potentialNewContextList;
         this.beActivatedList = beActivatedList;
         this.history.put(timestamp, activeContexts.size());
-        if (this.timestamp == -1L) {
-        	Iterator <Long> iter = this.beActivatedList.iterator();
-        	Map<Long, Integer> count = new HashMap<Long, Integer>(); 
-        	while(iter.hasNext()) {
-        		Long t = iter.next();
-        		if ( !count.containsKey(t) )
-        			count.put(t, 1);
-        		else {
-        			int c = count.get(t);
-        			count.put(t, c+1);
-        		}
-        	}
-        	for ( Map.Entry<Long, Integer> entry : count.entrySet()) {
-        		System.out.println(entry.getKey() + "\t" + (1.0*entry.getValue()/this.history.get(entry.getKey())));
-        	}
-        }
+//      if (this.timestamp == -1L) {
+//        	Iterator <Long> iter = this.beActivatedList.iterator();
+//        	Map<Long, Integer> count = new HashMap<Long, Integer>(); 
+//        	while(iter.hasNext()) {
+//        		Long t = iter.next();
+//        		if ( !count.containsKey(t) )
+//        			count.put(t, 1);
+//        		else {
+//        			int c = count.get(t);
+//        			count.put(t, c+1);
+//        		}
+//        	}
+//        	for ( Map.Entry<Long, Integer> entry : count.entrySet()) {
+//        		System.out.println(entry.getKey() + "\t" + (1.0*entry.getValue()/this.history.get(entry.getKey())));
+//        	}
+//        }
 //        System.out.println("up - > " + activeContexts.size()+","+numSelectedContext+","+potentialNewContextList.size());
 	}
 }

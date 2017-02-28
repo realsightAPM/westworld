@@ -1,5 +1,6 @@
 package com.realsight.brain.timeseries.lib.util.plot;
 
+import java.security.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,77 +18,6 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 
 public class Plot {
-	//Plot the data
-	public static void plot(final INDArray x, final INDArray y, final INDArray... predicted) {
-        final XYSeriesCollection dataSet = new XYSeriesCollection();
-        addSeries(dataSet,x,y,"True Function (Labels)");
-
-        for( int i=0; i<predicted.length; i++ ){
-            addSeries(dataSet,x,predicted[i],String.valueOf(i));
-        }
-
-        final JFreeChart chart = ChartFactory.createXYLineChart(
-                "Plot Example",      // chart title
-                "Time",                     // x axis label
-                "Number of Sunspot", 		// y axis label
-                dataSet,                    // data
-                PlotOrientation.VERTICAL,
-                true,                       // include legend
-                true,                       // tooltips
-                false                       // urls
-        );
-
-        final ChartPanel panel = new ChartPanel(chart);
-
-        final JFrame f = new JFrame();
-        f.add(panel);
-        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        f.pack();
-
-        f.setVisible(true);
-    }
-
-    private static void addSeries(final XYSeriesCollection dataSet, final INDArray x, final INDArray y, final String label){
-        final double[] xd = x.data().asDouble();
-        final double[] yd = y.data().asDouble();
-        final XYSeries s = new XYSeries(label);
-        for( int j=0; j<xd.length; j++ ) s.add(xd[j],yd[j]);
-        dataSet.addSeries(s);
-    }
-    
-    @SafeVarargs
-	public static void plot(final List<Double> y, final List<Double>... predicted){
-    	List<Double> x = new ArrayList<Double>();
-    	for(int i = 0; i < y.size(); i++){
-    		x.add(i+0.0);
-    	}
-    	final XYSeriesCollection dataSet = new XYSeriesCollection();
-        addSeries(dataSet,x,y,"True Function (Labels)");
-        
-        for( int i=0; i<predicted.length; i++ ){
-            addSeries(dataSet,x,predicted[i],String.valueOf(i));
-        }
-
-        final JFreeChart chart = ChartFactory.createXYLineChart(
-                "SBSBSB SBSBSB",      // chart title
-                "Time",                     // x axis label
-                "Number of Sunspot", 		// y axis label
-                dataSet,                    // data
-                PlotOrientation.VERTICAL,
-                true,                       // include legend
-                true,                       // tooltips
-                false                       // urls
-        );
-
-        final ChartPanel panel = new ChartPanel(chart);
-
-        final JFrame f = new JFrame();
-        f.add(panel);
-        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        f.pack();
-
-        f.setVisible(true);
-    }
 
 	private static void addSeries(XYSeriesCollection dataSet, List<Double> x, List<Double> y, String label) {
 		// TODO Auto-generated method stub
@@ -107,7 +37,7 @@ public class Plot {
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
     	for(int i = 0; i < series.size(); i++){
-    		x.add(series.get(i).getInstant()+0.0);
+    		x.add(0.0+series.get(i).getInstant());
     		y.add(series.get(i).getItem());
     	}
     	
@@ -117,11 +47,10 @@ public class Plot {
         for( int i=0; i<subSeries.length; i++ ){
         	List<Double> p = new ArrayList<Double>();
         	for (int j = 0, k = 0; j < series.size(); ) {
-        		if ( k < subSeries[i].size() ) {
+        		if ( k >= subSeries[i].size() ) {
         			p.add(0.0);
         			j++;
-        		}
-        		else if ( subSeries[i].get(k).getInstant().equals(series.get(j).getInstant()) ) {
+        		} else if ( subSeries[i].get(k).getInstant().equals(series.get(j).getInstant()) ) {
         			p.add(subSeries[i].get(k).getItem());
         			k++; j++;
         		} else if ( subSeries[i].get(k).getInstant() < series.get(j).getInstant() ) {
@@ -151,7 +80,6 @@ public class Plot {
         f.add(panel);
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.pack();
-
         f.setVisible(true);
 	}
     

@@ -18,6 +18,7 @@ public class Client {
 	private int threadCount;
 	private ExecutorService threadPool;
 	private LinkedBlockingQueue<String> urlqueue;
+	private volatile boolean isStop=false;
 	private static final int MAX_SIZE = 100000; 
 	public Client(String url,String hostName,int threadCount){
 		this.startUrl = url;
@@ -38,6 +39,7 @@ public class Client {
 	}
 	
 	public void stopNow(){
+		isStop = true;
 		threadPool.shutdownNow();
 	}
 	
@@ -47,7 +49,7 @@ public class Client {
 		
 		public void run() {
 			// TODO Auto-generated method stub
-			while(true){
+			while(!isStop){
 				String url = urlqueue.poll();
 				if(url!=null){
 					try {

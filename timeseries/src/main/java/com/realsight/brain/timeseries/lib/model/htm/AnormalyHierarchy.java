@@ -13,7 +13,7 @@ public class AnormalyHierarchy {
 	private double maxValue;
 	private static final int maxLeftSemiContextsLenght = 7;
 	private static final int maxActiveNeuronsNum = 15;
-	private static final int numBit = 3;
+	private static final int numBit = 4;
 	private double fullValueRange;
 	private double minValueStep;
 	private NeuroGroup neuroGroup = null;

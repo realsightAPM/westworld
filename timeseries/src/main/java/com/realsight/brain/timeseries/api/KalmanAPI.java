@@ -6,7 +6,7 @@ import com.realsight.brain.timeseries.lib.model.kalman.test.Backtest;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
-import com.realsight.brain.timeseries.lib.util.data.RealSight;
+import com.realsight.brain.timeseries.lib.util.data.RealSightData;
 import com.realsight.brain.timeseries.lib.util.plot.Plot;
 import com.realsight.brain.timeseries.lib.util.results.Domain;
 
@@ -176,21 +176,21 @@ public class KalmanAPI {
 	}
 	
 	public void train(String file_path) throws Exception{
-		RealSight.setLocalDir(file_path);
-		List<String> x = new ArrayList<String>();
-        String y = "value-0";
-        x.add("ones-0");
-        x.add("ones-0");
-        x.add("ones-0");
-        x.add("ones-0");
-        CointegrationAction strategy = new CointegrationAction(x, y);
-        // download historical data
-        MultipleDoubleSeries series = new MultipleDoubleSeries(RealSight.getPropertySeries("value"),
-        		RealSight.getPropertySeries("ones", 0), RealSight.getPropertySeries("zeros", 0));
-        Backtest backtest = new Backtest(series);
-        backtest.run(strategy, series);
-        save(backtest.getFilter());
-        deleteNoise();
+//		RealSight.setLocalDir(file_path);
+//		List<String> x = new ArrayList<String>();
+//        String y = "value-0";
+//        x.add("ones-0");
+//        x.add("ones-0");
+//        x.add("ones-0");
+//        x.add("ones-0");
+//        CointegrationAction strategy = new CointegrationAction(x, y);
+//        // download historical data
+//        MultipleDoubleSeries series = new MultipleDoubleSeries(RealSight.getPropertySeries("value"),
+//        		RealSight.getPropertySeries("ones", 0), RealSight.getPropertySeries("zeros", 0));
+//        Backtest backtest = new Backtest(series);
+//        backtest.run(strategy, series);
+//        save(backtest.getFilter());
+//        deleteNoise();
 	}
 	public void train(DoubleSeries ySeries) throws Exception {
 		List<String> x = new ArrayList<String>();
@@ -266,16 +266,16 @@ public class KalmanAPI {
 	}
 	
     private void main() throws Exception {
-    	String localDir = Paths.get(System.getProperty("user.dir"), "target", "data", 
-    			"282.1c701d3e20125b8909c8bc40aa4cc1e0.ActiveThreadsNum").toString();
-    	train(localDir);
-    	DoubleSeries ySeries = RealSight.getPropertySeries("value");
-    	Plot.plot("kalman", ySeries);
-    	for(int i = 0; i < ySeries.size(); i++){
-    		forecasting(ySeries.get(i));
-    		System.out.println(getTimeStamp() + " " + getValue() + " " + getFValue() + " " + getsd() + 
-    				" " + getUpper_bound() + " " + getLower_bound());
-    	}
+//    	String localDir = Paths.get(System.getProperty("user.dir"), "target", "data", 
+//    			"282.1c701d3e20125b8909c8bc40aa4cc1e0.ActiveThreadsNum").toString();
+//    	train(localDir);
+//    	DoubleSeries ySeries = RealSight.getPropertySeries("value");
+//    	Plot.plot("kalman", ySeries);
+//    	for(int i = 0; i < ySeries.size(); i++){
+//    		forecasting(ySeries.get(i));
+//    		System.out.println(getTimeStamp() + " " + getValue() + " " + getFValue() + " " + getsd() + 
+//    				" " + getUpper_bound() + " " + getLower_bound());
+//    	}
     }
     
     public static void main(String[] args) throws Exception {

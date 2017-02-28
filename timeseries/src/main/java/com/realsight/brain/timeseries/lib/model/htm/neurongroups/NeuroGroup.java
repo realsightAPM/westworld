@@ -33,11 +33,12 @@ public class NeuroGroup {
 	private double activate(List<Integer> currSensFacts, boolean rate, Long timestamp) {
 		this.neuroGroupOperator.setRate(rate);
 		this.neuroGroupOperator.setTimestamp(timestamp);
-//		for(int i = 0; i < currSensFacts.size(); i++)
-//			System.out.print(currSensFacts.get(i) + " ");
-//		System.out.print("\n");
+		
 //		for(int i = 0; i < this.leftFactsGroup.size(); i++)
 //			System.out.print(this.leftFactsGroup.get(i) + " ");
+//		System.out.print("-> ");
+//		for(int i = 0; i < currSensFacts.size(); i++)
+//			System.out.print(currSensFacts.get(i) + " ");
 //		System.out.print("\n");
 		currSensFacts = new ArrayList<Integer>(new HashSet<Integer>(currSensFacts));
 		Collections.sort(currSensFacts);

@@ -22,7 +22,7 @@ public abstract class AnormalyDetection {
 	
 	public Entry<Double> detection(double value, Long timestamp) {
 		double score = anormalyHTM.detectorAnomaly(value, timestamp);
-		score += anormalySegment.detectorAnomaly(value, timestamp)/2;
+//		score += anormalySegment.detectorAnomaly(value, timestamp)/2;
 //		System.out.println(timestamp + ", " + value + ", " + score);
 		return (new Entry<Double>(score, timestamp));
 	}
@@ -33,6 +33,21 @@ public abstract class AnormalyDetection {
 			double value = nSeries.get(i).getItem();
 			Long timestamp = nSeries.get(i).getInstant();
 			scores.add(detection(value, timestamp));
+		}
+		return scores;
+	}
+	
+	public DoubleSeries detectorSeries(DoubleSeries nSeries, double baseThreshold) {
+		DoubleSeries scores = new DoubleSeries("anormalys");
+		for ( int i = 0; i < nSeries.size(); i++ ) {
+			double value = nSeries.get(i).getItem();
+			Long timestamp = nSeries.get(i).getInstant();
+			Entry<Double> score = detection(value, timestamp);
+			if ( score.getItem()>baseThreshold && i>200 ) {
+				scores.add(new Entry<Double>(score.getItem(), score.getInstant()));
+			} else {
+				scores.add(new Entry<Double>(0.0, score.getInstant()));
+			}
 		}
 		return scores;
 	}

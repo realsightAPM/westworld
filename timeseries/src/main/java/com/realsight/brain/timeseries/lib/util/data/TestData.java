@@ -35,7 +35,7 @@ public class TestData extends BaseData{
 			Long pre_timestamp = -1L;
 			while(cr.readRecord()){
 				String time = cr.get("times");
-				System.out.println(time);
+//				System.out.println(time);
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 				Date date = null;
 				try {

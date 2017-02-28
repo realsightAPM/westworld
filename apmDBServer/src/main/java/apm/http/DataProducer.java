@@ -1,6 +1,7 @@
 package apm.http;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.Executors;
@@ -11,12 +12,15 @@ import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.hibernate.Session;
 
 import apm.Process.DataProcess;
+import apm.db.SessionFactory;
 import apm.globalinfo.HttpMethod;
 
 public class DataProducer implements Runnable{
@@ -30,8 +34,6 @@ public class DataProducer implements Runnable{
 	private HttpMethod methodType;
 	
 	private DataProcess process;
-	
-	private volatile boolean stop = false;
 	
 	private ScheduledExecutorService scheduledThreadPool;
 	
@@ -54,6 +56,7 @@ public class DataProducer implements Runnable{
 		switch(method){
 			case GET:
 			{
+				//System.out.println("heheheheheheh   createHttpUriRequest 57");
 				StringBuffer getParams = new StringBuffer();
 				if(params!=null)
 				{
@@ -66,11 +69,10 @@ public class DataProducer implements Runnable{
 						if(index<params.size())
 							getParams.append("&");
 					}
+			
 					url = url+"?"+getParams.toString();
 				}
-				
 				HttpGet get = new HttpGet(url);
-				
 				request = get;
 			}break;
 			case POST:
@@ -82,9 +84,7 @@ public class DataProducer implements Runnable{
 	}
 	
 	public void run() {
-		
 		HttpUriRequest request = createHttpUriRequest(url,params,methodType);
-			
 			try {
 				String message = getDataFromURL(request);
 				if(params.containsKey("part"))
@@ -113,14 +113,17 @@ public class DataProducer implements Runnable{
 		scheduledThreadPool	= Executors.newScheduledThreadPool(1);
 		
 		scheduledThreadPool.scheduleAtFixedRate(this, 0, 60,TimeUnit.SECONDS);
+		//System.out.println("data produce start");
 		//scheduledThreadPool.schedule(this, 10, TimeUnit.SECONDS);
 		//schedule(this, 0, 10, TimeUnit.SECONDS);
+	//	Session session  = SessionFactory.getSession();
+	//	session.close();
 		
 	}
 	
 	public void stop(){
+		System.out.println("DataProducer stop");
 		scheduledThreadPool.shutdownNow();
-		this.stop=true;
 	}
 	
 }

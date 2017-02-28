@@ -34,6 +34,7 @@ public class DataProcess {
 					heapDataProcesser.process(data);
 				}break;
 				case SYSTEMINFO:{
+					System.out.println("hahahahahahh");
 					systemInfoProcess.process(data);
 				}break;
 			}

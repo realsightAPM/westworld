@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CrossedContext {
-	private final int MEMORY_MAX_SIZE = 100;
+	private final int MEMORY_MAX_SIZE = 1;
 	private List<Long> memory;
 	private int numActivate;
 	private int zeroLevel;
