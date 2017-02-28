@@ -1,0 +1,18 @@
+
+digraph abstract { 
+
+label = "Banjo Version 2.2.0\nHigh scoring network, score: -8237.8639\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-1040-observations"; 
+labeljust="l"; 
+
+    0 [label="cpu"];
+    1 [label="http_times"];
+    2 [label="session_count"];
+    3 [label="thread_count"];
+    4 [label="used_memory"];
+
+    4->0;
+    3->1;
+    0->2;
+    2->3;
+}
+
