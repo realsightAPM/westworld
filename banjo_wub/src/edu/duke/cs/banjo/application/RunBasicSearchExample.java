@@ -17,6 +17,8 @@
  */
 package edu.duke.cs.banjo.application;
 
+import java.util.Properties;
+
 import edu.duke.cs.banjo.data.observations.ObservationsI;
 import edu.duke.cs.banjo.data.settings.Settings;
 import edu.duke.cs.banjo.learner.*;
@@ -52,8 +54,8 @@ public class RunBasicSearchExample {
 
             // Load and validate the parameters for running the application
             settings = new Settings();
-            String input_data = "";
-            settings.processCommandLine( args, input_data );
+            Properties properties = new Properties();
+            settings.processCommandLine( args, properties );
             
             // Setup the error handler so it knows about the (loaded) settings
             errorHandler = new BanjoErrorHandler( settings );

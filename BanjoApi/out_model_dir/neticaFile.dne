@@ -1,41 +1,237 @@
 bnet APM {
 autoupdate = FALSE;
-whenchanged = 1484117392);
+whenchanged = 1488161391);
+
+node HTTP_SYSTEM_ERROR{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, http4xxNum, http_Gobal_Hits, );
+whenchanged = 1488161391;
+
+node activeConnections{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = ();
+whenchanged = 1488161391;
+
+node activeThreads{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (tomcatBusyThreads, tomcatBytesReceived, );
+whenchanged = 1488161391;
+
+node clients{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http4xxNum, http5xxNum, );
+whenchanged = 1488161391;
 
 node cpu{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (session_count, used_memory, );
-whenchanged = 1484117392;
+parents = (http4xxNum, httpHitsRate, );
+whenchanged = 1488161391;
 
-node http_times{
+node deadLockThreads{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (cpu, session_count, thread_count, );
-whenchanged = 1484117392;
+parents = (HTTP_SYSTEM_ERROR, free_disk_space, usedNonHeapMemory, );
+whenchanged = 1488161391;
 
-node session_count{
+node fileDescriptors{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, );
+whenchanged = 1488161391;
+
+node free_disk_space{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, http4xxNum, http5xxNum, );
+whenchanged = 1488161391;
+
+node gc{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
 parents = ();
-whenchanged = 1484117392;
+whenchanged = 1488161391;
 
-node thread_count{
+node http2xxNum{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (cpu, session_count, used_memory, );
-whenchanged = 1484117392;
+parents = (http_Gobal_Hits, );
+whenchanged = 1488161391;
 
-node used_memory{
+node http4xxNum{
 kind = NATURE;
 discrete = TRUE;
 states = (a, b, c, d, e);
-parents = (session_count, );
-whenchanged = 1484117392;
+parents = (gc, http_Error_Hits, );
+whenchanged = 1488161391;
+
+node http5xxNum{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http_Error_Hits, http_Gobal_Hits, );
+whenchanged = 1488161391;
+
+node httpHitsRate{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (tomcatBytesSent, );
+whenchanged = 1488161391;
+
+node httpMeanTimes{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, );
+whenchanged = 1488161391;
+
+node httpSessions{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, http4xxNum, http_Cpu_Time_Sum, );
+whenchanged = 1488161391;
+
+node httpSessionsMeanAge{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http5xxNum, http_Cpu_Time_Sum, );
+whenchanged = 1488161391;
+
+node httpSystemErrors{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (httpMeanTimes, );
+whenchanged = 1488161391;
+
+node http_Cpu_Time_Sum{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (HTTP_SYSTEM_ERROR, http_Gobal_Hits, loadedClassesCount, );
+whenchanged = 1488161391;
+
+node http_Durations_Sum{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (deadLockThreads, http2xxNum, usedNonHeapMemory, );
+whenchanged = 1488161391;
+
+node http_Error_Hits{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = ();
+whenchanged = 1488161391;
+
+node http_Gobal_Hits{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http4xxNum, http_Error_Hits, );
+whenchanged = 1488161391;
+
+node loadedClassesCount{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http4xxNum, http5xxNum, threadCount, );
+whenchanged = 1488161391;
+
+node runningThreads{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (cpu, );
+whenchanged = 1488161391;
+
+node systemLoad{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (threadCount, );
+whenchanged = 1488161391;
+
+node threadCount{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, free_disk_space, );
+whenchanged = 1488161391;
+
+node tomcatBusyThreads{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (cpu, );
+whenchanged = 1488161391;
+
+node tomcatBytesReceived{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (gc, http4xxNum, tomcatBusyThreads, );
+whenchanged = 1488161391;
+
+node tomcatBytesSent{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, );
+whenchanged = 1488161391;
+
+node usedConnections{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (threadCount, );
+whenchanged = 1488161391;
+
+node usedMemory{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (free_disk_space, usedSwapSpaceSize, );
+whenchanged = 1488161391;
+
+node usedNonHeapMemory{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (http_Error_Hits, usedPhysicalMemorySize, );
+whenchanged = 1488161391;
+
+node usedPhysicalMemorySize{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (clients, free_disk_space, http2xxNum, );
+whenchanged = 1488161391;
+
+node usedSwapSpaceSize{
+kind = NATURE;
+discrete = TRUE;
+states = (a, b, c, d, e);
+parents = (fileDescriptors, http_Cpu_Time_Sum, );
+whenchanged = 1488161391;
 
 
 

@@ -42,7 +42,7 @@ public class BanjoApi {
             String[] file_list = outfile.list();
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
-            	delfile.delete();  
+            	delfile.delete();
                 System.out.println("ÒÑÉ¾³ý" + file_list[i]);  
             }
         }
@@ -236,7 +236,7 @@ public class BanjoApi {
 		// TODO Auto-generated method stub
 		
 		BanjoApi banjoApi = new BanjoApi();
-		banjoApi.train("inputjava_data1.csv", "out_model_dir", 10);
+		banjoApi.train("origin.csv", "out_model_dir", 2);
 		
 	}
 

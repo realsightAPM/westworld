@@ -202,7 +202,7 @@ public class Settings {
      * 
      * @param _applicationParameters The list of parameters provided.
      */
-  public void processCommandLine( final String[] _applicationParameters, final String input_data ) 
+  public void processCommandLine( final String[] _applicationParameters, final Properties properties ) 
           throws Exception { 
       
       // store in case we need to report on them later
@@ -212,7 +212,7 @@ public class Settings {
       // to the "application class" that is the wrapper for executing the search (e.g.,
       // the commandline application, or a gui)
             
-      loadSettings( _applicationParameters, input_data );
+      loadSettings( _applicationParameters, properties );
 
       // Validate any parameter that is part of this class
       validateRequiredData();
@@ -256,7 +256,7 @@ public class Settings {
      * @param _applicationParameters The list of parameters provided by the user to the
      * Banjo application
      */
-    protected synchronized void loadSettings( final String[] _applicationParameters, final String input_data ) 
+    protected synchronized void loadSettings( final String[] _applicationParameters, final Properties properties ) 
 			throws Exception {
 		
 	  	// If any optional parameters were specified, load them here
@@ -266,7 +266,7 @@ public class Settings {
 	    }
 	    
 	    // Load the parameters from the settings file 
-		loadedSettings = loadFileBasedParameters(input_data);
+		loadedSettings = loadFileBasedParameters(properties);
 		
 		// Load the default parameters, allowing us to keep machine dependent
 		// or user-designated "shared" parameters separate from core search parameters
@@ -786,7 +786,7 @@ public class Settings {
 //		return loadedParameters;
 //	}
 		
-	protected Properties loadFileBasedParameters(final String input_data) throws Exception {
+	protected Properties loadFileBasedParameters(final Properties properties) throws Exception {
 
 	    Properties loadedParameters = new Properties();
 	    
@@ -842,7 +842,7 @@ public class Settings {
 	    // listing properties and their values.
         if ( fileUtil == null ) fileUtil = new FileUtil( this );
         loadedParameters = fileUtil.loadSettings( 
-                settingsFileDirectory, settingsFileName, input_data );
+                settingsFileDirectory, settingsFileName, properties );
 	    
 	    return loadedParameters;
 	}

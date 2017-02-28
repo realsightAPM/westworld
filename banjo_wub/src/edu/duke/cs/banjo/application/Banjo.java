@@ -21,6 +21,7 @@ package edu.duke.cs.banjo.application;
 import java.io.File;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Properties;
 import java.util.TreeSet;
 
 import edu.duke.cs.banjo.data.settings.Settings;
@@ -95,7 +96,7 @@ public class Banjo {
         }
     }
     
-    public void execute( String _args[], String input_data ) throws Exception {
+    public void execute( String _args[], Properties properties ) throws Exception {
 
         BanjoErrorHandler errorHandler = new BanjoErrorHandler();
         XMLProcessor xmlProcessor;
@@ -125,7 +126,7 @@ public class Banjo {
             // Update the error handler to know about settings
             errorHandler = new BanjoErrorHandler( settings );
             // Load and validate the parameters for running the application 
-            settings.processCommandLine( _args, input_data );
+            settings.processCommandLine( _args, properties );
 
             // Get the (optional) list of XML files
             fileList = settings.validateXMLresultFiles();
@@ -461,6 +462,13 @@ public class Banjo {
 
         Banjo banjoAppWithThreads =  new Banjo();
         
-        banjoAppWithThreads.execute( _args , "data.txt");
+        Properties properties = new Properties();
+        
+        properties.setProperty(BANJO.SETTING_OBSERVATIONSFILE.toLowerCase(), "data.txt");
+        properties.setProperty(BANJO.SETTING_DATASET.toLowerCase(), "5-vars-898-observations-Test");
+        properties.setProperty(BANJO.DATA_BANJOXMLTAG_VARCOUNT.toLowerCase(), "5");
+        properties.setProperty(BANJO.SETTING_VARIABLENAMES.toLowerCase(), "cpu_test http session thread memory");
+        
+        banjoAppWithThreads.execute( _args , properties);
     }
 }

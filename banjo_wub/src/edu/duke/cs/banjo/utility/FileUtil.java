@@ -398,7 +398,7 @@ public class FileUtil {
     
     public Properties loadSettings( 
             String _directoryName, 
-            final String _inputFileName, final String input_data ) throws Exception {
+            final String _inputFileName, final Properties properties ) throws Exception {
                 
         File inputFile;
         
@@ -534,7 +534,13 @@ public class FileUtil {
         settings.setProperty( BANJO.SETTING_INPUTDIRECTORY.toLowerCase(),
                 "." );
         settings.setProperty( BANJO.SETTING_OBSERVATIONSFILE.toLowerCase(),
-        		input_data);
+        		properties.getProperty(BANJO.SETTING_OBSERVATIONSFILE.toLowerCase()));
+        settings.setProperty(BANJO.SETTING_DATASET.toLowerCase(), 
+        		properties.getProperty(BANJO.SETTING_DATASET.toLowerCase()));
+        settings.setProperty(BANJO.DATA_BANJOXMLTAG_VARCOUNT.toLowerCase(), 
+        		properties.getProperty(BANJO.DATA_BANJOXMLTAG_VARCOUNT.toLowerCase()));
+        settings.setProperty(BANJO.SETTING_VARIABLENAMES.toLowerCase(), 
+        		properties.getProperty(BANJO.SETTING_VARIABLENAMES.toLowerCase()));
         return settings;
     }
     
