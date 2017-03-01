@@ -19,7 +19,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import Initialization.Separate;
+import com.basic.Separate;
+
 import edu.duke.cs.banjo.application.Banjo;
 import edu.duke.cs.banjo.utility.BANJO;
 import weka.core.Instance;
@@ -30,6 +31,7 @@ import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.Discretize;
 
 public class BanjoApi {
+	
 	/*** these variables are used to record the state of the whole data set ***/
 	Separate separate;
 	public List<ArrayList<Integer>> parentMap;

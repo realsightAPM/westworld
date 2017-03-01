@@ -1,9 +1,11 @@
 package com.bnAnalysis;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import Initialization.Separate;
+import com.basic.Separate;
+
 import norsys.netica.*;
 import norsys.neticaEx.aliases.Node;
 
@@ -13,20 +15,38 @@ public class NeticaApi {
 	public BanjoApi banjo;
 	
 	public NeticaApi() throws Exception {
-		banjo = new BanjoApi();
-		buildNet();
+		buildNet("read.csv", 2);
 	}
 	
-	public NeticaApi(String csvinput, int num_thread) throws Exception {
-		banjo = new BanjoApi(csvinput, num_thread);
-		buildNet();
+	public NeticaApi(String original_csv, int num_thread) throws Exception {
+		
+		buildNet(original_csv, num_thread);
 	}
 	
 	public double getCurrentRisk() {
 		return 0;
 	}
 	
-	private void buildNet() throws Exception {
+	private void buildNet(String original_csv, int num_thread) throws Exception {
+		
+		banjo = new BanjoApi(original_csv, num_thread);
+		
+		System.out.println("========================\nnetica的.dne：\n");
+		
+		File outfile = new File("netica_out_dir");
+		if(outfile.exists()) {
+            System.out.println("目标文件已存在！");
+            String[] file_list = outfile.list();
+            for (int i = 0; i < file_list.length; i++) {
+            	File delfile = new File(outfile+"/"+file_list[i]);
+            	delfile.delete();
+                System.out.println("已删除" + file_list[i]);  
+            }
+        }
+		else {
+			outfile.mkdir();
+			System.out.println("创建目录成功！");
+		}
 		
 		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
 		Environ env = new Environ(null);
@@ -59,7 +79,7 @@ public class NeticaApi {
 		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
 		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
 		
-		net.write(new Streamer("Learned_netica.dne"));
+		net.write(new Streamer("netica_out_dir/Learned_netica.dne"));
 		
 		net.finalize();
 	}

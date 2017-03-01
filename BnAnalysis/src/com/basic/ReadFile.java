@@ -1,4 +1,4 @@
-package Initialization;
+package com.basic;
 
 import java.io.File;
 import java.io.FileNotFoundException;

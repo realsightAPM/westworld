@@ -1,4 +1,4 @@
-package Algorithm;
+package com.algorithm;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,11 +12,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.basic.Normalize;
+import com.basic.ReadFile;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-
-import Initialization.Normalize;
-import Initialization.ReadFile;
 
 public class Pearson {
 	public Double[][] pearsonMatrix;
@@ -30,7 +29,7 @@ public class Pearson {
 		getPearsonMatrix(original_csv);
 	}
 	
-	public  double pairScore(int v1, int v2) {
+	private  double pairScore(int v1, int v2) {
 		
 		List<ArrayList<Double>> data = normal.normalizedData;
 		

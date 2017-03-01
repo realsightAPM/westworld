@@ -1,4 +1,4 @@
-package Initialization;
+package com.basic;
 
 public class Pair {
 

@@ -1,6 +1,6 @@
 package com.bnAnalysis;
 
-import Algorithm.Pearson;
+import com.algorithm.Pearson;
 
 public class Relation {
 
@@ -8,7 +8,9 @@ public class Relation {
 		Pearson pearson = new Pearson();
 	}
 	
-	public void getEntropy() {}
+	public void getEntropy() {
+		
+	}
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -19,5 +21,4 @@ public class Relation {
 		pearson.writeMatrixCSV();
 		pearson.normal.writeCSV();
 	}
-	
 }
