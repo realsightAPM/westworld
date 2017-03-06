@@ -15,14 +15,14 @@ public class Probability {
 	}
 	
 	public Probability(String original_csv) throws Exception {  // read the file original_csv;
-		Separate sep = new Separate(original_csv);
+		separate = new Separate(original_csv);
 	}
 	
-	public double getProbability(int attr, int state) {
+	public double getProbability(int attr, int state) { //ok
 		return getProbability(new Pair(attr, state));
 	}
 	
-	public double getProbability(Pair pair) {
+	public double getProbability(Pair pair) {       //ok
 		int sum = 0;
 		for (int i = 0; i < separate.numInst; i++) {
 			if (separate.sepData.get(pair.first).get(i) == pair.second)
@@ -31,14 +31,14 @@ public class Probability {
 		return sum*1.0/separate.numInst;
 	}
 	
-	public double getUnionProbability(Pair p1, Pair p2) {
+	public double getUnionProbability(Pair p1, Pair p2) { //ok
 		List<Pair> towPair = new ArrayList<Pair>(2);
 		towPair.add(p1);
 		towPair.add(p2);
 		return getUnionProbability(towPair);
 	}
 	
-	public double getUnionProbability(List<Pair> unionList) {
+	public double getUnionProbability(List<Pair> unionList) { //ok
 		int sum = 0, unionLen = unionList.size();
 		for (int i = 0; i < separate.numInst; i++) {
 			int tmpSum = 0;
@@ -52,36 +52,75 @@ public class Probability {
 		return sum*1.0/separate.numInst;
 	}
 	
-	public double getConditionalProbability(Pair p1, Pair p2) {
-		List<Pair> list_1 = new ArrayList<Pair>(1);
-		List<Pair> list_2 = new ArrayList<Pair>(1);
+	public double getConditionalProbability(Pair attr, Pair conattr) { // ok
 		
-		list_1.add(p1);
-		list_2.add(p2);
-		return getConditionalProbability(list_1, list_2);
-	}
-	
-	public double getConditionalProbability(List<Pair> unionList, List<Pair> conList) {
-		int sum = 0, conSum = 0;
-		int unionLen = unionList.size();
-		int conLen = conList.size();
+		int sum = 0, consum = 0;
+		
 		for (int i = 0; i < separate.numInst; i++) {
-			int tmpSum = 0;
-			for (int j = 0; j < conLen; j++) {
-				if (separate.sepData.get(conList.get(j).first).get(i) == conList.get(j).second)
-					tmpSum ++;
-			}
-			if (tmpSum == conLen) {
-				conSum ++;
-				int tmpSum2 = 0;
-				for (int k = 0; k < unionLen; k++) {
-					if (separate.sepData.get(unionList.get(k).first).get(i) == unionList.get(k).second)
-						conSum ++;
+			if (separate.sepData.get(conattr.first).get(i) == conattr.second) {
+				consum++;
+				if (separate.sepData.get(attr.first).get(i) == attr.second) {
+					sum++;
 				}
-				if (tmpSum2 == unionLen)
-					sum ++;
 			}
 		}
-		return sum*1.0/conSum;
+		
+		return 1.0*sum/consum;
 	}
+	
+//	public double getConditionalProbability(List<Pair> unionList, List<Pair> conList) {
+//		int sum = 0, conSum = 0;
+//		int unionLen = unionList.size();
+//		int conLen = conList.size();
+//		for (int i = 0; i < separate.numInst; i++) {
+//			int tmpSum = 0;
+//			for (int j = 0; j < conLen; j++) {
+//				if (separate.sepData.get(conList.get(j).first).get(i) == conList.get(j).second)
+//					tmpSum ++;
+//			}
+//			if (tmpSum == conLen) {
+//				conSum ++;
+//				int tmpSum2 = 0;
+//				for (int k = 0; k < unionLen; k++) {
+//					if (separate.sepData.get(unionList.get(k).first).get(i) == unionList.get(k).second)
+//						conSum ++;
+//				}
+//				if (tmpSum2 == unionLen)
+//					sum ++;
+//			}
+//		}
+//		return sum*1.0/conSum;
+//	}
+	
+	public static void main(String[] args) throws Exception {
+		
+		Probability prob = new Probability();
+		
+		List<String[]> mapList = prob.separate.mapList;
+		
+//		for (int i = 0; i < mapList.size(); i++) {
+//			String[] attrMap = mapList.get(i);
+//			double sum = 0;
+//			for (int j = 0; j < attrMap.length; j++) {
+//				double x = prob.getProbability(new Pair(i, j));
+//				sum += x;
+//				System.out.print(x + "\t");
+//			}
+//			System.out.println("\n" + sum);
+//		}
+		
+		int attr_1 = 0, attr_2 = 2;
+		
+		double sum = 0;
+		for (int i = 0; i < mapList.get(attr_1).length; i++) {
+			for (int j = 0; j < mapList.get(attr_2).length; j++) {
+				double x = prob.getUnionProbability(new Pair(attr_1, i), new Pair(attr_2, j));
+				sum += x;
+				System.out.print(x + "\t");
+			}
+			System.out.println();
+		}
+		System.out.println("sum = " + sum);
+	}
+	
 }

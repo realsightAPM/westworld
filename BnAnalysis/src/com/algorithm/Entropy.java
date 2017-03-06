@@ -8,9 +8,9 @@ import com.basic.Pair;
 public class Entropy {
 
 	public Probability prob;
-	public List<Double> entropyList;
-	public List<ArrayList<Double>> entropyUnionMatrix;
-	public List<ArrayList<Double>> entropyConditionalMatrix;
+	public Double[] entropyList;
+	public Double[][] entropyUnionMatrix;
+	public Double[][] entropyConditionalMatrix;
 	
 	public Entropy() throws Exception{
 		initialize("read.csv");
@@ -23,9 +23,10 @@ public class Entropy {
 	private void initialize(String original_csv) throws Exception {
 		prob = new Probability(original_csv);
 		List<Pair> attrPairList = new ArrayList<Pair>();
-		entropyList = new ArrayList<Double>(prob.separate.numAttr);
-		entropyUnionMatrix = new ArrayList<ArrayList<Double>>(prob.separate.numAttr);
-		entropyConditionalMatrix = new ArrayList<ArrayList<Double>>(prob.separate.numAttr);
+		
+		entropyList = new Double[prob.separate.numAttr];
+		entropyUnionMatrix = new Double[prob.separate.numAttr][prob.separate.numAttr];
+		entropyConditionalMatrix = new Double[prob.separate.numAttr][prob.separate.numAttr];
 		
 		for (int i = 0; i < prob.separate.numAttr; i++) {
 			attrPairList.add(new Pair(i, prob.separate.mapList.get(i).length));
@@ -33,28 +34,22 @@ public class Entropy {
 		
 		/*** 熵数组 ***/
 		for (int i = 0; i < prob.separate.numAttr; i++) {
-			entropyList.add(getH(attrPairList.get(i)));
+			entropyList[i] = getH(attrPairList.get(i));
 		}
 		
 		/*** 联合熵数组 ***/
 		for (int i = 0; i < prob.separate.numAttr; i++) {
-			entropyUnionMatrix.add(new ArrayList<Double>(prob.separate.numAttr));
-		}
-		for (int i = 0; i < prob.separate.numAttr; i++) {
 			for (int j = 0; j < prob.separate.numAttr; j++) {
-				entropyUnionMatrix.get(i).add(getUnionH(attrPairList.get(i), attrPairList.get(j)));
+				entropyUnionMatrix[i][j] = getUnionH(attrPairList.get(i), attrPairList.get(j));
 			}
 		}
 		
 		/*** 条件熵数组 ***/
 		for (int i = 0; i < prob.separate.numAttr; i++) {
-			entropyConditionalMatrix.add(new ArrayList<Double>(prob.separate.numAttr));
-		}
-		for (int i = 0; i < prob.separate.numAttr; i++) {
 			for (int j = 0; j < prob.separate.numAttr; j++) {
-				entropyConditionalMatrix.get(i).add(getConditionalH(attrPairList.get(i), attrPairList.get(j)));
+				entropyConditionalMatrix[i][j] = getConditionalH(attrPairList.get(i), attrPairList.get(j));
 			}
-		} 
+		}
 	}
 	
 	private double H(double x) {
@@ -73,6 +68,8 @@ public class Entropy {
 		double sum = 0;
 		for (int i = 0; i < interval_size; i++) {
 			double x = prob.getProbability(attr, i);
+			if (x < 0.000001)
+				continue;
 			sum += H(x);
 		}
 		return sum;
@@ -84,7 +81,10 @@ public class Entropy {
 		double sum = 0;
 		for (int i = 0; i < attr_1.second; i++) {
 			for (int j = 0; j < attr_2.second; j++) {
-				sum += H(prob.getUnionProbability(new Pair(attr_1.first, i), new Pair(attr_2.first, j)));
+				double x = prob.getUnionProbability(new Pair(attr_1.first, i), new Pair(attr_2.first, j));
+				if (x < 0.000001)
+					continue;
+				sum += H(x);
 			}
 		}
 		return sum;
@@ -94,20 +94,43 @@ public class Entropy {
 		double sum = 0;
 		for (int i = 0; i < attr.second; i++) {
 			for (int j = 0; j < conattr.second; j++) {
-				List<Pair> unionList = new ArrayList<Pair>(1);
-				unionList.add(new Pair(attr.first, i));
-				List<Pair> conList = new ArrayList<Pair>(1);
-				conList.add(new Pair(conattr.first, j));
-				sum += H(prob.getUnionProbability(attr, conattr),prob.getConditionalProbability(unionList, conList));
+//				sum += prob.getConditionalProbability(new Pair(attr.first, i), new Pair(conattr.first, j));
+				double x = prob.getUnionProbability(new Pair(attr.first, i), new Pair(conattr.first, j));
+				double y = prob.getConditionalProbability(new Pair(attr.first, i), new Pair(conattr.first, j));
+				if (y < 0.000001)
+					continue;
+				sum += H(x, y);
 			}
 		}
 		return sum;
 	}
 	
-	public static void main(String[] args) {
-		double x = 2.71828;
+	public static void main(String[] args) throws Exception {
 		
-		System.out.println(Math.log(x));
+		Entropy entropy = new Entropy();
+		
+		int numAttr = entropy.prob.separate.numAttr;
+		
+		for (int i = 0; i < numAttr; i++) {
+			System.out.print(entropy.entropyList[i]+"\t");
+		}
+		System.out.println("\n");
+		
+		for (int i = 0; i < numAttr; i++) {
+			for (int j = 0; j < numAttr; j++) {
+				System.out.print(entropy.entropyUnionMatrix[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		for (int i = 0; i < numAttr; i++) {
+			for (int j = 0; j < numAttr; j++) {
+				System.out.print(entropy.entropyConditionalMatrix[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println();
 	}
 	
 }

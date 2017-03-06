@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 import com.basic.Normalize;
 import com.basic.ReadFile;
+import com.basic.WriteCSV;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 
@@ -99,32 +100,8 @@ public class Pearson {
 	}
 	
 	public void writeMatrixCSV() throws Exception {
-		
-		String[] attrList = normal.readFile.attrList;
-		int numAttr = normal.normalizedData.size();
-		
-		/***导出数据***/    
-		System.out.println("输出pearson相关性矩阵：");
-		
-		File file_write = new File("pearson_out_dir/pearson.csv");
-        Writer writer = new FileWriter(file_write);
-        CSVWriter csvWriter = new CSVWriter(writer, ',');
-        
-        String[] stmp = new String[numAttr+1];
-        stmp[0] = "";
-        for (int i = 1; i <= numAttr; i++) {
-        	stmp[i] = attrList[i-1];
-        }
-        csvWriter.writeNext(stmp);
-        
-		for (int i = 1; i <= numAttr; i++) {
-			stmp[0] = attrList[i-1];
-			for (int j = 1; j <= numAttr; j++) {
-				stmp[j] = Double.toString(pearsonMatrix[i-1][j-1]);
-			}
-			csvWriter.writeNext(stmp);
-		}
-		csvWriter.close();
+		WriteCSV writeCSV = new WriteCSV();
+		writeCSV.writeMatrixCSV(pearsonMatrix, normal.readFile.attrList, "pearson_out_dir", "pearson.csv");
 	}
 	
 }

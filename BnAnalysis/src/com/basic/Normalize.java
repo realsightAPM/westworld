@@ -12,14 +12,14 @@ public class Normalize {
 	public List<ArrayList<Double>> normalizedData;
 	public ReadFile readFile;
 	
-	public Normalize() throws Exception {
-		readFile = new ReadFile("read.csv");
-		getNormalData(readFile.originalData);
-	}
-	
 	public Normalize(List<ArrayList<Double>> original_data) {
 		readFile = null;
 		getNormalData(original_data);
+	}
+	
+	public Normalize() throws Exception {
+		readFile = new ReadFile("read.csv");
+		getNormalData(readFile.originalData);
 	}
 	
 	public Normalize(String original_csv) throws Exception {

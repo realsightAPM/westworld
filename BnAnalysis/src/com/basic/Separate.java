@@ -96,11 +96,11 @@ public class Separate {
 	
 	private void getInterval() {
 		
-		System.out.println("获得离散区间");
+//		System.out.println("获得离散区间");
 		
-		for (int i = 0; i < numAttr; i++) {
-			System.out.println(newData.attribute(i).toString());
-		}
+//		for (int i = 0; i < numAttr; i++) {
+//			System.out.println(newData.attribute(i).toString());
+//		}
 		
 		for (int i = 0; i < numAttr; i++) {
 			String[] str = newData.attribute(i).toString().split(" ");

@@ -10,12 +10,13 @@ import java.util.List;
 import com.basic.Normalize;
 import com.basic.Pair;
 import com.basic.ReadFile;
+import com.basic.WriteCSV;
 import com.opencsv.CSVWriter;
 
 public class Information {
 
 	public Entropy entropy;
-	public List<ArrayList<Double>> infoMatrix;
+	public Double[][] infoMatrix;
 	
 	public Information() throws Exception {
 		getInfoMatrix("read.csv");
@@ -26,7 +27,7 @@ public class Information {
 	}
 	
 	private double pairInfo(int x, int y) {
-		return entropy.entropyList.get(x) - entropy.entropyConditionalMatrix.get(x).get(y);
+		return entropy.entropyList[x] - entropy.entropyConditionalMatrix[x][y];
 	}
 	
 	private void getInfoMatrix(String original_csv) throws Exception {
@@ -50,44 +51,31 @@ public class Information {
 		
 		/*** 获得Info矩阵 ***/
 		entropy = new Entropy(original_csv);
-		infoMatrix = new ArrayList<ArrayList<Double>>(entropy.prob.separate.numAttr);
-		
-		for (int i = 0; i < entropy.prob.separate.numAttr; i++) {
-			infoMatrix.add(new ArrayList<Double>(entropy.prob.separate.numAttr));
-		}
+		infoMatrix = new Double[entropy.prob.separate.numAttr][entropy.prob.separate.numAttr];
 		
 		for (int i = 0; i < entropy.prob.separate.numAttr; i++) {
 			for (int j = 0; j < entropy.prob.separate.numAttr; j++) {
-				infoMatrix.get(i).add(pairInfo(i, j));
+				infoMatrix[i][j] = pairInfo(i, j);
 			}
 		}
 		
 	}
 	
 	public void writeCSV() throws Exception {
-		/***导出数据***/
-		System.out.println("输出info相关性矩阵：");
-		
-		int numAttr = entropy.prob.separate.numAttr;
-		String[] attrList = entropy.prob.separate.attrList;
-		String[] stmp = new String[numAttr+1];
-		
-		File file_write = new File("info_out_dir/info.csv");
-        Writer writer = new FileWriter(file_write);  
-        CSVWriter csvWriter = new CSVWriter(writer, ',');
-        
-        stmp[0] = "";
-        for (int i = 1; i <= numAttr; i++) {
-        	stmp[i] = attrList[i-1];
-        }
-        
-		for (int i = 1; i <= numAttr; i++) {
-			stmp[0] = attrList[i-1];
-			for (int j = 1; j <= numAttr; j++) {
-				stmp[j] = Double.toString(infoMatrix.get(i-1).get(j-1)); //默认6个属性
-			}
-			csvWriter.writeNext(stmp);
-		}
-		csvWriter.close();
+		WriteCSV writeCSV = new WriteCSV();
+		writeCSV.writeMatrixCSV(infoMatrix, entropy.prob.separate.attrList, "info_out_dir", "info.csv");
 	}
+	
+	public static void main(String[] args) throws Exception {
+		Information info = new Information();
+		/* Default:
+		 * Information info = new Information("read.csv");
+		 */
+		
+		info.writeCSV();
+		
+		System.out.println("\nFinish the test: if create the infoMatrix.csv");
+		
+	}
+	
 }
