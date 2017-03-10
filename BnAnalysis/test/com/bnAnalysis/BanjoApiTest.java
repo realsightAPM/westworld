@@ -8,7 +8,7 @@ public class BanjoApiTest {
 
 	@Test
 	public void test() throws Exception {
-		BanjoApi banjo = new BanjoApi("1_26testdata.csv",2);
+		BanjoApi banjo = new BanjoApi("2_3test800_1100.csv", 3);
 		/* default:
 		 * BanjoApi banjo = new BanjoApi("read.csv", 2);
 		 */

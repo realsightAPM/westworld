@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 import com.basic.Normalize;
@@ -96,6 +97,31 @@ public class Pearson {
 			for (int j =0; j < numAttr; j++) {
 				pearsonMatrix[i][j] = pairScore(i, j);
 			}
+		}
+	}
+	
+	public void getRelationRanking(int attr) {
+		Map<Double, String> posMap = new TreeMap<Double, String> ();
+		Map<Double, String> negMap = new TreeMap<Double, String> ();
+		String[] attrList = normal.readFile.attrList;
+		int numAttr = attrList.length;
+		for (int i = 0; i < numAttr; i++) {
+			if (i == attr)
+				continue;
+			if (pearsonMatrix[attr][i] > 0)
+				posMap.put(-pearsonMatrix[attr][i], attrList[i]);
+			else
+				negMap.put(pearsonMatrix[attr][i], attrList[i]);
+		}
+		
+		System.out.println("\n与" + attrList[attr] + "正相关：");
+		for (Double it : posMap.keySet()) {
+			System.out.println(posMap.get(it) + "\t" + (-it));
+		}
+		
+		System.out.println("\n与" + attrList[attr] +"负相关：");
+		for (Object it : negMap.keySet()) {
+			System.out.println(negMap.get(it)+ "\t" + it);
 		}
 	}
 	

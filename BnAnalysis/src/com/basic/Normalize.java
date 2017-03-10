@@ -60,7 +60,11 @@ public class Normalize {
 			
         	Double lo = new Double(Collections.min(in_data.get(i)));
         	Double hi = new Double(Collections.max(in_data.get(i)));
-        	Double gap = new Double(hi-lo);
+        	Double gap;
+        	if (hi-lo < 0.000001)
+        		gap = new Double(100000009);
+        	else
+        		gap = new Double(hi-lo);
         	
 //        	System.out.println(lo+" "+" "+hi+" "+gap);
         	
@@ -100,7 +104,7 @@ public class Normalize {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Normalize norm = new Normalize();
+		Normalize norm = new Normalize("2_3test800_1100.csv");
 		System.out.println("Ö´ÐÐ¹éÒ»»¯");
 		
 		norm.writeCSV();

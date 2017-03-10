@@ -8,10 +8,10 @@ public class NeticaApiTest {
 
 	@Test
 	public void testNeticaApi() throws Exception {
-		NeticaApi netica = new NeticaApi();
+		NeticaApi netica = new NeticaApi("2_3var15.csv", 2);
 		/*
 		 * default:
-		 * NeticaApi netica = new NeticaApi("read.csv");
+		 * NeticaApi netica = new NeticaApi("read.csv", 2);
 		 */
 		
 		/*** VM arguments: ***/
