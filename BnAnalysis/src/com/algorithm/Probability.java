@@ -19,10 +19,10 @@ public class Probability {
 	}
 	
 	public double getProbability(int attr, int state) { //ok
-		return getProbability(new Pair(attr, state));
+		return getProbability(new Pair<Integer, Integer>(attr, state));
 	}
 	
-	public double getProbability(Pair pair) {       //ok
+	public double getProbability(Pair<Integer, Integer> pair) {       //ok
 		int sum = 0;
 		for (int i = 0; i < separate.numInst; i++) {
 			if (separate.sepData.get(pair.first).get(i) == pair.second)
@@ -31,14 +31,14 @@ public class Probability {
 		return sum*1.0/separate.numInst;
 	}
 	
-	public double getUnionProbability(Pair p1, Pair p2) { //ok
-		List<Pair> towPair = new ArrayList<Pair>(2);
+	public double getUnionProbability(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) { //ok
+		List<Pair<Integer, Integer>> towPair = new ArrayList<Pair<Integer, Integer>>(2);
 		towPair.add(p1);
 		towPair.add(p2);
 		return getUnionProbability(towPair);
 	}
 	
-	public double getUnionProbability(List<Pair> unionList) { //ok
+	public double getUnionProbability(List<Pair<Integer, Integer>> unionList) { //ok
 		int sum = 0, unionLen = unionList.size();
 		for (int i = 0; i < separate.numInst; i++) {
 			int tmpSum = 0;
@@ -52,7 +52,7 @@ public class Probability {
 		return sum*1.0/separate.numInst;
 	}
 	
-	public double getConditionalProbability(Pair attr, Pair conattr) { // ok
+	public double getConditionalProbability(Pair<Integer, Integer> attr, Pair<Integer, Integer> conattr) { // ok
 		
 		int sum = 0, consum = 0;
 		

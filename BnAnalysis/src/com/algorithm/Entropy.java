@@ -60,7 +60,7 @@ public class Entropy {
 		return - x * Math.log(y);
 	}
 	
-	private double getH(Pair attr) {     // first为属性编号，second为该属性值的个数
+	private double getH(Pair<Integer, Integer> attr) {     // first为属性编号，second为该属性值的个数
 		return getH(attr.first, attr.second);
 	}
 	
@@ -77,7 +77,7 @@ public class Entropy {
 	
 	/*** 这个地方通用的方法不好写，暂时为两个变量的算法。对于互信息已经足够，对于条件互信息也只需要3个变量就够了 ***/
 	
-	private double getUnionH(Pair attr_1, Pair attr_2) {
+	private double getUnionH(Pair<Integer, Integer> attr_1, Pair<Integer, Integer> attr_2) {
 		double sum = 0;
 		for (int i = 0; i < attr_1.second; i++) {
 			for (int j = 0; j < attr_2.second; j++) {
@@ -90,7 +90,7 @@ public class Entropy {
 		return sum;
 	}
 	
-	private double getConditionalH(Pair attr, Pair conattr) {
+	private double getConditionalH(Pair<Integer, Integer> attr, Pair<Integer, Integer> conattr) {
 		double sum = 0;
 		for (int i = 0; i < attr.second; i++) {
 			for (int j = 0; j < conattr.second; j++) {

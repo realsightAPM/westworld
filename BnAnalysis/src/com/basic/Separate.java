@@ -71,7 +71,7 @@ public class Separate {
 		String[] opts = new String[5];
 		// choose the number of intervals
 		opts[0] = "-B";
-		opts[1] = "6";
+		opts[1] = "3";
 		// choose the range of attributes on which to apply hte filter:
 		opts[2] = "-R";
 		opts[3] = "1-"+numAttr;

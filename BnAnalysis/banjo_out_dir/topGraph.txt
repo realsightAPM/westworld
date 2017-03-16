@@ -1,52 +1,23 @@
 
 digraph abstract { 
 
-label = "Banjo Version 2.2.0\nHigh scoring network, score: -15195.8197\nProject: banjo apm data\nUser: wubin\nDataset: 15-vars-1099-observations"; 
+label = "Banjo Version 2.2.0\nHigh scoring network, score: -3397.6475\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-898-observations"; 
 labeljust="l"; 
 
-    0 [label="activeThreads"];
-    1 [label="clients"];
-    2 [label="cpu"];
-    3 [label="fileDescriptors"];
-    4 [label="free_disk_space"];
-    5 [label="httpMeanTimes"];
-    6 [label="httpSystemErrors"];
-    7 [label="http_Gobal_Hits"];
-    8 [label="systemLoad"];
-    9 [label="threadCount"];
-    10 [label="tomcatBusyThreads"];
-    11 [label="tomcatBytesSent"];
-    12 [label="usedConnections"];
-    13 [label="usedMemory"];
-    14 [label="usedPhysicalMemorySize"];
+    0 [label="cpu"];
+    1 [label="http_times"];
+    2 [label="session_count"];
+    3 [label="thread_count"];
+    4 [label="used_memory"];
 
-    6->0;
-    10->0;
+    2->0;
+    3->0;
+    4->0;
+    2->1;
     4->1;
-    9->1;
-    14->1;
-    11->2;
-    10->3;
-    12->3;
-    2->4;
-    5->4;
-    11->5;
-    9->6;
-    11->6;
-    1->7;
-    4->7;
-    12->7;
-    2->8;
-    4->9;
-    5->9;
-    9->10;
-    11->10;
-    1->12;
-    4->12;
-    6->12;
-    4->13;
-    12->13;
-    4->14;
-    6->14;
+    4->2;
+    1->3;
+    2->3;
+    4->3;
 }
 

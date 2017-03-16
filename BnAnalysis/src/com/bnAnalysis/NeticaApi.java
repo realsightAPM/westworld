@@ -11,7 +11,6 @@ import norsys.neticaEx.aliases.Node;
 
 public class NeticaApi {
 
-	public Net net;
 	public BanjoApi banjo;
 	
 	public NeticaApi() throws Exception {
@@ -51,7 +50,7 @@ public class NeticaApi {
 		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
 		Environ env = new Environ(null);
 		
-		net = new Net();
+		Net net = new Net();
 		net.setName("testNetica");
 		
 		Separate separate = banjo.separate;
@@ -82,6 +81,7 @@ public class NeticaApi {
 		net.write(new Streamer("netica_out_dir/Learned_netica.dne"));
 		
 		net.finalize();
+		env.finalize();
 	}
 	
 	private String getStates(int numstate) {

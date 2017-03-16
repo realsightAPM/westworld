@@ -1,15 +1,16 @@
 package com.basic;
 
-public class Pair {
+public class Pair<A, B> {
 
-	public int first, second;
+	public A first;
+	public B second;
 	
 	public Pair() {
-		first = 0;
-		second = 0;
+		first = null;
+		second = null;
 	}
 	
-	public Pair(int x, int y) {
+	public Pair(A x, B y) {
 		first = x;
 		second = y;
 	}
