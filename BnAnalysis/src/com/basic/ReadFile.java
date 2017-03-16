@@ -54,6 +54,7 @@ public class ReadFile {
         		originalData.get(j).add(Double.valueOf(list_read.get(i)[j]));
         	}
         }
+        
 	}
 	
 	public static void main(String[] args) throws Exception {

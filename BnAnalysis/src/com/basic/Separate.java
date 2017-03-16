@@ -92,6 +92,9 @@ public class Separate {
 		}
 		
 		getInterval();
+		
+		writeTSV();
+		writeCAS();
 	}
 	
 	private void getInterval() {
@@ -204,4 +207,5 @@ public class Separate {
 		}
 		out_separatedFile.close(); // close the file
 	}
+	
 }

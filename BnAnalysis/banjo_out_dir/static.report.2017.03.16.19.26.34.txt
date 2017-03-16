@@ -16,9 +16,9 @@ Network score: -3397.6475, found by thread 1
 5
 0 3 2 3 4
 1 2 2 4
-2 1 4
+2 0
 3 3 1 2 4
-4 0
+4 1 2
 
 -----------------------------------------------------------------------------
 - Post-processing                                            Influence scores
@@ -29,10 +29,10 @@ Influence score for   (3,0) ->   (0,0)   .0354
 Influence score for   (2,0) ->   (0,0)   .0996
 Influence score for   (4,0) ->   (1,0)   .0000
 Influence score for   (2,0) ->   (1,0)   .0000
-Influence score for   (4,0) ->   (2,0)   .7084
 Influence score for   (4,0) ->   (3,0)   .1627
 Influence score for   (2,0) ->   (3,0)   .0199
 Influence score for   (1,0) ->   (3,0)   .0000
+Influence score for   (2,0) ->   (4,0)   .6916
 
 -----------------------------------------------------------------------------
 - Post-processing                                  DOT graphics format output
@@ -54,9 +54,9 @@ labeljust="l";
     4->0;
     2->1;
     4->1;
-    4->2;
     1->3;
     2->3;
     4->3;
+    2->4;
 }
 

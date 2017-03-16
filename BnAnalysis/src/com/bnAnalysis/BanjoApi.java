@@ -48,8 +48,6 @@ public class BanjoApi {
 		
 		/*** Separate Data ***/
 		separate = new Separate(csvinput);
-		separate.writeTSV();
-		separate.writeCAS();
 		
 		/*** run Banjo.jar ***/
 		Banjo banjo = new Banjo();

@@ -1,10 +1,14 @@
 package com.bnAnalysis;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.basic.ReadCSV;
 import com.basic.Separate;
+import com.basic.WriteCSV;
 
 import norsys.netica.*;
 import norsys.neticaEx.aliases.Node;
@@ -12,18 +16,16 @@ import norsys.neticaEx.aliases.Node;
 public class NeticaApi {
 
 	public BanjoApi banjo;
+	public Environ env;
+	public Net net;
+	public Map<String, String[]> rangeMap;
 	
-	public NeticaApi() throws Exception {
-		buildNet("read.csv", 2);
+	public NeticaApi(String original_csv_or_dneFile, int num_thread) throws Exception {
+		buildNet(original_csv_or_dneFile, num_thread);
 	}
 	
-	public NeticaApi(String original_csv, int num_thread) throws Exception {
-		
-		buildNet(original_csv, num_thread);
-	}
-	
-	public double getCurrentRisk() {
-		return 0;
+	public NeticaApi() throws NeticaException, IOException {
+		loadNet();
 	}
 	
 	private void buildNet(String original_csv, int num_thread) throws Exception {
@@ -48,9 +50,9 @@ public class NeticaApi {
 		}
 		
 		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
-		Environ env = new Environ(null);
+		env = new Environ(null);
 		
-		Net net = new Net();
+		net = new Net();
 		net.setName("testNetica");
 		
 		Separate separate = banjo.separate;
@@ -79,9 +81,22 @@ public class NeticaApi {
 		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
 		
 		net.write(new Streamer("netica_out_dir/Learned_netica.dne"));
-		
-		net.finalize();
-		env.finalize();
+
+		WriteCSV writeCSV = new WriteCSV();
+		writeCSV.writeMapList(mapList, attrList,"netica_out_dir", "range_list.csv");
+		ReadCSV readCSV = new ReadCSV();
+		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+	}
+	
+	private void loadNet() throws NeticaException, IOException {
+		loadNet("netica_out_dir/Learned_netica.dne");
+	}
+	
+	private void loadNet(String dne_file) throws NeticaException, IOException {
+		env = new Environ(null);
+		net = new Net (new Streamer (dne_file));
+		ReadCSV readCSV = new ReadCSV();
+		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
 	}
 	
 	private String getStates(int numstate) {
@@ -92,6 +107,60 @@ public class NeticaApi {
 				str += ", ";
 		}
 		return str;
+	}
+	
+	public Map<String, String[]> getRangeMap() {
+		return rangeMap;
+	}
+	
+	public void printRangeMap() {
+		for (String it : rangeMap.keySet()) {
+			System.out.print(it + ":\t");
+			for (String it2 : rangeMap.get(it)) {
+				System.out.print(it2 + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public List<String> getChildren(Node node) throws NeticaException {
+		return getChildren(node.toString());
+	}
+	
+	public List<String> getChildren(String node_name) throws NeticaException {
+		List<String> children = new ArrayList<String>();
+		boolean exist = false;
+		for (String it : rangeMap.keySet()) {
+			if (it.equals(node_name)) {
+				exist = true;
+			}
+		}
+		if (!exist) {
+			System.out.println(node_name + " is not in the attrList");
+		}
+		NodeList nodeList = net.getNode(node_name).getChildren();
+		for (int i = 0; i < nodeList.size(); i++) {
+			children.add(nodeList.get(i).toString());
+		}
+		return children;
+	}
+	
+	public void printChildren(Node node) throws NeticaException {
+		printChildren(node.toString());
+	}
+	
+	public void printChildren(String node_name) throws NeticaException {
+		List<String> children = getChildren(node_name);
+		System.out.print("\nChildren of " + node_name + " are: ");
+		for (String it : children) {
+			System.out.print(it + " ,");
+		}
+	}
+	
+	@Override
+	public void finalize() throws NeticaException {
+		net.finalize();   // not strictly necessary, but a good habit
+		env.finalize();
 	}
 	
 	public static void main(String[] args) throws Exception {
