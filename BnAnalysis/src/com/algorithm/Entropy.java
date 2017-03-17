@@ -13,15 +13,15 @@ public class Entropy {
 	public Double[][] entropyConditionalMatrix;
 	
 	public Entropy() throws Exception{
-		initialize("read.csv");
+		initialize("read.csv", 3);
 	}
 	
-	public Entropy(String original_csv) throws Exception {
-		initialize(original_csv);
+	public Entropy(String original_csv, int num_bins) throws Exception {
+		initialize(original_csv, num_bins);
 	}
 	
-	private void initialize(String original_csv) throws Exception {
-		prob = new Probability(original_csv);
+	private void initialize(String original_csv, int num_bins) throws Exception {
+		prob = new Probability(original_csv, num_bins);
 		List<Pair> attrPairList = new ArrayList<Pair>();
 		
 		entropyList = new Double[prob.separate.numAttr];

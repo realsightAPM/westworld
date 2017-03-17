@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.basic.Pair;
 import com.basic.ReadCSV;
 import com.basic.Separate;
 import com.basic.WriteCSV;
 
 import norsys.netica.*;
-import norsys.neticaEx.aliases.Node;
 
 public class NeticaApi {
 
@@ -20,17 +20,11 @@ public class NeticaApi {
 	public Net net;
 	public Map<String, String[]> rangeMap;
 	
-	public NeticaApi(String original_csv_or_dneFile, int num_thread) throws Exception {
-		buildNet(original_csv_or_dneFile, num_thread);
-	}
+	public NeticaApi() throws Exception {}
 	
-	public NeticaApi() throws NeticaException, IOException {
-		loadNet();
-	}
-	
-	private void buildNet(String original_csv, int num_thread) throws Exception {
+	public void buildNet(String original_csv, int num_thread, int num_bins) throws Exception {
 		
-		banjo = new BanjoApi(original_csv, num_thread);
+		banjo = new BanjoApi(original_csv, num_thread, num_bins);
 		
 		System.out.println("========================\nneticaµÄ.dne£º\n");
 		
@@ -53,7 +47,7 @@ public class NeticaApi {
 		env = new Environ(null);
 		
 		net = new Net();
-		net.setName("testNetica");
+		net.setName("apm");
 		
 		Separate separate = banjo.separate;
 		Node[] nodeList = new Node[separate.numAttr];
@@ -86,17 +80,21 @@ public class NeticaApi {
 		writeCSV.writeMapList(mapList, attrList,"netica_out_dir", "range_list.csv");
 		ReadCSV readCSV = new ReadCSV();
 		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+		
+		net.compile();
 	}
 	
-	private void loadNet() throws NeticaException, IOException {
+	public void loadNet() throws NeticaException, IOException {
 		loadNet("netica_out_dir/Learned_netica.dne");
 	}
 	
 	private void loadNet(String dne_file) throws NeticaException, IOException {
 		env = new Environ(null);
 		net = new Net (new Streamer (dne_file));
+		net.setName("apm");
 		ReadCSV readCSV = new ReadCSV();
 		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+		net.compile();
 	}
 	
 	private String getStates(int numstate) {
@@ -114,6 +112,7 @@ public class NeticaApi {
 	}
 	
 	public void printRangeMap() {
+		System.out.println();
 		for (String it : rangeMap.keySet()) {
 			System.out.print(it + ":\t");
 			for (String it2 : rangeMap.get(it)) {
@@ -155,6 +154,38 @@ public class NeticaApi {
 		for (String it : children) {
 			System.out.print(it + " ,");
 		}
+	}
+	
+	public double getInfer(List<Pair<String, String>> conds, Pair<String, String> target) throws NeticaException {
+		
+		double res;
+		Node[] nodes = new Node[conds.size()];
+		for (int i = 0; i < conds.size(); i++) {
+			 nodes[i] = net.getNode(conds.get(i).first);
+			 nodes[i].finding().enterState(conds.get(i).second);
+		}
+		Node targetNode = net.getNode(target.first);
+		res = targetNode.getBelief(target.second);
+		
+		for (int i = 0; i < nodes.length; i++ ) {
+			nodes[i].finding().clear();
+		}
+		
+		return res;
+	}
+	
+	public double getInfer(String conds, String target) throws NeticaException {
+		String[] strConds = conds.split(",");
+		List<Pair<String, String>> condsList = new ArrayList<Pair<String, String>>();
+		for (int i = 0; i < strConds.length; i++) {
+			String[] strPair = strConds[i].split(":");
+			condsList.add(new Pair<String, String>(strPair[0], strPair[1]));
+		}
+		
+		String[] strTarget = target.split(":");
+		
+		Pair<String, String> pairTarget = new Pair<String, String>(strTarget[0], strTarget[1]); 
+		return getInfer(condsList, pairTarget);
 	}
 	
 	@Override

@@ -23,14 +23,14 @@ public class Separate {
 	public int numAttr, numInst;
 	
 	public Separate() throws Exception {   // read the default file "read.csv";
-		initailize("read.csv");
+		initailize("read.csv", 3);
 	}
 	
-	public Separate(String original_csv) throws Exception {    // read the file original_csv;
-		initailize(original_csv);
+	public Separate(String original_csv, int num_bins) throws Exception {    // read the file original_csv;
+		initailize(original_csv, num_bins);
 	}
 	
-	private void initailize(String original_csv) throws Exception {
+	private void initailize(String original_csv, int num_bins) throws Exception {
 		
 		System.out.println("========================\n¿Î…¢ªØ£∫\n" + original_csv);
 		
@@ -71,7 +71,7 @@ public class Separate {
 		String[] opts = new String[5];
 		// choose the number of intervals
 		opts[0] = "-B";
-		opts[1] = "3";
+		opts[1] = "" + num_bins;
 		// choose the range of attributes on which to apply hte filter:
 		opts[2] = "-R";
 		opts[3] = "1-"+numAttr;

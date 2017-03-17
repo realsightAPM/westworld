@@ -19,18 +19,18 @@ public class Information {
 	public Double[][] infoMatrix;
 	
 	public Information() throws Exception {
-		getInfoMatrix("read.csv");
+		getInfoMatrix("read.csv", 3);
 	}
 	
-	public Information(String original_csv) throws Exception {
-		getInfoMatrix(original_csv);
+	public Information(String original_csv, int num_bins) throws Exception {
+		getInfoMatrix(original_csv, num_bins);
 	}
 	
 	private double pairInfo(int x, int y) {
 		return entropy.entropyList[x] - entropy.entropyConditionalMatrix[x][y];
 	}
 	
-	private void getInfoMatrix(String original_csv) throws Exception {
+	private void getInfoMatrix(String original_csv, int num_bins) throws Exception {
 		
 		System.out.println("========================\ninfo相关性：\n");
 		
@@ -50,7 +50,7 @@ public class Information {
 		}
 		
 		/*** 获得Info矩阵 ***/
-		entropy = new Entropy(original_csv);
+		entropy = new Entropy(original_csv, num_bins);
 		infoMatrix = new Double[entropy.prob.separate.numAttr][entropy.prob.separate.numAttr];
 		
 		for (int i = 0; i < entropy.prob.separate.numAttr; i++) {

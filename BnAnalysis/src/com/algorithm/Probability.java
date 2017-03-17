@@ -14,8 +14,8 @@ public class Probability {
 		separate = new Separate();
 	}
 	
-	public Probability(String original_csv) throws Exception {  // read the file original_csv;
-		separate = new Separate(original_csv);
+	public Probability(String original_csv, int num_bins) throws Exception {  // read the file original_csv;
+		separate = new Separate(original_csv, num_bins);
 	}
 	
 	public double getProbability(int attr, int state) { //ok

@@ -34,7 +34,8 @@ public class RootCause {
 	}
 	
 	public void getCauseRank(String original_csv, String target_var) throws Exception {
-		netica = new NeticaApi(original_csv, 2);
+		netica = new NeticaApi();
+		netica.buildNet(original_csv, 2, 3);
 		ReadCSV readCSV = new ReadCSV();
 //		Map<String, String[]> rangeMap =  readCSV.readRangeList("netica_out_dir", "range_list.csv");
 		

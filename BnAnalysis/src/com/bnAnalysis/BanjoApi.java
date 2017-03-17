@@ -37,17 +37,17 @@ public class BanjoApi {
 	public List<ArrayList<Integer>> parentMap;
 	
 	public BanjoApi() throws Exception {
-		train("read.csv", 2);
+		train("read.csv", 2, 3);
 	}
 	
-	public BanjoApi( String csvinput, int num_thread ) throws Exception {
-		train(csvinput, num_thread);
+	public BanjoApi( String csvinput, int num_thread, int num_bins ) throws Exception {
+		train(csvinput, num_thread, num_bins);
 	}
 
-	private void train( String csvinput, int num_thread ) throws Exception {
+	private void train( String csvinput, int num_thread, int num_bins ) throws Exception {
 		
 		/*** Separate Data ***/
-		separate = new Separate(csvinput);
+		separate = new Separate(csvinput, num_bins);
 		
 		/*** run Banjo.jar ***/
 		Banjo banjo = new Banjo();
