@@ -24,11 +24,11 @@ public class NeticaApiTest {
 		NeticaApi netica = new NeticaApi();
 		
 		/*** begin: build netica. args: input_file, num_threads, num_bins ***/
-		netica.buildNet("inputjava_data1.csv", 2, 5);
+//		netica.buildNet("inputjava_data1.csv", 2, 5);
 		/*** end: build netica ***/
 		
 		/*** begin: load netica. the dne file must have been built ***/
-//		netica.loadNet();
+		netica.loadNet();
 		/*** end: load netica ***/
 		
 		netica.printRangeMap();
@@ -37,7 +37,7 @@ public class NeticaApiTest {
 			netica.printChildren(it);
 		}
 		
-		double res = netica.getInfer("session_count:c", "http_times:c");
+		double res = netica.getInfer("session_count:c,cpu:c", "http_times:c");
 		System.out.println("\n条件概率为：" + res);
 		
 		res = netica.getInfer("cpu:c", "http_times:c");
