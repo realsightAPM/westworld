@@ -1,4 +1,4 @@
-[Thread 1] Banjo search data:
+[Thread 2] Banjo search data:
 -----------------------------------------------------------------------------
 - Banjo                        Bayesian Network Inference with Java Objects -
 - Release 2.2.0                                                 15 Apr 2008 -
@@ -46,7 +46,7 @@
 - Min. accepted networks before reannealing:                              500
 -----------------------------------------------------------------------------
 - Output directory:                                             banjo_out_dir
-- Report file:                 thread=1_static.report.2017.03.17.14.36.30.txt
+- Report file:                 thread=2_static.report.2017.03.17.14.48.09.txt
 - Number of best networks tracked:                                          1
 - Max. time:                                                            2.0 m
 - Max. restarts:                                                        10000
@@ -66,10 +66,10 @@
 - XML parser:                             org.apache.xerces.parsers.SAXParser
 - Banjo XML format version:                                               1.0
 -----------------------------------------------------------------------------
-- Seed for starting search:                                     1489732590680
+- Seed for starting search:                                     1489733289111
 -----------------------------------------------------------------------------
 - Number of threads:                                                        2
-- Index of current thread:                                                  1
+- Index of current thread:                                                  2
 -----------------------------------------------------------------------------
 - Warnings:                                                                  
 -----------------------------------------------------------------------------
@@ -80,94 +80,94 @@ Supplied command line arguments:
 "threads=2"
 -----------------------------------------------------------------------------
 
-Memory info before starting the search: Banjo is using 3 mb of memory
-Prep. time used: 130.0 ms
+Memory info before starting the search: Banjo is using 7 mb of memory
+Prep. time used: 54.0 ms
 Beginning to search: expect a status report every 20.0 s
 
-[Thread 1]
-Status:  Networks   18016000
+[Thread 2]
+Status:  Networks   18602000
          Time       20.02 s (16.6% of max. 2.0 m)
-         Re-anneals 16 (0.1% of max. 10000)
-         Banjo is using 13 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 16 mb of memory
 
-[Thread 1]
-Status:  Networks   36872000
+[Thread 2]
+Status:  Networks   34588000
          Time       40.01 s (33.3% of max. 2.0 m)
-         Re-anneals 33 (0.3% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 16 mb of memory
 
-[Thread 1]
-Status:  Networks   56128000
+[Thread 2]
+Status:  Networks   50689000
          Time       1.0 m (50.0% of max. 2.0 m)
-         Re-anneals 51 (0.5% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 15 mb of memory
 
-[Thread 1]
-Status:  Networks   74978000
+[Thread 2]
+Status:  Networks   68144000
          Time       1.33 m (66.6% of max. 2.0 m)
-         Re-anneals 69 (0.6% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 15 mb of memory
 
-[Thread 1]
-Status:  Networks   94108000
+[Thread 2]
+Status:  Networks   85436000
          Time       1.67 m (83.3% of max. 2.0 m)
-         Re-anneals 86 (0.8% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 15 mb of memory
 
-[Thread 1]
-Status:  Networks   113290000
+[Thread 2]
+Status:  Networks   103002000
          Time       2.0 m (100.0% of max. 2.0 m)
-         Re-anneals 104 (1.0% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals  5 (0.0% of max. 10000)
+         Banjo is using 15 mb of memory
 
 
 
 -----------------------------------------------------------------------------
-- [Thread 1] Final report                                Best network overall
+- [Thread 2] Final report                                Best network overall
 -----------------------------------------------------------------------------
 
 
-Network score: -3397.6475, first found at iteration 50309
+Network score: -4786.1434, first found at iteration 56664
 5
-0 3 2 3 4
-1 2 2 4
-2 0
-3 3 1 2 4
-4 1 2
+0 0
+1 2 0 3
+2 3 0 1 3
+3 1 0
+4 3 0 2 3
 
 
 -----------------------------------------------------------------------------
-- [Thread 1] Search Statistics                                               
+- [Thread 2] Search Statistics                                               
 -----------------------------------------------------------------------------
 
 Statistics collected in searcher 'SearcherSimAnneal':
-  Number of networks examined: 113290000
+  Number of networks examined: 103002000
   Total time used: 2.0 m
-  High score: -3397.6475, first found at iteration 50309
-  Number of re-anneals: 104
+  High score: -4786.1434, first found at iteration 56664
+  Number of re-anneals: 5
 
 Statistics collected in proposer 'ProposerRandomLocalMove':
-  Additions -- proposed:    34268585
-  Deletions -- proposed:    41378487
-  Reversals -- proposed:    37642927
+  Additions -- proposed:    29976519
+  Deletions -- proposed:    36625099
+  Reversals -- proposed:    36400381
 
 Statistics collected in cycle checker 'CycleCheckerCheckThenApply':
-  Additions -- considered:  34268585,  acyclic:  1010447
+  Additions -- considered:  29976519,  acyclic:  42725
   Deletions -- no cyclicity test necessary
-  Reversals -- considered:  37642927,  acyclic:  15328482
+  Reversals -- considered:  36400381,  acyclic:  16081041
 
 Statistics collected in evaluator 'EvaluatorBDe':
-  Scores computed:          5084663
+  Scores computed:          1920013
   Scores (cache)            placed         fetched        
-      with 0 parents:       5              10497334       
-      with 1 parents:       13             20016733       
-      with 2 parents:       16             36919255       
-      with 3 parents:       5084629        527952         
+      with 0 parents:       0              8185927        
+      with 1 parents:       6              16341210       
+      with 2 parents:       4              36379755       
+      with 3 parents:       1920003        6003016        
 
 Statistics collected in decider 'DeciderMetropolis':
-  Additions -- considered:  1010447,  better score:  993350,  other accepted:  14744
-  Deletions -- considered:  41378487,  better score:  14695,  other accepted:  993390
-  Reversals -- considered:  15328482,  better score:  9016970,  other accepted:  5353325
-  Average permissivity:     0.133
+  Additions -- considered:  42725,  better score:  42725,  other accepted:  0
+  Deletions -- considered:  36625099,  better score:  0,  other accepted:  42716
+  Reversals -- considered:  16081041,  better score:  6286855,  other accepted:  241752
+  Average permissivity:     0.006
 
-Memory info after completing the search: Banjo is using 11 mb of memory
+Memory info after completing the search: Banjo is using 15 mb of memory

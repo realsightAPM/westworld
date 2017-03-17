@@ -12,27 +12,27 @@
 - Notes:                                    static bayesian network inference
 -----------------------------------------------------------------------------
 
-Network score: -3397.6475, found by thread 1
+Network score: -4786.1434, found by thread 1
 5
-0 3 2 3 4
-1 2 2 4
-2 0
-3 3 1 2 4
-4 1 2
+0 0
+1 2 0 3
+2 3 0 1 3
+3 1 0
+4 3 0 2 3
 
 -----------------------------------------------------------------------------
 - Post-processing                                            Influence scores
 -----------------------------------------------------------------------------
 
-Influence score for   (4,0) ->   (0,0)   -.0109
-Influence score for   (3,0) ->   (0,0)   .0354
-Influence score for   (2,0) ->   (0,0)   .0996
-Influence score for   (4,0) ->   (1,0)   .0000
-Influence score for   (2,0) ->   (1,0)   .0000
-Influence score for   (4,0) ->   (3,0)   .1627
-Influence score for   (2,0) ->   (3,0)   .0199
-Influence score for   (1,0) ->   (3,0)   .0000
-Influence score for   (2,0) ->   (4,0)   .6916
+Influence score for   (3,0) ->   (1,0)   .0000
+Influence score for   (0,0) ->   (1,0)   .0000
+Influence score for   (3,0) ->   (2,0)   .0000
+Influence score for   (1,0) ->   (2,0)   .0000
+Influence score for   (0,0) ->   (2,0)   -.0100
+Influence score for   (0,0) ->   (3,0)   .0000
+Influence score for   (3,0) ->   (4,0)   .0000
+Influence score for   (2,0) ->   (4,0)   .0000
+Influence score for   (0,0) ->   (4,0)   .0000
 
 -----------------------------------------------------------------------------
 - Post-processing                                  DOT graphics format output
@@ -40,7 +40,7 @@ Influence score for   (2,0) ->   (4,0)   .6916
 
 digraph abstract { 
 
-label = "Banjo Version 2.2.0\nHigh scoring network, score: -3397.6475\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-898-observations"; 
+label = "Banjo Version 2.2.0\nHigh scoring network, score: -4786.1434\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-898-observations"; 
 labeljust="l"; 
 
     0 [label="cpu"];
@@ -49,14 +49,14 @@ labeljust="l";
     3 [label="thread_count"];
     4 [label="used_memory"];
 
-    2->0;
-    3->0;
-    4->0;
-    2->1;
-    4->1;
-    1->3;
-    2->3;
-    4->3;
+    0->1;
+    3->1;
+    0->2;
+    1->2;
+    3->2;
+    0->3;
+    0->4;
     2->4;
+    3->4;
 }
 
