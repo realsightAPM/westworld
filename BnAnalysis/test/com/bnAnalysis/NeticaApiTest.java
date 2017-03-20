@@ -24,11 +24,11 @@ public class NeticaApiTest {
 		NeticaApi netica = new NeticaApi();
 		
 		/*** begin: build netica. args: input_file, num_threads, num_bins ***/
-//		netica.buildNet("inputjava_data1.csv", 2, 5);
+		netica.buildNet("inputjava_data1.csv", 2, 3);
 		/*** end: build netica ***/
 		
 		/*** begin: load netica. the dne file must have been built ***/
-		netica.loadNet();
+//		netica.loadNet();
 		/*** end: load netica ***/
 		
 		netica.printRangeMap();

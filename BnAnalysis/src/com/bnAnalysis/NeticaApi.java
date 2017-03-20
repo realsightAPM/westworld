@@ -107,6 +107,14 @@ public class NeticaApi {
 		return str;
 	}
 	
+	public String getState(int state) {
+		String str = "";
+		
+		str += ((char) ('a'+state));
+		
+		return str;
+	}
+	
 	public Map<String, String[]> getRangeMap() {
 		return rangeMap;
 	}
@@ -186,6 +194,29 @@ public class NeticaApi {
 		
 		Pair<String, String> pairTarget = new Pair<String, String>(strTarget[0], strTarget[1]); 
 		return getInfer(condsList, pairTarget);
+	}
+	
+	public double getExeption(String conds, String target) throws NeticaException {
+		String[] strConds = conds.split(",");
+		List<Pair<String, String>> condsList = new ArrayList<Pair<String, String>>();
+		for (int i = 0; i < strConds.length; i++) {
+			String[] strPair = strConds[i].split(":");
+			condsList.add(new Pair<String, String>(strPair[0], strPair[1]));
+		}
+		
+		return getExeption(condsList, target);
+	}
+	
+	public double getExeption(List<Pair<String, String>> conds, String target) throws NeticaException {
+		Node node = net.getNode(target);
+		double res = 0;
+		
+		for (int i = 0; i < node.getNumStates(); i++) {
+			double belief = getInfer(conds, new Pair<String, String> (target, getState(i)));
+			res += i*belief;
+		}
+		
+		return res;
 	}
 	
 	@Override
