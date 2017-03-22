@@ -3,11 +3,9 @@ package com.realsight.brain.timeseries.lib.model.htm.neurongroups;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import com.realsight.brain.timeseries.lib.model.htm.context.*;
 import com.realsight.brain.timeseries.lib.util.Pair;
@@ -24,7 +22,6 @@ public class NeuroGroupOperator {
 	private int numSelectedContext = 0;
 	private List<Pair<List<Integer>, List<Integer>>> potentialNewContextList;
 	private int numAddedContexts;
-	private boolean rate = true;
 	private List<Long> beActivatedList;
 	private Long timestamp;
 	private Map<Long, Integer> history;
@@ -43,10 +40,6 @@ public class NeuroGroupOperator {
 
 	public int getNumAddedContexts() {
 		return numAddedContexts;
-	}
-	
-	public void setRate(boolean rate) {
-		this.rate = rate;
 	}
 	
 	public List<Long> getBeActivatedList() {
@@ -84,55 +77,54 @@ public class NeuroGroupOperator {
 	
 	public int getContextByFacts(List<Pair<List<Integer>, List<Integer>>> newContextsList, int zeroLevel){
 		int numAddedContexts = 0;
-		if ( rate ) {
-			for(int i = 0; i < newContextsList.size(); i++){
-				List<Integer> leftFacts = newContextsList.get(i).getA();
-				List<Integer> rightFacts = newContextsList.get(i).getB();
-				Collections.sort(leftFacts);
-				Collections.sort(rightFacts);
-				int leftHash = leftFacts.hashCode();
-				int rightHash = rightFacts.hashCode();
+		for(int i = 0; i < newContextsList.size(); i++){
+			List<Integer> leftFacts = newContextsList.get(i).getA();
+			List<Integer> rightFacts = newContextsList.get(i).getB();
+			Collections.sort(leftFacts);
+			Collections.sort(rightFacts);
+			int leftHash = leftFacts.hashCode();
+			int rightHash = rightFacts.hashCode();
+		
+			int nextLeftSemiContextNumber = semiContextDics[0].size();
+			if(!this.semiContextDics[0].containsKey(leftHash)){
+				this.semiContextDics[0].put(leftHash, nextLeftSemiContextNumber);
+			}
+			int leftSemiContextID = this.semiContextDics[0].get(leftHash);
+			if (leftSemiContextID == nextLeftSemiContextNumber){
+				ContextValue leftSemiContextValues = new ContextValue(leftFacts.size());
+				semiContextValuesLists[0].add(leftSemiContextValues);
+				for(Integer fact : leftFacts){
+					if(!this.factsDics[0].containsKey(fact)){
+						this.factsDics[0].put(fact, new ArrayList<ContextValue>());
+					}
+					List<ContextValue> semiContextList = this.factsDics[0].get(fact);
+					semiContextList.add(leftSemiContextValues);
+				}
+			}
 			
-				int nextLeftSemiContextNumber = semiContextDics[0].size();
-				if(!this.semiContextDics[0].containsKey(leftHash)){
-					this.semiContextDics[0].put(leftHash, nextLeftSemiContextNumber);
-				}
-				int leftSemiContextID = this.semiContextDics[0].get(leftHash);
-				if (leftSemiContextID == nextLeftSemiContextNumber){
-					ContextValue leftSemiContextValues = new ContextValue(leftFacts.size());
-					semiContextValuesLists[0].add(leftSemiContextValues);
-					for(Integer fact : leftFacts){
-						if(!this.factsDics[0].containsKey(fact)){
-							this.factsDics[0].put(fact, new ArrayList<ContextValue>());
-						}
-						List<ContextValue> semiContextList = this.factsDics[0].get(fact);
-						semiContextList.add(leftSemiContextValues);
+			int nextRightSemiContextNumber = semiContextDics[1].size();
+			if(!this.semiContextDics[1].containsKey(rightHash)){
+				this.semiContextDics[1].put(rightHash, nextRightSemiContextNumber);
+			}
+			int rightSemiContextID = this.semiContextDics[1].get(rightHash);
+			if (rightSemiContextID == nextRightSemiContextNumber){
+				ContextValue rightSemiContextValues = new ContextValue(rightFacts.size());
+				semiContextValuesLists[1].add(rightSemiContextValues);
+				for(Integer fact : rightFacts){
+					if(!this.factsDics[1].containsKey(fact)){
+						this.factsDics[1].put(fact, new ArrayList<ContextValue>());
 					}
+					List<ContextValue> semiContextList = this.factsDics[1].get(fact);
+					semiContextList.add(rightSemiContextValues);
 				}
-				
-				int nextRightSemiContextNumber = semiContextDics[1].size();
-				if(!this.semiContextDics[1].containsKey(rightHash)){
-					this.semiContextDics[1].put(rightHash, nextRightSemiContextNumber);
-				}
-				int rightSemiContextID = this.semiContextDics[1].get(rightHash);
-				if (rightSemiContextID == nextRightSemiContextNumber){
-					ContextValue rightSemiContextValues = new ContextValue(rightFacts.size());
-					semiContextValuesLists[1].add(rightSemiContextValues);
-					for(Integer fact : rightFacts){
-						if(!this.factsDics[1].containsKey(fact)){
-							this.factsDics[1].put(fact, new ArrayList<ContextValue>());
-						}
-						List<ContextValue> semiContextList = this.factsDics[1].get(fact);
-						semiContextList.add(rightSemiContextValues);
-					}
-				}
-				int nextFreeContextIDNumber = this.contextsValuesList.size();
-				if(!this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().containsKey(rightSemiContextID)){
-					this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().put(rightSemiContextID, nextFreeContextIDNumber);
-				}
-			    int contextID = this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().get(rightSemiContextID);
-			    if (contextID == nextFreeContextIDNumber){
-	//		    	System.out.println(contextID);
+			}
+			int nextFreeContextIDNumber = this.contextsValuesList.size();
+			if(!this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().containsKey(rightSemiContextID)){
+				this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().put(rightSemiContextID, nextFreeContextIDNumber);
+			}
+		    int contextID = this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().get(rightSemiContextID);
+		    if (contextID == nextFreeContextIDNumber){
+//		    	System.out.println(contextID);
 //			    	System.out.print((contextID+(1<<30)) + " : ");
 //			    	for(int ii = 0; ii < leftFacts.size(); ii++)
 //						System.out.print(leftFacts.get(ii) + " ");
@@ -140,56 +132,36 @@ public class NeuroGroupOperator {
 //					for(int ii = 0; ii < rightFacts.size(); ii++)
 //						System.out.print(rightFacts.get(ii) + " ");
 //					System.out.print("\n");
-			    	numAddedContexts += 1;
-			    	CrossedContext crossedContexts = new CrossedContext(0, zeroLevel, leftHash, rightHash);
-			    	this.contextsValuesList.add(crossedContexts);
-			    	if (zeroLevel > 0) {
-			    		this.newContextID = contextID;
-			    		return 0;
-			    	}
-			    } else {
-			    	CrossedContext crossedContexts = this.contextsValuesList.get(contextID);
-			    	if (zeroLevel > 0) {
-			    		crossedContexts.setZeroLevel(1);
-			    		return -1;
-			    	}
-			    }
-			}
-		} else {
-			Set<Pair<List<Integer>, List<Integer>>> set = new HashSet<Pair<List<Integer>, List<Integer>>>();
-			set.addAll(newContextsList);
-			for ( Pair<List<Integer>, List<Integer>> newContexts : set) {
-				List<Integer> leftFacts = newContexts.getA();
-				List<Integer> rightFacts = newContexts.getB();
-				Collections.sort(leftFacts);
-				Collections.sort(rightFacts);
-				int leftHash = leftFacts.hashCode();
-				int rightHash = rightFacts.hashCode();
-				if(!this.semiContextDics[0].containsKey(leftHash)){
-					numAddedContexts += 1.0;
-					continue;
-				}
-				int leftSemiContextID = this.semiContextDics[0].get(leftHash);
-				
-				if(!this.semiContextDics[1].containsKey(rightHash)){
-					numAddedContexts += 1.0;
-					continue;
-				}
-				int rightSemiContextID = this.semiContextDics[1].get(rightHash);
-				
-				if(!this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().containsKey(rightSemiContextID)){
-					numAddedContexts += 1.0;
-					continue;
-				}
-			}
+		    	numAddedContexts += 1;
+		    	CrossedContext crossedContexts = new CrossedContext(1, zeroLevel, leftHash, rightHash);
+		    	this.contextsValuesList.add(crossedContexts);
+		    	if (zeroLevel > 0) {
+		    		this.newContextID = contextID;
+		    		return 0;
+		    	}
+		    } else if( this.contextsValuesList.get(contextID).getNumActivate() <= 0 ) {
+		    	numAddedContexts += 1;
+		    	this.contextsValuesList.get(contextID).setNumActivate(1);
+//		    	System.out.print("SBSBSB+\n");
+		    	if (zeroLevel > 0) {
+		    		this.newContextID = contextID;
+		    		return 0;
+		    	}
+		    } else {
+		    	CrossedContext crossedContexts = this.contextsValuesList.get(contextID);
+		    	if (zeroLevel > 0) {
+		    		crossedContexts.setZeroLevel(1);
+		    		return -1;
+		    	}
+		    }
 		}
 		return numAddedContexts;
 	}
 	
 	
-	public void contextCrosser(int leftOrRight, List<Integer> factsList, boolean newContextFlag, List<Pair<List<Integer>, List<Integer>>> potentialNewContexts) {
+	public void contextCrosser(int leftOrRight, List<Integer> factsList, boolean newContextFlag, boolean learnFlag, List<Pair<List<Integer>, List<Integer>>> potentialNewContexts) {
 		if (leftOrRight == 0) {
-			if ( potentialNewContexts.size() > 0 )
+			if ( potentialNewContexts.size() > 0 && learnFlag)
 				this.numAddedContexts = this.getContextByFacts (potentialNewContexts, 0);
 			else 
 				this.numAddedContexts = 0;
@@ -217,7 +189,6 @@ public class NeuroGroupOperator {
 		if ( leftOrRight == 1 ) {
 			updateContextsAndGetActive(newContextFlag);
 		}
-		
 	}
 	
 	public void updateContextsAndGetActive(boolean newContextFlag) {
@@ -233,6 +204,7 @@ public class NeuroGroupOperator {
         	for (Map.Entry<Integer, Integer> entry : leftSemiContextValues.getContexIDs().entrySet()) {
         		int rightSemiContextID = entry.getKey();
         		int contextID = entry.getValue();
+        		if (this.contextsValuesList.get(contextID).getNumActivate() <= 0) continue;
         		if ( this.newContextID != contextID ) {
         			ContextValue rightSemiContextValue = this.semiContextValuesLists[1].get(rightSemiContextID);
         			if ( leftSemiContextValues.getFromOrto().size() == leftSemiContextValues.getLenFact() ) {
@@ -256,6 +228,11 @@ public class NeuroGroupOperator {
         								new Pair<List<Integer>, List<Integer>>(leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFromOrto());
         						potentialNewContextList.add(p);
         					}
+        				} 
+        				if ( newContextFlag && rightSemiContextValue.getFromOrto().size()!=rightSemiContextValue.getLenFact() ) {
+        					int tmp = this.contextsValuesList.get(contextID).getNumActivate();
+        					this.contextsValuesList.get(contextID).setNumActivate(tmp-5);
+//        					System.out.println("SBSBSB- " + tmp + " " + this.contextsValuesList.get(contextID).getNumActivate());
         				}
         					
         			} else if (  this.contextsValuesList.get(contextID).getZeroLevel()==1 && rightSemiContextValue.getFromOrto().size()>0 && 

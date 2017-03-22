@@ -1,78 +1,89 @@
 package com.realsight.brain.timeseries.lib.model.htm;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import com.realsight.brain.timeseries.lib.model.htm.neurongroups.*;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
+import com.realsight.brain.timeseries.lib.util.Pair;
 
 public class AnormalyHierarchy {
-	
-	private double minValue;
-	private double maxValue;
-	private static final int maxLeftSemiContextsLenght = 7;
-	private static final int maxActiveNeuronsNum = 15;
-	private static final int numBit = 4;
-	private double fullValueRange;
-	private double minValueStep;
+
+	private final int maxLeftSemiContextsLenght = 27;
+	private final int maxActiveNeuronsNum = 25;
+	private final int numBit = 32;
+	private final double radius = 0.150; // (0,0.5)
+	private List<Pair<Double, Double>> sensing = new ArrayList<Pair<Double, Double>>();
 	private NeuroGroup neuroGroup = null;
+	private final double eps = 1e-5;
 	
 	private AnormalyHierarchy(double minValue, double maxValue) {
-		this.minValue = minValue;
-		this.maxValue = maxValue;
-		this.fullValueRange = this.maxValue - this.minValue;
-		int numNormValue = (1<<numBit) - 1;
-        if ( this.fullValueRange == 0.0 ) {
-        	this.fullValueRange = numNormValue;
-        }
-		this.minValueStep = this.fullValueRange / numNormValue;
+		double length = maxValue - minValue;
+		if ( length < eps ) length = 1.0;
+		double stepLength = length / this.numBit;
+		for ( double x = minValue; x < length; x += stepLength ) {
+			Double L = x - length*radius;
+			Double R = x + length*radius;
+			this.sensing.add(new Pair<Double, Double>(L, R));
+		}
 		this.neuroGroup = new NeuroGroup(maxActiveNeuronsNum, maxLeftSemiContextsLenght);
 	}
 	
-	private List<Integer> bit2SensFacts(int bit) {
-		List<Integer> currSensFacts = new ArrayList<Integer>();
-		for(int j = 0; bit>0 || j<numBit; bit>>=1, j++){
-			if ( (bit&1) > 0 ) {
-				currSensFacts.add(2*j+1);
-			} else {
-				currSensFacts.add(2*j);
-			}
+	private AnormalyHierarchy(DoubleSeries series) {
+		Random rng = new Random(2234);
+		List<Double> data = series.getTData();
+		Collections.sort(data);
+		int n = data.size() - 1;
+		while(this.sensing.size() < this.numBit) {
+			int rn = rng.nextInt(data.size());
+			Double R = data.get(n);
+			Double L = data.get(0);
+			if (rn + n*radius <= n) R = data.get((int) (rn + n*radius));
+			if (rn - n*radius >= 0) L = data.get((int) (rn - n*radius));
+			this.sensing.add(new Pair<Double, Double>(L, R));
 		}
-		return currSensFacts;
+		
+		this.neuroGroup = new NeuroGroup(maxActiveNeuronsNum, maxLeftSemiContextsLenght);
 	}
 	
-	public int getBit(double value) {
-		int bit = (int) ((value-this.minValue)/this.minValueStep);
-		return bit;
+	private List<Integer> value2SensFacts(double value) {
+		List<Integer> currSensFacts = new ArrayList<Integer>();
+		for ( int i = 0; i < this.sensing.size(); i++) {
+			Pair<Double, Double> p = this.sensing.get(i);
+			if (value>p.getA() && value<p.getB()) 
+				currSensFacts.add(i);
+		}
+//		System.out.println(currSensFacts.size());
+		return currSensFacts;
 	}
 	
 	private double learn(List<Integer> currSensFacts, Long timestamp){
 		return this.neuroGroup.learn(currSensFacts, timestamp);
 	}
 	
-	private double predict(List<Integer> currSensFacts, Long timestamp){
-		return this.neuroGroup.predict(currSensFacts, timestamp);
+	public double predict(Long timestamp, double value) {
+		List<Integer> sensFacts = value2SensFacts(value);
+		return this.neuroGroup.predict(sensFacts, timestamp);
 	}
 	
 	public Double detectorAnomaly(Double value, Long timestamp, boolean anormly) {
-		int bit = getBit(value);
-		List<Integer> currSensFacts = bit2SensFacts(bit);
-		if (anormly) return predict(currSensFacts, timestamp);
+		List<Integer> currSensFacts = value2SensFacts(value);
+		if (anormly) return learn(currSensFacts, timestamp);
 		return learn(currSensFacts, timestamp);
 	}
 	
 	public Double detectorAnomaly(Double value, Long timestamp) {
-		int bit = getBit(value);
-		List<Integer> currSensFacts = bit2SensFacts(bit);
+		List<Integer> currSensFacts = value2SensFacts(value);
 		return learn(currSensFacts, timestamp);
 	}
-	
+		
 	public DoubleSeries detectorSeriesAnomaly(DoubleSeries nSeries, Long timestamp) {
 		List<Entry<Double>> newEntries = new ArrayList<>();
 		for(int i = 0; i < nSeries.size(); i += 1){
-			int bit = getBit(nSeries.get(i).getItem());
-			List<Integer> currSensFacts = bit2SensFacts(bit);
+			List<Integer> currSensFacts = value2SensFacts(nSeries.get(i).getItem());
 			newEntries.add(new Entry<Double>(learn(currSensFacts, timestamp), nSeries.get(i).getInstant()));
 		}
 		return new DoubleSeries(newEntries, "anormly");
@@ -82,11 +93,15 @@ public class AnormalyHierarchy {
 		AnormalyHierarchy res = new AnormalyHierarchy(minValue, maxValue);
 		if (nSeries != null) {
 			for(int i = 0; i< nSeries.size(); i += 1){
-				int bit = res.getBit(nSeries.get(i).getItem());
-				List<Integer> currSensFacts = res.bit2SensFacts(bit);
+				List<Integer> currSensFacts = res.value2SensFacts(nSeries.get(i).getItem());
 				res.learn(currSensFacts, nSeries.get(i).getInstant());
 			}
 		}
+		return res;
+	}
+	
+	public static AnormalyHierarchy build(DoubleSeries nSeries){
+		AnormalyHierarchy res = new AnormalyHierarchy(nSeries);
 		return res;
 	}
 }
