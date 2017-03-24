@@ -102,6 +102,14 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     public List<Entry<T>> getData() {
         return mData;
     }
+    
+    public List<T> getTData() {
+    	List<T> tData = new ArrayList<T>();
+    	for ( int i = 0; i < this.mData.size(); i++) {
+    		tData.add(this.mData.get(i).getItem());
+    	}
+    	return tData;
+    }
 
     public Entry<T> get(int index) {
     	if (index < 0)

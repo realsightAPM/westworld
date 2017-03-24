@@ -23,15 +23,8 @@ public class NeuroGroup {
 		this.potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
 	}
 	
-	public void sleep() {
-		this.leftFactsGroup = new ArrayList<Integer>();
-		this.potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
-		List<Integer> currSensFacts = new ArrayList<Integer>();
-		this.activate(currSensFacts, false, -1L);
-	}
 	
-	private double activate(List<Integer> currSensFacts, boolean rate, Long timestamp) {
-		this.neuroGroupOperator.setRate(rate);
+	private double activate(List<Integer> currSensFacts, Long timestamp) {
 		this.neuroGroupOperator.setTimestamp(timestamp);
 		
 //		for(int i = 0; i < this.leftFactsGroup.size(); i++)
@@ -52,7 +45,7 @@ public class NeuroGroup {
 			potNewZeroLevelContext.add(new Pair<List<Integer>, List<Integer>>(this.leftFactsGroup, currSensFacts));
             newContextFlag = this.neuroGroupOperator.getContextByFacts(potNewZeroLevelContext, 1);
 		}
-		this.neuroGroupOperator.contextCrosser(1, currSensFacts, newContextFlag>=0, new ArrayList<Pair<List<Integer>, List<Integer>>>());
+		this.neuroGroupOperator.contextCrosser(1, currSensFacts,(newContextFlag>=0), true,  new ArrayList<Pair<List<Integer>, List<Integer>>>());
 		double percentSelectedContextActive = 0.0;
 		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
 			percentSelectedContextActive = 
@@ -105,7 +98,7 @@ public class NeuroGroup {
 //			System.out.print(")\n");
 //		}
 		
-		this.neuroGroupOperator.contextCrosser(0, this.leftFactsGroup, false, this.potentialNewContextList);
+		this.neuroGroupOperator.contextCrosser(0, this.leftFactsGroup, false, true, this.potentialNewContextList);
 		double percentaddContextActive = 0.0;
 		if ( activeContext.size() > 0 ) {
 			double newContextNum = this.neuroGroupOperator.getNumAddedContexts();
@@ -117,15 +110,24 @@ public class NeuroGroup {
 		}
 		
 //		System.out.println(percentaddContextActive);
-		return (1.0 - percentSelectedContextActive + percentaddContextActive) / 2.0; 
+		return (1.0 - percentSelectedContextActive)*0.50 + (percentaddContextActive)*0.50; 
 	}
 	
 	public double learn(List<Integer> currSensFacts, Long timestamp) {
-		return activate(currSensFacts, true, timestamp);
+		return activate(currSensFacts, timestamp);
 	}
 	
-	public double predict(List<Integer> currSensFacts, Long timestamp) {
-		return activate(currSensFacts, false, timestamp);
+	public double predict(List<Integer> preSensFacts, Long timestamp) {
+		this.neuroGroupOperator.setTimestamp(timestamp);
+		preSensFacts = new ArrayList<Integer>(new HashSet<Integer>(preSensFacts));
+		Collections.sort(preSensFacts);
+		this.neuroGroupOperator.contextCrosser(1, preSensFacts, false, false, new ArrayList<Pair<List<Integer>, List<Integer>>>());
+		double percentSelectedContextActive = 0.0;
+		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
+			percentSelectedContextActive = 
+					1.0 * this.neuroGroupOperator.getActiveContexts().size() / this.neuroGroupOperator.getNumSelectedContext();
+		}
+		return percentSelectedContextActive;
 	}
 
 	public List<Integer> getActiveNeuros() {

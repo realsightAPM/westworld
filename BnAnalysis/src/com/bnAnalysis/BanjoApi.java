@@ -3,32 +3,11 @@ package com.bnAnalysis;
 /*** BinWu 2017/1/8 ***/
 
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-
+import java.io.*;
+import java.util.*;
 import com.basic.Separate;
-
 import edu.duke.cs.banjo.application.Banjo;
 import edu.duke.cs.banjo.utility.BANJO;
-import weka.core.Instance;
-import weka.core.Instances;
-import weka.core.converters.CSVLoader;
-import weka.core.converters.CSVSaver;
-import weka.filters.Filter;
-import weka.filters.unsupervised.attribute.Discretize;
 
 public class BanjoApi {
 	

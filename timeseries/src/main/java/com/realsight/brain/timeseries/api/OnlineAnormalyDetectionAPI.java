@@ -11,4 +11,8 @@ public class OnlineAnormalyDetectionAPI extends AnormalyDetection{
 	public OnlineAnormalyDetectionAPI(double minValue, double maxValue) {
 		this(null, minValue, maxValue);
 	}
+	
+	public OnlineAnormalyDetectionAPI(DoubleSeries nSeries) {
+		super(nSeries);
+	}
 }

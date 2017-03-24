@@ -70,9 +70,7 @@ public class NeticaApi {
 		}
 		
 		/*** counting case ***/
-		NodeList nodes = net.getNodes();
-		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
-		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+		
 		
 		net.write(new Streamer("netica_out_dir/Learned_netica.dne"));
 
@@ -81,19 +79,40 @@ public class NeticaApi {
 		ReadCSV readCSV = new ReadCSV();
 		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
 		
+		NodeList nodes = net.getNodes();
+		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
+		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+		net.write(new Streamer("netica_out_dir/Learned_netica_CPT.dne"));
+		net.compile();
+	}
+	
+	public void loadRangeMap() throws IOException {
+		ReadCSV readCSV = new ReadCSV();
+		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+	}
+	
+	public void loadSimuNet() throws NeticaException, IOException {
+		env = new Environ(null);
+		net = new Net(new Streamer ("netica_out_dir/Learned_netica.dne"));
+		net.setName("apm");
+		
+		NodeList nodes = net.getNodes();
+		Streamer caseFile = new Streamer("simuLoad_out_dir/simuLoad.cas");
+		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+		
 		net.compile();
 	}
 	
 	public void loadNet() throws NeticaException, IOException {
-		loadNet("netica_out_dir/Learned_netica.dne");
-	}
-	
-	private void loadNet(String dne_file) throws NeticaException, IOException {
 		env = new Environ(null);
-		net = new Net (new Streamer (dne_file));
+		net = new Net (new Streamer ("netica_out_dir/Learned_netica.dne"));
 		net.setName("apm");
-		ReadCSV readCSV = new ReadCSV();
-		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+		loadRangeMap();
+		
+		NodeList nodes = net.getNodes();
+		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
+		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+		
 		net.compile();
 	}
 	

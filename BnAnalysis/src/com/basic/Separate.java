@@ -1,12 +1,7 @@
 package com.basic;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 import weka.core.Instance;
 import weka.core.Instances;
@@ -40,7 +35,7 @@ public class Separate {
             String[] file_list = outfile.list();
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
-            	delfile.delete();  
+            	delfile.delete();
                 System.out.println("ÒÑÉ¾³ý" + file_list[i]);  
             }
         }

@@ -1,0 +1,841 @@
+2017-02-25T17:23:05,709 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:27:18,060 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:32:15,390 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:32:20,029 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487290185232}
+2017-02-25T17:32:20,090 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487290185232%7D ] success
+2017-02-25T17:32:20,142 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487290485243}
+2017-02-25T17:32:20,145 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487290485243%7D ] success
+2017-02-25T17:32:20,157 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487290785245}
+2017-02-25T17:32:20,160 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487290785245%7D ] success
+2017-02-25T17:32:20,171 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487291085255}
+2017-02-25T17:32:20,173 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487291085255%7D ] success
+2017-02-25T17:32:20,184 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487291385264}
+2017-02-25T17:32:20,187 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487291385264%7D ] success
+2017-02-25T17:32:20,199 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487291685275}
+2017-02-25T17:32:20,202 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487291685275%7D ] success
+2017-02-25T17:32:20,213 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487291985285}
+2017-02-25T17:32:20,216 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487291985285%7D ] success
+2017-02-25T17:32:20,226 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487292285287}
+2017-02-25T17:32:20,229 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487292285287%7D ] success
+2017-02-25T17:32:20,240 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487292585297}
+2017-02-25T17:32:20,242 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487292585297%7D ] success
+2017-02-25T17:32:20,254 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487292885308}
+2017-02-25T17:32:20,256 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487292885308%7D ] success
+2017-02-25T17:32:20,268 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487293185314}
+2017-02-25T17:32:20,270 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487293185314%7D ] success
+2017-02-25T17:32:20,281 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487293485319}
+2017-02-25T17:32:20,284 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487293485319%7D ] success
+2017-02-25T17:32:20,295 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487293785330}
+2017-02-25T17:32:20,296 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487293785330%7D ] success
+2017-02-25T17:32:20,308 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487294085341}
+2017-02-25T17:32:20,311 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487294085341%7D ] success
+2017-02-25T17:32:20,323 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487294385351}
+2017-02-25T17:32:20,325 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487294385351%7D ] success
+2017-02-25T17:32:20,337 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487294685353}
+2017-02-25T17:32:20,340 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487294685353%7D ] success
+2017-02-25T17:32:20,350 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487294985364}
+2017-02-25T17:32:20,353 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487294985364%7D ] success
+2017-02-25T17:32:20,363 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487295285372}
+2017-02-25T17:32:20,365 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487295285372%7D ] success
+2017-02-25T17:32:20,376 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487295585379}
+2017-02-25T17:32:20,378 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487295585379%7D ] success
+2017-02-25T17:32:20,388 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487295885387}
+2017-02-25T17:32:20,390 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487295885387%7D ] success
+2017-02-25T17:32:20,400 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487296185396}
+2017-02-25T17:32:20,403 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487296185396%7D ] success
+2017-02-25T17:32:20,413 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487296485407}
+2017-02-25T17:32:20,416 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487296485407%7D ] success
+2017-02-25T17:32:20,425 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487296785413}
+2017-02-25T17:32:20,427 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487296785413%7D ] success
+2017-02-25T17:32:20,437 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"100","timestamp":1487297085434}
+2017-02-25T17:32:20,439 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%22100%22%2C%22timestamp%22%3A1487297085434%7D ] success
+2017-02-25T17:32:20,449 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"20","timestamp":1487297385431}
+2017-02-25T17:32:20,451 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2220%22%2C%22timestamp%22%3A1487297385431%7D ] success
+2017-02-25T17:32:20,461 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487297685445}
+2017-02-25T17:32:20,463 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487297685445%7D ] success
+2017-02-25T17:32:20,473 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487297985446}
+2017-02-25T17:32:20,475 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487297985446%7D ] success
+2017-02-25T17:32:20,486 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"23","timestamp":1487298285453}
+2017-02-25T17:32:20,488 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2223%22%2C%22timestamp%22%3A1487298285453%7D ] success
+2017-02-25T17:32:20,499 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"12","timestamp":1487298585466}
+2017-02-25T17:32:20,501 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2212%22%2C%22timestamp%22%3A1487298585466%7D ] success
+2017-02-25T17:32:20,510 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487298885474}
+2017-02-25T17:32:20,513 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487298885474%7D ] success
+2017-02-25T17:32:20,523 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487299185480}
+2017-02-25T17:32:20,526 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487299185480%7D ] success
+2017-02-25T17:32:20,538 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487299485492}
+2017-02-25T17:32:20,540 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487299485492%7D ] success
+2017-02-25T17:32:20,551 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487299785501}
+2017-02-25T17:32:20,554 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487299785501%7D ] success
+2017-02-25T17:32:20,564 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487300085504}
+2017-02-25T17:32:20,566 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487300085504%7D ] success
+2017-02-25T17:32:20,576 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487300385523}
+2017-02-25T17:32:20,579 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487300385523%7D ] success
+2017-02-25T17:32:20,588 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487300685525}
+2017-02-25T17:32:20,590 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487300685525%7D ] success
+2017-02-25T17:32:20,600 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487300985529}
+2017-02-25T17:32:20,601 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487300985529%7D ] success
+2017-02-25T17:32:20,613 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487301285538}
+2017-02-25T17:32:20,615 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487301285538%7D ] success
+2017-02-25T17:32:20,625 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487301585546}
+2017-02-25T17:32:20,628 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487301585546%7D ] success
+2017-02-25T17:32:20,640 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"20","timestamp":1487301885557}
+2017-02-25T17:32:20,642 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2220%22%2C%22timestamp%22%3A1487301885557%7D ] success
+2017-02-25T17:32:20,652 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487302185563}
+2017-02-25T17:32:20,654 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487302185563%7D ] success
+2017-02-25T17:32:20,669 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487302485571}
+2017-02-25T17:32:20,671 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487302485571%7D ] success
+2017-02-25T17:32:20,681 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487302785579}
+2017-02-25T17:32:20,683 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487302785579%7D ] success
+2017-02-25T17:32:20,693 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487303085593}
+2017-02-25T17:32:20,695 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487303085593%7D ] success
+2017-02-25T17:32:20,705 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487303385595}
+2017-02-25T17:32:20,707 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487303385595%7D ] success
+2017-02-25T17:32:20,716 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487303685603}
+2017-02-25T17:32:20,718 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487303685603%7D ] success
+2017-02-25T17:32:20,728 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487303985632}
+2017-02-25T17:32:20,730 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487303985632%7D ] success
+2017-02-25T17:32:20,739 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487304285627}
+2017-02-25T17:32:20,741 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487304285627%7D ] success
+2017-02-25T17:32:20,751 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487304585630}
+2017-02-25T17:32:20,753 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487304585630%7D ] success
+2017-02-25T17:32:20,763 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487304885637}
+2017-02-25T17:32:20,765 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487304885637%7D ] success
+2017-02-25T17:32:20,775 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487305185646}
+2017-02-25T17:32:20,777 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487305185646%7D ] success
+2017-02-25T17:32:20,788 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487305485656}
+2017-02-25T17:32:20,790 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487305485656%7D ] success
+2017-02-25T17:32:20,801 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487305785665}
+2017-02-25T17:32:20,803 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487305785665%7D ] success
+2017-02-25T17:32:20,813 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487306085672}
+2017-02-25T17:32:20,815 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487306085672%7D ] success
+2017-02-25T17:32:20,825 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487306385678}
+2017-02-25T17:32:20,827 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487306385678%7D ] success
+2017-02-25T17:32:20,837 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487306685689}
+2017-02-25T17:32:20,839 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487306685689%7D ] success
+2017-02-25T17:32:20,849 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487306985696}
+2017-02-25T17:32:20,851 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487306985696%7D ] success
+2017-02-25T17:32:20,861 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487307285703}
+2017-02-25T17:32:20,863 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487307285703%7D ] success
+2017-02-25T17:32:20,872 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487307585712}
+2017-02-25T17:32:20,875 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487307585712%7D ] success
+2017-02-25T17:32:20,885 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487307885723}
+2017-02-25T17:32:20,887 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487307885723%7D ] success
+2017-02-25T17:32:20,897 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487308187162}
+2017-02-25T17:32:20,899 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487308187162%7D ] success
+2017-02-25T17:32:20,908 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487308485739}
+2017-02-25T17:32:20,910 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487308485739%7D ] success
+2017-02-25T17:32:20,919 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487308785749}
+2017-02-25T17:32:20,921 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487308785749%7D ] success
+2017-02-25T17:32:20,933 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487309085755}
+2017-02-25T17:32:20,936 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487309085755%7D ] success
+2017-02-25T17:32:20,945 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487309385761}
+2017-02-25T17:32:20,948 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487309385761%7D ] success
+2017-02-25T17:32:20,957 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487309685771}
+2017-02-25T17:32:20,959 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487309685771%7D ] success
+2017-02-25T17:32:20,968 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487309985778}
+2017-02-25T17:32:20,970 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487309985778%7D ] success
+2017-02-25T17:32:20,979 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487310285787}
+2017-02-25T17:32:20,981 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487310285787%7D ] success
+2017-02-25T17:32:20,990 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487310585799}
+2017-02-25T17:32:20,991 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487310585799%7D ] success
+2017-02-25T17:32:21,000 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487310885805}
+2017-02-25T17:32:21,002 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487310885805%7D ] success
+2017-02-25T17:32:21,011 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487311185812}
+2017-02-25T17:32:21,013 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487311185812%7D ] success
+2017-02-25T17:32:21,022 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487311485820}
+2017-02-25T17:32:21,023 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487311485820%7D ] success
+2017-02-25T17:32:21,034 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487311785832}
+2017-02-25T17:32:21,036 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487311785832%7D ] success
+2017-02-25T17:32:21,047 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487312085837}
+2017-02-25T17:32:21,048 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487312085837%7D ] success
+2017-02-25T17:32:21,059 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487312385847}
+2017-02-25T17:32:21,061 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487312385847%7D ] success
+2017-02-25T17:32:21,072 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"39","timestamp":1487312685856}
+2017-02-25T17:32:21,074 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2239%22%2C%22timestamp%22%3A1487312685856%7D ] success
+2017-02-25T17:32:21,085 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487312985862}
+2017-02-25T17:32:21,087 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487312985862%7D ] success
+2017-02-25T17:32:21,096 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487313285873}
+2017-02-25T17:32:21,098 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487313285873%7D ] success
+2017-02-25T17:32:21,107 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487313585886}
+2017-02-25T17:32:21,109 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487313585886%7D ] success
+2017-02-25T17:32:21,119 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487313885916}
+2017-02-25T17:32:21,121 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487313885916%7D ] success
+2017-02-25T17:32:21,130 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487314185896}
+2017-02-25T17:32:21,132 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487314185896%7D ] success
+2017-02-25T17:32:21,140 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487314485903}
+2017-02-25T17:32:21,142 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487314485903%7D ] success
+2017-02-25T17:32:21,151 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487314785954}
+2017-02-25T17:32:21,153 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487314785954%7D ] success
+2017-02-25T17:32:21,163 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487315085922}
+2017-02-25T17:32:21,166 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487315085922%7D ] success
+2017-02-25T17:32:21,175 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487315385929}
+2017-02-25T17:32:21,177 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487315385929%7D ] success
+2017-02-25T17:32:21,187 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487315685939}
+2017-02-25T17:32:21,188 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487315685939%7D ] success
+2017-02-25T17:32:21,197 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487315985946}
+2017-02-25T17:32:21,199 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487315985946%7D ] success
+2017-02-25T17:32:21,208 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487316285955}
+2017-02-25T17:32:21,210 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487316285955%7D ] success
+2017-02-25T17:32:21,219 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487316585964}
+2017-02-25T17:32:21,220 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487316585964%7D ] success
+2017-02-25T17:32:21,229 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487316885971}
+2017-02-25T17:32:21,231 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487316885971%7D ] success
+2017-02-25T17:32:21,240 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487317186009}
+2017-02-25T17:32:21,242 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487317186009%7D ] success
+2017-02-25T17:32:21,251 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487317485990}
+2017-02-25T17:32:21,253 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487317485990%7D ] success
+2017-02-25T17:32:21,261 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487317786004}
+2017-02-25T17:32:21,263 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487317786004%7D ] success
+2017-02-25T17:32:21,272 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487318086005}
+2017-02-25T17:32:21,274 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487318086005%7D ] success
+2017-02-25T17:32:21,284 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"24","timestamp":1487318386013}
+2017-02-25T17:32:21,286 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2224%22%2C%22timestamp%22%3A1487318386013%7D ] success
+2017-02-25T17:32:21,295 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487318686024}
+2017-02-25T17:32:21,297 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487318686024%7D ] success
+2017-02-25T17:32:21,307 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487318986029}
+2017-02-25T17:32:21,309 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487318986029%7D ] success
+2017-02-25T17:32:21,318 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487319286037}
+2017-02-25T17:32:21,319 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487319286037%7D ] success
+2017-02-25T17:32:21,328 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487319586050}
+2017-02-25T17:32:21,331 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487319586050%7D ] success
+2017-02-25T17:32:21,340 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487319886055}
+2017-02-25T17:32:21,341 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487319886055%7D ] success
+2017-02-25T17:32:21,350 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487320186094}
+2017-02-25T17:32:21,352 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487320186094%7D ] success
+2017-02-25T17:32:21,361 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487320486074}
+2017-02-25T17:32:21,363 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487320486074%7D ] success
+2017-02-25T17:32:21,373 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487320786078}
+2017-02-25T17:32:21,375 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487320786078%7D ] success
+2017-02-25T17:32:21,384 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487321086089}
+2017-02-25T17:32:21,386 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487321086089%7D ] success
+2017-02-25T17:32:21,394 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"10","timestamp":1487321386100}
+2017-02-25T17:32:21,397 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2210%22%2C%22timestamp%22%3A1487321386100%7D ] success
+2017-02-25T17:32:21,406 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487321686105}
+2017-02-25T17:32:21,407 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487321686105%7D ] success
+2017-02-25T17:32:21,416 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487321986116}
+2017-02-25T17:32:21,417 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487321986116%7D ] success
+2017-02-25T17:32:21,426 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487322286124}
+2017-02-25T17:32:21,428 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487322286124%7D ] success
+2017-02-25T17:32:21,437 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"9","timestamp":1487322586133}
+2017-02-25T17:32:21,439 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%229%22%2C%22timestamp%22%3A1487322586133%7D ] success
+2017-02-25T17:32:21,448 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487322886162}
+2017-02-25T17:32:21,449 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487322886162%7D ] success
+2017-02-25T17:32:21,458 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487323186148}
+2017-02-25T17:32:21,460 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487323186148%7D ] success
+2017-02-25T17:32:21,469 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487323486205}
+2017-02-25T17:32:21,471 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487323486205%7D ] success
+2017-02-25T17:32:21,500 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487323786170}
+2017-02-25T17:32:21,502 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487323786170%7D ] success
+2017-02-25T17:32:21,512 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487324086174}
+2017-02-25T17:32:21,514 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487324086174%7D ] success
+2017-02-25T17:32:21,525 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487324386180}
+2017-02-25T17:32:21,526 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487324386180%7D ] success
+2017-02-25T17:32:21,536 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487324686189}
+2017-02-25T17:32:21,538 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487324686189%7D ] success
+2017-02-25T17:32:21,546 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487324986199}
+2017-02-25T17:32:21,548 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487324986199%7D ] success
+2017-02-25T17:32:21,556 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487325286207}
+2017-02-25T17:32:21,558 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487325286207%7D ] success
+2017-02-25T17:32:21,567 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487325586214}
+2017-02-25T17:32:21,569 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487325586214%7D ] success
+2017-02-25T17:32:21,578 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487325886221}
+2017-02-25T17:32:21,580 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487325886221%7D ] success
+2017-02-25T17:32:21,589 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487326186239}
+2017-02-25T17:32:21,591 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487326186239%7D ] success
+2017-02-25T17:32:21,600 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487326486237}
+2017-02-25T17:32:21,602 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487326486237%7D ] success
+2017-02-25T17:32:21,611 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487326786257}
+2017-02-25T17:32:21,613 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487326786257%7D ] success
+2017-02-25T17:32:21,622 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487327086552}
+2017-02-25T17:32:21,624 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487327086552%7D ] success
+2017-02-25T17:32:21,632 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487327386266}
+2017-02-25T17:32:21,634 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487327386266%7D ] success
+2017-02-25T17:32:21,643 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487327686275}
+2017-02-25T17:32:21,645 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487327686275%7D ] success
+2017-02-25T17:32:21,655 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487327986280}
+2017-02-25T17:32:21,657 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487327986280%7D ] success
+2017-02-25T17:32:21,667 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487328286295}
+2017-02-25T17:32:21,670 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487328286295%7D ] success
+2017-02-25T17:32:21,679 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487328586296}
+2017-02-25T17:32:21,682 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487328586296%7D ] success
+2017-02-25T17:32:21,690 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487328886308}
+2017-02-25T17:32:21,692 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487328886308%7D ] success
+2017-02-25T17:32:21,701 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487329186337}
+2017-02-25T17:32:21,703 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487329186337%7D ] success
+2017-02-25T17:32:21,713 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487329486367}
+2017-02-25T17:32:21,715 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487329486367%7D ] success
+2017-02-25T17:32:21,724 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487329786329}
+2017-02-25T17:32:21,726 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487329786329%7D ] success
+2017-02-25T17:32:21,735 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487330086340}
+2017-02-25T17:32:21,736 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487330086340%7D ] success
+2017-02-25T17:32:21,745 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487330386352}
+2017-02-25T17:32:21,747 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487330386352%7D ] success
+2017-02-25T17:32:21,777 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487330686355}
+2017-02-25T17:32:21,779 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487330686355%7D ] success
+2017-02-25T17:32:21,788 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487330986373}
+2017-02-25T17:32:21,789 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487330986373%7D ] success
+2017-02-25T17:32:21,799 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487331286374}
+2017-02-25T17:32:21,801 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487331286374%7D ] success
+2017-02-25T17:32:21,810 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487331586396}
+2017-02-25T17:32:21,811 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487331586396%7D ] success
+2017-02-25T17:32:21,820 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487331886390}
+2017-02-25T17:32:21,822 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487331886390%7D ] success
+2017-02-25T17:32:21,830 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487332186399}
+2017-02-25T17:32:21,833 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487332186399%7D ] success
+2017-02-25T17:32:21,843 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487332486410}
+2017-02-25T17:32:21,844 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487332486410%7D ] success
+2017-02-25T17:32:21,854 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487332786413}
+2017-02-25T17:32:21,856 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487332786413%7D ] success
+2017-02-25T17:32:21,864 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487333086422}
+2017-02-25T17:32:21,866 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487333086422%7D ] success
+2017-02-25T17:32:21,875 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487333386428}
+2017-02-25T17:32:21,877 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487333386428%7D ] success
+2017-02-25T17:32:21,886 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487333686441}
+2017-02-25T17:32:21,887 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487333686441%7D ] success
+2017-02-25T17:32:21,895 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487333986451}
+2017-02-25T17:32:21,897 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487333986451%7D ] success
+2017-02-25T17:32:21,906 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487334286455}
+2017-02-25T17:32:21,907 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487334286455%7D ] success
+2017-02-25T17:32:21,916 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487334586467}
+2017-02-25T17:32:21,917 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487334586467%7D ] success
+2017-02-25T17:32:21,926 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487334886471}
+2017-02-25T17:32:21,928 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487334886471%7D ] success
+2017-02-25T17:32:21,936 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487335186483}
+2017-02-25T17:32:21,938 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487335186483%7D ] success
+2017-02-25T17:32:21,947 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487335486500}
+2017-02-25T17:32:21,948 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487335486500%7D ] success
+2017-02-25T17:32:21,957 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487335786497}
+2017-02-25T17:32:21,959 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487335786497%7D ] success
+2017-02-25T17:32:21,967 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487336086511}
+2017-02-25T17:32:21,968 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487336086511%7D ] success
+2017-02-25T17:32:21,981 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487336386514}
+2017-02-25T17:32:21,982 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487336386514%7D ] success
+2017-02-25T17:32:21,991 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487336686521}
+2017-02-25T17:32:21,992 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487336686521%7D ] success
+2017-02-25T17:32:22,001 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487336986553}
+2017-02-25T17:32:22,003 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487336986553%7D ] success
+2017-02-25T17:32:22,012 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487337286542}
+2017-02-25T17:32:22,013 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487337286542%7D ] success
+2017-02-25T17:32:22,022 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487337586554}
+2017-02-25T17:32:22,033 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487337586554%7D ] success
+2017-02-25T17:32:22,060 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487337886554}
+2017-02-25T17:32:22,063 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487337886554%7D ] success
+2017-02-25T17:32:22,076 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487338186563}
+2017-02-25T17:32:22,077 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487338186563%7D ] success
+2017-02-25T17:32:22,087 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487338486571}
+2017-02-25T17:32:22,089 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487338486571%7D ] success
+2017-02-25T17:32:22,098 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487338786582}
+2017-02-25T17:32:22,101 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487338786582%7D ] success
+2017-02-25T17:32:22,109 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487339086594}
+2017-02-25T17:32:22,111 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487339086594%7D ] success
+2017-02-25T17:32:22,119 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487339386598}
+2017-02-25T17:32:22,120 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487339386598%7D ] success
+2017-02-25T17:32:22,129 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487339686603}
+2017-02-25T17:32:22,131 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487339686603%7D ] success
+2017-02-25T17:32:22,140 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487339986614}
+2017-02-25T17:32:22,141 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487339986614%7D ] success
+2017-02-25T17:32:22,150 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487340286623}
+2017-02-25T17:32:22,152 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487340286623%7D ] success
+2017-02-25T17:32:22,161 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487340586632}
+2017-02-25T17:32:22,162 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487340586632%7D ] success
+2017-02-25T17:32:22,171 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487340886639}
+2017-02-25T17:32:22,173 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487340886639%7D ] success
+2017-02-25T17:32:22,183 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487341186646}
+2017-02-25T17:32:22,184 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487341186646%7D ] success
+2017-02-25T17:32:22,193 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487341486655}
+2017-02-25T17:32:22,194 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487341486655%7D ] success
+2017-02-25T17:32:22,203 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487341786664}
+2017-02-25T17:32:22,204 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487341786664%7D ] success
+2017-02-25T17:32:22,213 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487342086672}
+2017-02-25T17:32:22,215 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487342086672%7D ] success
+2017-02-25T17:32:22,224 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487342386679}
+2017-02-25T17:32:22,225 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487342386679%7D ] success
+2017-02-25T17:32:22,234 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487342686688}
+2017-02-25T17:32:22,235 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487342686688%7D ] success
+2017-02-25T17:32:22,244 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487342986700}
+2017-02-25T17:32:22,245 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487342986700%7D ] success
+2017-02-25T17:32:22,255 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487343286708}
+2017-02-25T17:32:22,256 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487343286708%7D ] success
+2017-02-25T17:32:22,264 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487343586713}
+2017-02-25T17:32:22,266 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487343586713%7D ] success
+2017-02-25T17:32:22,275 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487343886722}
+2017-02-25T17:32:22,276 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487343886722%7D ] success
+2017-02-25T17:32:22,287 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487344186732}
+2017-02-25T17:32:22,289 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487344186732%7D ] success
+2017-02-25T17:32:22,298 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487344486738}
+2017-02-25T17:32:22,300 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487344486738%7D ] success
+2017-02-25T17:32:22,309 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487344786746}
+2017-02-25T17:32:22,310 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487344786746%7D ] success
+2017-02-25T17:32:22,319 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487345086755}
+2017-02-25T17:32:22,320 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487345086755%7D ] success
+2017-02-25T17:32:22,330 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487345386764}
+2017-02-25T17:32:22,331 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487345386764%7D ] success
+2017-02-25T17:32:22,341 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487345686775}
+2017-02-25T17:32:22,342 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487345686775%7D ] success
+2017-02-25T17:32:22,351 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487345986783}
+2017-02-25T17:32:22,352 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487345986783%7D ] success
+2017-02-25T17:32:22,361 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487346286792}
+2017-02-25T17:32:22,362 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487346286792%7D ] success
+2017-02-25T17:32:22,371 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487346586801}
+2017-02-25T17:32:22,373 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487346586801%7D ] success
+2017-02-25T17:32:22,381 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487346886806}
+2017-02-25T17:32:22,382 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487346886806%7D ] success
+2017-02-25T17:32:22,390 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487347186816}
+2017-02-25T17:32:22,392 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487347186816%7D ] success
+2017-02-25T17:32:22,403 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487347486824}
+2017-02-25T17:32:22,405 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487347486824%7D ] success
+2017-02-25T17:32:22,418 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487347786835}
+2017-02-25T17:32:22,419 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487347786835%7D ] success
+2017-02-25T17:32:22,428 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487348086840}
+2017-02-25T17:32:22,429 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487348086840%7D ] success
+2017-02-25T17:32:22,438 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487348386850}
+2017-02-25T17:32:22,439 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487348386850%7D ] success
+2017-02-25T17:32:22,447 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487348686945}
+2017-02-25T17:32:22,448 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487348686945%7D ] success
+2017-02-25T17:32:22,457 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487348986957}
+2017-02-25T17:32:22,458 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487348986957%7D ] success
+2017-02-25T17:32:22,467 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487349286960}
+2017-02-25T17:32:22,469 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487349286960%7D ] success
+2017-02-25T17:32:22,477 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487349586969}
+2017-02-25T17:32:22,479 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487349586969%7D ] success
+2017-02-25T17:32:22,487 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487349886978}
+2017-02-25T17:32:22,489 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487349886978%7D ] success
+2017-02-25T17:32:22,497 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487350186989}
+2017-02-25T17:32:22,500 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487350186989%7D ] success
+2017-02-25T17:32:22,509 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487350486994}
+2017-02-25T17:32:22,510 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487350486994%7D ] success
+2017-02-25T17:32:22,519 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487350787004}
+2017-02-25T17:32:22,520 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487350787004%7D ] success
+2017-02-25T17:32:22,529 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487351087012}
+2017-02-25T17:32:22,530 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487351087012%7D ] success
+2017-02-25T17:32:22,539 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487351387020}
+2017-02-25T17:32:22,541 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487351387020%7D ] success
+2017-02-25T17:32:22,550 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487351687030}
+2017-02-25T17:32:22,552 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487351687030%7D ] success
+2017-02-25T17:32:22,560 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487351987036}
+2017-02-25T17:32:22,562 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487351987036%7D ] success
+2017-02-25T17:32:22,571 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487352287045}
+2017-02-25T17:32:22,572 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487352287045%7D ] success
+2017-02-25T17:32:22,581 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487352587054}
+2017-02-25T17:32:22,582 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487352587054%7D ] success
+2017-02-25T17:32:22,591 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487352887061}
+2017-02-25T17:32:22,593 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487352887061%7D ] success
+2017-02-25T17:32:22,601 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487353187070}
+2017-02-25T17:32:22,602 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487353187070%7D ] success
+2017-02-25T17:32:22,611 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487353487078}
+2017-02-25T17:32:22,612 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487353487078%7D ] success
+2017-02-25T17:32:22,620 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487353787101}
+2017-02-25T17:32:22,622 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487353787101%7D ] success
+2017-02-25T17:32:22,631 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487354087094}
+2017-02-25T17:32:22,633 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487354087094%7D ] success
+2017-02-25T17:32:22,642 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487354387106}
+2017-02-25T17:32:22,643 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487354387106%7D ] success
+2017-02-25T17:32:22,652 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487354687111}
+2017-02-25T17:32:22,653 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487354687111%7D ] success
+2017-02-25T17:32:22,662 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487354987121}
+2017-02-25T17:32:22,663 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487354987121%7D ] success
+2017-02-25T17:32:22,671 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487355287129}
+2017-02-25T17:32:22,673 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487355287129%7D ] success
+2017-02-25T17:32:22,682 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487355587052}
+2017-02-25T17:32:22,683 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487355587052%7D ] success
+2017-02-25T17:32:22,692 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487355887057}
+2017-02-25T17:32:22,694 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487355887057%7D ] success
+2017-02-25T17:32:22,703 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487356187064}
+2017-02-25T17:32:22,705 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487356187064%7D ] success
+2017-02-25T17:32:22,714 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487356487072}
+2017-02-25T17:32:22,716 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487356487072%7D ] success
+2017-02-25T17:32:22,724 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487356787080}
+2017-02-25T17:32:22,726 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487356787080%7D ] success
+2017-02-25T17:32:22,735 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487357087094}
+2017-02-25T17:32:22,737 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487357087094%7D ] success
+2017-02-25T17:32:22,745 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487357387097}
+2017-02-25T17:32:22,747 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487357387097%7D ] success
+2017-02-25T17:32:22,757 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487357687107}
+2017-02-25T17:32:22,758 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487357687107%7D ] success
+2017-02-25T17:32:22,768 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487357987114}
+2017-02-25T17:32:22,770 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487357987114%7D ] success
+2017-02-25T17:32:22,778 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487358287125}
+2017-02-25T17:32:22,780 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487358287125%7D ] success
+2017-02-25T17:32:22,789 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487358587133}
+2017-02-25T17:32:22,791 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487358587133%7D ] success
+2017-02-25T17:32:22,799 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487358887143}
+2017-02-25T17:32:22,801 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487358887143%7D ] success
+2017-02-25T17:32:22,813 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487359187151}
+2017-02-25T17:32:22,814 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487359187151%7D ] success
+2017-02-25T17:32:22,824 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487359487157}
+2017-02-25T17:32:22,825 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487359487157%7D ] success
+2017-02-25T17:32:22,836 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487359787164}
+2017-02-25T17:32:22,839 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487359787164%7D ] success
+2017-02-25T17:32:22,852 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487360087172}
+2017-02-25T17:32:22,854 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487360087172%7D ] success
+2017-02-25T17:32:22,862 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487360387189}
+2017-02-25T17:32:22,864 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487360387189%7D ] success
+2017-02-25T17:32:22,873 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487360687189}
+2017-02-25T17:32:22,874 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487360687189%7D ] success
+2017-02-25T17:32:22,883 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487360987202}
+2017-02-25T17:32:22,884 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487360987202%7D ] success
+2017-02-25T17:32:22,893 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487361287533}
+2017-02-25T17:32:22,894 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487361287533%7D ] success
+2017-02-25T17:32:22,902 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487361587222}
+2017-02-25T17:32:22,904 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487361587222%7D ] success
+2017-02-25T17:32:22,912 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487361887226}
+2017-02-25T17:32:22,914 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487361887226%7D ] success
+2017-02-25T17:32:22,925 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487362187231}
+2017-02-25T17:32:22,926 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487362187231%7D ] success
+2017-02-25T17:32:22,935 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487362487239}
+2017-02-25T17:32:22,936 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487362487239%7D ] success
+2017-02-25T17:32:22,945 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487362787247}
+2017-02-25T17:32:22,947 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487362787247%7D ] success
+2017-02-25T17:32:22,956 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487363087256}
+2017-02-25T17:32:22,957 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487363087256%7D ] success
+2017-02-25T17:32:22,966 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487363387265}
+2017-02-25T17:32:22,967 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487363387265%7D ] success
+2017-02-25T17:32:22,977 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487363687273}
+2017-02-25T17:32:22,978 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487363687273%7D ] success
+2017-02-25T17:32:22,987 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487363987284}
+2017-02-25T17:32:22,988 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487363987284%7D ] success
+2017-02-25T17:32:22,997 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487364287290}
+2017-02-25T17:32:22,998 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487364287290%7D ] success
+2017-02-25T17:32:23,007 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487364587297}
+2017-02-25T17:32:23,009 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487364587297%7D ] success
+2017-02-25T17:32:23,017 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487364887306}
+2017-02-25T17:32:23,019 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487364887306%7D ] success
+2017-02-25T17:32:23,027 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487365187315}
+2017-02-25T17:32:23,028 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487365187315%7D ] success
+2017-02-25T17:32:23,038 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487365487322}
+2017-02-25T17:32:23,039 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487365487322%7D ] success
+2017-02-25T17:32:23,049 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487365787334}
+2017-02-25T17:32:23,050 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487365787334%7D ] success
+2017-02-25T17:32:23,059 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487366087342}
+2017-02-25T17:32:23,061 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487366087342%7D ] success
+2017-02-25T17:32:23,070 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487366387348}
+2017-02-25T17:32:23,072 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487366387348%7D ] success
+2017-02-25T17:32:23,082 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487366687357}
+2017-02-25T17:32:23,084 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487366687357%7D ] success
+2017-02-25T17:32:23,095 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487366987365}
+2017-02-25T17:32:23,097 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487366987365%7D ] success
+2017-02-25T17:32:23,106 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487367287373}
+2017-02-25T17:32:23,107 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487367287373%7D ] success
+2017-02-25T17:32:23,117 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487367587380}
+2017-02-25T17:32:23,119 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487367587380%7D ] success
+2017-02-25T17:32:23,128 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487367887390}
+2017-02-25T17:32:23,130 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487367887390%7D ] success
+2017-02-25T17:32:23,138 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487368187401}
+2017-02-25T17:32:23,140 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487368187401%7D ] success
+2017-02-25T17:32:23,148 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487368487406}
+2017-02-25T17:32:23,150 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487368487406%7D ] success
+2017-02-25T17:32:23,159 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487368787415}
+2017-02-25T17:32:23,161 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487368787415%7D ] success
+2017-02-25T17:32:23,170 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487369087426}
+2017-02-25T17:32:23,171 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487369087426%7D ] success
+2017-02-25T17:32:23,180 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487369387432}
+2017-02-25T17:32:23,181 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487369387432%7D ] success
+2017-02-25T17:32:23,190 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487369687439}
+2017-02-25T17:32:23,191 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487369687439%7D ] success
+2017-02-25T17:32:23,200 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487369987448}
+2017-02-25T17:32:23,202 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487369987448%7D ] success
+2017-02-25T17:32:23,210 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487370287457}
+2017-02-25T17:32:23,216 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487370287457%7D ] success
+2017-02-25T17:32:23,225 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487370587469}
+2017-02-25T17:32:23,227 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487370587469%7D ] success
+2017-02-25T17:32:23,235 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487370887475}
+2017-02-25T17:32:23,237 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487370887475%7D ] success
+2017-02-25T17:32:23,246 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487371187483}
+2017-02-25T17:32:23,247 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487371187483%7D ] success
+2017-02-25T17:32:23,256 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487371487495}
+2017-02-25T17:32:23,258 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487371487495%7D ] success
+2017-02-25T17:32:23,267 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487371787498}
+2017-02-25T17:32:23,268 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487371787498%7D ] success
+2017-02-25T17:32:23,277 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487372087809}
+2017-02-25T17:32:23,279 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487372087809%7D ] success
+2017-02-25T17:32:23,288 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487372387516}
+2017-02-25T17:32:23,289 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487372387516%7D ] success
+2017-02-25T17:32:23,298 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487372687523}
+2017-02-25T17:32:23,299 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487372687523%7D ] success
+2017-02-25T17:32:23,308 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487372987531}
+2017-02-25T17:32:23,310 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487372987531%7D ] success
+2017-02-25T17:32:23,318 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487373287539}
+2017-02-25T17:32:23,320 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487373287539%7D ] success
+2017-02-25T17:32:23,329 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487373587548}
+2017-02-25T17:32:23,331 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487373587548%7D ] success
+2017-02-25T17:32:23,340 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487373887559}
+2017-02-25T17:32:23,341 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487373887559%7D ] success
+2017-02-25T17:32:23,350 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487374187564}
+2017-02-25T17:32:23,352 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487374187564%7D ] success
+2017-02-25T17:32:23,360 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487374487574}
+2017-02-25T17:32:23,361 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487374487574%7D ] success
+2017-02-25T17:32:23,370 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487374787581}
+2017-02-25T17:32:23,372 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487374787581%7D ] success
+2017-02-25T17:32:23,380 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487375087590}
+2017-02-25T17:32:23,382 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487375087590%7D ] success
+2017-02-25T17:32:23,391 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487375387611}
+2017-02-25T17:32:23,392 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487375387611%7D ] success
+2017-02-25T17:32:23,401 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487375687606}
+2017-02-25T17:32:23,402 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487375687606%7D ] success
+2017-02-25T17:32:23,411 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487375987618}
+2017-02-25T17:32:23,413 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487375987618%7D ] success
+2017-02-25T17:32:23,422 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487376287624}
+2017-02-25T17:32:23,424 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487376287624%7D ] success
+2017-02-25T17:32:23,432 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487376587632}
+2017-02-25T17:32:23,433 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487376587632%7D ] success
+2017-02-25T17:32:23,442 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487376887641}
+2017-02-25T17:32:23,443 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487376887641%7D ] success
+2017-02-25T17:32:23,452 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487377187668}
+2017-02-25T17:32:23,453 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487377187668%7D ] success
+2017-02-25T17:32:23,463 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487377487659}
+2017-02-25T17:32:23,464 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487377487659%7D ] success
+2017-02-25T17:32:23,475 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487377787665}
+2017-02-25T17:32:23,476 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487377787665%7D ] success
+2017-02-25T17:32:23,486 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487378087693}
+2017-02-25T17:32:23,487 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487378087693%7D ] success
+2017-02-25T17:32:23,496 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487378387681}
+2017-02-25T17:32:23,497 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487378387681%7D ] success
+2017-02-25T17:32:23,508 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487378687693}
+2017-02-25T17:32:23,510 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487378687693%7D ] success
+2017-02-25T17:32:23,521 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487378987701}
+2017-02-25T17:32:23,522 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487378987701%7D ] success
+2017-02-25T17:32:23,534 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487379287707}
+2017-02-25T17:32:23,537 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487379287707%7D ] success
+2017-02-25T17:32:23,547 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487379587715}
+2017-02-25T17:32:23,548 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487379587715%7D ] success
+2017-02-25T17:32:23,560 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487379888032}
+2017-02-25T17:32:23,562 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487379888032%7D ] success
+2017-02-25T17:32:23,572 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487380187738}
+2017-02-25T17:32:23,573 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487380187738%7D ] success
+2017-02-25T17:32:23,583 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487380487755}
+2017-02-25T17:32:23,585 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487380487755%7D ] success
+2017-02-25T17:32:23,595 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487380787748}
+2017-02-25T17:32:23,596 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487380787748%7D ] success
+2017-02-25T17:32:23,608 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487381087757}
+2017-02-25T17:32:23,610 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487381087757%7D ] success
+2017-02-25T17:32:23,624 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487381387765}
+2017-02-25T17:32:23,626 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487381387765%7D ] success
+2017-02-25T17:32:23,636 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487381687790}
+2017-02-25T17:32:23,638 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487381687790%7D ] success
+2017-02-25T17:32:23,647 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487381987794}
+2017-02-25T17:32:23,648 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487381987794%7D ] success
+2017-02-25T17:32:23,657 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487382287804}
+2017-02-25T17:32:23,659 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487382287804%7D ] success
+2017-02-25T17:32:23,668 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487382587799}
+2017-02-25T17:32:23,670 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487382587799%7D ] success
+2017-02-25T17:32:23,679 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487382887812}
+2017-02-25T17:32:23,681 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487382887812%7D ] success
+2017-02-25T17:32:23,689 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487383187814}
+2017-02-25T17:32:23,690 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487383187814%7D ] success
+2017-02-25T17:32:23,699 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487383487829}
+2017-02-25T17:32:23,700 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487383487829%7D ] success
+2017-02-25T17:32:23,710 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487383787839}
+2017-02-25T17:32:23,712 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487383787839%7D ] success
+2017-02-25T17:32:23,720 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487384087840}
+2017-02-25T17:32:23,722 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487384087840%7D ] success
+2017-02-25T17:32:23,730 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487384387870}
+2017-02-25T17:32:23,732 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487384387870%7D ] success
+2017-02-25T17:32:23,741 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487384687865}
+2017-02-25T17:32:23,743 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487384687865%7D ] success
+2017-02-25T17:32:23,753 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487384987868}
+2017-02-25T17:32:23,755 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487384987868%7D ] success
+2017-02-25T17:32:23,764 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487385287877}
+2017-02-25T17:32:23,766 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487385287877%7D ] success
+2017-02-25T17:32:23,776 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487385587881}
+2017-02-25T17:32:23,777 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487385587881%7D ] success
+2017-02-25T17:32:23,789 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487385887919}
+2017-02-25T17:32:23,793 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487385887919%7D ] success
+2017-02-25T17:32:23,804 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487386187903}
+2017-02-25T17:32:23,806 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487386187903%7D ] success
+2017-02-25T17:32:23,816 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487386487909}
+2017-02-25T17:32:23,818 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487386487909%7D ] success
+2017-02-25T17:32:23,828 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487386787916}
+2017-02-25T17:32:23,829 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487386787916%7D ] success
+2017-02-25T17:32:23,838 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487387087930}
+2017-02-25T17:32:23,840 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487387087930%7D ] success
+2017-02-25T17:32:23,849 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487387387933}
+2017-02-25T17:32:23,851 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487387387933%7D ] success
+2017-02-25T17:32:23,859 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487387687942}
+2017-02-25T17:32:23,861 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487387687942%7D ] success
+2017-02-25T17:32:23,869 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487387987952}
+2017-02-25T17:32:23,870 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487387987952%7D ] success
+2017-02-25T17:32:23,880 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487388287956}
+2017-02-25T17:32:23,881 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487388287956%7D ] success
+2017-02-25T17:32:23,890 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487388587968}
+2017-02-25T17:32:23,891 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487388587968%7D ] success
+2017-02-25T17:32:23,902 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487388887975}
+2017-02-25T17:32:23,904 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487388887975%7D ] success
+2017-02-25T17:32:23,915 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487389187982}
+2017-02-25T17:32:23,916 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487389187982%7D ] success
+2017-02-25T17:32:23,927 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487389487994}
+2017-02-25T17:32:23,929 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487389487994%7D ] success
+2017-02-25T17:32:23,940 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487389787999}
+2017-02-25T17:32:23,941 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487389787999%7D ] success
+2017-02-25T17:32:23,951 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487390088008}
+2017-02-25T17:32:23,953 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487390088008%7D ] success
+2017-02-25T17:32:23,964 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487390388022}
+2017-02-25T17:32:23,966 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487390388022%7D ] success
+2017-02-25T17:32:23,978 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487390688026}
+2017-02-25T17:32:23,980 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487390688026%7D ] success
+2017-02-25T17:32:23,989 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487390988037}
+2017-02-25T17:32:23,990 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487390988037%7D ] success
+2017-02-25T17:32:23,999 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487391288045}
+2017-02-25T17:32:24,000 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487391288045%7D ] success
+2017-02-25T17:32:24,008 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487391588057}
+2017-02-25T17:32:24,010 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487391588057%7D ] success
+2017-02-25T17:32:24,019 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487391888058}
+2017-02-25T17:32:24,020 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487391888058%7D ] success
+2017-02-25T17:32:24,028 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487392188067}
+2017-02-25T17:32:24,030 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487392188067%7D ] success
+2017-02-25T17:32:24,040 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487392488098}
+2017-02-25T17:32:24,042 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487392488098%7D ] success
+2017-02-25T17:32:24,051 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487392788109}
+2017-02-25T17:32:24,053 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487392788109%7D ] success
+2017-02-25T17:32:24,062 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487393088095}
+2017-02-25T17:32:24,063 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487393088095%7D ] success
+2017-02-25T17:32:24,072 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487393388101}
+2017-02-25T17:32:24,073 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487393388101%7D ] success
+2017-02-25T17:32:24,083 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487393688108}
+2017-02-25T17:32:24,085 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487393688108%7D ] success
+2017-02-25T17:32:24,096 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"0","timestamp":1487393988119}
+2017-02-25T17:32:24,098 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%220%22%2C%22timestamp%22%3A1487393988119%7D ] success
+2017-02-25T17:32:24,109 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487394288125}
+2017-02-25T17:32:24,111 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487394288125%7D ] success
+2017-02-25T17:32:24,123 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"8","timestamp":1487394588132}
+2017-02-25T17:32:24,125 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%228%22%2C%22timestamp%22%3A1487394588132%7D ] success
+2017-02-25T17:32:24,137 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487394888141}
+2017-02-25T17:32:24,139 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487394888141%7D ] success
+2017-02-25T17:32:24,150 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487395188148}
+2017-02-25T17:32:24,152 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487395188148%7D ] success
+2017-02-25T17:32:24,162 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"7","timestamp":1487395488157}
+2017-02-25T17:32:24,163 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%227%22%2C%22timestamp%22%3A1487395488157%7D ] success
+2017-02-25T17:32:24,173 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487395788165}
+2017-02-25T17:32:24,175 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487395788165%7D ] success
+2017-02-25T17:32:24,186 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487396088175}
+2017-02-25T17:32:24,189 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487396088175%7D ] success
+2017-02-25T17:32:24,198 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487396388192}
+2017-02-25T17:32:24,199 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487396388192%7D ] success
+2017-02-25T17:32:24,209 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"11","timestamp":1487396688190}
+2017-02-25T17:32:24,210 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%2211%22%2C%22timestamp%22%3A1487396688190%7D ] success
+2017-02-25T17:32:24,220 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487396988238}
+2017-02-25T17:32:24,222 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487396988238%7D ] success
+2017-02-25T17:32:24,231 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"1","timestamp":1487397288209}
+2017-02-25T17:32:24,233 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%221%22%2C%22timestamp%22%3A1487397288209%7D ] success
+2017-02-25T17:32:24,246 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487397588219}
+2017-02-25T17:32:24,248 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487397588219%7D ] success
+2017-02-25T17:32:24,261 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487397888226}
+2017-02-25T17:32:24,263 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487397888226%7D ] success
+2017-02-25T17:32:24,275 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"5","timestamp":1487398188232}
+2017-02-25T17:32:24,276 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%225%22%2C%22timestamp%22%3A1487398188232%7D ] success
+2017-02-25T17:32:24,290 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487398488241}
+2017-02-25T17:32:24,292 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487398488241%7D ] success
+2017-02-25T17:32:24,302 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487398788251}
+2017-02-25T17:32:24,304 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487398788251%7D ] success
+2017-02-25T17:32:24,318 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487399088262}
+2017-02-25T17:32:24,319 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487399088262%7D ] success
+2017-02-25T17:32:24,336 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487399388267}
+2017-02-25T17:32:24,338 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487399388267%7D ] success
+2017-02-25T17:32:24,349 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487399688274}
+2017-02-25T17:32:24,351 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487399688274%7D ] success
+2017-02-25T17:32:24,365 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487399988309}
+2017-02-25T17:32:24,386 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487399988309%7D ] success
+2017-02-25T17:32:24,412 [Restlet-1866161430] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487400288295}
+2017-02-25T17:32:24,415 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487400288295%7D ] success
+2017-02-25T17:32:24,440 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487400588327}
+2017-02-25T17:32:24,443 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487400588327%7D ] success
+2017-02-25T17:32:24,457 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487400888324}
+2017-02-25T17:32:24,459 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487400888324%7D ] success
+2017-02-25T17:32:24,474 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487401188315}
+2017-02-25T17:32:24,476 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487401188315%7D ] success
+2017-02-25T17:32:24,490 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487401489539}
+2017-02-25T17:32:24,491 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487401489539%7D ] success
+2017-02-25T17:32:24,502 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487401788341}
+2017-02-25T17:32:24,504 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487401788341%7D ] success
+2017-02-25T17:32:24,514 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487402088342}
+2017-02-25T17:32:24,516 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487402088342%7D ] success
+2017-02-25T17:32:24,525 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487402388352}
+2017-02-25T17:32:24,526 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%223%22%2C%22timestamp%22%3A1487402388352%7D ] success
+2017-02-25T17:32:24,535 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487402688372}
+2017-02-25T17:32:24,537 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487402688372%7D ] success
+2017-02-25T17:32:24,546 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487402988373}
+2017-02-25T17:32:24,547 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487402988373%7D ] success
+2017-02-25T17:32:24,558 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487403288409}
+2017-02-25T17:32:24,559 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487403288409%7D ] success
+2017-02-25T17:32:24,568 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487403588383}
+2017-02-25T17:32:24,569 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487403588383%7D ] success
+2017-02-25T17:32:24,578 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487403888398}
+2017-02-25T17:32:24,580 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487403888398%7D ] success
+2017-02-25T17:32:24,595 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487404188407}
+2017-02-25T17:32:24,596 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487404188407%7D ] success
+2017-02-25T17:32:24,606 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487404488415}
+2017-02-25T17:32:24,608 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487404488415%7D ] success
+2017-02-25T17:32:24,618 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"2","timestamp":1487404788417}
+2017-02-25T17:32:24,620 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%222%22%2C%22timestamp%22%3A1487404788417%7D ] success
+2017-02-25T17:32:24,632 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"4","timestamp":1487405088425}
+2017-02-25T17:32:24,635 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%224%22%2C%22timestamp%22%3A1487405088425%7D ] success
+2017-02-25T17:32:24,646 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"6","timestamp":1487405388433}
+2017-02-25T17:32:24,648 [pool-2-thread-1] DEBUG rca.server.RCAServer - [ http://localhost:8083/rca/data/digit/%7B%22value%22%3A%226%22%2C%22timestamp%22%3A1487405388433%7D ] success
+2017-02-25T17:32:24,658 [Restlet-159724053] INFO rca.cmd.InsertDigitDataCommand - {"value":"3","timestamp":1487405688442}
+2017-02-25T17:32:35,911 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:35:00,130 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:36:24,391 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:36:55,207 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:38:21,776 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:38:24,420 [Restlet-107241811] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487261841626
+2017-02-25T17:42:06,542 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:42:08,815 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487261841626
+2017-02-25T17:44:54,441 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:45:00,191 [Restlet-107241811] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:45:00,193 [Restlet-107241811] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487261841626
+2017-02-25T17:46:47,081 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:46:49,362 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:46:49,363 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487261841626
+2017-02-25T17:48:14,987 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:48:17,540 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:48:17,541 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487261841626
+2017-02-25T17:49:50,155 [Restlet-1866161430] ERROR app.viz.LogDetection - Repeat scan log.
+2017-02-25T17:49:53,751 [Restlet-1866161430] ERROR app.viz.LogDetection - Repeat scan log.
+2017-02-25T17:50:44,898 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:50:48,195 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:50:48,197 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"}]
+2017-02-25T17:50:48,197 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"}]
+2017-02-25T17:50:48,198 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"}]
+2017-02-25T17:50:48,199 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"}]
+2017-02-25T17:50:48,200 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"}]
+2017-02-25T17:50:48,202 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"},{"message_content":"ии???\u008fбд?бд?????\u0094бз\\n","message_class":"[com.neusoft.chartsshow.security.user.controller.UserBindingsController]","message_type":"ERROR","url":"/service/user/binding/verifycode ajax POST","timestamp":"1487263009780"}]
+2017-02-25T17:50:48,203 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487263018997
+2017-02-25T17:50:57,758 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:50:57,758 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"}]
+2017-02-25T17:50:57,759 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"}]
+2017-02-25T17:50:57,760 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"}]
+2017-02-25T17:50:57,761 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"}]
+2017-02-25T17:50:57,762 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"}]
+2017-02-25T17:50:57,763 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"},{"message_content":"ии???\u008fбд?бд?????\u0094бз\\n","message_class":"[com.neusoft.chartsshow.security.user.controller.UserBindingsController]","message_type":"ERROR","url":"/service/user/binding/verifycode ajax POST","timestamp":"1487263009780"}]
+2017-02-25T17:50:57,764 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487263018997
+2017-02-25T17:51:47,479 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:51:51,805 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"}]
+2017-02-25T17:51:51,807 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"}]
+2017-02-25T17:51:51,807 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"}]
+2017-02-25T17:51:51,808 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"}]
+2017-02-25T17:51:51,809 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"}]
+2017-02-25T17:51:51,810 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"}]
+2017-02-25T17:51:51,811 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - [{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261771669"},{"message_content":"иж\u009c?ии?\u0081?\u0099???\u0095\\n","message_class":"[com.neusoft.chartsshow.books.controller.ResourceSharingController]","message_type":"ERROR","url":"/service/resource/sharing/resource?code=275249f71b9d074e ajax GET","timestamp":"1487261841626"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262258794"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262701358"},{"message_content":"[QQtokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2QQResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262789315"},{"message_content":"[Weixintokencheck]Non-positiveexpirationtoken.Checkpassed.","message_class":"[com.neusoft.chartsshow.security.user.service.external.OAuth2WeixinResourceManager]","message_type":"WARN","url":"/service/user/info ajax GET","timestamp":"1487262972742"},{"message_content":"ии???\u008fбд?бд?????\u0094бз\\n","message_class":"[com.neusoft.chartsshow.security.user.controller.UserBindingsController]","message_type":"ERROR","url":"/service/user/binding/verifycode ajax POST","timestamp":"1487263009780"}]
+2017-02-25T17:51:51,813 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487263018997
+2017-02-25T17:52:29,162 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T17:52:31,152 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487263018997
+2017-02-25T17:52:54,421 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261771669 1487548037593
+2017-02-25T17:53:51,021 [Restlet-1866161430] ERROR app.viz.LogDetection - For input string: ""
+2017-02-25T17:54:14,007 [Restlet-1866161430] ERROR app.viz.LogDetection - Repeat scan log.
+2017-02-25T17:54:21,575 [Restlet-1866161430] ERROR app.viz.LogDetection - Repeat scan log.
+2017-02-25T17:54:25,723 [Restlet-1866161430] ERROR app.viz.LogDetection - Repeat scan log.
+2017-02-25T18:00:46,869 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T18:00:49,780 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1497548037593 1497548037594
+2017-02-25T18:00:56,566 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1497548037593 1497548037594
+2017-02-25T18:03:26,869 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T18:03:27,202 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487260935715 1487261771669
+2017-02-25T18:03:29,544 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1497548037593 1497548037594
+2017-02-25T18:03:32,269 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487260935715 1487261771669
+2017-02-25T18:03:43,917 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261098140 1487261771669
+2017-02-25T18:06:13,357 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-25T18:06:15,977 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261098140 1487261771669
+2017-02-25T18:06:28,228 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261098140 1487548037593
+2017-02-25T18:06:43,412 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487261098140 1487548037593
+2017-02-25T18:06:51,969 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487548037593 148754803759999
+2017-02-25T18:06:57,534 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487548037594 148754803759999
+2017-02-25T18:07:03,218 [Restlet-1866161430] INFO rca.cmd.LogDetectionCommand - 1487548037594 148754803759999

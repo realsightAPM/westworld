@@ -82,5 +82,33 @@ public class Plot {
         f.pack();
         f.setVisible(true);
 	}
-    
+	public static void plot(String name, List<Double> x, List<Double> ... y) {
+		// TODO Auto-generated method stub
+    	
+    	final XYSeriesCollection dataSet = new XYSeriesCollection();
+        
+        
+        for( int i=0; i<y.length; i++ ){
+        	addSeries(dataSet,x,y[i],"y_"+i);
+        }
+
+        final JFreeChart chart = ChartFactory.createXYLineChart(
+        		name,      // chart title
+                "Time",                     // x axis label
+                "Value", 		// y axis label
+                dataSet,                    // data
+                PlotOrientation.VERTICAL,
+                true,                       // include legend
+                true,                       // tooltips
+                false                       // urls
+        );
+
+        final ChartPanel panel = new ChartPanel(chart);
+
+        final JFrame f = new JFrame();
+        f.add(panel);
+        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        f.pack();
+        f.setVisible(true);
+	}
 }
