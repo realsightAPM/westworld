@@ -1,5 +1,6 @@
 package com.realsight.brain.timeseries.lib.model.htm.neurongroups;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -8,8 +9,12 @@ import java.util.Set;
 
 import com.realsight.brain.timeseries.lib.util.Pair;
 
-public class NeuroGroup {
+public class NeuroGroup implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7024856854549187135L;
 	private int maxActiveNeuronsNum;
 	private List<Integer> leftFactsGroup;
 	private List<Integer> activeNeuros;
@@ -23,7 +28,42 @@ public class NeuroGroup {
 		this.potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
 	}
 	
-	
+	public int getMaxActiveNeuronsNum() {
+		return maxActiveNeuronsNum;
+	}
+
+	public List<Integer> getLeftFactsGroup() {
+		return leftFactsGroup;
+	}
+
+	public NeuroGroupOperator getNeuroGroupOperator() {
+		return neuroGroupOperator;
+	}
+
+	public List<Pair<List<Integer>, List<Integer>>> getPotentialNewContextList() {
+		return potentialNewContextList;
+	}
+
+	public void setMaxActiveNeuronsNum(int maxActiveNeuronsNum) {
+		this.maxActiveNeuronsNum = maxActiveNeuronsNum;
+	}
+
+	public void setLeftFactsGroup(List<Integer> leftFactsGroup) {
+		this.leftFactsGroup = leftFactsGroup;
+	}
+
+	public void setActiveNeuros(List<Integer> activeNeuros) {
+		this.activeNeuros = activeNeuros;
+	}
+
+	public void setNeuroGroupOperator(NeuroGroupOperator neuroGroupOperator) {
+		this.neuroGroupOperator = neuroGroupOperator;
+	}
+
+	public void setPotentialNewContextList(List<Pair<List<Integer>, List<Integer>>> potentialNewContextList) {
+		this.potentialNewContextList = potentialNewContextList;
+	}
+
 	private double activate(List<Integer> currSensFacts, Long timestamp) {
 		this.neuroGroupOperator.setTimestamp(timestamp);
 		
@@ -37,7 +77,7 @@ public class NeuroGroup {
 		Collections.sort(currSensFacts);
 //		for(int i = 0; i < leftFactsGroup.size(); i++)
 //			System.out.print(leftFactsGroup.get(i) + ",");
-//		System.out.print("\n");
+//		System.out.print("\n/////////////////////////////////////////////////////\n");
 		List<Pair<List<Integer>, List<Integer>>> potNewZeroLevelContext = 
 				new ArrayList<Pair<List<Integer>, List<Integer>>>();
 		int newContextFlag = -1;
@@ -109,7 +149,6 @@ public class NeuroGroup {
 //			System.out.println((1.0 - percentSelectedContextActive + percentaddContextActive) / 2.0);
 		}
 		
-//		System.out.println(percentaddContextActive);
 		return (1.0 - percentSelectedContextActive)*0.50 + (percentaddContextActive)*0.50; 
 	}
 	
@@ -117,16 +156,27 @@ public class NeuroGroup {
 		return activate(currSensFacts, timestamp);
 	}
 	
-	public double predict(List<Integer> preSensFacts, Long timestamp) {
+	public double predict(List<Integer> currSensFacts, Long timestamp) {
 		this.neuroGroupOperator.setTimestamp(timestamp);
-		preSensFacts = new ArrayList<Integer>(new HashSet<Integer>(preSensFacts));
-		Collections.sort(preSensFacts);
-		this.neuroGroupOperator.contextCrosser(1, preSensFacts, false, false, new ArrayList<Pair<List<Integer>, List<Integer>>>());
+		currSensFacts = new ArrayList<Integer>(new HashSet<Integer>(currSensFacts));
+		Collections.sort(currSensFacts);
+		this.neuroGroupOperator.contextCrosser(1, currSensFacts, false, false, new ArrayList<Pair<List<Integer>, List<Integer>>>());
 		double percentSelectedContextActive = 0.0;
+//		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
+//			percentSelectedContextActive = this.neuroGroupOperator.getActiveContexts().size();
+//			percentSelectedContextActive /= this.neuroGroupOperator.getNumSelectedContext();
+//		}
 		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
-			percentSelectedContextActive = 
-					1.0 * this.neuroGroupOperator.getActiveContexts().size() / this.neuroGroupOperator.getNumSelectedContext();
+			percentSelectedContextActive = this.neuroGroupOperator.getSelectedContextValue();
+			percentSelectedContextActive /= this.neuroGroupOperator.getSumActiveContextsValue();
 		}
+//		Set<Pair<List<Integer>, List<Integer>>> activeContext = new HashSet<Pair<List<Integer>, List<Integer>>>();
+//		activeContext.addAll(this.neuroGroupOperator.getPotentialNewContextList());
+//		double percentaddContextActive = 0.0;
+//		if ( activeContext.size() > 0 ) {
+//			double newContextNum = this.neuroGroupOperator.getNewContextList(activeContext);
+//			percentaddContextActive = newContextNum / activeContext.size();
+//		}
 		return percentSelectedContextActive;
 	}
 

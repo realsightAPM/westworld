@@ -1,6 +1,13 @@
 package com.realsight.brain.timeseries.lib.util;
 
-public class Pair <T,S> implements Comparable<Pair<Double, String>>{
+import java.io.Serializable;
+
+public class Pair <T,S> implements Comparable<Pair<Double, S>>, Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6790701026148285960L;
+	
 	private T a;
 	private S b;
 	
@@ -23,7 +30,7 @@ public class Pair <T,S> implements Comparable<Pair<Double, String>>{
 	}
 
 	@Override
-	public int compareTo(Pair<Double, String> o) {
+	public int compareTo(Pair<Double, S> o) {
 		// TODO Auto-generated method stub
 		if((Double) this.a < o.a){
 			return -1;

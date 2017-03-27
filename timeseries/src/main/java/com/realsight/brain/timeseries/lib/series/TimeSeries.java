@@ -5,7 +5,7 @@ import java.util.*;
 import static com.realsight.brain.timeseries.lib.util.Util.check;
 
 public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
-    public static class Entry<T> implements Comparable<Entry<T>>{
+    public static class Entry<T> implements Comparable<Entry<T>> {
         T mT;
         Long mInstant;
 
@@ -42,7 +42,8 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
             return result;
         }
 
-        @Override public String toString() {
+        @Override
+        public String toString() {
             return "Entry{" +
                 "mInstant=" + mInstant +
                 ", mT=" + mT.toString() +
@@ -95,20 +96,13 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         return res.iterator();
     }
 
-    @Override public Iterator<Entry<T>> iterator() {
+    @Override
+    public Iterator<Entry<T>> iterator() {
         return mData.iterator();
     }
 
     public List<Entry<T>> getData() {
         return mData;
-    }
-    
-    public List<T> getTData() {
-    	List<T> tData = new ArrayList<T>();
-    	for ( int i = 0; i < this.mData.size(); i++) {
-    		tData.add(this.mData.get(i).getItem());
-    	}
-    	return tData;
     }
 
     public Entry<T> get(int index) {
@@ -257,7 +251,8 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     	Collections.sort(this.getData());
     }
     
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return mData.isEmpty() ? "TimeSeries{empty}" :
             "TimeSeries{" +
                 "from=" + mData.get(0).getInstant() +

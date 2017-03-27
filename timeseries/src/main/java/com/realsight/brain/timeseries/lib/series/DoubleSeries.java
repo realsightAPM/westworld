@@ -1,12 +1,12 @@
 package com.realsight.brain.timeseries.lib.series;
 
-import static com.realsight.brain.timeseries.lib.util.Util.check;
+import com.realsight.brain.timeseries.lib.util.Util;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.realsight.brain.timeseries.lib.util.Util;
+import static com.realsight.brain.timeseries.lib.util.Util.check;
 
 public class DoubleSeries extends TimeSeries<Double> {
 
@@ -352,15 +352,18 @@ public class DoubleSeries extends TimeSeries<Double> {
 		return pro;
     }
 
-    @Override public DoubleSeries toAscending() {
+    @Override
+    public DoubleSeries toAscending() {
         return new DoubleSeries(super.toAscending().mData, getName());
     }
 
-    @Override public DoubleSeries toDescending() {
+    @Override
+    public DoubleSeries toDescending() {
         return new DoubleSeries(super.toDescending().mData, getName());
     }
 
-    @Override public DoubleSeries lag(int k) {
+    @Override
+    public DoubleSeries lag(int k) {
         return new DoubleSeries(super.lag(k).mData, getName());
     }
     
@@ -403,11 +406,10 @@ public class DoubleSeries extends TimeSeries<Double> {
     	if(this.size() == 0)
     		return 1.0;
     	double var = 0.0;
-    	double m = mean();
     	for(int i = 0; i < this.size(); i++){
-    		var += Math.pow(this.getData().get(i).getItem()-m, 2);
+    		var += Math.pow(this.getData().get(i).getItem(), 2);
     	}
-    	return Math.sqrt(var/this.size());
+    	return (var/this.size());
     }
     
     public double min(){
@@ -452,7 +454,25 @@ public class DoubleSeries extends TimeSeries<Double> {
     	}
     }
     
-    @Override public String toString() {
+    public void normly2() {
+    	double std_value = this.getData().get(0).getItem();
+    	if ( std_value < eps )
+    		std_value = 1.0;
+    	for ( Entry<Double> entry : this.getData()) {
+    		entry.mT = entry.mT / std_value;
+    	}
+    }
+    
+    public List<Double> getTData() {
+    	List<Double> tData = new ArrayList<Double>();
+    	for ( Entry<Double> entry : this.mData) {
+    		tData.add(entry.getItem());
+    	}
+    	return tData;
+    }
+    
+    @Override
+    public String toString() {
         return mData.isEmpty() ? "DoubleSeries{empty}" :
             "DoubleSeries{" +
                 "mName=" + mName +

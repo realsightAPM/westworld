@@ -1,10 +1,11 @@
 package com.realsight.brain.timeseries.lib.util;
 
 
-import com.realsight.brain.timeseries.lib.model.regression.LinearRegression;
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
 import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 import com.realsight.brain.timeseries.lib.series.TimeSeries.Entry;
+
+import Jama.Matrix;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Util {
     public static Path writeCsv(MultipleDoubleSeries series) {
         StringBuffer data = new StringBuffer();
         data.append("timestamp");
-        for(String name : series.getNames()){
+        for(String name : series.getProperty_list()){
         	data.append(","+name);
         }
         data.append("\n");
@@ -56,9 +57,26 @@ public class Util {
         }
     }
 
+    public static Path writeCsv(MultipleDoubleSeries series, Path path) {
+        StringBuffer data = new StringBuffer();
+        data.append("timestamp");
+        for(String name : series.getProperty_list()){
+        	data.append(","+name);
+        }
+        data.append("\n");
+        for(Entry<LinkedList<Double>> e : series.getData()){
+        	data.append(e.getInstant());
+        	for(Double item : e.getItem()){
+        		data.append(","+item);
+        	}
+        	data.append("\n");
+        }
+        return writeString(data.toString(), path);
+    }
 
     public static Path writeString(String content, Path path) {
         try {
+        	path.getParent().toFile().mkdirs();
             Files.write(path, content.getBytes());
             return path;
         } catch (IOException e) {
@@ -86,29 +104,24 @@ public class Util {
     	return sum/series.size();
     }
     
-    public static double sd(MultipleDoubleSeries series, List<String> x, String y) {
-		LinearRegression lr = new LinearRegression(x,y);
-        lr.training(series);
-        DoubleSeries fSeries = lr.forecasting(series);
-        DoubleSeries Y = series.getColumn(y);
-        
-        List<Double> noise = new ArrayList<Double>();
-        for(int i = 0; i < Y.size(); i++){
-        	double t = Y.get(i).getItem() - fSeries.get(i).getItem();
-        	noise.add(t*t);
-        }
-        Collections.sort(noise);
-        int n = noise.size();
-        int l = (int) (n*0.0000001), r = (int) (n*0.99999);
-        double sse = 0;
-        for(int i = l; i <= r; i++){
-        	sse += noise.get(i);
-        }
-        return Math.sqrt(sse/(r-l+1));
-	}
-    
     public static double Sigma(double y){
 		return 1.0-2.0/(1.0+Math.exp(y));
 	}
+    
+    public static Matrix toVec(Iterator<Double> iter) {
+    	List<Double> list = new ArrayList<Double>();
+    	while(iter.hasNext()) {
+    		list.add(iter.next());
+    	}
+    	double[] array = new double[list.size()];
+    	for(int i = 0; i < list.size(); i++){
+    		array[i] = list.get(i);
+    	}
+    	return new Matrix(array, array.length);
+    }
+    
+    public static Matrix toVec(Double x) {
+    	return new Matrix(1, 1, x);
+    }
 }
 

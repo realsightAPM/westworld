@@ -1,12 +1,17 @@
 package com.realsight.brain.timeseries.lib.model.htm.context;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ContextValue {
+public class ContextValue implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6675500572833028313L;
 	private List<Integer> fromOrto;
 	private int lenFact;
 	private Map<Integer, Integer> contexIDs;

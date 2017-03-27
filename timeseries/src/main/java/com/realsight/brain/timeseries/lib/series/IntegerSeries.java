@@ -75,19 +75,22 @@ public class IntegerSeries extends TimeSeries<Integer> {
         return res;
     }
 
-    @Override public IntegerSeries toAscending() {
+    @Override
+    public IntegerSeries toAscending() {
         return new IntegerSeries(super.toAscending().mData, getName());
     }
 
-    @Override public IntegerSeries toDescending() {
+    @Override
+    public IntegerSeries toDescending() {
         return new IntegerSeries(super.toDescending().mData, getName());
     }
 
-    @Override public IntegerSeries lag(int k) {
+    @Override
+    public IntegerSeries lag(int k) {
         return new IntegerSeries(super.lag(k).mData, getName());
     }
     
-    public IntegerSeries subSeries(int l, int r) throws Exception{
+    public IntegerSeries subSeries(int l, int r) throws Exception {
     	if(l<0 || r>size())
     		throw new Exception("l<0 || r>size()");
     	List<Entry<Integer>> newEntries = new ArrayList<>();
@@ -144,7 +147,8 @@ public class IntegerSeries extends TimeSeries<Integer> {
     	return (l+r)/2.0;
     }
     
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return mData.isEmpty() ? "DoubleSeries{empty}" :
             "DoubleSeries{" +
                 "mName=" + mName +

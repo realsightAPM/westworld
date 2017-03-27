@@ -1,6 +1,5 @@
 package com.realsight.brain.timeseries.lib.util.plot;
 
-import java.security.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +12,9 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import org.nd4j.linalg.api.ndarray.INDArray;
 
 import com.realsight.brain.timeseries.lib.series.DoubleSeries;
+import com.realsight.brain.timeseries.lib.series.MultipleDoubleSeries;
 
 public class Plot {
 
@@ -82,6 +81,7 @@ public class Plot {
         f.pack();
         f.setVisible(true);
 	}
+	@SafeVarargs
 	public static void plot(String name, List<Double> x, List<Double> ... y) {
 		// TODO Auto-generated method stub
     	
@@ -111,4 +111,5 @@ public class Plot {
         f.pack();
         f.setVisible(true);
 	}
+	
 }

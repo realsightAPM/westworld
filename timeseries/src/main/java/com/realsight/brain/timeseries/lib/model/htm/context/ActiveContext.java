@@ -1,21 +1,27 @@
 package com.realsight.brain.timeseries.lib.model.htm.context;
 
-public class ActiveContext implements Comparable<ActiveContext> {
+import java.io.Serializable;
+
+public class ActiveContext implements Comparable<ActiveContext>, Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6531219945765919093L;
 	private int contextID;
-	private int numActivate;
+	private double numActivate;
 	private int leftHash;
 	private int rightHash;
 	
-	public ActiveContext(int contextID, int numActivate, int leftHash, int rightHash) {
+	public ActiveContext(int contextID, double numActivate, int leftHash, int rightHash) {
 		this.setContextID(contextID);
 		this.numActivate = numActivate;
 		this.leftHash = leftHash;
 		this.rightHash = rightHash;
 	}
-	public int getNumActivate() {
+	public double getNumActivate() {
 		return numActivate;
 	}
-	public void setNumActivate(int numActivate) {
+	public void setNumActivate(double numActivate) {
 		this.numActivate = numActivate;
 	}
 	public int getLeftHash() {
