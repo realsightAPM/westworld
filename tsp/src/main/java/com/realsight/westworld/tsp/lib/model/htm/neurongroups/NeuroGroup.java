@@ -64,8 +64,7 @@ public class NeuroGroup implements Serializable{
 		this.potentialNewContextList = potentialNewContextList;
 	}
 
-	private double activate(List<Integer> currSensFacts, Long timestamp) {
-		this.neuroGroupOperator.setTimestamp(timestamp);
+	private double activate(List<Integer> currSensFacts) {
 		
 //		for(int i = 0; i < this.leftFactsGroup.size(); i++)
 //			System.out.print(this.leftFactsGroup.get(i) + " ");
@@ -87,9 +86,14 @@ public class NeuroGroup implements Serializable{
 		}
 		this.neuroGroupOperator.contextCrosser(1, currSensFacts,(newContextFlag>=0), true,  new ArrayList<Pair<List<Integer>, List<Integer>>>());
 		double percentSelectedContextActive = 0.0;
+//		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
+//			percentSelectedContextActive = 
+//					1.0 * this.neuroGroupOperator.getActiveContexts().size() / this.neuroGroupOperator.getNumSelectedContext();
+//		}
+		
 		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
-			percentSelectedContextActive = 
-					1.0 * this.neuroGroupOperator.getActiveContexts().size() / this.neuroGroupOperator.getNumSelectedContext();
+			percentSelectedContextActive = this.neuroGroupOperator.getSelectedContextValue();
+			percentSelectedContextActive /= this.neuroGroupOperator.getSumActiveContextsValue();
 		}
 		
 		Set<Pair<List<Integer>, List<Integer>>> activeContext = new HashSet<Pair<List<Integer>, List<Integer>>>();
@@ -152,24 +156,23 @@ public class NeuroGroup implements Serializable{
 		return (1.0 - percentSelectedContextActive)*0.50 + (percentaddContextActive)*0.50; 
 	}
 	
-	public double learn(List<Integer> currSensFacts, Long timestamp) {
-		return activate(currSensFacts, timestamp);
+	public double learn(List<Integer> currSensFacts) {
+		return activate(currSensFacts);
 	}
 	
-	public double predict(List<Integer> currSensFacts, Long timestamp) {
-		this.neuroGroupOperator.setTimestamp(timestamp);
+	public double predict(List<Integer> currSensFacts) {
 		currSensFacts = new ArrayList<Integer>(new HashSet<Integer>(currSensFacts));
 		Collections.sort(currSensFacts);
 		this.neuroGroupOperator.contextCrosser(1, currSensFacts, false, false, new ArrayList<Pair<List<Integer>, List<Integer>>>());
 		double percentSelectedContextActive = 0.0;
-//		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
-//			percentSelectedContextActive = this.neuroGroupOperator.getActiveContexts().size();
-//			percentSelectedContextActive /= this.neuroGroupOperator.getNumSelectedContext();
-//		}
 		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
-			percentSelectedContextActive = this.neuroGroupOperator.getSelectedContextValue();
-			percentSelectedContextActive /= this.neuroGroupOperator.getSumActiveContextsValue();
+			percentSelectedContextActive = this.neuroGroupOperator.getActiveContexts().size();
+			percentSelectedContextActive /= this.neuroGroupOperator.getNumSelectedContext();
 		}
+//		if (this.neuroGroupOperator.getNumSelectedContext() > 0) {
+//			percentSelectedContextActive = this.neuroGroupOperator.getSelectedContextValue();
+//			percentSelectedContextActive /= this.neuroGroupOperator.getSumActiveContextsValue();
+//		}
 //		Set<Pair<List<Integer>, List<Integer>>> activeContext = new HashSet<Pair<List<Integer>, List<Integer>>>();
 //		activeContext.addAll(this.neuroGroupOperator.getPotentialNewContextList());
 //		double percentaddContextActive = 0.0;

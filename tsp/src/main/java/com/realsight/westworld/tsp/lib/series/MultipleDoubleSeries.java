@@ -7,7 +7,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import Jama.Matrix;
-import com.realsight.westworld.tsp.lib.util.Util;
 
 public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     List<String> property_list;
@@ -58,8 +57,6 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     }
 
     public void addSeries(DoubleSeries series) {
-    	Util.check(this.isAscending());
-        Util.check(series.isAscending());
 
         Iterator<Entry<LinkedList<Double>>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = series.iterator();
@@ -91,7 +88,7 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
         property_list.add(series.mName);
     }
 
-    public MultipleDoubleSeries subSeries(int l, int r) throws Exception{
+	public MultipleDoubleSeries subSeries(int l, int r) throws Exception{
     	
     	if(l<0 || r>size())
     		throw new Exception("l<0 || r>size()");

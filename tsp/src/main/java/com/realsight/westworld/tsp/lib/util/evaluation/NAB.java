@@ -96,7 +96,7 @@ public class NAB {
 		return Totals_scores;
 	}
 	public static void main(String[] args) throws IOException{
-		System.out.println(SA("D:/workspace/NAB/results/realsight/",0.85));
+		System.out.println(SA("E:/EclipseWorkspace/westworld/timeseries/realsight/",0.73));
 //		System.out.println(SA("D:/workspace/NAB/results/contextOSE/", 0.76552734376));
 //		System.out.println(SDA("D:/workspace/NAB/src/results/neusoft/realTweets/neusoft_Twitter_volume_UPS.csv", 1.1));
 //		System.out.println(SDA("D:/workspace/NAB/src/results/neusoft/realAWSCloudwatch/neusoft_ec2_cpu_utilization_53ea38.csv", 3.9));

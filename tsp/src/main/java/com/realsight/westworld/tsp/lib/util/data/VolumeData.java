@@ -33,7 +33,10 @@ public class VolumeData {
 				throw new IOException("File not exists timestamp.");
 			if(cr.getIndex(name) == -1)
 				throw new IOException("File not exists " + name + ".");
+//			int idx = 0;
 			while(cr.readRecord()){
+//				idx += 1;
+//				if (idx%6 == 0) continue;
 				String time = cr.get("time_window").split(",")[0].substring(1);
 				Date date = null;
 				try {

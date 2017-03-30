@@ -8,17 +8,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import com.realsight.westworld.tsp.lib.series.TimeSeries;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import com.realsight.westworld.tsp.lib.csv.CsvReader;
 import com.realsight.westworld.tsp.lib.series.DoubleSeries;
 import com.realsight.westworld.tsp.lib.series.StringSeries;
+import com.realsight.westworld.tsp.lib.series.TimeSeries;
 
 @SuppressWarnings("deprecation")
 public class StockData {

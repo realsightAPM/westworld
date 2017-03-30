@@ -1,8 +1,8 @@
 package com.realsight.westworld.tsp.lib.series;
 
-import java.util.*;
-
 import static com.realsight.westworld.tsp.lib.util.Util.check;
+
+import java.util.*;
 
 public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     public static class Entry<T> implements Comparable<Entry<T>> {

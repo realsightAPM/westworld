@@ -1,12 +1,12 @@
 package com.realsight.westworld.tsp.lib.series;
 
-import com.realsight.westworld.tsp.lib.util.Util;
+import static com.realsight.westworld.tsp.lib.util.Util.check;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static com.realsight.westworld.tsp.lib.util.Util.check;
+import com.realsight.westworld.tsp.lib.util.Util;
 
 public class DoubleSeries extends TimeSeries<Double> {
 
@@ -70,8 +70,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
     
     public DoubleSeries and(DoubleSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
@@ -109,8 +109,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries or(DoubleSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
@@ -150,8 +150,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries plus(DoubleSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
@@ -189,7 +189,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries plus(double factor) {
-    	Util.check(this.isAscending());
+    	check(this.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
 
@@ -204,8 +204,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries mul(DoubleSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
@@ -243,7 +243,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries mul(double factor) {
-    	Util.check(this.isAscending());
+    	check(this.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
 
@@ -258,8 +258,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
 
     public DoubleSeries div(DoubleSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
@@ -297,7 +297,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     }
     
     public DoubleSeries div(double other) {
-    	Util.check(this.isAscending());
+    	check(this.isAscending());
 
         Iterator<Entry<Double>> i1 = this.iterator();
 

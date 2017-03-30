@@ -1,12 +1,12 @@
 package com.realsight.westworld.tsp.lib.series;
 
-import com.realsight.westworld.tsp.lib.util.Util;
+import static com.realsight.westworld.tsp.lib.util.Util.check;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static com.realsight.westworld.tsp.lib.util.Util.check;
+import com.realsight.westworld.tsp.lib.util.Util;
 
 public class StringSeries extends TimeSeries<String> {
 
@@ -69,8 +69,8 @@ public class StringSeries extends TimeSeries<String> {
     }
     
     public StringSeries and(StringSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<String>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = other.iterator();
@@ -108,8 +108,8 @@ public class StringSeries extends TimeSeries<String> {
     }
 
     public StringSeries or(StringSeries other) {
-    	Util.check(this.isAscending());
-        Util.check(other.isAscending());
+    	check(this.isAscending());
+        check(other.isAscending());
 
         Iterator<Entry<String>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = other.iterator();

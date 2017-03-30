@@ -1,11 +1,7 @@
 package com.realsight.westworld.tsp.lib.util;
 
 
-import com.realsight.westworld.tsp.lib.series.DoubleSeries;
-import com.realsight.westworld.tsp.lib.series.MultipleDoubleSeries;
-
 import Jama.Matrix;
-import com.realsight.westworld.tsp.lib.series.TimeSeries;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,6 +13,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.realsight.westworld.tsp.lib.series.DoubleSeries;
+import com.realsight.westworld.tsp.lib.series.MultipleDoubleSeries;
+import com.realsight.westworld.tsp.lib.series.TimeSeries.Entry;
+
 public class Util {
 	
 	public static Path writeCsv(DoubleSeries series) {
@@ -24,7 +24,7 @@ public class Util {
         data.append("timestamp");
         data.append(","+series.getName());
         data.append("\n");
-        for(TimeSeries.Entry<Double> e : series.getData()){
+        for(Entry<Double> e : series.getData()){
         	data.append(e.getInstant());
         	data.append(","+e.getItem());
         	data.append("\n");
@@ -39,7 +39,7 @@ public class Util {
         	data.append(","+name);
         }
         data.append("\n");
-        for(TimeSeries.Entry<LinkedList<Double>> e : series.getData()){
+        for(Entry<LinkedList<Double>> e : series.getData()){
         	data.append(e.getInstant());
         	for(Double item : e.getItem()){
         		data.append(","+item);
@@ -64,7 +64,7 @@ public class Util {
         	data.append(","+name);
         }
         data.append("\n");
-        for(TimeSeries.Entry<LinkedList<Double>> e : series.getData()){
+        for(Entry<LinkedList<Double>> e : series.getData()){
         	data.append(e.getInstant());
         	for(Double item : e.getItem()){
         		data.append(","+item);
