@@ -1,0 +1,165 @@
+2017-02-20T14:57:53,057 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T14:59:35,785 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T14:59:46,958 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T14:59:46,985 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:01:30,110 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:01:33,253 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:01:33,257 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:01:57,488 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:02:00,773 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:02:00,779 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:13,125 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:03:16,628 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:16,629 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:19,215 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:19,215 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:22,814 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:22,815 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:27,482 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:27,482 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:33,501 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:33,502 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sb] a,b,c
+2017-02-20T15:03:46,443 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:03:46,448 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [ssb] a,b,c
+2017-02-20T15:04:22,035 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:04:22,037 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [sssb] a,b,c
+2017-02-20T15:04:32,873 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:04:32,875 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [sssbb] a,b,c
+2017-02-20T15:13:09,402 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:13:21,053 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:13:21,054 [Restlet-992846223] WARN rca.viz.CreateDetectionKPIsGroup - [sssbb] a,b,c
+2017-02-20T15:13:30,271 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:13:30,272 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - [sssbb] delete
+2017-02-20T15:13:47,819 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:13:47,820 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - [sssb] delete
+2017-02-20T15:13:52,110 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:13:52,110 [Restlet-992846223] WARN rca.viz.DeleteDetectionKPIsGroup - [sssbsss] not exist.
+2017-02-20T15:14:16,051 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:14:16,052 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - [sb] delete
+2017-02-20T15:14:20,077 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:14:20,078 [Restlet-992846223] DEBUG rca.viz.DeleteDetectionKPIsGroup - [ssb] delete
+2017-02-20T15:54:00,664 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:54:41,635 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:54:41,683 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [ssb] a,b,c
+2017-02-20T15:55:22,321 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:55:22,373 [Restlet-992846223] ERROR rca.viz.InsertDetectionKPIsGroup - [ssb] KPI_list.length != parameter.length.
+2017-02-20T15:57:40,566 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T15:57:44,744 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T15:57:44,751 [Restlet-992846223] ERROR rca.viz.InsertDetectionKPIsGroup - [ssb] KPI_list.length != parameter.length.
+2017-02-20T16:00:07,166 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:00:10,001 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:02:06,540 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:03:07,751 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:03:15,627 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:03:15,637 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:31,387 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:31,389 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:33,735 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:33,738 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:33,931 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:33,934 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:34,149 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:34,152 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:34,506 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:34,509 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:34,741 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:34,743 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:04:34,923 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:04:34,926 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:16:19,886 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:16:25,632 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:16:25,686 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - ssb
+2017-02-20T16:16:25,694 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:18:06,129 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:18:06,130 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - ssb
+2017-02-20T16:18:06,131 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,b,c 1,2,3
+2017-02-20T16:18:21,752 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Create etection KPIs Table
+2017-02-20T16:18:21,752 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - ssb
+2017-02-20T16:18:21,757 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:19:40,288 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:19:42,710 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:19:42,733 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:20:34,765 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:20:37,142 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:20:37,151 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:20:37,168 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:22:39,658 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:22:42,092 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:22:42,098 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:22:42,113 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:23:25,152 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:23:28,181 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:23:28,187 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:23:28,187 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - a 1 0
+2017-02-20T16:23:28,188 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - c 2 2
+2017-02-20T16:23:28,188 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - b 3 1
+2017-02-20T16:23:28,189 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:24:57,355 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:24:59,978 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:24:59,985 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:24:59,985 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 1
+2017-02-20T16:24:59,985 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:24:59,985 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:24:59,987 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:25:16,683 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:25:16,684 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:25:16,684 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 1
+2017-02-20T16:25:16,684 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:25:16,684 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:25:16,686 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] a,c,b 1,2,3
+2017-02-20T16:25:30,133 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:25:30,133 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:25:30,133 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:25:30,134 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:25:30,134 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - 1
+2017-02-20T16:25:30,137 [Restlet-630074945] DEBUG rca.viz.InsertDetectionKPIsGroup - [ssb] c,b,a 1,2,3
+2017-02-20T16:28:16,315 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:32:52,659 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:33:11,524 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:34:03,118 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - Create detection KPIs Group
+2017-02-20T16:34:03,125 [Restlet-992846223] DEBUG rca.viz.CreateDetectionKPIsGroup - [cpu] timestamp,value
+2017-02-20T16:34:33,282 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:34:33,287 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:34:33,287 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 1
+2017-02-20T16:34:33,288 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:34:33,291 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 1,2
+2017-02-20T16:34:39,281 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:34:39,281 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:34:39,281 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:34:39,282 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 3
+2017-02-20T16:34:39,285 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:09,313 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:47:17,150 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:17,156 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:17,160 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:22,087 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:22,089 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:22,094 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:42,145 [main] INFO rca.server.RCAServer - SCAServer create.
+2017-02-20T16:47:44,613 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:44,618 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:44,622 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:44,814 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:44,815 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:44,822 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:45,282 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:45,282 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:45,285 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:45,479 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:45,480 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:45,486 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:45,662 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:45,663 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:45,693 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:45,831 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:45,832 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:45,835 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:46,031 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:46,031 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:46,035 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:46,194 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:46,195 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:46,198 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3
+2017-02-20T16:47:46,364 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - Insert detection KPIs Table
+2017-02-20T16:47:46,365 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - 2
+2017-02-20T16:47:46,372 [Restlet-992846223] DEBUG rca.viz.InsertDetectionKPIsGroup - [cpu] timestamp,value 2,3

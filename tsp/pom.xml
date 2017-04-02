@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.realsight.westworld</groupId>
+	<artifactId>tsp</artifactId>
+	<version>1.0.0</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-util</artifactId>
+			<version>9.3.7.v20160115</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.la4j</groupId>
+			<artifactId>la4j</artifactId>
+			<version>0.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.reactivex</groupId>
+			<artifactId>rxjava</artifactId>
+			<version>1.0.14</version>
+		</dependency>
+		<dependency>
+			<groupId>io.reactivex</groupId>
+			<artifactId>rxjava-async-util</artifactId>
+			<version>0.21.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nd4j</groupId>
+			<artifactId>nd4j-jblas</artifactId>
+			<version>0.4-rc3.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mkobos</groupId>
+			<artifactId>pca_transform</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist.math</groupId>
+			<artifactId>jama</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>fully.qualified.MainClass</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+	</build>
+
+</project>

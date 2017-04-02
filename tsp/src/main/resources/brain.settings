@@ -1,0 +1,4 @@
+###-------------------------------------------------
+### Realsight APM Brain Settings
+
+solr.url = http://localhost:8084/solr/apm
