@@ -1,4 +1,4 @@
-package com.bnAnalysis;
+package com.basic;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,12 +6,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-import com.basic.ReadFile;
+import com.bnAnalysis.NeticaApi;
 
 import norsys.netica.NeticaException;
 import norsys.netica.Node;
 
 public class SimuLoad {
+	
+	// 这个类的主要目的是用来写一个模拟增压后的分布的.tsv文件
 	
 	public ReadFile readFile;
 	public NeticaApi netica;
@@ -81,22 +83,22 @@ public class SimuLoad {
 		}
 		
 		writeCas(simu_var, times);
-		netica.loadSimuNet();
+//		netica.loadSimuNet();
 	}
-	
-	public List<Double> getNewDistribution(String strVar) throws NeticaException {
-		Node node = netica.net.getNode(strVar);
-		int numState = node.getNumStates();
-		
-		List<Double> resList = new ArrayList<Double>();
-		
-		for (int i = 0; i < numState; i++) {
-			double tmp = node.getBelief(""+((char)('a'+i)));
-			resList.add(tmp);
-		}
-		
-		return resList;
-	}
+
+//	public List<Double> getNewDistribution(String strVar) throws NeticaException {
+//		Node node = netica.net.getNode(strVar);
+//		int numState = node.getNumStates();
+//		
+//		List<Double> resList = new ArrayList<Double>();
+//		
+//		for (int i = 0; i < numState; i++) {
+//			double tmp = node.getBelief(""+((char)('a'+i)));
+//			resList.add(tmp);
+//		}
+//		
+//		return resList;
+//	}
 	
 	private int getSimuState(double value, String var) {
 		int pos = 0;
@@ -109,7 +111,7 @@ public class SimuLoad {
 		return pos;
 	}
 	
-	public void writeCas(String target_var, double times) throws IOException {
+	private void writeCas(String target_var, double times) throws IOException {
 //		System.out.println("========================\n输出模拟压力测试的离散化CAS文件：\n");
 		
 		/*** output separated cas file ***/
@@ -135,9 +137,9 @@ public class SimuLoad {
 				double tmp = readFile.originalData.get(j).get(i);
 				if (attrList[j].equals(target_var)) {
 					out_simuFile.write((char) ('a'+getSimuState(tmp*times, attrList[j])));
-					System.out.println(tmp + "\t" + tmp*times);
-					System.out.println(((char) ('a'+getSimuState(tmp, attrList[j]))) + "\t" + 
-							((char) ('a'+getSimuState(tmp*times, attrList[j]))));
+//					System.out.println(tmp + "\t" + tmp*times);
+//					System.out.println(((char) ('a'+getSimuState(tmp, attrList[j]))) + "\t" + 
+//							((char) ('a'+getSimuState(tmp*times, attrList[j]))));
 				}
 				else {
 					out_simuFile.write((char) ('a'+getSimuState(tmp, attrList[j])));
@@ -150,13 +152,17 @@ public class SimuLoad {
 		}
 		out_simuFile.close(); // close the file
 	}
-	
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		SimuLoad simu = new SimuLoad("inputjava_data1.csv", "session_count", 1.5);
 		
-		
+//		List<Double> list = simu.getNewDistribution("session_count");
+//		
+//		for (int i = 0; i < list.size(); i++) {
+//			System.out.print(list.get(i) + " ");
+//		}
+//		System.out.println();
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.bnAnalysis;
+package com.application;
 
 
 import java.io.IOException;
@@ -9,44 +9,28 @@ import java.util.TreeMap;
 
 import com.basic.Pair;
 import com.basic.ReadCSV;
+import com.basic.SimuLoad;
+import com.bnAnalysis.NeticaApi;
+import com.bnAnalysis.SimuCPT;
 
 import norsys.netica.*;
 
 public class RootCause {
-	                                                                                                                                      
-	public NeticaApi netica;
+	
+	// 载入的netica是哪一个网络，就进行那个分析。
 	public List<Pair<String, Double>> causeRank;
 
-	public RootCause() throws Exception {}
+	public RootCause() {}
 	
-	public RootCause(String target_var) throws Exception {
-		loadNetica();
-		getCauseRankOf(target_var);
+	public RootCause(String target_var, NeticaApi netica) throws Exception {
+		getCauseRankOf(target_var, netica);
 	}
 	
-	public RootCause(SimuLoad simuLoad, String target_var) throws Exception {
-		simuNetica(simuLoad);
-		getCauseRankOf(target_var);
-	}
-	
-	public void loadNetica() throws Exception {
-		netica = new NeticaApi();
-		netica.loadNet();
-	}
-	
-	public void buildNetica(String original_csv, String target_var) throws Exception {
-		netica = new NeticaApi();
-		netica.buildNet(original_csv, 2, 3);
-	}
-	
-	public void simuNetica(SimuLoad simuLoad) throws Exception {
-		netica = simuLoad.netica;
-	}
-	
-	public void getCauseRankOf(String target_var) throws Exception {
+	private void getCauseRankOf(String target_var, NeticaApi netica) throws Exception {
 //		netica = new NeticaApi();
 //		netica.buildNet(original_csv, 2, 3);
 //		netica.loadNet();
+		netica.loadRangeMap();
 		
 		if (!netica.rangeMap.containsKey(target_var)) {
 			System.out.println("target_var if not exist");
@@ -73,7 +57,9 @@ public class RootCause {
 	
 	
 	public static void main (String[] args) throws Throwable{
-	    RootCause rootCause = new RootCause("http_times");
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+	    RootCause rootCause = new RootCause("http_times", netica);
 	    
 		
 //		System.out.println("\n输出根源性的期望值：");
@@ -87,27 +73,24 @@ public class RootCause {
 			System.out.println(rank.get(i).first + "\t" + rank.get(i).second);
 		}
 		
-		rootCause.netica.finalize();
+		netica.finalize();
 		
 		String simuStr = "session_count";
-		double times = 1;
+		double times = 20;
 		
-		SimuLoad simu = new SimuLoad("inputjava_data1.csv", simuStr, times);
-	    RootCause simuCause = new RootCause(simu,"http_times");
-		
-	    List<Double> newDist = simu.getNewDistribution(simuStr);
+		SimuLoad simu = new SimuLoad("inputjava_data1.csv", simuStr, times);   // 只是用来生成模拟的.tsv文件
+//		netica.loadSimuNet();
+		SimuCPT simuCPT = new SimuCPT();
+		simuCPT.setSimuCPT(simuStr);
+		netica = simuCPT.loadSimuCPT();
+	    RootCause simuCause = new RootCause("http_times", netica);
 	    
 		rank = simuCause.causeRank;
 		System.out.println("\nsimu："+ simuStr + "*" + times + "后http_times期望：");
 		for (int i = 0; i < rank.size(); i++) {
 			System.out.println(rank.get(i).first + "\t" + rank.get(i).second);
 		}
-		
-		System.out.println("新的"+simuStr+"分布");
-		
-		for(int i = 0; i < newDist.size(); i++) {
-			System.out.println(""+((char)('a'+i)) + ": " + newDist.get(i));
-		}
+		netica.finalize();
 		
 	}
 }

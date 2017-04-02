@@ -22,6 +22,8 @@ public class NeticaApi {
 	
 	public NeticaApi() throws Exception {}
 	
+	/************************************************************ 建网 *********************************************************/
+	
 	public void buildNet(String original_csv, int num_thread, int num_bins) throws Exception {
 		
 		banjo = new BanjoApi(original_csv, num_thread, num_bins);
@@ -43,7 +45,7 @@ public class NeticaApi {
 			System.out.println("创建目录成功！");
 		}
 		
-		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
+//		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
 		env = new Environ(null);
 		
 		net = new Net();
@@ -83,13 +85,10 @@ public class NeticaApi {
 		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
 		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
 		net.write(new Streamer("netica_out_dir/Learned_netica_CPT.dne"));
-		net.compile();
+//		net.compile();
 	}
 	
-	public void loadRangeMap() throws IOException {
-		ReadCSV readCSV = new ReadCSV();
-		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
-	}
+	/************************************************* load网络 *****************************************************/
 	
 	public void loadSimuNet() throws NeticaException, IOException {
 		env = new Environ(null);
@@ -116,6 +115,29 @@ public class NeticaApi {
 		net.compile();
 	}
 	
+	public void loadNet(String dne_file, String cas_file) throws NeticaException, IOException {
+		
+		env = new Environ(null);
+		net = new Net (new Streamer (dne_file));
+		net.setName("apm");
+		loadRangeMap();
+		
+		NodeList nodes = net.getNodes();
+		Streamer caseFile = new Streamer(cas_file);
+		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+		
+		net.compile();
+	}
+	
+	public void loadNet(String dne_file) throws NeticaException {
+		
+		env = new Environ(null);
+		net = new Net (new Streamer (dne_file));
+		net.compile();
+	}
+	
+	/******************************************************** 将数字转化成字母状态 *******************************************/
+	
 	private String getStates(int numstate) {
 		String str = "";
 		for (int i = 0; i < numstate; i++) {
@@ -134,6 +156,13 @@ public class NeticaApi {
 		return str;
 	}
 	
+	/************************************************************ 变量及其对应的离散区间 **************************************************/
+	
+	public void loadRangeMap() throws IOException {
+		ReadCSV readCSV = new ReadCSV();
+		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+	}
+	
 	public Map<String, String[]> getRangeMap() {
 		return rangeMap;
 	}
@@ -148,6 +177,49 @@ public class NeticaApi {
 			System.out.println();
 		}
 	}
+	
+	/***************************************************************** 获得变量概率分布 ***************************************************/
+	
+	public List<Double> getDistribution(String strVar) throws NeticaException {
+		Node node = net.getNode(strVar);
+		int numState = node.getNumStates();
+		
+		List<Double> resList = new ArrayList<Double>();
+		
+		for (int i = 0; i < numState; i++) {
+			double tmp = node.getBelief(""+((char)('a'+i)));
+			resList.add(tmp);
+		}
+		
+		return resList;
+	}
+	
+	/************************************************************* 获得父结点  ***************************************************/
+	
+	public List<String> getParents(Node node) throws NeticaException {
+		return getParents(node.toString());
+	}
+	
+	public List<String> getParents(String node_name) throws NeticaException {
+		List<String> parents = new ArrayList<String>();
+		boolean exist = false;
+		for (String it : rangeMap.keySet()) {
+			if (it.equals(node_name)) {
+				exist = true;
+			}
+		}
+		if (!exist) {
+			System.out.println(node_name + " is not in the attrList");
+		}
+		NodeList nodeList = net.getNode(node_name).getParents();
+		for (int i = 0; i < nodeList.size(); i++) {
+			parents.add(nodeList.get(i).toString());
+		}
+		return parents;
+	}
+	
+	
+	/************************************************************* 获得孩子结点 ********************************************************/
 	
 	public List<String> getChildren(Node node) throws NeticaException {
 		return getChildren(node.toString());
@@ -183,6 +255,8 @@ public class NeticaApi {
 		}
 	}
 	
+	/******************************************************** 概率推理 ***************************************************/
+	
 	public double getInfer(List<Pair<String, String>> conds, Pair<String, String> target) throws NeticaException {
 		
 		double res;
@@ -191,6 +265,24 @@ public class NeticaApi {
 			 nodes[i] = net.getNode(conds.get(i).first);
 			 nodes[i].finding().enterState(conds.get(i).second);
 		}
+		Node targetNode = net.getNode(target.first);
+		res = targetNode.getBelief(target.second);
+		
+		for (int i = 0; i < nodes.length; i++ ) {
+			nodes[i].finding().clear();
+		}
+		
+		return res;
+	}
+	
+	public double getInfer(List<Pair<String, float[]>> hoods, Pair<String, String> target, String likelihood) throws NeticaException {
+		double res;
+		Node[] nodes = new Node[hoods.size()];
+		for (int i = 0; i < hoods.size(); i++) {
+			nodes[i] = net.getNode(hoods.get(i).first);
+			nodes[i].finding().enterLikelihood(hoods.get(i).second);
+		}
+		
 		Node targetNode = net.getNode(target.first);
 		res = targetNode.getBelief(target.second);
 		
@@ -215,6 +307,8 @@ public class NeticaApi {
 		return getInfer(condsList, pairTarget);
 	}
 	
+	/************************************************************* 期望推理 *********************************************************/
+	
 	public double getExeption(String conds, String target) throws NeticaException {
 		String[] strConds = conds.split(",");
 		List<Pair<String, String>> condsList = new ArrayList<Pair<String, String>>();
@@ -234,7 +328,6 @@ public class NeticaApi {
 			double belief = getInfer(conds, new Pair<String, String> (target, getState(i)));
 			res += i*belief;
 		}
-		
 		return res;
 	}
 	
