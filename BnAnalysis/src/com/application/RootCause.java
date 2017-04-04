@@ -44,6 +44,7 @@ public class RootCause {
 			if (tmpNode.toString().equals(target_var)) {
 				continue;
 			}
+			//设为最高状态
 			double belief = netica.getExeption(tmpNode.toString()+":"+netica.getState(tmpNode.getNumStates()-1), target_var);
 			rankMap.put(-belief, tmpNode.toString());
 		}
