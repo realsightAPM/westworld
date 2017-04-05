@@ -99,6 +99,8 @@ public class NeticaApi {
 		Streamer caseFile = new Streamer("simuLoad_out_dir/simuLoad.cas");
 		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
 		
+		net.write(new Streamer("simuTest.dne"));
+		
 		net.compile();
 	}
 	
@@ -293,6 +295,19 @@ public class NeticaApi {
 		return res;
 	}
 	
+	public double getInfer(Pair<String, float[]> hood, Pair<String, String> target, String likelihood) throws NeticaException {
+		double res;
+		
+		Node node = net.getNode(hood.first);
+		node.finding().enterLikelihood(hood.second);
+		Node targetNode = net.getNode(target.first);
+		res = targetNode.getBelief(target.second);
+		
+		node.finding().clear();
+		
+		return res;
+	}
+	
 	public double getInfer(String conds, String target) throws NeticaException {
 		String[] strConds = conds.split(",");
 		List<Pair<String, String>> condsList = new ArrayList<Pair<String, String>>();
@@ -328,6 +343,19 @@ public class NeticaApi {
 			double belief = getInfer(conds, new Pair<String, String> (target, getState(i)));
 			res += i*belief;
 		}
+		return res;
+	}
+	
+	public double getExeption(Pair<String, float[]> hood, String target, String likelihood) throws NeticaException {
+		double res = 0;
+		
+		Node node = net.getNode(target);
+		
+		for (int i = 0; i < node.getNumStates(); i++) {
+			double belief = getInfer(hood, new Pair<String, String> (target, getState(i)), "likelihood");
+			res += i*belief;
+		}
+		
 		return res;
 	}
 	

@@ -1,6 +1,6 @@
 // ~->[DNET-1]->~
 
-// File created by an unlicensed user using Netica 5.04 on Apr 04, 2017 at 20:54:09.
+// File created by an unlicensed user using Netica 5.04 on Apr 05, 2017 at 09:34:54.
 
 bnet apm {
 autoupdate = FALSE;
@@ -26,9 +26,9 @@ node session_count {
 	parents = (used_memory);
 	probs = 
 		// a            b            c             // used_memory 
-		  (0.07522035,  0.8462927,   0.07848702,   // a           
-		   0.05686069,  0.8101639,   0.1329754,    // b           
-		   2.524271e-4, 0.09056752,  0.90918);     // c           ;
+		  (0.1120725,   0.03049839,  0.857429,     // a           
+		   0.05407761,  0.01863678,  0.9272856,    // b           
+		   3.785213e-5, 3.284879e-4, 0.9996336);   // c           ;
 	};
 
 node http_times {

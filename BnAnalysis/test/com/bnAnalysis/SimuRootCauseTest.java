@@ -9,7 +9,6 @@ public class SimuRootCauseTest {
 	@Test
 	public void testSimuRootCause() throws Exception {
 		SimuRootCause root = new SimuRootCause();
-		root.run("inputjava_data1.csv", "session_count", 2, "http_times");
+		root.run("inputjava_data1.csv", "session_count", 20, "http_times");
 	}
-
 }
