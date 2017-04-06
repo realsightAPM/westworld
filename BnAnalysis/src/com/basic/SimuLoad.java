@@ -86,19 +86,19 @@ public class SimuLoad {
 //		netica.loadSimuNet();
 	}
 
-//	public List<Double> getNewDistribution(String strVar) throws NeticaException {
-//		Node node = netica.net.getNode(strVar);
-//		int numState = node.getNumStates();
-//		
-//		List<Double> resList = new ArrayList<Double>();
-//		
-//		for (int i = 0; i < numState; i++) {
-//			double tmp = node.getBelief(""+((char)('a'+i)));
-//			resList.add(tmp);
-//		}
-//		
-//		return resList;
-//	}
+	public List<Double> getNewDistribution(String strVar) throws NeticaException {
+		Node node = netica.net.getNode(strVar);
+		int numState = node.getNumStates();
+		
+		List<Double> resList = new ArrayList<Double>();
+		
+		for (int i = 0; i < numState; i++) {
+			double tmp = node.getBelief(""+((char)('a'+i)));
+			resList.add(tmp);
+		}
+		
+		return resList;
+	}
 	
 	private int getSimuState(double value, String var) {
 		int pos = 0;
@@ -152,17 +152,24 @@ public class SimuLoad {
 		}
 		out_simuFile.close(); // close the file
 	}
+	
+	@Override
+	public void finalize() throws NeticaException {
+		netica.finalize();
+	}
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		SimuLoad simu = new SimuLoad("inputjava_data1.csv", "session_count", 1.5);
+		SimuLoad simu = new SimuLoad("inputjava_data1.csv", "session_count", 1);
 		
-//		List<Double> list = simu.getNewDistribution("session_count");
-//		
-//		for (int i = 0; i < list.size(); i++) {
-//			System.out.print(list.get(i) + " ");
-//		}
-//		System.out.println();
+		List<Double> list = simu.getNewDistribution("session_count");
+		
+		for (int i = 0; i < list.size(); i++) {
+			System.out.print(list.get(i) + " ");
+		}
+		System.out.println();
+		
+		simu.finalize();
 		
 	}
 

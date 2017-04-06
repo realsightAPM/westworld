@@ -1,8 +1,10 @@
-package com.bnAnalysis;
+package com.application;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.application.NeticaBuild;
 
 public class NeticaBuildTest {
 

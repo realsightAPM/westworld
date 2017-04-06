@@ -12,5 +12,4 @@ public class SimuInternTest {
 		SimuIntern simu = new SimuIntern();
 		simu.run("session_count", "http_times", hood);
 	}
-
 }

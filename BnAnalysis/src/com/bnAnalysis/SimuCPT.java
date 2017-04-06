@@ -34,6 +34,8 @@ public class SimuCPT {
 		for (int i = 0; i < list_simu_dist.size(); i++) {
 			System.out.print(list_simu_dist.get(i)+"\t");
 		}
+		
+		netica.finalize();
 	}
 	
 	public void setSimuCPT(String var) throws Exception {
@@ -123,7 +125,7 @@ public class SimuCPT {
 	
 	public static void main(String[] args) throws Exception {
 		SimuCPT simuCPT = new SimuCPT();
-		simuCPT.setSimuCPT("session_count");
+		simuCPT.getSimuCPT("session_count");
 		
 	}
 	

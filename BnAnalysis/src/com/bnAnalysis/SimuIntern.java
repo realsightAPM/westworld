@@ -16,6 +16,8 @@ public class SimuIntern {
 		
 		netica.loadNet();
 		
+//		netica.loadSimuNet();
+		
 		double res = netica.getExeption(new Pair<String, float[]> (simuStr, likelihood), var, "likelihood");
 		netica.finalize();
 		
