@@ -1,0 +1,5 @@
+###-------------------------------------------------
+### Realsight APM Brain Settings
+
+version = 1.0.0
+solr_addr = localhost:8983
