@@ -33,15 +33,15 @@ public class NeticaApiTest {
 		
 		netica.printRangeMap();
 		
-		for (String it : netica.rangeMap.keySet()) {
-			netica.printChildren(it);
-		}
-		
-		double res = netica.getInfer("session_count:c,cpu:c", "http_times:c");
-		System.out.println("\n条件概率为：" + res);
-		
-		res = netica.getInfer("cpu:c", "http_times:c");
-		System.out.println("\n条件概率为：" + res);
+//		for (String it : netica.rangeMap.keySet()) {
+//			netica.printChildren(it);
+//		}
+//		
+//		double res = netica.getInfer("session_count:c,cpu:c", "http_times:c");
+//		System.out.println("\n条件概率为：" + res);
+//		
+//		res = netica.getInfer("cpu:c", "http_times:c");
+//		System.out.println("\n条件概率为：" + res);
 		
 		System.out.println("\nFinish the test: if NeticaApi build Learned_netica.dne");
 	}

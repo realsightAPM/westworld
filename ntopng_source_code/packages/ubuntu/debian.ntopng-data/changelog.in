@@ -1,0 +1,4 @@
+ntopng-data (@NTOPNG_VERS@) table; urgency=high
+   * Last packaged version
+
+ -- Luca Deri <deri@ntop.org>  @DATE@
