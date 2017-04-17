@@ -4,7 +4,9 @@ import static com.realsight.westworld.tsp.lib.util.Util.check;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import com.realsight.westworld.tsp.lib.util.Util;
 
@@ -401,6 +403,14 @@ public class DoubleSeries extends TimeSeries<Double> {
     	}
     	return sum/this.size();
     }
+    
+    public double sum(){
+    	double res = 0;
+    	for(int i = 0; i < this.size(); i++){
+    		res += this.getData().get(i).getItem();
+    	}
+    	return res;
+    }
 
     public double variance(){
     	if(this.size() == 0)
@@ -463,12 +473,33 @@ public class DoubleSeries extends TimeSeries<Double> {
     	}
     }
     
+    public void smooth(int len) {
+    	Queue<Double> que = new LinkedList<Double>();
+    	double sum = 0.0;
+    	for ( Entry<Double> entry : this.getData()) {
+    		que.add(entry.mT);
+    		sum += entry.mT;
+    		while(que.size() > len) {
+    			sum -= que.poll();
+    		}
+    		entry.mT = sum/len;
+    	}
+    }
+    
     public List<Double> getTData() {
     	List<Double> tData = new ArrayList<Double>();
     	for ( Entry<Double> entry : this.mData) {
     		tData.add(entry.getItem());
     	}
     	return tData;
+    }
+    
+    public DoubleSeries copy() {
+    	DoubleSeries res = new DoubleSeries(this.mName);
+    	for ( Entry<Double> entry : this.mData) {
+    		res.add(new Entry<Double>(entry.getItem(), entry.getInstant()));
+    	}
+    	return res;
     }
     
     @Override
