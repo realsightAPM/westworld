@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.realsight.westworld.tsp.lib.model.htm.neurongroups.NeuroGroup;
 import com.realsight.westworld.tsp.lib.series.DoubleSeries;
 import com.realsight.westworld.tsp.lib.series.TimeSeries.Entry;
 
@@ -17,11 +18,13 @@ public class AnormalyHierarchy extends Hierarchy implements Serializable{
 	 */
 	private static final long serialVersionUID = 973860126368457409L;
 
-	
+	private int maxLeftSemiContextsLenght = 27;
+	private int maxActiveNeuronsNum = 15;
+	private int maxRemeberNeuronsNum = 1155;
 	private double min_value;
 	private double max_value;
 	private double scope;
-	private int radius = 3; // (0,0.5)
+	private int radius = 3;
 	private int numBit = 1<<radius;
 	private Random rng = new Random(542);
 
@@ -50,14 +53,11 @@ public class AnormalyHierarchy extends Hierarchy implements Serializable{
 	}
 
 	private AnormalyHierarchy(DoubleSeries series) {
-		super();
+		this.neuroGroup = new NeuroGroup(maxActiveNeuronsNum, maxLeftSemiContextsLenght, maxRemeberNeuronsNum);
 		this.min_value = series.min();
 		this.max_value = series.max();
 		this.scope = (max_value - min_value)/(this.numBit-1);
 		if (this.scope < 1e-5) this.scope = 1.0;
-		
-		super.setMaxActiveNeuronsNum(15);
-		super.setMaxLeftSemiContextsLenght(17);
 	}
 	
 	protected List<Integer> value2SensFacts(Matrix value) {
@@ -72,10 +72,16 @@ public class AnormalyHierarchy extends Hierarchy implements Serializable{
 	}
 	
 	public static AnormalyHierarchy build(DoubleSeries nSeries){
+		return build(nSeries, false);
+	}
+	
+	public static AnormalyHierarchy build(DoubleSeries nSeries, boolean flag){
 		AnormalyHierarchy res = new AnormalyHierarchy(nSeries);
-		for(int i = 0; i < nSeries.size(); i++) {
-			Entry<Double> entry = nSeries.get(i);
-			res.learn(new Matrix(1, 1, entry.getItem()));
+		if (flag){
+			for(int i = 0; i < nSeries.size(); i++) {
+				Entry<Double> entry = nSeries.get(i);
+				res.learn(new Matrix(1, 1, entry.getItem()));
+			}
 		}
 		return res;
 	}

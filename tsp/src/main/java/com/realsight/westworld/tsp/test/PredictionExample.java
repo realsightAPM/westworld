@@ -1,82 +1,113 @@
 package com.realsight.westworld.tsp.test;
 
 import java.io.File;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.realsight.westworld.tsp.api.OnlineTimeseriesPredictionAPI;
 import com.realsight.westworld.tsp.lib.series.DoubleSeries;
 import com.realsight.westworld.tsp.lib.series.MultipleDoubleSeries;
+import com.realsight.westworld.tsp.lib.series.TimeSeries;
+import com.realsight.westworld.tsp.lib.util.Util;
 import com.realsight.westworld.tsp.lib.util.data.TimeseriesData;
 import com.realsight.westworld.tsp.lib.util.data.VolumeData;
 import com.realsight.westworld.tsp.lib.util.plot.Plot;
+
+import Jama.Matrix;
 
 /**
  * @author Sun Muxin
  * 
  */ 
 public class PredictionExample {
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public void main() throws Exception {
+	
+	public void main1() throws Exception {
+		String root = new File(System.getProperty("user.dir")).getPath();
+		Path trainPath = Paths.get(root, "data", "volume");
+		Path testPath = Paths.get(root, "data", "test");
+		String[] regexs = new String[]{"1_0_am", "1_0_pm", "1_1_am", "1_1_pm", 
+				"2_0_am", "2_0_pm", "3_0_am", "3_0_pm", "3_1_am", "3_1_pm"};
+		double sum = 0;
+		for (String regex : regexs) {
+//			System.err.print(regex + " ");
+			OnlineTimeseriesPredictionAPI p = new OnlineTimeseriesPredictionAPI();
+			List<MultipleDoubleSeries> train = new ArrayList<MultipleDoubleSeries>();
+			List<DoubleSeries> plot = new ArrayList<DoubleSeries>();
+			for (File file : trainPath.toFile().listFiles()) {
+				if (!file.getName().contains(regex)) continue;
+				VolumeData vd = new VolumeData(file.getAbsolutePath());
+				DoubleSeries series = vd.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
+				MultipleDoubleSeries mSeries = new MultipleDoubleSeries(file.getName(), series);
+				if (series.size() != 12)
+					continue;
+				train.add(mSeries);
+				plot.add(series);	
+			}
+//			Plot.plot(regex, plot);
+			int len = train.size();
+			int train_len = (int) (len*0.8);
+			List<MultipleDoubleSeries> train_data = new ArrayList<MultipleDoubleSeries>();
+			List<MultipleDoubleSeries> test_data = new ArrayList<MultipleDoubleSeries>();
+			for (int i = 0; i < train_len; i++){
+				train_data.add(train.get(i));
+			}
+			for (int i = train_len; i < len; i++) {
+				test_data.add(train.get(i));
+			}
+			for (int iter = 0; iter < 30; iter ++) {
+				p.train(train);
+//				p.test(test_data);
+			}
+//			sum += p.test(test_data);
+			for (File file : testPath.toFile().listFiles()) {
+				if (!file.getName().contains(regex)) continue;
+				VolumeData vd = new VolumeData(file.getAbsolutePath());
+				DoubleSeries series = vd.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
+				MultipleDoubleSeries mSeries = new MultipleDoubleSeries(file.getName(), series);
+				List<Integer> res = p.submmit(mSeries);
+				for (Integer i : res) {
+					System.out.println(file.getName() + "," + i);
+				}
+			}
+		}
+		System.err.println(sum / regexs.length);
+	}
+	
+	public void main2() {
 		String root = new File(System.getProperty("user.dir")).getPath();
 		String dataPath = Paths.get(root, "data").toString();
-		VolumeData a = new VolumeData(dataPath+File.separator+"volume_20min_1_0.csv");
-		VolumeData b = new VolumeData(dataPath+File.separator+"volume_20min_1_1.csv");
-		VolumeData c = new VolumeData(dataPath+File.separator+"volume_20min_2_0.csv");
-		VolumeData d = new VolumeData(dataPath+File.separator+"volume_20min_3_0.csv");
-		VolumeData e = new VolumeData(dataPath+File.separator+"volume_20min_3_1.csv");
-		DoubleSeries aSeries = a.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
-		DoubleSeries bSeries = b.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
-		DoubleSeries cSeries = c.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
-		DoubleSeries dSeries = d.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
-		DoubleSeries eSeries = e.getPropertySeries("volume", new SimpleDateFormat("yyyy-MM-dd HH:mm:SS"));
-		MultipleDoubleSeries mSeries = new MultipleDoubleSeries("ts", 
-				aSeries, bSeries); // , cSeries, dSeries, eSeries
-		Plot.plot(mSeries);
+		TimeseriesData in = new TimeseriesData(dataPath+File.separator+"cpu.csv");
+		MultipleDoubleSeries nSeries = new MultipleDoubleSeries("213", in.getPropertyDoubleSeries("value").subSeries(300, 350));
+		Plot.plot(nSeries);
 		OnlineTimeseriesPredictionAPI p = new OnlineTimeseriesPredictionAPI();
-		p.run(mSeries);
-//		TimeseriesData in = new TimeseriesData(dataPath+File.separator+"IN.csv");
-//		TimeseriesData out = new TimeseriesData(dataPath+File.separator+"OUT.csv");
-//		DoubleSeries inSeries = in.getPropertyDoubleSeries("diweijiage");
-////		DoubleSeries outSeries = out.getPropertySeries(String.valueOf(20), new SimpleDateFormat("yyyyMMddHH"));
-//		MultipleDoubleSeries nSeries = new MultipleDoubleSeries("ts", inSeries);
-//		Plot.plot("sb", inSeries);
-//		System.out.println(inSeries.size());
-//		PredictionAPI p = new PredictionAPI(nSeries);
-//		List<Double> as = p.run(nSeries);
-//		double sum = 0;
-//		for(Double a : as) {
-//			sum += a;
-//		}
-//		System.out.println((sum/as.size()));
-//		double ss = 0;
-//		int[] I = new int[]{12, 14, 20, 22, 27, 29, 34, 45, 50, 51, 52, 53, 58, 59, 60, 68, 69, 73, 81, 89};
-////		for (int i = 1; i <= 16*8; i++) {
-//		for (int i : I){
-//			DoubleSeries inSeries = in.getPropertyDoubleSeries(String.valueOf(i), new SimpleDateFormat("yyyyMMddHH"));
-//			DoubleSeries outSeries = out.getPropertyDoubleSeries(String.valueOf(i), new SimpleDateFormat("yyyyMMddHH"));
-//			MultipleDoubleSeries nSeries = new MultipleDoubleSeries("ts", inSeries, outSeries);
-//			OnlineTimeseriesPredictionAPI p = new OnlineTimeseriesPredictionAPI();
-//			List<Double> a = p.run(nSeries);
-//			double sum = 0.0;
-//			System.out.print(a.size());
-////			System.out.println("");
-//			for (int j = 0; j < a.size(); j++){
-//				sum += (a.get(j));
-////				System.out.println(a.get(j));
-//			}
-//			System.out.println("{ " + i + " -> " + (sum/20) + " }");
-//			ss += sum/20;
-//		}
-//		ss /= I.length;
-//		System.out.println(Math.sqrt(ss));
+		DoubleSeries real = new DoubleSeries("real");
+		DoubleSeries pre = new DoubleSeries("pre");
+		for (int iter = 0; iter < 20; iter ++) {
+			System.err.println("epoch is " + iter);
+			p.train(nSeries);
+		}
+		for ( int i = 0; i < nSeries.size(); i++ ) {
+			Matrix value = Util.toVec(nSeries.get(i).getItem().iterator());
+			long timestamp = nSeries.get(i).getInstant();
+			if (i > nSeries.size()/2){
+				Matrix t_value = p.prediction();
+				if (t_value != null) {
+					System.out.println("");
+					System.out.print("{ " + t_value.get(0, 0) + " & " + value.get(0, 0) + "}");
+					real.add(new TimeSeries.Entry<Double>(value.get(0, 0), timestamp));
+					pre.add(new TimeSeries.Entry<Double>(t_value.get(0, 0), timestamp));
+					continue;
+				}
+			}
+			p.todayValue(value, timestamp);
+		}
+		Plot.plot("222", real, pre);
 	}
 	
 	public static void main(String[] args) throws Exception {
-		new PredictionExample().main();
+		new PredictionExample().main2();
 	}
 }

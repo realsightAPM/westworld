@@ -44,7 +44,8 @@ public class Plot {
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
     	for(int i = 0; i < subSeries[0].size(); i++){
-    		x.add(0.0+subSeries[0].get(i).getInstant());
+//    		x.add(0.0+subSeries[0].get(i).getInstant());
+    		x.add(i+0.0);
     		y.add(subSeries[0].get(i).getItem());
     	}
     	
@@ -54,18 +55,21 @@ public class Plot {
         for( int i=1; i<subSeries.length; i++ ){
         	List<Double> p = new ArrayList<Double>();
         	for (int j = 0, k = 0; j < subSeries[0].size(); ) {
-        		if ( k >= subSeries[i].size() ) {
-        			p.add(0.0);
-        			j++;
-        		} else if ( subSeries[i].get(k).getInstant().equals(subSeries[0].get(j).getInstant()) ) {
-        			p.add(subSeries[i].get(k).getItem());
-        			k++; j++;
-        		} else if ( subSeries[i].get(k).getInstant() < subSeries[0].get(j).getInstant() ) {
-        			k++;
-        		} else {
-        			p.add(0.0);
-        			j++;
-        		}
+//        		System.out.println(subSeries[i].size());
+        		p.add(subSeries[i].get(k).getItem());
+    			k++; j++;
+//        		if ( k >= subSeries[i].size() ) {
+//        			p.add(0.0);
+//        			j++;
+//        		} else if ( subSeries[i].get(k).getInstant().equals(subSeries[0].get(j).getInstant()) ) {
+//        			p.add(subSeries[i].get(k).getItem());
+//        			k++; j++;
+//        		} else if ( subSeries[i].get(k).getInstant() < subSeries[0].get(j).getInstant() ) {
+//        			k++;
+//        		} else {
+//        			p.add(0.0);
+//        			j++;
+//        		}
         	}
             addSeries(dataSet,x,p,subSeries[i].getName());
         }
@@ -118,6 +122,15 @@ public class Plot {
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.pack();
         f.setVisible(true);
+	}
+
+	public static void plot(String name, List<DoubleSeries> series) {
+		// TODO Auto-generated method stub
+		DoubleSeries[] mSeries = new DoubleSeries[series.size()];
+		for (int i = 0; i < series.size(); i++) {
+			mSeries[i] = series.get(i);
+		}
+		plot(name, mSeries);
 	}
 	
 }

@@ -18,12 +18,16 @@ public class OnlineAnormalyDetectionAPI extends AnormalyDetection{
 	private DoubleSeries mSeries = new DoubleSeries("metric value");
 	private static final int len = 200;
 	
+	public void update(DoubleSeries mSeries) {
+		HTM = AnormalyHierarchy.build(mSeries);
+	}
+	
 	public Entry<Double> detection(double value, Long timestamp) {
-		if (mSeries.size() < len) {
+		if ((HTM==null) && (mSeries.size()<len)) {
 			mSeries.add(new Entry<Double>(value, timestamp));
 			return null;
 		} else if (HTM == null){
-			HTM = AnormalyHierarchy.build(mSeries);
+			HTM = AnormalyHierarchy.build(mSeries, true);
 			return null;
 		}
 		double score = HTM.learn(new Matrix(1, 1, value));

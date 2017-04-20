@@ -8,23 +8,28 @@ public class CrossedContext implements Serializable{
 	 */
 	private static final long serialVersionUID = -4985948833978382789L;
 	
-	private double numActivate;
+	private double TP;
+	private double FP;
 	private int zeroLevel;
 	private int leftHash;
 	private int rightHash;
 	
-	public CrossedContext(double numActivate, int zeroLevel, int leftHash, int rightHash) {
-		this.numActivate = numActivate;
+	public CrossedContext(double TP, double FP, int zeroLevel, int leftHash, int rightHash) {
+		this.TP = TP;
+		this.FP = FP;
 		this.zeroLevel = zeroLevel;
 		this.leftHash = leftHash;
 		this.rightHash = rightHash;
 	}
 	
 	public double getNumActivate() {
-		return numActivate;
+		return TP / (TP+FP);
 	}
-	public void setNumActivate(double numActivate) {
-		this.numActivate = numActivate;
+	public void addNumActivate() {
+		TP = TP+1;
+	}
+	public void subNumActivate() {
+		FP = FP+1;
 	}
 	public int getZeroLevel() {
 		return zeroLevel;

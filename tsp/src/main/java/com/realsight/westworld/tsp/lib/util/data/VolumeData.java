@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import com.realsight.westworld.tsp.lib.csv.CsvReader;
@@ -14,14 +15,14 @@ public class VolumeData {
 	private char delimiter = ',';
 	private Charset charset = null;
 	private String csvFilePath = null;
-	public VolumeData(char delimiter, Charset charset, String coalFilePath){
+	public VolumeData(char delimiter, Charset charset, String path){
 		this.delimiter = delimiter;
 		this.charset = charset;
-		this.csvFilePath = coalFilePath;
+		this.csvFilePath = path;
 	}
 	
-	public VolumeData(String coalFilePath){
-		this(',', Charset.forName("ISO-8859-1"), coalFilePath);
+	public VolumeData(String path){
+		this(',', Charset.forName("ISO-8859-1"), path);
 	}
 	
 	public DoubleSeries getPropertySeries(String name, SimpleDateFormat sdf){
@@ -29,15 +30,12 @@ public class VolumeData {
 		try {
 			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
 			cr.readHeaders();
-			if(cr.getIndex("time_window") == -1)
-				throw new IOException("File not exists timestamp.");
-			if(cr.getIndex(name) == -1)
+			if(cr.getIndex("start_time") == -1)
+				throw new IOException("File not exists start_time.");
+			if(!name.equals("hour") && cr.getIndex(name)==-1)
 				throw new IOException("File not exists " + name + ".");
-//			int idx = 0;
 			while(cr.readRecord()){
-//				idx += 1;
-//				if (idx%6 == 0) continue;
-				String time = cr.get("time_window").split(",")[0].substring(1);
+				String time = cr.get("start_time").trim();
 				Date date = null;
 				try {
 					date = sdf.parse(time);
@@ -46,7 +44,17 @@ public class VolumeData {
 					e.printStackTrace();
 				}
 				Long timestamp = date.getTime();
-				double num = Double.parseDouble(cr.get(name));
+				Calendar cal =  Calendar.getInstance();
+				cal.setTimeInMillis(timestamp);
+				double num = 0;
+				if (name.equals("hour")) {
+					num = cal.get(Calendar.HOUR_OF_DAY)*3+cal.get(Calendar.MINUTE)/20;
+//					num = cal.get(Calendar.HOUR_OF_DAY);
+				} else {
+					num = Double.parseDouble(cr.get(name));
+//					if (num > 75) continue;
+				}
+//				System.out.println(num);
 				res.add(new TimeSeries.Entry<Double>(num, timestamp));
 			}
 			cr.close();
