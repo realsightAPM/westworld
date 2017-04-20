@@ -31,8 +31,8 @@
 
     <modules>
 		<module>tsp</module>
-        <module>rca</module>
         <module>engine</module>
+        <module>BnAnalysis</module>
     </modules>
 
 </project>
