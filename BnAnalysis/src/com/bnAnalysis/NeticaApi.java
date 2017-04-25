@@ -196,6 +196,20 @@ public class NeticaApi {
 		return resList;
 	}
 	
+	/************************************************************* 获得结点  
+	 * @throws NeticaException ***************************************************/
+	
+	public List<String> getGONodes() throws NeticaException {
+		
+		List<String> list = new ArrayList<String>();
+		NodeList nodeList = net.getNodes();
+		for (int i = 0; i < nodeList.size(); i++) {
+			list.add(nodeList.get(i).toString());
+		}
+		
+		return list;
+	}
+	
 	/************************************************************* 获得父结点  ***************************************************/
 	
 	public List<String> getParents(Node node) throws NeticaException {

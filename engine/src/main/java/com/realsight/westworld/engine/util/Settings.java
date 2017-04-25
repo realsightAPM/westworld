@@ -1,6 +1,8 @@
 package com.realsight.westworld.engine.util;
 
 import java.io.FileInputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 /**
@@ -17,8 +19,10 @@ public class Settings {
 
     public static Settings getInstance(){
         if (settings == null){
+        	Path path = Paths.get(System.getProperty("user.dir"));
+        	Path dir = path.getParent();
             settings = new Settings();
-            settings.init("conf/brain.settings");
+            settings.init(Paths.get(dir.toString(), "conf", "brain.settings").toString());
         }
         return settings;
     }

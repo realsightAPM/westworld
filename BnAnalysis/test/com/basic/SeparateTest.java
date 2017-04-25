@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class SeparateTest {
 
-	@Test
+//	@Test
 	public void testSeparate() throws Exception {
 		Separate sep =  new Separate("inputjava_data1.csv", 3);
 		for (int i = 0; i < sep.mapList.size(); i++) {

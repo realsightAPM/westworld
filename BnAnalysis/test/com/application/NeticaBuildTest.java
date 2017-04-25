@@ -8,7 +8,7 @@ import com.application.NeticaBuild;
 
 public class NeticaBuildTest {
 
-	@Test
+//	@Test
 	public void testNeticaBuild() throws Exception {
 		NeticaBuild buildNet = new NeticaBuild();
 		buildNet.build("inputjava_data1.csv");

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class SimuInternTest {
 
-	@Test
+//	@Test
 	public void testSimuIntern() throws Exception {
 		float[] hood = {0f, 0f, 1f};
 		SimuIntern simu = new SimuIntern();

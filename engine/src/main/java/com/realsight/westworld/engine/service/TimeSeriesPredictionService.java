@@ -1,7 +1,17 @@
 package com.realsight.westworld.engine.service;
 
+import com.basic.Pair;
+import com.bnAnalysis.NeticaApi;
 import com.realsight.westworld.engine.job.JobManager;
 import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
+import com.realsight.westworld.engine.model.Edge;
+import com.realsight.westworld.engine.model.Vertice;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.stereotype.Service;
@@ -10,7 +20,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TimeSeriesPredictionService {
 
-    public String get_version() {
+    public String get_version() throws Exception {
         return "1.0.0";
     }
 
@@ -33,6 +43,31 @@ public class TimeSeriesPredictionService {
 	        return false;
         }
         return true;
+    }
+    
+    public Pair<ArrayList<Vertice>, ArrayList<Edge>> getEdgeList() throws Exception {
+    	List<Vertice> vertice_list = new ArrayList<Vertice>();
+    	List<Edge> edge_list = new ArrayList<Edge>();
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+		
+		List<String> list =  netica.getGONodes();
+		
+		for (int i = 0; i < list.size(); i++) {
+			vertice_list.add(new Vertice(list.get(i)));
+		}
+
+		for (int i = 0; i < list.size(); i++) {
+			List<String> tmp_list = netica.getChildren(list.get(i));
+			for (int j = 0; j < tmp_list.size(); j++) {
+				edge_list.add(new Edge(list.get(i), tmp_list.get(j)));
+			}
+		}
+		netica.finalize();
+		Pair<ArrayList<Vertice>, ArrayList<Edge>> pair = new Pair<ArrayList<Vertice>, ArrayList<Edge>>();
+		pair.first = (ArrayList<Vertice>) vertice_list;
+		pair.second = (ArrayList<Edge>) edge_list;
+    	return pair;
     }
 
 	public static void main(String[] args) {

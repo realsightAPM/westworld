@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class BanjoApiTest {
 
-	@Test
+//	@Test
 	public void test() throws Exception {
 		BanjoApi banjo = new BanjoApi("inputjava_data1.csv", 3, 3);
 		/* default:

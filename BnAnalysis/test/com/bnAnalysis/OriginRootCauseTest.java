@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class OriginRootCauseTest {
 
-	@Test
+//	@Test
 	public void testOriginRootCause() throws Exception {
 		OriginRootCause root = new OriginRootCause();
 		root.run("http_times");

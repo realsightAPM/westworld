@@ -8,7 +8,7 @@ import com.algorithm.Pearson;
 
 public class PearsonTest {
 
-	@Test
+//	@Test
 	public void testWriteCSV() throws Exception {
 		Pearson pearson = new Pearson("inputjava_data1.csv");
 		

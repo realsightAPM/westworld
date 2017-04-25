@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class InformationTest {
 
-	@Test
+//	@Test
 	public void testInfo() throws Exception {
 		Information info = new Information();
 		/* Default:
