@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.realsight.westworld.bnanalysis.basic.Separate;
+
 public class SeparateTest {
 
 //	@Test

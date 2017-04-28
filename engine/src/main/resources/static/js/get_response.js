@@ -38,13 +38,72 @@ $( document ).ready(function() {
 					console.log("Success: ", result);
 				}
 				else {
-					$("#getResultDiv").html("<strong>Error</strong>");
+					$("#myDiagramDiv").html("<strong>Error</strong>");
 					console.log("Fail: ", result);
 				}
 			},
 			error : function(e) {
 				$("#getResultDiv").html("<string>Error</strong>");
 				console.log("ERROR: ", e);
+			}
+		});
+	}
+	
+	// Get Pearson
+	$("#PearsonBtn").click(function(event) {
+		event.preventDefault();
+		ajaxPearson();
+	});
+	
+	function ajaxPearson() {
+		$.ajax({
+			type: "Get",
+			url: url + "api/job/getPearson",
+			success: function(result) {
+				if (result.status == "Done") {
+					$.each(result.data.first, function(i, pair){
+						var row = "(" + i +") " + pair.first + ": " + pair.second;
+						$('#pearsonList1 .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
+					});
+					
+					$.each(result.data.second, function(i, pair){
+						var row = "(" + i +") " + pair.first + ": " + pair.second;
+						$('#pearsonList2 .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
+					});
+					
+					console.log("Success: ", result);
+				}
+				else {
+	//				$("#myDiagramDiv").html("<strong>Error</strong>");
+					console.log("Fail: ", result);
+				}
+			}
+		});
+	}
+	
+	// Get Cause
+	$("#CauseBtn").click(function () {
+		event.preventDefault();
+		ajaxCause();
+	});
+	
+	function ajaxCause() {
+		$.ajax({
+			type: "Get",
+			url: url + "api/job/getCause",
+			success: function(result) {
+				if (result.status == "Done") {
+					$.each(result.data, function(i, pair){
+						var row = "(" + i +") " + pair.first + ": " + pair.second;
+						$('#causeList .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
+					});
+					
+					console.log("Success: ", result);
+				}
+				else {
+	//				$("#myDiagramDiv").html("<strong>Error</strong>");
+					console.log("Fail: ", result);
+				}
 			}
 		});
 	}

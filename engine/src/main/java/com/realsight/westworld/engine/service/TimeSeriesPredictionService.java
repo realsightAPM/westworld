@@ -1,7 +1,7 @@
 package com.realsight.westworld.engine.service;
 
-import com.basic.Pair;
-import com.bnAnalysis.NeticaApi;
+import com.realsight.westworld.bnanalysis.basic.Pair;
+import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.engine.job.JobManager;
 import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
 import com.realsight.westworld.engine.model.Edge;
@@ -69,6 +69,7 @@ public class TimeSeriesPredictionService {
 		pair.second = (ArrayList<Edge>) edge_list;
     	return pair;
     }
+    
 
 	public static void main(String[] args) {
 

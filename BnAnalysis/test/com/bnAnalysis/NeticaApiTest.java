@@ -4,9 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.realsight.westworld.bnanalysis.service.NeticaApi;
+
 public class NeticaApiTest {
 
-	@Test
+//	@Test
 	public void testNeticaApi() throws Exception {
 		
 		/*** VM arguments: ***/

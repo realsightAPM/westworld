@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.application.NeticaBuild;
+import com.realsight.westworld.bnanalysis.app.NeticaBuild;
 
 public class NeticaBuildTest {
 

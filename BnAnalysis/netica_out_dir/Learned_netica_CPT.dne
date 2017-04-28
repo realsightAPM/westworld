@@ -1,11 +1,11 @@
 // ~->[DNET-1]->~
 
-// File created by an unlicensed user using Netica 5.04 on Apr 20, 2017 at 14:16:58.
+// File created by an unlicensed user using Netica 5.04 on Apr 28, 2017 at 17:34:12.
 
 bnet apm {
 autoupdate = FALSE;
 
-node session_count {
+node used_memory {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
@@ -13,26 +13,26 @@ node session_count {
 	parents = ();
 	probs = 
 		// a            b            c            
-		  (0.3329634,   0.3196448,   0.3473918);
+		  (0.3329634,   0.3329634,   0.3340732);
 	numcases = 901;
 	};
 
-node used_memory {
+node session_count {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (session_count);
+	parents = (used_memory);
 	probs = 
-		// a            b            c             // session_count 
-		  (0.5364239,   0.4602649,   0.003311258,  // a             
-		   0.437931,    0.4758621,   0.0862069,    // b             
-		   0.04126984,  0.07936508,  0.8793651);   // c             ;
+		// a            b            c             // used_memory 
+		  (0.5364239,   0.4205298,   0.04304636,   // a           
+		   0.4602649,   0.4569536,   0.08278146,   // b           
+		   0.00330033,  0.08250825,  0.9141914);   // c           ;
 	numcases = 
-		                 // session_count 
-		  (302,          // a             
-		   290,          // b             
-		   315);         // c             ;
+		                 // used_memory 
+		  (302,          // a           
+		   302,          // b           
+		   303);         // c           ;
 	};
 
 node http_times {

@@ -76,11 +76,12 @@ public class PredictionExample {
 		System.err.println(sum / regexs.length);
 	}
 	
-	public void main2() {
+	public void main2() throws Exception {
 		String root = new File(System.getProperty("user.dir")).getPath();
 		String dataPath = Paths.get(root, "data").toString();
-		TimeseriesData in = new TimeseriesData(dataPath+File.separator+"cpu.csv");
-		MultipleDoubleSeries nSeries = new MultipleDoubleSeries("213", in.getPropertyDoubleSeries("value").subSeries(300, 350));
+		TimeseriesData in = new TimeseriesData(dataPath+File.separator+"test.csv");
+		MultipleDoubleSeries nSeries = in.getPropertyDoubleSeries().subSeries(300, 350);
+//		MultipleDoubleSeries nSeries = new MultipleDoubleSeries("213", in.getPropertyDoubleSeries("cpu").subSeries(300, 350));//.subSeries(300, 350)
 		Plot.plot(nSeries);
 		OnlineTimeseriesPredictionAPI p = new OnlineTimeseriesPredictionAPI();
 		DoubleSeries real = new DoubleSeries("real");
@@ -94,11 +95,12 @@ public class PredictionExample {
 			long timestamp = nSeries.get(i).getInstant();
 			if (i > nSeries.size()/2){
 				Matrix t_value = p.prediction();
+//				System.out.println(t_value);
 				if (t_value != null) {
 					System.out.println("");
 					System.out.print("{ " + t_value.get(0, 0) + " & " + value.get(0, 0) + "}");
-					real.add(new TimeSeries.Entry<Double>(value.get(0, 0), timestamp));
-					pre.add(new TimeSeries.Entry<Double>(t_value.get(0, 0), timestamp));
+					real.add(new TimeSeries.Entry<Double>(value.get(4, 0), timestamp));
+					pre.add(new TimeSeries.Entry<Double>(t_value.get(4, 0), timestamp));
 					continue;
 				}
 			}
