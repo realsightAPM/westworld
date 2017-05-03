@@ -107,6 +107,9 @@ $( document ).ready(function() {
 	//				$("#myDiagramDiv").html("<strong>Error</strong>");
 					console.log("Fail: ", result);
 				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
 			}
 		});
 	}
@@ -134,6 +137,9 @@ $( document ).ready(function() {
 	//				$("#myDiagramDiv").html("<strong>Error</strong>");
 					console.log("Fail: ", result);
 				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
 			}
 		});
 	}
@@ -170,7 +176,7 @@ $( document ).ready(function() {
 			dataType : 'json',
 			success : function(result) {
 				if (result.status == "Done") {
-					$("#relief").html("<strong>" + result.data + "</strong>");
+					$("#relief").html("<strong>html报警概率：" + result.data + "</strong>");
 				}
 				else {
 					alert("错误");
@@ -185,5 +191,28 @@ $( document ).ready(function() {
 		});
 	}
 	
+	$("#predictBnt").click(function(event) {
+		event.preventDefault();
+		predictAjax();
+	});
+	
+	function predictAjax() {
+		$.ajax({
+			type : "Get",
+			url : url+"/api/job/TSP",
+			success : function(result) {
+				if (result.status == "Done") {
+					$("#predictDiv").html("<strong>html报警预测：" + result.data + "</strong>")
+					console.log("Success: ", result);
+				}
+				else {
+					console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});
+	}
 	
 })

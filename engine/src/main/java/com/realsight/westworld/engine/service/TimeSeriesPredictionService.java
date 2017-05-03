@@ -8,6 +8,7 @@ import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
 import com.realsight.westworld.engine.model.Edge;
 import com.realsight.westworld.engine.model.Inferance;
 import com.realsight.westworld.engine.model.Vertice;
+import com.realsight.westworld.tsp.test.TSPService;
 
 import norsys.netica.NeticaException;
 
@@ -98,6 +99,32 @@ public class TimeSeriesPredictionService {
     	
     	double res = netica.getInfer(hoods, new Pair<String, String>(infers.get(infers.size()-1).getInfer(), state), "likelihood");
     	
+    	netica.finalize();
+    	return res;
+    }
+    
+    public double getTSP(String csv_file, int current, String tar_var) throws Exception {
+    	TSPService tspService = new TSPService();
+    	Map<String, Double> map = tspService.getTSPService(csv_file, current);
+    	if (map == null) {
+    		System.out.println("map是null");
+    		return Double.MIN_NORMAL;
+    	}
+    	
+    	NeticaApi netica = new NeticaApi();
+    	netica.loadNet();
+    	netica.loadRangeDouble();
+    	List<Pair<String, String>> pairList = new ArrayList<Pair<String, String>> ();
+    	for (String it : map.keySet()) {
+    		if (it.equals(tar_var)) continue;
+    		double tmp = map.get(it);
+    		pairList.add(new Pair<String, String>(it, netica.mapDoubleState(tmp, it)));
+    	}
+    	
+    	String state = "" + ((char) ('a'+ netica.rangeMap.get(tar_var).length-1));
+    	Pair<String, String> pair = new Pair<String, String>(tar_var, state);
+    	
+    	double res = netica.getInfer(pairList, pair);
     	netica.finalize();
     	return res;
     }

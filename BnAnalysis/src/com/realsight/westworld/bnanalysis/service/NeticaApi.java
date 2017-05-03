@@ -162,19 +162,15 @@ public class NeticaApi {
 		return str;
 	}
 	
-	/************************************************************ 变量及其对应的离散区间 
-	 * @throws IOException **************************************************/
-	
-	public int reflect(double value, String var) {
+	public String mapDoubleState(double value, String var) {
 		int pos = 0;
 		List<Double> list = rangeDouble.get(var);
-		for (; pos < list.size(); pos++) {
-			if (value < list.get(pos)) {
-				return pos;
-			}
-		}
-		return pos;
+		for (; pos < list.size() && value > list.get(pos); pos++);
+		return ""+((char)('a'+pos));
 	}
+	
+	/************************************************************ 变量及其对应的离散区间 
+	 * @throws IOException **************************************************/
 	
 	public void loadRangeDouble() throws IOException {
 		ReadCSV readCSV = new ReadCSV();
@@ -183,6 +179,7 @@ public class NeticaApi {
 		rangeDouble = new HashMap<String, ArrayList<Double>>();
 		
 		for (String it : rangeMap.keySet()) {
+			treeSet.clear();
 			rangeDouble.put(it, new ArrayList<Double>());
 			String[] str = rangeMap.get(it);
 			for (int i = 0; i < str.length; i++) {
@@ -197,6 +194,13 @@ public class NeticaApi {
 				rangeDouble.get(it).add(it1);
 			}
 		}
+//		for (String it : rangeDouble.keySet()) {
+//			System.out.println(it + ": ");
+//			for (Double it2 : rangeDouble.get(it)) {
+//				System.out.print(it2 + " ");
+//			}
+//			System.out.println();
+//		}
 	}
 	
 	public void loadRangeMap() throws IOException {

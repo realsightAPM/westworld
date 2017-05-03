@@ -1,7 +1,11 @@
 package com.realsight.westworld.tsp.test;
 
+
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.realsight.westworld.tsp.api.OnlineTimeseriesPredictionAPI;
 import com.realsight.westworld.tsp.lib.series.DoubleSeries;
@@ -12,6 +16,7 @@ import com.realsight.westworld.tsp.lib.util.data.TimeseriesData;
 import com.realsight.westworld.tsp.lib.util.plot.Plot;
 
 import Jama.Matrix;
+//import com.realsight.westworld.bnanalysis.basic;
 
 public class TSPService {
 
@@ -19,36 +24,35 @@ public class TSPService {
 		
 	}
 	
-	public TSPService(String csv_file) throws Exception {
-		String root = new File(System.getProperty("user.dir")).getPath();
-		String dataPath = Paths.get(root, "data").toString();
-		TimeseriesData in = new TimeseriesData(dataPath+File.separator+"test.csv");
-		MultipleDoubleSeries nSeries = in.getPropertyDoubleSeries().subSeries(300, 350);
-//		MultipleDoubleSeries nSeries = new MultipleDoubleSeries("213", in.getPropertyDoubleSeries("cpu").subSeries(300, 350));//.subSeries(300, 350)
-		Plot.plot(nSeries);
+	public Map<String, Double> getTSPService(String csv_file, int current) throws Exception {
+		
+		Map<String, Double> resMap = new HashMap<String, Double>();
+		
+		TimeseriesData in = new TimeseriesData(csv_file);
+		MultipleDoubleSeries nSeries = in.getPropertyDoubleSeries().subSeries(0, current);
 		OnlineTimeseriesPredictionAPI p = new OnlineTimeseriesPredictionAPI();
-		DoubleSeries real = new DoubleSeries("real");
-		DoubleSeries pre = new DoubleSeries("pre");
-		for (int iter = 0; iter < 20; iter ++) {
-			System.err.println("epoch is " + iter);
-			p.train(nSeries);
-		}
-		for ( int i = 0; i < nSeries.size(); i++ ) {
+		
+		System.out.println("时间序列分析的规模：" + nSeries.size());
+		
+		for (int i = 0; i < current; i++) {
 			Matrix value = Util.toVec(nSeries.get(i).getItem().iterator());
 			long timestamp = nSeries.get(i).getInstant();
-			if (i > nSeries.size()/2){
-				Matrix t_value = p.prediction();
-//				System.out.println(t_value);
-				if (t_value != null) {
-					System.out.println("");
-					System.out.print("{ " + t_value.get(0, 0) + " & " + value.get(0, 0) + "}");
-					real.add(new TimeSeries.Entry<Double>(value.get(4, 0), timestamp));
-					pre.add(new TimeSeries.Entry<Double>(t_value.get(4, 0), timestamp));
-					continue;
-				}
-			}
 			p.todayValue(value, timestamp);
 		}
-		Plot.plot("222", real, pre);
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i+": ");
+			p.train(nSeries);
+		}
+			
+		Matrix t_value = p.prediction();
+		if (t_value != null) {
+			for (int i = 0; i < nSeries.getProperty_list().size(); i++) {
+				resMap.put(nSeries.getProperty_list().get(i), t_value.get(i, 0));
+			}
+			return resMap;
+		}
+		return null;
+//		Plot.plot("对比", real, pre);
 	}
 }

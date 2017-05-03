@@ -104,4 +104,12 @@ public class TimeSeriesPredictionController {
 		Response response = new Response("Done", res);
 		return response;
 	}
+	
+	@GetMapping("/api/job/TSP")
+	@ResponseBody
+	public Response getTSp() throws Exception {
+		double res = tsps.getTSP("test.csv", 100, "http_times");
+		Response response = new Response("Done", res);
+		return response;
+	}
 }
