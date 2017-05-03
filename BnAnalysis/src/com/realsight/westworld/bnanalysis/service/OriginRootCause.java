@@ -2,7 +2,7 @@ package com.realsight.westworld.bnanalysis.service;
 
 import java.util.List;
 
-import com.realsight.westworld.bnanalysis.app.RootCause;
+import com.realsight.westworld.bnanalysis.api.RootCause;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 
 public class OriginRootCause {

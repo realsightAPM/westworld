@@ -7,6 +7,7 @@ import com.realsight.westworld.bnanalysis.service.OriginRootCause;
 import com.realsight.westworld.engine.message.GraphResponse;
 import com.realsight.westworld.engine.message.Response;
 import com.realsight.westworld.engine.model.Edge;
+import com.realsight.westworld.engine.model.Inferance;
 import com.realsight.westworld.engine.model.Vertice;
 import com.realsight.westworld.engine.service.TimeSeriesPredictionService;
 
@@ -19,6 +20,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -75,5 +78,30 @@ public class TimeSeriesPredictionController {
 		Response response = new Response("Done", list);
 		return response;
 	}
+	
+	@GetMapping("/api/job/getAttr")
+	@ResponseBody
+	public Response getAttr() throws Exception {
+		List<String> list = new ArrayList<String> ();
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+		netica.loadRangeMap();
+		for (String it : netica.rangeMap.keySet()) {
+			list.add(it);
+		}
+		Response response = new Response("Done", list);
+		netica.finalize();
+		return response;
+	}
 
+	@PostMapping("/api/job/postInfer")
+	@ResponseBody
+	public Response postInfer(@RequestBody List<Inferance> infers) throws Exception {
+		System.out.println(infers);
+		
+		double res = tsps.postInfer(infers);
+		
+		Response response = new Response("Done", res);
+		return response;
+	}
 }

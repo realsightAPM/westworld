@@ -1,4 +1,4 @@
-package com.realsight.westworld.bnanalysis.app;
+package com.realsight.westworld.bnanalysis.api;
 
 import java.io.IOException;
 

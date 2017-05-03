@@ -38,7 +38,7 @@ public class SimuLoad {
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
             	delfile.delete();
-                System.out.println("ÒÑÉ¾³ý" + file_list[i]);  
+                System.out.println("ÒÑÉ¾³ý" + file_list[i]);
             }
         }
 		else {

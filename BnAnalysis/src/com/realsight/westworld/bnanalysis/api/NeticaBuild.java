@@ -1,4 +1,4 @@
-package com.realsight.westworld.bnanalysis.app;
+package com.realsight.westworld.bnanalysis.api;
 
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 

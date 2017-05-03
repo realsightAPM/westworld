@@ -1,11 +1,15 @@
 package com.realsight.westworld.engine.service;
 
+import com.google.common.collect.RangeMap;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.engine.job.JobManager;
 import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
 import com.realsight.westworld.engine.model.Edge;
+import com.realsight.westworld.engine.model.Inferance;
 import com.realsight.westworld.engine.model.Vertice;
+
+import norsys.netica.NeticaException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -68,6 +72,34 @@ public class TimeSeriesPredictionService {
 		pair.first = (ArrayList<Vertice>) vertice_list;
 		pair.second = (ArrayList<Edge>) edge_list;
     	return pair;
+    }
+    
+    public double postInfer(List<Inferance> infers) throws Exception {
+    	
+    	NeticaApi netica = new NeticaApi();
+    	netica.loadNet();
+    	netica.loadRangeMap();
+    	
+    	List<Pair<String, float[]>> hoods = new ArrayList<Pair<String, float[]>>();
+    	for (int i = 0; i < infers.size()-1; i++) {
+    		
+    		String[] strs = infers.get(i).getInfer().split(":");
+    		if (strs.length < 2) continue;
+    		String[] inferStrs = strs[1].split(",");
+    		float[] tmp_hood = new float[inferStrs.length];
+    		for (int j = 0; j < tmp_hood.length; j++) {
+    			tmp_hood[j] = Float.valueOf(inferStrs[j]);
+    		}
+    		hoods.add(new Pair<String, float[]>(strs[0], tmp_hood));
+    	}
+    	
+    	String var = infers.get(infers.size()-1).getInfer();
+    	String state = "" + ((char) ('a'+ netica.rangeMap.get(var).length-1));
+    	
+    	double res = netica.getInfer(hoods, new Pair<String, String>(infers.get(infers.size()-1).getInfer(), state), "likelihood");
+    	
+    	netica.finalize();
+    	return res;
     }
     
 

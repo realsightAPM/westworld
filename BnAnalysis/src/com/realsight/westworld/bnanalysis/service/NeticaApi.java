@@ -3,8 +3,11 @@ package com.realsight.westworld.bnanalysis.service;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.basic.Separate;
@@ -19,6 +22,7 @@ public class NeticaApi {
 	public Environ env;
 	public Net net;
 	public Map<String, String[]> rangeMap;
+	public Map<String, ArrayList<Double>> rangeDouble;
 	
 	public NeticaApi() throws Exception {}
 	
@@ -158,7 +162,42 @@ public class NeticaApi {
 		return str;
 	}
 	
-	/************************************************************ 变量及其对应的离散区间 **************************************************/
+	/************************************************************ 变量及其对应的离散区间 
+	 * @throws IOException **************************************************/
+	
+	public int reflect(double value, String var) {
+		int pos = 0;
+		List<Double> list = rangeDouble.get(var);
+		for (; pos < list.size(); pos++) {
+			if (value < list.get(pos)) {
+				return pos;
+			}
+		}
+		return pos;
+	}
+	
+	public void loadRangeDouble() throws IOException {
+		ReadCSV readCSV = new ReadCSV();
+		rangeMap = readCSV.readRangeList("netica_out_dir/range_list.csv");
+		Set<Double> treeSet = new TreeSet<Double>();
+		rangeDouble = new HashMap<String, ArrayList<Double>>();
+		
+		for (String it : rangeMap.keySet()) {
+			rangeDouble.put(it, new ArrayList<Double>());
+			String[] str = rangeMap.get(it);
+			for (int i = 0; i < str.length; i++) {
+				String[] tmp = str[i].replace('(', ' ').replace(')', ' ').replace('[', ' ').replace(']', ' ').trim().split("-");
+				for (int j = 0; j < tmp.length; j++) {
+					if (!tmp[j].equals("inf") && !tmp[j].equals("")) {
+						treeSet.add(Double.valueOf(tmp[j]));
+					}
+				}
+			}
+			for (Double it1 : treeSet) {
+				rangeDouble.get(it).add(it1);
+			}
+		}
+	}
 	
 	public void loadRangeMap() throws IOException {
 		ReadCSV readCSV = new ReadCSV();
@@ -196,8 +235,7 @@ public class NeticaApi {
 		return resList;
 	}
 	
-	/************************************************************* 获得结点  
-	 * @throws NeticaException ***************************************************/
+	/************************************************************* 获得结点  *************************************************************/
 	
 	public List<String> getGONodes() throws NeticaException {
 		
@@ -293,6 +331,7 @@ public class NeticaApi {
 	
 	public double getInfer(List<Pair<String, float[]>> hoods, Pair<String, String> target, String likelihood) throws NeticaException {
 		double res;
+		
 		Node[] nodes = new Node[hoods.size()];
 		for (int i = 0; i < hoods.size(); i++) {
 			nodes[i] = net.getNode(hoods.get(i).first);
@@ -301,6 +340,7 @@ public class NeticaApi {
 		
 		Node targetNode = net.getNode(target.first);
 		res = targetNode.getBelief(target.second);
+		System.out.println(target.second);
 		
 		for (int i = 0; i < nodes.length; i++ ) {
 			nodes[i].finding().clear();

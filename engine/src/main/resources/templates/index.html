@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head xmlns:th="http://www.thymeleaf.org">
 <title>Spring Boot - POST-GET AJAXExample</title>
 <meta charset="utf-8"></meta>
@@ -11,31 +12,8 @@
 <script src="/js/go.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
 </head>
-<body>
 
-<!-- <div class="container">
-	<h1>POST-GET AJAX</h1>
-	<div id="postdiv">
-		<form id="customerForm">
-			<label>FirstName</label>
-			<input type="text" id="firstname" class="form-control"/>
-			<label>LastName</label>
-			<input type="text" id="lastname" class="form-control"/>
-			<button type="submit" id="postBtn" class="btn btn-primary">Submit</button>
-		</form>
-	</div>
-	
-	<div id="postResultDiv">
-	</div>
-	<br/>
-	<div id="getdiv">
-		<button id="getBtn">Get All Customers</button>
-	</div>
-	<div id="getResultDiv">
-		<ul class="list-group">
-		</ul>
-	</div>
-</div> -->
+<body>
 
 <div class="container">
 	<h1>展示贝叶斯网络</h1>
@@ -49,7 +27,7 @@
 
 <div class="container">
 	<div id="PearsonDiv">
-		<button id="PearsonBtn">获得线性相关性</button>
+		<button id="PearsonBtn">http获得线性相关性</button>
 	</div>
 	<div id="pearsonList1">
 		<span>正相关</span>
@@ -65,7 +43,7 @@
 
 <div class="container">
 	<div id="CauseDiv">
-		<button id="CauseBtn">根源性排序</button>
+		<button id="CauseBtn">http根源性排序</button>
 	</div>
 	<div id="causeList">
 		<ul class="list-group"></ul>
@@ -74,14 +52,36 @@
 
 <div class="container">
 	概率推理
+	<Form id="inferForm">
+			<div id="attrList">
+				<ul class="list-group"></ul>
+			</div>
+			<div id="attrList2">
+				<select id="select_value" class="list-group">
+				</select>
+			</div>
+			<button type="submit" id="postInferBnt" class="btn btn-primary">Infer</button>
+	</Form>
+	
+	<div id="relief">
+		
+	</div>
+	
+</div>
+
+
+
+<div class="container">
+	时间序列预测
+	<br/>
+	<button id="predictBnt" class="btn btn-primary">Infer</button>
+	<div id="predictDiv">
+		
+	</div>
 </div>
 
 <div class="container">
 	压力测试
-</div>
-
-<div class="container">
-	时间序列预测
 </div>
 
 </body>
