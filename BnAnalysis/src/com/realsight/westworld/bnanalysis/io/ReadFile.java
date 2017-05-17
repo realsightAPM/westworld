@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.opencsv.CSVReader;
 
@@ -12,17 +14,28 @@ public class ReadFile {
 	
 	public List<ArrayList<Double>> originalData;
 	public String[] attrList;
+	public Map<String, Integer> attrMap;
 	
 	public ReadFile() throws Exception {
 		getData("read.csv");
+		setAttrMap();
 	}
 	
 	public ReadFile(String original_csv) throws Exception {
 		getData(original_csv);
+		setAttrMap();
 	}
 	
 	private void getData() throws Exception {
 		getData("read.csv");
+		setAttrMap();
+	}
+	
+	private void setAttrMap() {
+		attrMap = new HashMap<String, Integer>();
+		for (int i = 0; i < attrList.length; i++) {
+			attrMap.put(attrList[i], i);
+		}
 	}
 
 	private void getData(String original_csv) throws Exception {

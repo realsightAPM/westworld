@@ -9,7 +9,7 @@ public class Vertice {
 	}
 
 	public Vertice(String key) {
-		super();
+//		super();
 		this.key = key;
 	}
 
@@ -20,6 +20,6 @@ public class Vertice {
 	public void setKey(String key) {
 		this.key = key;
 	}
-	
+
 	
 }

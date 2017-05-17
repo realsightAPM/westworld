@@ -8,6 +8,7 @@ import com.realsight.westworld.engine.message.GraphResponse;
 import com.realsight.westworld.engine.message.Response;
 import com.realsight.westworld.engine.model.Edge;
 import com.realsight.westworld.engine.model.Inferance;
+import com.realsight.westworld.engine.model.PostItem;
 import com.realsight.westworld.engine.model.Vertice;
 import com.realsight.westworld.engine.service.TimeSeriesPredictionService;
 
@@ -32,10 +33,16 @@ public class TimeSeriesPredictionController {
 	
 	@Autowired
 	TimeSeriesPredictionService tsps;
+	public String setTarget;
 	
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String index() {
 		return "index";
+	}
+	
+	@RequestMapping(value="/two",method = RequestMethod.GET)
+	public String index2() {
+		return "bn";
 	}
 	
 	@ResponseBody
@@ -52,22 +59,45 @@ public class TimeSeriesPredictionController {
 		return String.valueOf(status);
 	}
 	
+	
+	
 	@RequestMapping("/api/job/getGraph")
 	@ResponseBody
 	public GraphResponse getGraph() throws Exception {
+		setTarget = "";
 		Pair<ArrayList<Vertice>, ArrayList<Edge>> pair = tsps.getEdgeList();
 		GraphResponse response = new GraphResponse("Done", pair.first, pair.second);
 		return response;
 	}
 	
-	@RequestMapping("/api/job/getPearson")
+	@PostMapping("/api/job/setTarget")
 	@ResponseBody
-	public Response getPearson() throws Exception {
-		List<Pair<String, Double>> res_list = new ArrayList<Pair<String, Double>>();
+	public Response setTarget(@RequestBody PostItem post_item) throws Exception {
+		setTarget = post_item.getItem();
+		Response response = new Response("Done", setTarget);
+		return response;
+	}
+	
+	@PostMapping("/api/job/getPearson")
+	@ResponseBody
+	public Response getPearson(@RequestBody PostItem post_item) throws Exception {
+//		List<Pair<String, Double>> res_list = new ArrayList<Pair<String, Double>>();
+		
+//		System.out.println(item);
 		
 		Pearson pearson = new Pearson("inputjava_data1.csv");
 		
-		Response response = new Response("Done", pearson.getRelationRanking(1));
+		Response response = new Response("Done", pearson.getRelationRanking(post_item.getItem()));
+		return response;
+	}
+	
+	@PostMapping("/api/job/getHistoryData")
+	@ResponseBody
+	public Response getHistoryData(@RequestBody PostItem post_item) throws Exception {
+		
+		Pearson pearson = new Pearson("inputjava_data1.csv");
+		
+		Response response = new Response("Done", pearson.getHistoryData(post_item.getItem()));
 		return response;
 	}
 	

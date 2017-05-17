@@ -101,6 +101,13 @@ public class Pearson {
 		}
 	}
 	
+	public Pair<ArrayList<Pair<String, Double>>, ArrayList<Pair<String, Double>>> getRelationRanking(String str_attr) {
+		String[] attrList = normal.readFile.attrList;
+		int pos = 0;
+		for (; pos < attrList.length && !attrList[pos].equals(str_attr); pos++);
+		return getRelationRanking(pos);
+	}
+	
 	public Pair<ArrayList<Pair<String, Double>>, ArrayList<Pair<String, Double>>> getRelationRanking(int attr) {
 		Pair<ArrayList<Pair<String, Double>>, ArrayList<Pair<String, Double>>> pair = new Pair<ArrayList<Pair<String, Double>>, ArrayList<Pair<String, Double>>>();
 		Map<Double, String> posMap = new TreeMap<Double, String> ();
@@ -133,6 +140,19 @@ public class Pearson {
 		}
 		pair.first = list1;
 		pair.second = list2;
+		return pair;
+	}
+	
+	public Pair<List<Double>, List<Double>> getHistoryData(String attr_str) {
+		List<Double> data_y = normal.readFile.originalData.get(normal.readFile.attrMap.get(attr_str));
+		int len = data_y.size();
+		List<Double> data_x = new ArrayList<Double>();
+		for (int i = 0; i < len; i++) {
+			data_x.add((double) i);
+		}
+		Pair<List<Double>, List<Double>> pair = new Pair<List<Double>, List<Double>>();
+		pair.first = data_x;
+		pair.second = data_y;
 		return pair;
 	}
 	

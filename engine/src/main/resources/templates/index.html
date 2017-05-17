@@ -10,36 +10,50 @@
 <script src="/js/get_response.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/go.js"></script>
+<script src="/js/echarts.min.js"></script>
+
+<link rel='stylesheet' href='/css/dataInspector.css' />
+<script src="/js/dataInspector.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
 </head>
 
 <body>
+<!-- <div id="getdiv0">
+	<button id="getBtn0">获得网络结构</button>
+</div>
+ -->
+<div id="sample">
+    <span style="display: inline-block; vertical-align: top;">
+    	<div style="margin-left: 10px;">
+          <h2>Bayes Network</h2>
+        </div>
+        <div id="attrList2" style="margin-left: 50px;">
+    		Select the target variable: 
+			<select id="set_value" class="list-group">
+			</select>
+			<button type="submit" id="set_target" class="btn btn-primary">Set</button>
+		</div>
+		<div id="target_list" style="width: 200px; height: 40px; margin-left: 50px;">
+		
+		</div>
+        <div style="margin-left: 10px;">
+          <div id="myDiagramDiv0" style="border: solid 1px black; width:600px; height:600px;"></div>
+        </div>
+    </span>
+    <span  style="display: inline-block; vertical-align: top;">
+    	<div id="history" style="width: 600px; height: 400px; margin-left: 50px;"></div>
+		<div id="main" style="width: 600px; height: 400px; margin-left: 50px;"></div>
+    </span>
+</div>
 
-<div class="container">
-	<h1>展示贝叶斯网络</h1>
-	<div id="getdiv">
-		<button id="getBtn">获得网络结构</button>
-	</div>
-	<div id="myDiagramDiv" style="border: solid 1px blue; width:400px; height:300px">
+<div>
+	<div><h2>performance evaluation</h2></div>
+	<div id="performdiv">
 		
 	</div>
+
 </div>
 
-<div class="container">
-	<div id="PearsonDiv">
-		<button id="PearsonBtn">http获得线性相关性</button>
-	</div>
-	<div id="pearsonList1">
-		<span>正相关</span>
-		<br/>
-		<ul class="list-group"></ul>
-	</div>
-	<div id="pearsonList2">
-		<span>负相关</span>
-		<br/>
-		<ul class="list-group"></ul>
-	</div>
-</div>
 
 <div class="container">
 	<div id="CauseDiv">
@@ -56,10 +70,7 @@
 			<div id="attrList">
 				<ul class="list-group"></ul>
 			</div>
-			<div id="attrList2">
-				<select id="select_value" class="list-group">
-				</select>
-			</div>
+			
 			<button type="submit" id="postInferBnt" class="btn btn-primary">Infer</button>
 	</Form>
 	
@@ -68,8 +79,6 @@
 	</div>
 	
 </div>
-
-
 
 <div class="container">
 	时间序列预测
