@@ -6,8 +6,10 @@ import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.service.OriginRootCause;
 import com.realsight.westworld.engine.message.GraphResponse;
 import com.realsight.westworld.engine.message.Response;
+import com.realsight.westworld.engine.message.ResponseList;
 import com.realsight.westworld.engine.model.Edge;
 import com.realsight.westworld.engine.model.Inferance;
+import com.realsight.westworld.engine.model.PieData;
 import com.realsight.westworld.engine.model.PostItem;
 import com.realsight.westworld.engine.model.Vertice;
 import com.realsight.westworld.engine.service.TimeSeriesPredictionService;
@@ -59,7 +61,14 @@ public class TimeSeriesPredictionController {
 		return String.valueOf(status);
 	}
 	
-	
+	@GetMapping("/api/job/buildNet")
+	@ResponseBody
+	public Response buildNet() throws Exception {
+		NeticaApi netica = new NeticaApi();
+		netica.buildNet("inputjava_data1.csv", 2, 3);
+		netica.finalize();
+		return (new Response("Done", "Build OK"));
+	}
 	
 	@RequestMapping("/api/job/getGraph")
 	@ResponseBody
@@ -101,12 +110,76 @@ public class TimeSeriesPredictionController {
 		return response;
 	}
 	
-	@RequestMapping("/api/job/getCause")
+	@PostMapping("/api/job/getCause")
 	@ResponseBody
-	public Response getCause() throws Exception {
-		List<Pair<String, Double>> list = new OriginRootCause().run("http_times");
-		Response response = new Response("Done", list);
+	public ResponseList getCause(@RequestBody PostItem postItem) throws Exception {
+		List<Pair<String, Double>> list = new OriginRootCause().run(postItem.getItem());
+		
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+		String[] names = new String[3];
+		names[0] = "low";
+		names[1] = "medium";
+		names[2] = "high";
+		List<Double> list2 = netica.getDistribution(setTarget);
+		List<PieData> res = new ArrayList<PieData> ();
+		for (int i = 0; i < 3; i++) {
+			res.add(new PieData(list2.get(i), names[i]));
+		}
+		netica.finalize();
+		ResponseList response = new ResponseList();
+		if (setTarget.equals(postItem.getItem())) {
+			response.setStatus("Done");
+		}
+		else {
+			response.setStatus("Done1");
+		}
+		List<Object> tmp_list = new ArrayList<Object>();
+		tmp_list.add(list);
+		tmp_list.add(res);
+		response.setData(tmp_list);
 		return response;
+	}
+	
+	@PostMapping("/api/job/Infer")
+	@ResponseBody
+	public Response getInfer(@RequestBody PostItem post_item) throws Exception {
+		
+		String[] str = post_item.getItem().split(":");
+		
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+		List<PieData> res = new ArrayList<PieData>();
+		System.out.println(str[0] + " " + str[1]);
+		
+		List<Double> list = netica.getInfer(str[0], str[1], setTarget);
+		String[] names = new String[3];
+		names[0] = "low";
+		names[1] = "medium";
+		names[2] = "high";
+		for (int i = 0; i < 3; i++) {
+			res.add(new PieData(list.get(i), names[i]));
+		}
+		netica.finalize();
+		return (new Response("Done", res));
+	}
+	
+	@PostMapping("/api/job/originalDistribute")
+	@ResponseBody
+	public Response getOriDis(@RequestBody PostItem postItem) throws Exception {
+		NeticaApi netica = new NeticaApi();
+		netica.loadNet();
+		String[] names = new String[3];
+		names[0] = "low";
+		names[1] = "medium";
+		names[2] = "high";
+		List<Double> list = netica.getDistribution(postItem.getItem());
+		List<PieData> res = new ArrayList<PieData> ();
+		for (int i = 0; i < 3; i++) {
+			res.add(new PieData(list.get(i), names[i]));
+		}
+		netica.finalize();
+		return (new Response("Done", res));
 	}
 	
 	@GetMapping("/api/job/getAttr")
@@ -138,7 +211,15 @@ public class TimeSeriesPredictionController {
 	@GetMapping("/api/job/TSP")
 	@ResponseBody
 	public Response getTSp() throws Exception {
-		double res = tsps.getTSP("test.csv", 100, "http_times");
+		String[] names = new String[3];
+		names[0] = "low";
+		names[1] = "medium";
+		names[2] = "high";
+		List<Double> list = tsps.getTSP("test.csv", 100, setTarget);
+		List<PieData> res = new ArrayList<PieData> ();
+		for (int i = 0; i < 3; i++) {
+			res.add(new PieData(list.get(i), names[i]));
+		}
 		Response response = new Response("Done", res);
 		return response;
 	}

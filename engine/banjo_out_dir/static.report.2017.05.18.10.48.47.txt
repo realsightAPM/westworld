@@ -16,9 +16,9 @@ Network score: -3397.6475, found by thread 1
 5
 0 3 2 3 4
 1 2 2 4
-2 0
+2 1 4
 3 3 1 2 4
-4 1 2
+4 0
 
 -----------------------------------------------------------------------------
 - Post-processing                                            Influence scores
@@ -29,10 +29,10 @@ Influence score for   (3,0) ->   (0,0)   .0354
 Influence score for   (2,0) ->   (0,0)   .0996
 Influence score for   (4,0) ->   (1,0)   .0000
 Influence score for   (2,0) ->   (1,0)   .0000
+Influence score for   (4,0) ->   (2,0)   .7084
 Influence score for   (4,0) ->   (3,0)   .1627
 Influence score for   (2,0) ->   (3,0)   .0199
 Influence score for   (1,0) ->   (3,0)   .0000
-Influence score for   (2,0) ->   (4,0)   .6916
 
 -----------------------------------------------------------------------------
 - Post-processing                                  DOT graphics format output
@@ -44,19 +44,19 @@ label = "Banjo Version 2.2.0\nHigh scoring network, score: -3397.6475\nProject: 
 labeljust="l"; 
 
     0 [label="cpu"];
-    1 [label="http_times"];
-    2 [label="session_count"];
-    3 [label="thread_count"];
-    4 [label="used_memory"];
+    1 [label="http"];
+    2 [label="session"];
+    3 [label="thread"];
+    4 [label="memory"];
 
     2->0;
     3->0;
     4->0;
     2->1;
     4->1;
+    4->2;
     1->3;
     2->3;
     4->3;
-    2->4;
 }
 

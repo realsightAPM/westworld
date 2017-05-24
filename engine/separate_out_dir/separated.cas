@@ -1,4 +1,4 @@
-cpu	http_times	session_count	thread_count	used_memory
+cpu	http	session	thread	memory
 a	b	a	a	a
 a	b	a	a	a
 a	b	a	a	a

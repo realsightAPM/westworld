@@ -103,12 +103,12 @@ public class TimeSeriesPredictionService {
     	return res;
     }
     
-    public double getTSP(String csv_file, int current, String tar_var) throws Exception {
+    public List<Double> getTSP(String csv_file, int current, String tar_var) throws Exception {
     	TSPService tspService = new TSPService();
     	Map<String, Double> map = tspService.getTSPService(csv_file, current);
     	if (map == null) {
     		System.out.println("map是null");
-    		return Double.MIN_NORMAL;
+    		return null;
     	}
     	
     	NeticaApi netica = new NeticaApi();
@@ -121,10 +121,10 @@ public class TimeSeriesPredictionService {
     		pairList.add(new Pair<String, String>(it, netica.mapDoubleState(tmp, it)));
     	}
     	
-    	String state = "" + ((char) ('a'+ netica.rangeMap.get(tar_var).length-1));
-    	Pair<String, String> pair = new Pair<String, String>(tar_var, state);
+//    	String state = "" + ((char) ('a'+ netica.rangeMap.get(tar_var).length-1));
+//    	Pair<String, String> pair = new Pair<String, String>(tar_var, state);
     	
-    	double res = netica.getInfer(pairList, pair);
+    	List<Double> res = netica.getInfer(pairList, tar_var);
     	netica.finalize();
     	return res;
     }

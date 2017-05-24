@@ -1,4 +1,4 @@
-timestamp,cpu,http_times,session_count,thread_count,used_memory
+timestamp,cpu,http,session,thread,memory
 0,0,159,81,7,36294872
 1,0,159,81,7,36294872
 2,0,159,81,7,36294872

@@ -1,0 +1,99 @@
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                  setting not found
+- User:                                                     setting not found
+- Dataset:                                                  setting not found
+- Notes:                                                    setting not found
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-5-18 8:36:12]
+The following info is provided to assist in trouble-shooting: 
+The settings file 'banjo.properties' cannot be found at 'input'.
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: default applied.) Default value ('input') applied to 'settingsDirectory' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=2"
+
+Stack trace info:
+
+edu.duke.cs.banjo.utility.FileUtil.loadSettings(FileUtil.java:515)
+edu.duke.cs.banjo.data.settings.Settings.loadFileBasedParameters(Settings.java:844)
+edu.duke.cs.banjo.data.settings.Settings.loadSettings(Settings.java:269)
+edu.duke.cs.banjo.data.settings.Settings.processCommandLine(Settings.java:215)
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:129)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:33)
+com.realsight.westworld.engine.controller.TimeSeriesPredictionController.buildNet(TimeSeriesPredictionController.java:66)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798)
+org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434)
+org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+

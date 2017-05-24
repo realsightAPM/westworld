@@ -333,6 +333,32 @@ public class NeticaApi {
 		return res;
 	}
 	
+	public List<Double> getInfer(List<Pair<String, String>> conds, String tar) throws NeticaException {
+		List<Double> res = new ArrayList<Double> ();
+		Node[] nodes = new Node[conds.size()];
+		for (int i = 0; i < conds.size(); i++) {
+			 nodes[i] = net.getNode(conds.get(i).first);
+			 nodes[i].finding().enterState(conds.get(i).second);
+		}
+		Node tarNode = net.getNode(tar);
+		for (int i =0; i < tarNode.getNumStates(); i++) {
+			res.add((double) tarNode.getBelief(""+((char)('a'+i))));
+		}
+		
+		for (int i = 0; i < nodes.length; i++ ) {
+			nodes[i].finding().clear();
+		}
+		return res;
+	}
+	
+	public List<Double> getInfer(String a, String b, String tar) throws NeticaException {
+		Node set_node = net.getNode(a);
+		set_node.finding().enterState(b);
+		List<Double> res = getDistribution(tar);
+		set_node.finding().clear();
+		return res;
+	}
+	
 	public double getInfer(List<Pair<String, float[]>> hoods, Pair<String, String> target, String likelihood) throws NeticaException {
 		double res;
 		
@@ -345,6 +371,23 @@ public class NeticaApi {
 		Node targetNode = net.getNode(target.first);
 		res = targetNode.getBelief(target.second);
 		System.out.println(target.second);
+		
+		for (int i = 0; i < nodes.length; i++ ) {
+			nodes[i].finding().clear();
+		}
+		
+		return res;
+	}
+	
+	public List<Double> getInfer(List<Pair<String, float[]>> hoods, String target, String likelihood) throws NeticaException {
+		
+		Node[] nodes = new Node[hoods.size()];
+		for (int i = 0; i < hoods.size(); i++) {
+			nodes[i] = net.getNode(hoods.get(i).first);
+			nodes[i].finding().enterLikelihood(hoods.get(i).second);
+		}
+		
+		List<Double> res = getDistribution(target);
 		
 		for (int i = 0; i < nodes.length; i++ ) {
 			nodes[i].finding().clear();

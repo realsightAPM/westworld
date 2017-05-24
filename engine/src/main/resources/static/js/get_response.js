@@ -1,7 +1,8 @@
 var attrArray = new Array();
+var selected_var="";
 $( document ).ready(function() {
 	var url = window.location;
-	
+
 	$("#set_target").click(function(event) {
 		event.preventDefault();
 		var p = $("#set_value").val();
@@ -32,12 +33,35 @@ $( document ).ready(function() {
 			}
 		});
 	}
-	
+
 	// initailize bayes network
 //	$("#getBtn0").click(function(event) {
 //		event.preventDefault();
 //		getBnGraph();
 //	});
+	
+	$("#build_net").click(function(event) {
+		event.preventDefault();
+		ajaxBuildNet();
+	});
+	
+	function ajaxBuildNet() {
+		$.ajax({
+			type : "GET",
+			url : url + "/api/job/buildNet",
+			success : function(result) {
+				if (result.status == "Done") {
+					alert(result.data);
+				}
+				else {
+					console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});
+	}
 	
 	getBnGraph();
 	
@@ -160,7 +184,7 @@ $( document ).ready(function() {
 			    { font: "bold 10pt helvetica, bold arial, sans-serif", textAlign: "center", maxSize: new go.Size(100, NaN) },
 			    new go.Binding("text", "key")),
 			    {
-			        click: function(e, obj) { showMessage(obj.part.data.key); },
+			        click: function(e, obj) { window.selected_var=obj.part.data.key;showMessage(obj.part.data.key); },
 			        selectionChanged: function(part) {
 				    	var shape = part.elt(0);
 				    	shape.fill = part.isSelected ? "red" : "CornflowerBlue";
@@ -190,8 +214,11 @@ $( document ).ready(function() {
 	}
 	
 	function showMessage(s) {
+		$("#perform_pie2").html("");
 		ajaxPearson(s);
 		ajaxHistoryData(s);
+		ajaxPerform(s);
+//		ajaxOriDis(s);
 	}
 
 	// Get Pearson
@@ -227,7 +254,7 @@ $( document ).ready(function() {
 					});
 //					alert(attr);
 //					alert(values);
-					drawMyChart(attr, values);
+					drawMyChart(attr, values, "main", -1, 1, "Pearson Correlation");
 					console.log("Success: ", result);
 				}
 				else {
@@ -267,14 +294,74 @@ $( document ).ready(function() {
 		});
 	}
 	
+	function ajaxOriDis(p) {
+		postData = {
+			item : p
+		};
+		$.ajax({
+			type : "Post",
+			contentType : "application/json",
+			url : "/api/job/originalDistribute",
+			data : JSON.stringify(postData),
+			dataType : 'json',
+			
+			success : function(result) {
+				if (result.status == "Done") {
+					drawPieChart(result.data);
+					console.log("Success: ", result);
+				}
+				else {
+					console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});
+	}
+	
+	$(document).on("click","#set_state1", function(){
+//		alert($("#select_state").val());
+		ajaxInfer($("#select_state").val());
+	});
+	
+	function ajaxInfer(state) {
+		postData = {
+			item : window.selected_var+":"+state
+		};
+//		alert(postData.item);
+		$.ajax({
+			type : "Post",
+			contentType : "application/json",
+			url : "/api/job/Infer",
+			data : JSON.stringify(postData),
+			dataType : 'json',
+			success : function(result) {
+				if (result.status == "Done") {
+					drawPieChart(result.data, "perform_pie2", "Inferential distribution of target");
+				}
+				else {
+					console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});
+	}
+	
 	// draw my chart pearson
-	function drawMyChart(attr, values) {
-		var myChart = echarts.init(document.getElementById('main'));
+	function drawMyChart(attr, values, locationId, lo, hi, title_name) {
+		var myChart = echarts.init(document.getElementById(locationId));
 		
 		var option = {
 			title: {
-				text: 'Pearson Correlation'
+				text: title_name
 			},
+			
+	        tooltip: {
+	            trigger: 'axis'
+	        },
 				
 			toolbox: {
 				show: true,
@@ -299,18 +386,18 @@ $( document ).ready(function() {
 			},
 				
 			xAxis: {
-				data: attr//["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+				data: attr
 			},
 				
 			yAxis: {
-				'min':-1,
-				'max':1
+				'min':lo,
+				'max':hi
            	},
 				
 			series: [{
-				name: 'Pearson Correlation',
+				name: title_name,
 				type: 'bar',
-				data: values//[5, 20, 36, 10, 10, 20]
+				data: values
 			}]
 		};
 		
@@ -323,9 +410,13 @@ $( document ).ready(function() {
 		
 		var option = {
 			title: {
-				text: 'History Data'
+				text: 'Historical Data'
 			},
-				
+			
+	        tooltip: {
+	            trigger: 'axis'
+	        },
+			
 			toolbox: {
 				show: true,
 				feature: {
@@ -357,23 +448,88 @@ $( document ).ready(function() {
 		myChart.setOption(option);
 	}
 	
-	// Get Cause
-	$("#CauseBtn").click(function () {
-		event.preventDefault();
-		ajaxCause();
-	});
+	function drawPieChart(dis_data, id, title_name) {
+		var myChart = echarts.init(document.getElementById(id));
+		option = {
+			title : {
+				text: title_name,
+				x:'center'
+			},
+			tooltip : {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+//			legend: {
+//				orient: 'vertical',
+//				left: 'left',
+//				data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+//			},
+			series : [
+				{
+				    name: '访问来源',
+				    type: 'pie',
+				    radius : '55%',
+				    center: ['50%', '60%'],
+				        data:dis_data,
+				        itemStyle: {
+				            emphasis: {
+					            shadowBlur: 10,
+					            shadowOffsetX: 0,
+					            shadowColor: 'rgba(0, 0, 0, 0.5)'
+				            }
+				        }
+				}
+			]
+		};
+		myChart.setOption(option);
+	}
 	
-	function ajaxCause() {
+	// Get perform
+//	$("#CauseBtn").click(function (event) {
+//		event.preventDefault();
+//		ajaxPerform();
+//	});
+	
+	function ajaxPerform(p) {
+		postData = {
+			item : p
+		};
+		var attr = [];
+		var values = [];
 		$.ajax({
-			type: "Get",
+			type : "Post",
+			contentType : "application/json",
 			url: url + "/api/job/getCause",
+			data : JSON.stringify(postData),
+			dataType : 'json',
 			success: function(result) {
 				if (result.status == "Done") {
-					$.each(result.data, function(i, pair){
-						var row = "(" + i +") " + pair.first + ": " + pair.second;
-						$('#causeList .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
+					$.each(result.data[0], function(i, pair){
+						attr.push(pair.first);
+						values.push(pair.second);
+//						var row = "(" + i +") " + pair.first + ": " + pair.second;
+//						$('#perform_left .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
 					});
-					
+//					alert(attr);
+//					alert(values);
+					drawMyChart(attr, values, "perform_left", 0, 2, "Root Cause");
+					drawPieChart(result.data[1], "perform_pie1", "Orginal Distribution");
+					$("#perform_pie2").html(
+							'<button type="submit" id="tspBtn" class="btn btn-primary">TSP</button>'
+					);
+					console.log("Success: ", result);
+				}
+				else if (result.status == "Done1") {
+					$("#perform_left").html(
+							'Select the state of<br/>'
+							+'<select id="select_state" class="list-group">'
+							+'<option value="a">low</option>'
+							+'<option value="b">medium</option>'
+							+'<option value="c">high</option>'
+							+'</select>'
+							+'<button type="submit" id="set_state1" class="btn btn-primary">Infer</button>'
+					);
+					drawPieChart(result.data[1], "perform_pie1", "Orginal Distribution");
 					console.log("Success: ", result);
 				}
 				else {
@@ -385,6 +541,47 @@ $( document ).ready(function() {
 			}
 		});
 	}
+	
+	$(document).on("click","#tspBtn", function(){
+//		alert("predict");
+		ajaxTsp();
+	});
+	
+	function ajaxTsp() {
+		$.ajax({
+			type : "GET",
+			url : "/api/job/TSP",
+			success : function(result) {
+				if (result.status == "Done") {
+					drawPieChart(result.data, "perform_pie2", "TSP of target");
+				}
+				else {
+					console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	$("#postInferBnt").click(function(event) {
 		event.preventDefault();

@@ -27,7 +27,8 @@
     	<div style="margin-left: 10px;">
           <h2>Bayes Network</h2>
         </div>
-        <div id="attrList2" style="margin-left: 50px;">
+        <div id="attrList2">
+        	<button type="submit" id="build_net" class="btn">Build</button>
     		Select the target variable: 
 			<select id="set_value" class="list-group">
 			</select>
@@ -46,15 +47,19 @@
     </span>
 </div>
 
-<div>
+<!-- <span id="perform_pie1" style="width: 100px; height: 400px;"></span>
+			<span id="perform_pie2" style="width: 100px; height: 400px;"></span> -->
+
+<div style="height: 600px;">
 	<div><h2>performance evaluation</h2></div>
 	<div id="performdiv">
-		
+		<span id="perform_left" style="display: inline-block; vertical-align: top; width: 400px; height: 400px; margin-left: 50px;"></span>
+		<span id="perform_pie1" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
+		<span id="perform_pie2" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
 	</div>
-
 </div>
 
-
+<!-- 
 <div class="container">
 	<div id="CauseDiv">
 		<button id="CauseBtn">http根源性排序</button>
@@ -92,6 +97,7 @@
 <div class="container">
 	压力测试
 </div>
+ -->
 
 </body>
 </html>

@@ -32,9 +32,38 @@ public class Pearson {
 		getPearsonMatrix(original_csv);
 	}
 	
-	private  double pairScore(int v1, int v2) {
+	public Pearson(List<ArrayList<Double>> solr_array) {
+		System.out.println("========================\npearson相关性：\n");
 		
-		List<ArrayList<Double>> data = normal.normalizedData;
+		File outfile = new File("pearson_out_dir");
+		if(outfile.exists()) {
+            System.out.println("目标文件已存在！");
+            String[] file_list = outfile.list();
+            for (int i = 0; i < file_list.length; i++) {
+            	File delfile = new File(outfile+"/"+file_list[i]);
+            	delfile.delete();  
+                System.out.println("已删除" + file_list[i]);  
+            }
+        }
+		else {
+			outfile.mkdir();
+			System.out.println("创建目录成功！");
+		}
+		
+		
+		int numAttr = solr_array.size();
+		
+		pearsonMatrix = new Double[numAttr][numAttr];
+		for (int i = 0; i < numAttr; i++) {
+			for (int j =0; j < numAttr; j++) {
+				pearsonMatrix[i][j] = pairScore(i, j, solr_array);
+			}
+		}
+	}
+	
+	private  double pairScore(int v1, int v2, List<ArrayList<Double>> data) {
+		
+//		List<ArrayList<Double>> data = normal.normalizedData;
 		
 		int numAttr = data.size();
 		if (numAttr == 0) {
@@ -96,7 +125,7 @@ public class Pearson {
 		pearsonMatrix = new Double[numAttr][numAttr];
 		for (int i = 0; i < numAttr; i++) {
 			for (int j =0; j < numAttr; j++) {
-				pearsonMatrix[i][j] = pairScore(i, j);
+				pearsonMatrix[i][j] = pairScore(i, j, normal.normalizedData);
 			}
 		}
 	}
