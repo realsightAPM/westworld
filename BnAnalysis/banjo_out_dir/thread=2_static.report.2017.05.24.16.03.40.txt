@@ -1,4 +1,4 @@
-[Thread 1] Banjo search data:
+[Thread 2] Banjo search data:
 -----------------------------------------------------------------------------
 - Banjo                        Bayesian Network Inference with Java Objects -
 - Release 2.2.0                                                 15 Apr 2008 -
@@ -8,16 +8,16 @@
 -----------------------------------------------------------------------------
 - Project:                                                     banjo apm data
 - User:                                                                 wubin
-- Dataset:                                            5-vars-898-observations
+- Dataset:                                           33-vars-635-observations
 - Notes:                                    static bayesian network inference
 -----------------------------------------------------------------------------
 - Settings file:                                                             
 -----------------------------------------------------------------------------
 - Input directory:                                                          .
 - Observations file:                       separate_out_dir/separated_tsv.txt
-- Observation count:                                                      898
-- Number of variables:                                                      5
-- Variable names:       cpu http_times session_count thread_count used_memory
+- Observation count:                                                      635
+- Number of variables:                                                     33
+- Variable names:  HTTP_SYSTEM_ERROR activeConnections activeThreads clients cpu deadLockThreads fileDescriptors free_disk_space gc http2xxNum http4xxNum http5xxNum httpHitsRate httpMeanTimes httpSessions httpSessionsMeanAge httpSystemErrors http_Cpu_Time_Sum http_Durations_Sum http_Error_Hits http_Gobal_Hits loadedClassesCount runningThreads systemLoad threadCount tomcatBusyThreads tomcatBytesReceived tomcatBytesSent usedConnections usedMemory usedNonHeapMemory usedPhysicalMemorySize usedSwapSpaceSize
 - Discretization policy:                                                 none
 - Exceptions to the discretization policy:                               none
 -----------------------------------------------------------------------------
@@ -46,7 +46,7 @@
 - Min. accepted networks before reannealing:                              500
 -----------------------------------------------------------------------------
 - Output directory:                                             banjo_out_dir
-- Report file:                 thread=1_static.report.2017.04.28.17.33.11.txt
+- Report file:                 thread=2_static.report.2017.05.24.16.03.40.txt
 - Number of best networks tracked:                                          1
 - Max. time:                                                            1.0 m
 - Max. restarts:                                                        10000
@@ -66,90 +66,118 @@
 - XML parser:                             org.apache.xerces.parsers.SAXParser
 - Banjo XML format version:                                               1.0
 -----------------------------------------------------------------------------
-- Seed for starting search:                                     1493371991488
+- Seed for starting search:                                     1495613020393
 -----------------------------------------------------------------------------
 - Number of threads:                                                        2
-- Index of current thread:                                                  1
+- Index of current thread:                                                  2
 -----------------------------------------------------------------------------
 - Warnings:                                                                  
 -----------------------------------------------------------------------------
-(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
 (Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
 
 Supplied command line arguments:
 "threads=2"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
 -----------------------------------------------------------------------------
 
-Memory info before starting the search: Banjo is using 3 mb of memory
-Prep. time used: 138.0 ms
+Memory info before starting the search: Banjo is using 4 mb of memory
+Prep. time used: 45.0 ms
 Beginning to search: expect a status report every 20.0 s
 
-[Thread 1]
-Status:  Networks   18236000
-         Time       20.02 s (33.3% of max. 1.0 m)
-         Re-anneals 16 (0.1% of max. 10000)
+[Thread 2]
+Status:  Networks   4974000
+         Time       20.0 s (33.3% of max. 1.0 m)
+         Re-anneals  3 (0.0% of max. 10000)
          Banjo is using 12 mb of memory
 
-[Thread 1]
-Status:  Networks   36617000
-         Time       40.01 s (66.6% of max. 1.0 m)
-         Re-anneals 33 (0.3% of max. 10000)
-         Banjo is using 11 mb of memory
+[Thread 2]
+Status:  Networks   9822000
+         Time       40.0 s (66.6% of max. 1.0 m)
+         Re-anneals  8 (0.0% of max. 10000)
+         Banjo is using 12 mb of memory
 
-[Thread 1]
-Status:  Networks   55170000
+[Thread 2]
+Status:  Networks   14693000
          Time       1.0 m (100.0% of max. 1.0 m)
-         Re-anneals 50 (0.5% of max. 10000)
-         Banjo is using 11 mb of memory
+         Re-anneals 12 (0.1% of max. 10000)
+         Banjo is using 12 mb of memory
 
 
 
 -----------------------------------------------------------------------------
-- [Thread 1] Final report                                Best network overall
+- [Thread 2] Final report                                Best network overall
 -----------------------------------------------------------------------------
 
 
-Network score: -3397.6475, first found at iteration 28474
-5
-0 3 2 3 4
-1 2 2 4
-2 1 4
-3 3 1 2 4
-4 0
+Network score: -7287.1596, first found at iteration 8626982
+33
+ 0 3 14 17 31
+ 1 1 28
+ 2 2 16 25
+ 3 2 6 19
+ 4 2 6 19
+ 5 2 2 13
+ 6 2 19 28
+ 7 2 9 20
+ 8 0
+ 9 2 8 31
+10 3 13 14 31
+11 2 9 31
+12 3 4 19 26
+13 2 3 21
+14 2 3 21
+15 3 0 3 10
+16 1 13
+17 3 10 14 29
+18 1 12
+19 1 11
+20 2 9 11
+21 2 20 28
+22 1 4
+23 3 5 24 30
+24 3 6 10 31
+25 3 1 24 27
+26 2 6 21
+27 3 11 12 13
+28 1 7
+29 3 3 10 11
+30 2 11 21
+31 0
+32 2 0 4
 
 
 -----------------------------------------------------------------------------
-- [Thread 1] Search Statistics                                               
+- [Thread 2] Search Statistics                                               
 -----------------------------------------------------------------------------
 
 Statistics collected in searcher 'SearcherSimAnneal':
-  Number of networks examined: 55170000
+  Number of networks examined: 14693000
   Total time used: 1.0 m
-  High score: -3397.6475, first found at iteration 28474
-  Number of re-anneals: 50
+  High score: -7287.1596, first found at iteration 8626982
+  Number of re-anneals: 12
 
 Statistics collected in proposer 'ProposerRandomLocalMove':
-  Additions -- proposed:    16696772
-  Deletions -- proposed:    20144767
-  Reversals -- proposed:    18328460
+  Additions -- proposed:    4075957
+  Deletions -- proposed:    6075291
+  Reversals -- proposed:    4541751
 
 Statistics collected in cycle checker 'CycleCheckerCheckThenApply':
-  Additions -- considered:  16696772,  acyclic:  492335
+  Additions -- considered:  4075957,  acyclic:  2261775
   Deletions -- no cyclicity test necessary
-  Reversals -- considered:  18328460,  acyclic:  7467631
+  Reversals -- considered:  4541751,  acyclic:  2412298
 
 Statistics collected in evaluator 'EvaluatorBDe':
-  Scores computed:          2479497
+  Scores computed:          1845619
   Scores (cache)            placed         fetched        
-      with 0 parents:       5              5109015        
-      with 1 parents:       11             9749222        
-      with 2 parents:       18             17981691       
-      with 3 parents:       2479463        252978         
+      with 0 parents:       0              1099682        
+      with 1 parents:       415            3994675        
+      with 2 parents:       8221           5070702        
+      with 3 parents:       1836983        1077324        
 
 Statistics collected in decider 'DeciderMetropolis':
-  Additions -- considered:  492335,  better score:  484001,  other accepted:  7161
-  Deletions -- considered:  20144767,  better score:  7247,  other accepted:  483906
-  Reversals -- considered:  7467631,  better score:  4401313,  other accepted:  2609562
-  Average permissivity:     0.134
+  Additions -- considered:  2261775,  better score:  723618,  other accepted:  116959
+  Deletions -- considered:  6075291,  better score:  744129,  other accepted:  96390
+  Reversals -- considered:  2412298,  better score:  525353,  other accepted:  100710
+  Average permissivity:     0.036
 
-Memory info after completing the search: Banjo is using 11 mb of memory
+Memory info after completing the search: Banjo is using 12 mb of memory

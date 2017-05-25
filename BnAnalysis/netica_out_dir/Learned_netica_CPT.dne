@@ -1,11 +1,12 @@
 // ~->[DNET-1]->~
 
-// File created by an unlicensed user using Netica 5.04 on Apr 28, 2017 at 17:34:12.
+// File created by WuB at DalianUTech using Netica 5.04 on May 24, 2017 at 16:04:41.
 
 bnet apm {
 autoupdate = FALSE;
+whenchanged = 1495613081;
 
-node used_memory {
+node gc {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
@@ -13,122 +14,674 @@ node used_memory {
 	parents = ();
 	probs = 
 		// a            b            c            
-		  (0.3329634,   0.3329634,   0.3340732);
-	numcases = 901;
+		  (0.9937304,   0.003134796, 0.003134796);
+	numcases = 638;
+	whenchanged = 1495613081;
 	};
 
-node session_count {
+node usedPhysicalMemorySize {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (used_memory);
+	parents = ();
 	probs = 
-		// a            b            c             // used_memory 
-		  (0.5364239,   0.4205298,   0.04304636,   // a           
-		   0.4602649,   0.4569536,   0.08278146,   // b           
-		   0.00330033,  0.08250825,  0.9141914);   // c           ;
-	numcases = 
-		                 // used_memory 
-		  (302,          // a           
-		   302,          // b           
-		   303);         // c           ;
+		// a            b            c            
+		  (0.3338558,   0.3338558,   0.3322884);
+	numcases = 638;
+	whenchanged = 1495613081;
 	};
 
-node http_times {
+node http2xxNum {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (session_count, used_memory);
+	parents = (gc, usedPhysicalMemorySize);
 	probs = 
-		// a            b            c             // session_count used_memory 
-		  (0.152439,    0.8048781,   0.04268293,   // a             a           
-		   0.3900709,   0.6028369,   0.007092198,  // a             b           
-		   0.3333333,   0.3333333,   0.3333333,    // a             c           
-		   0.751938,    0.1937985,   0.05426357,   // b             a           
-		   0.4785714,   0.4285714,   0.09285714,   // b             b           
-		   0.4814815,   0.2592593,   0.2592593,    // b             c           
-		   0.06666667,  0.06666667,  0.8666667,    // c             a           
-		   0.03703704,  0.03703704,  0.9259259,    // c             b           
-		   0.1577061,   0.003584229, 0.8387097);   // c             c           ;
+		// a            b            c             // gc usedPhysicalMemorySize 
+		  (0.9859813,   0.009345794, 0.004672897,  // a  a                      
+		   0.004651163, 0.9813954,   0.01395349,   // a  b                      
+		   0.004694836, 0.004694836, 0.9906103,    // a  c                      
+		   0.3333333,   0.3333333,   0.3333333,    // b  a                      
+		   0.3333333,   0.3333333,   0.3333333,    // b  b                      
+		   0.5,         0.25,        0.25,         // b  c                      
+		   0.5,         0.25,        0.25,         // c  a                      
+		   0.3333333,   0.3333333,   0.3333333,    // c  b                      
+		   0.3333333,   0.3333333,   0.3333333);   // c  c                      ;
 	numcases = 
-		                 // session_count used_memory 
-		  (164,          // a             a           
-		   141,          // a             b           
-		   3,            // a             c           
-		   129,          // b             a           
-		   140,          // b             b           
-		   27,           // b             c           
-		   15,           // c             a           
-		   27,           // c             b           
-		   279);         // c             c           ;
+		                 // gc usedPhysicalMemorySize 
+		  (214,          // a  a                      
+		   215,          // a  b                      
+		   213,          // a  c                      
+		   3,            // b  a                      
+		   3,            // b  b                      
+		   4,            // b  c                      
+		   4,            // c  a                      
+		   3,            // c  b                      
+		   3);           // c  c                      ;
+	whenchanged = 1495613081;
 	};
 
-node thread_count {
+node http5xxNum {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (http_times, session_count, used_memory);
+	parents = (http2xxNum, usedPhysicalMemorySize);
 	probs = 
-		// a            b            c             // http_times session_count used_memory 
-		  (0.7037037,   0.2592593,   0.03703704,   // a          a             a           
-		   0.7543859,   0.2280702,   0.01754386,   // a          a             b           
-		   0.3333333,   0.3333333,   0.3333333,    // a          a             c           
-		   0.9191919,   0.07070707,  0.01010101,   // a          b             a           
-		   0.7971014,   0.1884058,   0.01449275,   // a          b             b           
-		   0.06666667,  0.8666667,   0.06666667,   // a          b             c           
-		   0.3333333,   0.3333333,   0.3333333,    // a          c             a           
-		   0.3333333,   0.3333333,   0.3333333,    // a          c             b           
-		   0.02173913,  0.4130435,   0.5652174,    // a          c             c           
-		   0.9402985,   0.007462686, 0.05223881,   // b          a             a           
-		   0.8390805,   0.1494253,   0.01149425,   // b          a             b           
-		   0.3333333,   0.3333333,   0.3333333,    // b          a             c           
-		   0.9259259,   0.03703704,  0.03703704,   // b          b             a           
-		   0.3064516,   0.3064516,   0.3870968,    // b          b             b           
-		   0.1111111,   0.1111111,   0.7777778,    // b          b             c           
-		   0.3333333,   0.3333333,   0.3333333,    // b          c             a           
-		   0.3333333,   0.3333333,   0.3333333,    // b          c             b           
-		   0.3333333,   0.3333333,   0.3333333,    // b          c             c           
-		   0.7777778,   0.1111111,   0.1111111,    // c          a             a           
-		   0.3333333,   0.3333333,   0.3333333,    // c          a             b           
-		   0.3333333,   0.3333333,   0.3333333,    // c          a             c           
-		   0.7777778,   0.1111111,   0.1111111,    // c          b             a           
-		   0.06666667,  0.8666667,   0.06666667,   // c          b             b           
-		   0.1111111,   0.7777778,   0.1111111,    // c          b             c           
-		   0.4666667,   0.4666667,   0.06666667,   // c          c             a           
-		   0.4814815,   0.4814815,   0.03703704,   // c          c             b           
-		   0.07627118,  0.2584746,   0.6652542);   // c          c             c           ;
+		// a            b            c             // http2xxNum usedPhysicalMemorySize 
+		  (0.9906542,   0.004672897, 0.004672897,  // a          a                      
+		   0.3333333,   0.3333333,   0.3333333,    // a          b                      
+		   0.5,         0.25,        0.25,         // a          c                      
+		   0.25,        0.5,         0.25,         // b          a                      
+		   0.004694836, 0.9906103,   0.004694836,  // b          b                      
+		   0.3333333,   0.3333333,   0.3333333,    // b          c                      
+		   0.3333333,   0.3333333,   0.3333333,    // c          a                      
+		   0.2,         0.6,         0.2,          // c          b                      
+		   0.004694836, 0.02347418,  0.971831);    // c          c                      ;
 	numcases = 
-		                 // http_times session_count used_memory 
-		  (27,           // a          a             a           
-		   57,           // a          a             b           
-		   3,            // a          a             c           
-		   99,           // a          b             a           
-		   69,           // a          b             b           
-		   15,           // a          b             c           
-		   3,            // a          c             a           
-		   3,            // a          c             b           
-		   46,           // a          c             c           
-		   134,          // b          a             a           
-		   87,           // b          a             b           
-		   3,            // b          a             c           
-		   27,           // b          b             a           
-		   62,           // b          b             b           
-		   9,            // b          b             c           
-		   3,            // b          c             a           
-		   3,            // b          c             b           
-		   3,            // b          c             c           
-		   9,            // c          a             a           
-		   3,            // c          a             b           
-		   3,            // c          a             c           
-		   9,            // c          b             a           
-		   15,           // c          b             b           
-		   9,            // c          b             c           
-		   15,           // c          c             a           
-		   27,           // c          c             b           
-		   236);         // c          c             c           ;
+		                 // http2xxNum usedPhysicalMemorySize 
+		  (214,          // a          a                      
+		   3,            // a          b                      
+		   4,            // a          c                      
+		   4,            // b          a                      
+		   213,          // b          b                      
+		   3,            // b          c                      
+		   3,            // c          a                      
+		   5,            // c          b                      
+		   213);         // c          c                      ;
+	whenchanged = 1495613081;
+	};
+
+node http_Error_Hits {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http5xxNum);
+	probs = 
+		// a            b            c             // http5xxNum 
+		  (0.9906977,   0.004651163, 0.004651163,  // a          
+		   0.004545454, 0.9909091,   0.004545454,  // b          
+		   0.004784689, 0.01913876,  0.9760765);   // c          ;
+	numcases = 
+		                 // http5xxNum 
+		  (215,          // a          
+		   220,          // b          
+		   209);         // c          ;
+	whenchanged = 1495613081;
+	};
+
+node http_Gobal_Hits {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http2xxNum, http5xxNum);
+	probs = 
+		// a            b            c             // http2xxNum http5xxNum 
+		  (0.9906977,   0.004651163, 0.004651163,  // a          a          
+		   0.3333333,   0.3333333,   0.3333333,    // a          b          
+		   0.3333333,   0.3333333,   0.3333333,    // a          c          
+		   0.3333333,   0.3333333,   0.3333333,    // b          a          
+		   0.004672897, 0.9906542,   0.004672897,  // b          b          
+		   0.3333333,   0.3333333,   0.3333333,    // b          c          
+		   0.3333333,   0.3333333,   0.3333333,    // c          a          
+		   0.1111111,   0.1111111,   0.7777778,    // c          b          
+		   0.004784689, 0.004784689, 0.9904306);   // c          c          ;
+	numcases = 
+		                 // http2xxNum http5xxNum 
+		  (215,          // a          a          
+		   3,            // a          b          
+		   3,            // a          c          
+		   3,            // b          a          
+		   214,          // b          b          
+		   3,            // b          c          
+		   3,            // c          a          
+		   9,            // c          b          
+		   209);         // c          c          ;
+	whenchanged = 1495613081;
+	};
+
+node free_disk_space {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http2xxNum, http_Gobal_Hits);
+	probs = 
+		// a            b            c             // http2xxNum http_Gobal_Hits 
+		  (0.004651163, 0.009302326, 0.9860465,    // a          a               
+		   0.3333333,   0.3333333,   0.3333333,    // a          b               
+		   0.3333333,   0.3333333,   0.3333333,    // a          c               
+		   0.3333333,   0.3333333,   0.3333333,    // b          a               
+		   0.004672897, 0.9906542,   0.004672897,  // b          b               
+		   0.3333333,   0.3333333,   0.3333333,    // b          c               
+		   0.3333333,   0.3333333,   0.3333333,    // c          a               
+		   0.3333333,   0.3333333,   0.3333333,    // c          b               
+		   0.9906977,   0.004651163, 0.004651163); // c          c               ;
+	numcases = 
+		                 // http2xxNum http_Gobal_Hits 
+		  (215,          // a          a               
+		   3,            // a          b               
+		   3,            // a          c               
+		   3,            // b          a               
+		   214,          // b          b               
+		   3,            // b          c               
+		   3,            // c          a               
+		   3,            // c          b               
+		   215);         // c          c               ;
+	whenchanged = 1495613081;
+	};
+
+node usedConnections {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (free_disk_space);
+	probs = 
+		// a            b            c             // free_disk_space 
+		  (0.004651163, 0.8883721,   0.1069767,    // a               
+		   0.004651163, 0.5953488,   0.4,          // b               
+		   0.9439253,   0.03738318,  0.01869159);  // c               ;
+	numcases = 
+		                 // free_disk_space 
+		  (215,          // a               
+		   215,          // b               
+		   214);         // c               ;
+	whenchanged = 1495613081;
+	};
+
+node fileDescriptors {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http_Error_Hits, usedConnections);
+	probs = 
+		// a            b            c             // http_Error_Hits usedConnections 
+		  (0.4362745,   0.5490196,   0.01470588,   // a               a               
+		   0.09090909,  0.2727273,   0.6363636,    // a               b               
+		   0.1666667,   0.1666667,   0.6666667,    // a               c               
+		   0.3333333,   0.3333333,   0.3333333,    // b               a               
+		   0.01470588,  0.5073529,   0.4779412,    // b               b               
+		   0.01111111,  0.06666667,  0.9222222,    // b               c               
+		   0.3333333,   0.3333333,   0.3333333,    // c               a               
+		   0.6612903,   0.1397849,   0.1989247,    // c               b               
+		   0.04347826,  0.1304348,   0.8260869);   // c               c               ;
+	numcases = 
+		                 // http_Error_Hits usedConnections 
+		  (204,          // a               a               
+		   11,           // a               b               
+		   6,            // a               c               
+		   3,            // b               a               
+		   136,          // b               b               
+		   90,           // b               c               
+		   3,            // c               a               
+		   186,          // c               b               
+		   23);          // c               c               ;
+	whenchanged = 1495613081;
+	};
+
+node clients {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (fileDescriptors, http_Error_Hits);
+	probs = 
+		// a            b            c             // fileDescriptors http_Error_Hits 
+		  (0.7472528,   0.2417582,   0.01098901,   // a               a               
+		   0.25,        0.25,        0.5,          // a               b               
+		   0.984,       0.008,       0.008,        // a               c               
+		   0.1637931,   0.8275862,   0.00862069,   // b               a               
+		   0.02631579,  0.09210526,  0.8815789,    // b               b               
+		   0.1,         0.8666667,   0.03333334,   // b               c               
+		   0.07142857,  0.8571429,   0.07142857,   // c               a               
+		   0.006711409, 0.0738255,   0.9194631,    // c               b               
+		   0.01754386,  0.8070176,   0.1754386);   // c               c               ;
+	numcases = 
+		                 // fileDescriptors http_Error_Hits 
+		  (91,           // a               a               
+		   4,            // a               b               
+		   125,          // a               c               
+		   116,          // b               a               
+		   76,           // b               b               
+		   30,           // b               c               
+		   14,           // c               a               
+		   149,          // c               b               
+		   57);          // c               c               ;
+	whenchanged = 1495613081;
+	};
+
+node loadedClassesCount {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http_Gobal_Hits, usedConnections);
+	probs = 
+		// a            b            c             // http_Gobal_Hits usedConnections 
+		  (0.990196,    0.004901961, 0.004901961,  // a               a               
+		   0.09090909,  0.8181818,   0.09090909,   // a               b               
+		   0.3333333,   0.5,         0.1666667,    // a               c               
+		   0.3333333,   0.3333333,   0.3333333,    // b               a               
+		   0.007751938, 0.8914729,   0.1007752,    // b               b               
+		   0.01136364,  0.9545454,   0.03409091,   // b               c               
+		   0.3333333,   0.3333333,   0.3333333,    // c               a               
+		   0.02590674,  0.02590674,  0.9481865,    // c               b               
+		   0.04,        0.04,        0.92);        // c               c               ;
+	numcases = 
+		                 // http_Gobal_Hits usedConnections 
+		  (204,          // a               a               
+		   11,           // a               b               
+		   6,            // a               c               
+		   3,            // b               a               
+		   129,          // b               b               
+		   88,           // b               c               
+		   3,            // c               a               
+		   193,          // c               b               
+		   25);          // c               c               ;
+	whenchanged = 1495613081;
+	};
+
+node httpSessions {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (clients, loadedClassesCount);
+	probs = 
+		// a            b            c             // clients loadedClassesCount 
+		  (0.2391304,   0.2934783,   0.4673913,    // a       a                  
+		   0.7142857,   0.1428571,   0.1428571,    // a       b                  
+		   0.7916667,   0.04166667,  0.1666667,    // a       c                  
+		   0.008333334, 0.375,       0.6166667,    // b       a                  
+		   0.03448276,  0.03448276,  0.9310345,    // b       b                  
+		   0.09589041,  0.6849315,   0.2191781,    // b       c                  
+		   0.3333333,   0.3333333,   0.3333333,    // c       a                  
+		   0.4782609,   0.3206522,   0.201087,     // c       b                  
+		   0.02941176,  0.9411765,   0.02941176);  // c       c                  ;
+	numcases = 
+		                 // clients loadedClassesCount 
+		  (92,           // a       a                  
+		   7,            // a       b                  
+		   120,          // a       c                  
+		   120,          // b       a                  
+		   29,           // b       b                  
+		   73,           // b       c                  
+		   3,            // c       a                  
+		   184,          // c       b                  
+		   34);          // c       c                  ;
+	whenchanged = 1495613081;
+	};
+
+node httpMeanTimes {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (clients, loadedClassesCount);
+	probs = 
+		// a            b            c             // clients loadedClassesCount 
+		  (0.5,         0.3586957,   0.1413043,    // a       a                  
+		   0.7142857,   0.1428571,   0.1428571,    // a       b                  
+		   0.9,         0.06666667,  0.03333334,   // a       c                  
+		   0.08333334,  0.4416667,   0.475,        // b       a                  
+		   0.06896552,  0.1724138,   0.7586207,    // b       b                  
+		   0.3835616,   0.1506849,   0.4657534,    // b       c                  
+		   0.3333333,   0.3333333,   0.3333333,    // c       a                  
+		   0.08152174,  0.451087,    0.4673913,    // c       b                  
+		   0.1764706,   0.7941176,   0.02941176);  // c       c                  ;
+	numcases = 
+		                 // clients loadedClassesCount 
+		  (92,           // a       a                  
+		   7,            // a       b                  
+		   120,          // a       c                  
+		   120,          // b       a                  
+		   29,           // b       b                  
+		   73,           // b       c                  
+		   3,            // c       a                  
+		   184,          // c       b                  
+		   34);          // c       c                  ;
+	whenchanged = 1495613081;
+	};
+
+node http4xxNum {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (httpMeanTimes, httpSessions, usedPhysicalMemorySize);
+	probs = 
+		// a            b            c             // httpMeanTimes httpSessions usedPhysicalMemorySize 
+		  (0.08333334,  0.08333334,  0.8333333,    // a             a            a                      
+		   0.7777778,   0.1111111,   0.1111111,    // a             a            b                      
+		   0.009615385, 0.25,        0.7403846,    // a             a            c                      
+		   0.2916667,   0.04166667,  0.6666667,    // a             b            a                      
+		   0.3846154,   0.5384616,   0.07692308,   // a             b            b                      
+		   0.02941176,  0.9411765,   0.02941176,   // a             b            c                      
+		   0.3913043,   0.04347826,  0.5652174,    // a             c            a                      
+		   0.5,         0.25,        0.25,         // a             c            b                      
+		   0.0625,      0.875,       0.0625,       // a             c            c                      
+		   0.1666667,   0.1666667,   0.6666667,    // b             a            a                      
+		   0.7777778,   0.2,         0.02222222,   // b             a            b                      
+		   0.3333333,   0.3333333,   0.3333333,    // b             a            c                      
+		   0.375,       0.03125,     0.59375,      // b             b            a                      
+		   0.2352941,   0.7352941,   0.02941176,   // b             b            b                      
+		   0.04,        0.92,        0.04,         // b             b            c                      
+		   0.5714286,   0.01785714,  0.4107143,    // b             c            a                      
+		   0.9310345,   0.03448276,  0.03448276,   // b             c            b                      
+		   0.1,         0.8,         0.1,          // b             c            c                      
+		   0.1428571,   0.1428571,   0.7142857,    // c             a            a                      
+		   0.4761905,   0.5,         0.02380952,   // c             a            b                      
+		   0.09090909,  0.09090909,  0.8181818,    // c             a            c                      
+		   0.4347826,   0.04347826,  0.5217391,    // c             b            a                      
+		   0.05555556,  0.9166667,   0.02777778,   // c             b            b                      
+		   0.05555556,  0.05555556,  0.8888889,    // c             b            c                      
+		   0.8214286,   0.01785714,  0.1607143,    // c             c            a                      
+		   0.9259259,   0.03703704,  0.03703704,   // c             c            b                      
+		   0.05882353,  0.7058824,   0.2352941);   // c             c            c                      ;
+	numcases = 
+		                 // httpMeanTimes httpSessions usedPhysicalMemorySize 
+		  (12,           // a             a            a                      
+		   9,            // a             a            b                      
+		   104,          // a             a            c                      
+		   24,           // a             b            a                      
+		   13,           // a             b            b                      
+		   34,           // a             b            c                      
+		   23,           // a             c            a                      
+		   4,            // a             c            b                      
+		   16,           // a             c            c                      
+		   6,            // b             a            a                      
+		   45,           // b             a            b                      
+		   3,            // b             a            c                      
+		   32,           // b             b            a                      
+		   34,           // b             b            b                      
+		   25,           // b             b            c                      
+		   56,           // b             c            a                      
+		   29,           // b             c            b                      
+		   10,           // b             c            c                      
+		   7,            // c             a            a                      
+		   42,           // c             a            b                      
+		   11,           // c             a            c                      
+		   23,           // c             b            a                      
+		   36,           // c             b            b                      
+		   18,           // c             b            c                      
+		   56,           // c             c            a                      
+		   27,           // c             c            b                      
+		   17);          // c             c            c                      ;
+	whenchanged = 1495613081;
+	};
+
+node usedMemory {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (clients, http4xxNum, http5xxNum);
+	probs = 
+		// a            b            c             // clients http4xxNum http5xxNum 
+		  (0.9354839,   0.03225806,  0.03225806,   // a       a          a          
+		   0.3333333,   0.3333333,   0.3333333,    // a       a          b          
+		   0.3333333,   0.3333333,   0.3333333,    // a       a          c          
+		   0.3333333,   0.3333333,   0.3333333,    // a       b          a          
+		   0.3333333,   0.3333333,   0.3333333,    // a       b          b          
+		   0.01960784,  0.01960784,  0.9607843,    // a       b          c          
+		   0.9666666,   0.01666667,  0.01666667,   // a       c          a          
+		   0.3333333,   0.3333333,   0.3333333,    // a       c          b          
+		   0.0125,      0.45,        0.5375,       // a       c          c          
+		   0.8571429,   0.1309524,   0.01190476,   // b       a          a          
+		   0.5789474,   0.368421,    0.05263158,   // b       a          b          
+		   0.3333333,   0.3333333,   0.3333333,    // b       a          c          
+		   0.3333333,   0.3333333,   0.3333333,    // b       b          a          
+		   0.3333333,   0.3333333,   0.3333333,    // b       b          b          
+		   0.02040816,  0.3061225,   0.6734694,    // b       b          c          
+		   0.9591837,   0.02040816,  0.02040816,   // b       c          a          
+		   0.3333333,   0.3333333,   0.3333333,    // b       c          b          
+		   0.03703704,  0.7037037,   0.2592593,    // b       c          c          
+		   0.3333333,   0.3333333,   0.3333333,    // c       a          a          
+		   0.009090909, 0.7090909,   0.2818182,    // c       a          b          
+		   0.3333333,   0.3333333,   0.3333333,    // c       a          c          
+		   0.3333333,   0.3333333,   0.3333333,    // c       b          a          
+		   0.01030928,  0.5463917,   0.443299,     // c       b          b          
+		   0.07142857,  0.07142857,  0.8571429,    // c       b          c          
+		   0.3333333,   0.3333333,   0.3333333,    // c       c          a          
+		   0.3333333,   0.3333333,   0.3333333,    // c       c          b          
+		   0.3333333,   0.3333333,   0.3333333);   // c       c          c          ;
+	numcases = 
+		                 // clients http4xxNum http5xxNum 
+		  (31,           // a       a          a          
+		   3,            // a       a          b          
+		   3,            // a       a          c          
+		   3,            // a       b          a          
+		   3,            // a       b          b          
+		   51,           // a       b          c          
+		   60,           // a       c          a          
+		   3,            // a       c          b          
+		   80,           // a       c          c          
+		   84,           // b       a          a          
+		   19,           // b       a          b          
+		   3,            // b       a          c          
+		   3,            // b       b          a          
+		   3,            // b       b          b          
+		   49,           // b       b          c          
+		   49,           // b       c          a          
+		   3,            // b       c          b          
+		   27,           // b       c          c          
+		   3,            // c       a          a          
+		   110,          // c       a          b          
+		   3,            // c       a          c          
+		   3,            // c       b          a          
+		   97,           // c       b          b          
+		   14,           // c       b          c          
+		   3,            // c       c          a          
+		   3,            // c       c          b          
+		   3);           // c       c          c          ;
+	whenchanged = 1495613081;
+	};
+
+node http_Cpu_Time_Sum {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http4xxNum, httpSessions, usedMemory);
+	probs = 
+		// a            b            c             // http4xxNum httpSessions usedMemory 
+		  (0.3333333,   0.3333333,   0.3333333,    // a          a            a          
+		   0.02941176,  0.9411765,   0.02941176,   // a          a            b          
+		   0.03225806,  0.9354839,   0.03225806,   // a          a            c          
+		   0.03846154,  0.9230769,   0.03846154,   // a          b            a          
+		   0.05882353,  0.8823529,   0.05882353,   // a          b            b          
+		   0.25,        0.5,         0.25,         // a          b            c          
+		   0.02247191,  0.9662921,   0.01123596,   // a          c            a          
+		   0.01960784,  0.509804,    0.4705882,    // a          c            b          
+		   0.25,        0.5,         0.25,         // a          c            c          
+		   0.3333333,   0.3333333,   0.3333333,    // b          a            a          
+		   0.06666667,  0.8666667,   0.06666667,   // b          a            b          
+		   0.02272727,  0.9545454,   0.02272727,   // b          a            c          
+		   0.3333333,   0.3333333,   0.3333333,    // b          b            a          
+		   0.01785714,  0.9642857,   0.01785714,   // b          b            b          
+		   0.01538462,  0.9692308,   0.01538462,   // b          b            c          
+		   0.3333333,   0.3333333,   0.3333333,    // b          c            a          
+		   0.25,        0.5,         0.25,         // b          c            b          
+		   0.03030303,  0.9393939,   0.03030303,   // b          c            c          
+		   0.05,        0.05,        0.9,          // c          a            a          
+		   0.02272727,  0.9545454,   0.02272727,   // c          a            b          
+		   0.02222222,  0.9555556,   0.02222222,   // c          a            c          
+		   0.0212766,   0.0212766,   0.9574468,    // c          b            a          
+		   0.07142857,  0.8571429,   0.07142857,   // c          b            b          
+		   0.1428571,   0.7142857,   0.1428571,    // c          b            c          
+		   0.02222222,  0.02222222,  0.9555556,    // c          c            a          
+		   0.25,        0.5,         0.25,         // c          c            b          
+		   0.2,         0.6,         0.2);         // c          c            c          ;
+	numcases = 
+		                 // http4xxNum httpSessions usedMemory 
+		  (3,            // a          a            a          
+		   34,           // a          a            b          
+		   31,           // a          a            c          
+		   26,           // a          b            a          
+		   17,           // a          b            b          
+		   4,            // a          b            c          
+		   89,           // a          c            a          
+		   51,           // a          c            b          
+		   4,            // a          c            c          
+		   3,            // b          a            a          
+		   15,           // b          a            b          
+		   44,           // b          a            c          
+		   3,            // b          b            a          
+		   56,           // b          b            b          
+		   65,           // b          b            c          
+		   3,            // b          c            a          
+		   4,            // b          c            b          
+		   33,           // b          c            c          
+		   20,           // c          a            a          
+		   44,           // c          a            b          
+		   45,           // c          a            c          
+		   47,           // c          b            a          
+		   14,           // c          b            b          
+		   7,            // c          b            c          
+		   45,           // c          c            a          
+		   4,            // c          c            b          
+		   5);           // c          c            c          ;
+	whenchanged = 1495613081;
+	};
+
+node HTTP_SYSTEM_ERROR {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (httpSessions, http_Cpu_Time_Sum, usedPhysicalMemorySize);
+	probs = 
+		// a            b            c             // httpSessions http_Cpu_Time_Sum usedPhysicalMemorySize 
+		  (0.3333333,   0.3333333,   0.3333333,    // a            a                 a                      
+		   0.3333333,   0.3333333,   0.3333333,    // a            a                 b                      
+		   0.3333333,   0.3333333,   0.3333333,    // a            a                 c                      
+		   0.3333333,   0.3333333,   0.3333333,    // a            b                 a                      
+		   0.01111111,  0.9777778,   0.01111111,   // a            b                 b                      
+		   0.009009009, 0.981982,    0.009009009,  // a            b                 c                      
+		   0.05263158,  0.8947368,   0.05263158,   // a            c                 a                      
+		   0.3333333,   0.3333333,   0.3333333,    // a            c                 b                      
+		   0.5,         0.25,        0.25,         // a            c                 c                      
+		   0.3333333,   0.3333333,   0.3333333,    // b            a                 a                      
+		   0.3333333,   0.3333333,   0.3333333,    // b            a                 b                      
+		   0.3333333,   0.3333333,   0.3333333,    // b            a                 c                      
+		   0.7586207,   0.2068966,   0.03448276,   // b            b                 a                      
+		   0.01298701,  0.974026,    0.01298701,   // b            b                 b                      
+		   0.01408451,  0.971831,    0.01408451,   // b            b                 c                      
+		   0.0212766,   0.3191489,   0.6595744,    // b            c                 a                      
+		   0.3333333,   0.3333333,   0.3333333,    // b            c                 b                      
+		   0.3333333,   0.3333333,   0.3333333,    // b            c                 c                      
+		   0.5,         0.25,        0.25,         // c            a                 a                      
+		   0.3333333,   0.3333333,   0.3333333,    // c            a                 b                      
+		   0.3333333,   0.3333333,   0.3333333,    // c            a                 c                      
+		   0.3255814,   0.6627907,   0.01162791,   // c            b                 a                      
+		   0.03225806,  0.9354839,   0.03225806,   // c            b                 b                      
+		   0.02702703,  0.9459459,   0.02702703,   // c            b                 c                      
+		   0.02222222,  0.02222222,  0.9555556,    // c            c                 a                      
+		   0.03846154,  0.9230769,   0.03846154,   // c            c                 b                      
+		   0.3333333,   0.3333333,   0.3333333);   // c            c                 c                      ;
+	numcases = 
+		                 // httpSessions http_Cpu_Time_Sum usedPhysicalMemorySize 
+		  (3,            // a            a                 a                      
+		   3,            // a            a                 b                      
+		   3,            // a            a                 c                      
+		   3,            // a            b                 a                      
+		   90,           // a            b                 b                      
+		   111,          // a            b                 c                      
+		   19,           // a            c                 a                      
+		   3,            // a            c                 b                      
+		   4,            // a            c                 c                      
+		   3,            // b            a                 a                      
+		   3,            // b            a                 b                      
+		   3,            // b            a                 c                      
+		   29,           // b            b                 a                      
+		   77,           // b            b                 b                      
+		   71,           // b            b                 c                      
+		   47,           // b            c                 a                      
+		   3,            // b            c                 b                      
+		   3,            // b            c                 c                      
+		   4,            // c            a                 a                      
+		   3,            // c            a                 b                      
+		   3,            // c            a                 c                      
+		   86,           // c            b                 a                      
+		   31,           // c            b                 b                      
+		   37,           // c            b                 c                      
+		   45,           // c            c                 a                      
+		   26,           // c            c                 b                      
+		   3);           // c            c                 c                      ;
+	whenchanged = 1495613081;
+	};
+
+node httpSessionsMeanAge {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (HTTP_SYSTEM_ERROR, clients, http4xxNum);
+	probs = 
+		// a            b            c             // HTTP_SYSTEM_ERROR clients http4xxNum 
+		  (0.04761905,  0.7142857,   0.2380952,    // a                 a       a          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 a       b          
+		   0.5,         0.25,        0.25,         // a                 a       c          
+		   0.02941176,  0.8823529,   0.0882353,    // a                 b       a          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 b       b          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 b       c          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 c       a          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 c       b          
+		   0.3333333,   0.3333333,   0.3333333,    // a                 c       c          
+		   0.07692308,  0.6923077,   0.2307692,    // b                 a       a          
+		   0.3529412,   0.07843138,  0.5686275,    // b                 a       b          
+		   0.6972477,   0.09174312,  0.2110092,    // b                 a       c          
+		   0.1884058,   0.6666667,   0.1449275,    // b                 b       a          
+		   0.8163266,   0.1632653,   0.02040816,   // b                 b       b          
+		   0.8928571,   0.07142857,  0.03571429,   // b                 b       c          
+		   0.3454545,   0.2545455,   0.4,          // b                 c       a          
+		   0.06481481,  0.8055556,   0.1296296,    // b                 c       b          
+		   0.3333333,   0.3333333,   0.3333333,    // b                 c       c          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 a       a          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 a       b          
+		   0.03333334,  0.6,         0.3666667,    // c                 a       c          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 b       a          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 b       b          
+		   0.1041667,   0.875,       0.02083333,   // c                 b       c          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 c       a          
+		   0.3333333,   0.3333333,   0.3333333,    // c                 c       b          
+		   0.3333333,   0.3333333,   0.3333333);   // c                 c       c          ;
+	numcases = 
+		                 // HTTP_SYSTEM_ERROR clients http4xxNum 
+		  (21,           // a                 a       a          
+		   3,            // a                 a       b          
+		   4,            // a                 a       c          
+		   34,           // a                 b       a          
+		   3,            // a                 b       b          
+		   3,            // a                 b       c          
+		   3,            // a                 c       a          
+		   3,            // a                 c       b          
+		   3,            // a                 c       c          
+		   13,           // b                 a       a          
+		   51,           // b                 a       b          
+		   109,          // b                 a       c          
+		   69,           // b                 b       a          
+		   49,           // b                 b       b          
+		   28,           // b                 b       c          
+		   110,          // b                 c       a          
+		   108,          // b                 c       b          
+		   3,            // b                 c       c          
+		   3,            // c                 a       a          
+		   3,            // c                 a       b          
+		   30,           // c                 a       c          
+		   3,            // c                 b       a          
+		   3,            // c                 b       b          
+		   48,           // c                 b       c          
+		   3,            // c                 c       a          
+		   3,            // c                 c       b          
+		   3);           // c                 c       c          ;
+	whenchanged = 1495613081;
 	};
 
 node cpu {
@@ -136,64 +689,523 @@ node cpu {
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (session_count, thread_count, used_memory);
+	parents = (fileDescriptors, http_Error_Hits);
 	probs = 
-		// a            b            c             // session_count thread_count used_memory 
-		  (0.8289474,   0.125,       0.04605263,   // a             a            a           
-		   0.7264957,   0.1623932,   0.1111111,    // a             a            b           
-		   0.3333333,   0.3333333,   0.3333333,    // a             a            c           
-		   0.1111111,   0.1111111,   0.7777778,    // a             b            a           
-		   0.03703704,  0.4814815,   0.4814815,    // a             b            b           
-		   0.3333333,   0.3333333,   0.3333333,    // a             b            c           
-		   0.1111111,   0.1111111,   0.7777778,    // a             c            a           
-		   0.3333333,   0.3333333,   0.3333333,    // a             c            b           
-		   0.3333333,   0.3333333,   0.3333333,    // a             c            c           
-		   0.5528455,   0.2845528,   0.1626016,    // b             a            a           
-		   0.7333333,   0.09333333,  0.1733333,    // b             a            b           
-		   0.3333333,   0.3333333,   0.3333333,    // b             a            c           
-		   0.1111111,   0.7777778,   0.1111111,    // b             b            a           
-		   0.02222222,  0.02222222,  0.9555556,    // b             b            b           
-		   0.04761905,  0.3333333,   0.6190476,    // b             b            c           
-		   0.3333333,   0.3333333,   0.3333333,    // b             c            a           
-		   0.03846154,  0.2692308,   0.6923077,    // b             c            b           
-		   0.7777778,   0.1111111,   0.1111111,    // b             c            c           
-		   0.1111111,   0.1111111,   0.7777778,    // c             a            a           
-		   0.4666667,   0.06666667,  0.4666667,    // c             a            b           
-		   0.05,        0.9,         0.05,         // c             a            c           
-		   0.1111111,   0.1111111,   0.7777778,    // c             b            a           
-		   0.06666667,  0.4666667,   0.4666667,    // c             b            b           
-		   0.01234568,  0.6049383,   0.3827161,    // c             b            c           
-		   0.3333333,   0.3333333,   0.3333333,    // c             c            a           
-		   0.3333333,   0.3333333,   0.3333333,    // c             c            b           
-		   0.005434783, 0.6630435,   0.3315217);   // c             c            c           ;
+		// a            b            c             // fileDescriptors http_Error_Hits 
+		  (0.02197802,  0.2637363,   0.7142857,    // a               a               
+		   0.5,         0.25,        0.25,         // a               b               
+		   0.976,       0.016,       0.008,        // a               c               
+		   0.00862069,  0.1810345,   0.8103448,    // b               a               
+		   0.3026316,   0.6447368,   0.05263158,   // b               b               
+		   0.03333334,  0.8666667,   0.1,          // b               c               
+		   0.07142857,  0.07142857,  0.8571429,    // c               a               
+		   0.02684564,  0.8389262,   0.1342282,    // c               b               
+		   0.01754386,  0.4736842,   0.508772);    // c               c               ;
 	numcases = 
-		                 // session_count thread_count used_memory 
-		  (152,          // a             a            a           
-		   117,          // a             a            b           
-		   3,            // a             a            c           
-		   9,            // a             b            a           
-		   27,           // a             b            b           
-		   3,            // a             b            c           
-		   9,            // a             c            a           
-		   3,            // a             c            b           
-		   3,            // a             c            c           
-		   123,          // b             a            a           
-		   75,           // b             a            b           
-		   3,            // b             a            c           
-		   9,            // b             b            a           
-		   45,           // b             b            b           
-		   21,           // b             b            c           
-		   3,            // b             c            a           
-		   26,           // b             c            b           
-		   9,            // b             c            c           
-		   9,            // c             a            a           
-		   15,           // c             a            b           
-		   20,           // c             a            c           
-		   9,            // c             b            a           
-		   15,           // c             b            b           
-		   81,           // c             b            c           
-		   3,            // c             c            a           
-		   3,            // c             c            b           
-		   184);         // c             c            c           ;
+		                 // fileDescriptors http_Error_Hits 
+		  (91,           // a               a               
+		   4,            // a               b               
+		   125,          // a               c               
+		   116,          // b               a               
+		   76,           // b               b               
+		   30,           // b               c               
+		   14,           // c               a               
+		   149,          // c               b               
+		   57);          // c               c               ;
+	whenchanged = 1495613081;
+	};
+
+node usedSwapSpaceSize {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (HTTP_SYSTEM_ERROR, cpu);
+	functable = 
+		                    // HTTP_SYSTEM_ERROR cpu 
+		  (a,               // a                 a   
+		   a,               // a                 b   
+		   a,               // a                 c   
+		   a,               // b                 a   
+		   a,               // b                 b   
+		   a,               // b                 c   
+		   a,               // c                 a   
+		   a,               // c                 b   
+		   a);              // c                 c   ;
+	numcases = 
+		                 // HTTP_SYSTEM_ERROR cpu 
+		  (1,            // a                 a   
+		   20,           // a                 b   
+		   32,           // a                 c   
+		   149,          // b                 a   
+		   242,          // b                 b   
+		   125,          // b                 c   
+		   1,            // c                 a   
+		   8,            // c                 b   
+		   66);          // c                 c   ;
+	whenchanged = 1495613081;
+	};
+
+node threadCount {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (fileDescriptors, http4xxNum, usedPhysicalMemorySize);
+	probs = 
+		// a            b            c             // fileDescriptors http4xxNum usedPhysicalMemorySize 
+		  (0.02857143,  0.9428571,   0.02857143,   // a               a          a                      
+		   0.5,         0.25,        0.25,         // a               a          b                      
+		   0.3333333,   0.3333333,   0.3333333,    // a               a          c                      
+		   0.3333333,   0.3333333,   0.3333333,    // a               b          a                      
+		   0.3333333,   0.3333333,   0.3333333,    // a               b          b                      
+		   0.9375,      0.02083333,  0.04166667,   // a               b          c                      
+		   0.03389831,  0.9491525,   0.01694915,   // a               c          a                      
+		   0.3333333,   0.3333333,   0.3333333,    // a               c          b                      
+		   0.9625,      0.025,       0.0125,       // a               c          c                      
+		   0.01428571,  0.9714286,   0.01428571,   // b               a          a                      
+		   0.02777778,  0.2222222,   0.75,         // b               a          b                      
+		   0.3333333,   0.3333333,   0.3333333,    // b               a          c                      
+		   0.3333333,   0.3333333,   0.3333333,    // b               b          a                      
+		   0.02564103,  0.2051282,   0.7692308,    // b               b          b                      
+		   0.0625,      0.0625,      0.875,        // b               b          c                      
+		   0.02040816,  0.9591837,   0.02040816,   // b               c          a                      
+		   0.3333333,   0.3333333,   0.3333333,    // b               c          b                      
+		   0.04761905,  0.9047619,   0.04761905,   // b               c          c                      
+		   0.07142857,  0.8571429,   0.07142857,   // c               a          a                      
+		   0.01098901,  0.03296703,  0.956044,     // c               a          b                      
+		   0.3333333,   0.3333333,   0.3333333,    // c               a          c                      
+		   0.3333333,   0.3333333,   0.3333333,    // c               b          a                      
+		   0.01754386,  0.0877193,   0.8947368,    // c               b          b                      
+		   0.01851852,  0.01851852,  0.962963,     // c               b          c                      
+		   0.3333333,   0.3333333,   0.3333333,    // c               c          a                      
+		   0.3333333,   0.3333333,   0.3333333,    // c               c          b                      
+		   0.1,         0.8,         0.1);         // c               c          c                      ;
+	numcases = 
+		                 // fileDescriptors http4xxNum usedPhysicalMemorySize 
+		  (35,           // a               a          a                      
+		   4,            // a               a          b                      
+		   3,            // a               a          c                      
+		   3,            // a               b          a                      
+		   3,            // a               b          b                      
+		   48,           // a               b          c                      
+		   59,           // a               c          a                      
+		   3,            // a               c          b                      
+		   80,           // a               c          c                      
+		   70,           // b               a          a                      
+		   36,           // b               a          b                      
+		   3,            // b               a          c                      
+		   3,            // b               b          a                      
+		   39,           // b               b          b                      
+		   16,           // b               b          c                      
+		   49,           // b               c          a                      
+		   3,            // b               c          b                      
+		   21,           // b               c          c                      
+		   14,           // c               a          a                      
+		   91,           // c               a          b                      
+		   3,            // c               a          c                      
+		   3,            // c               b          a                      
+		   57,           // c               b          b                      
+		   54,           // c               b          c                      
+		   3,            // c               c          a                      
+		   3,            // c               c          b                      
+		   10);          // c               c          c                      ;
+	whenchanged = 1495613081;
+	};
+
+node tomcatBytesReceived {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (fileDescriptors, loadedClassesCount);
+	functable = 
+		                    // fileDescriptors loadedClassesCount 
+		  (a,               // a               a                  
+		   a,               // a               b                  
+		   a,               // a               c                  
+		   a,               // b               a                  
+		   a,               // b               b                  
+		   a,               // b               c                  
+		   a,               // c               a                  
+		   a,               // c               b                  
+		   a);              // c               c                  ;
+	numcases = 
+		                 // fileDescriptors loadedClassesCount 
+		  (93,           // a               a                  
+		   6,            // a               b                  
+		   115,          // a               c                  
+		   112,          // b               a                  
+		   67,           // b               b                  
+		   37,           // b               c                  
+		   4,            // c               a                  
+		   141,          // c               b                  
+		   69);          // c               c                  ;
+	whenchanged = 1495613081;
+	};
+
+node usedNonHeapMemory {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http5xxNum, loadedClassesCount);
+	probs = 
+		// a            b            c             // http5xxNum loadedClassesCount 
+		  (0.9902439,   0.004878049, 0.004878049,  // a          a                  
+		   0.8461539,   0.07692308,  0.07692308,   // a          b                  
+		   0.3333333,   0.3333333,   0.3333333,    // a          c                  
+		   0.3333333,   0.3333333,   0.3333333,    // b          a                  
+		   0.005,       0.99,        0.005,        // b          b                  
+		   0.04347826,  0.6956522,   0.2608696,    // b          c                  
+		   0.1428571,   0.1428571,   0.7142857,    // c          a                  
+		   0.1428571,   0.1428571,   0.7142857,    // c          b                  
+		   0.004975124, 0.004975124, 0.9900498);   // c          c                  ;
+	numcases = 
+		                 // http5xxNum loadedClassesCount 
+		  (205,          // a          a                  
+		   13,           // a          b                  
+		   3,            // a          c                  
+		   3,            // b          a                  
+		   200,          // b          b                  
+		   23,           // b          c                  
+		   7,            // c          a                  
+		   7,            // c          b                  
+		   201);         // c          c                  ;
+	whenchanged = 1495613081;
+	};
+
+node httpHitsRate {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (cpu, http_Error_Hits, tomcatBytesReceived);
+	probs = 
+		// a            b            c             // cpu http_Error_Hits tomcatBytesReceived 
+		  (0.5,         0.25,        0.25,         // a   a               a                   
+		   0.9310345,   0.03448276,  0.03448276,   // a   b               a                   
+		   0.983871,    0.008064516, 0.008064516,  // a   c               a                   
+		   0.1521739,   0.5869565,   0.2608696,    // b   a               a                   
+		   0.3085714,   0.5714286,   0.12,         // b   b               a                   
+		   0.05454545,  0.3454545,   0.6,          // b   c               a                   
+		   0.02339181,  0.3333333,   0.6432748,    // c   a               a                   
+		   0.04,        0.56,        0.4,          // c   b               a                   
+		   0.03030303,  0.03030303,  0.9393939);   // c   c               a                   ;
+	numcases = 
+		                 // cpu http_Error_Hits tomcatBytesReceived 
+		  (4,            // a   a               a                   
+		   29,           // a   b               a                   
+		   124,          // a   c               a                   
+		   46,           // b   a               a                   
+		   175,          // b   b               a                   
+		   55,           // b   c               a                   
+		   171,          // c   a               a                   
+		   25,           // c   b               a                   
+		   33);          // c   c               a                   ;
+	whenchanged = 1495613081;
+	};
+
+node tomcatBytesSent {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (http5xxNum, httpHitsRate, httpMeanTimes);
+	probs = 
+		// a            b            c             // http5xxNum httpHitsRate httpMeanTimes 
+		  (0.6,         0.3,         0.1,          // a          a            a             
+		   0.3333333,   0.3333333,   0.3333333,    // a          a            b             
+		   0.6666667,   0.1666667,   0.1666667,    // a          a            c             
+		   0.07142857,  0.7857143,   0.1428571,    // a          b            a             
+		   0.02777778,  0.6111111,   0.3611111,    // a          b            b             
+		   0.02439024,  0.3414634,   0.6341463,    // a          b            c             
+		   0.02857143,  0.8571429,   0.1142857,    // a          c            a             
+		   0.01818182,  0.5636364,   0.4181818,    // a          c            b             
+		   0.02564103,  0.02564103,  0.948718,     // a          c            c             
+		   0.8666667,   0.06666667,  0.06666667,   // b          a            a             
+		   0.8055556,   0.1666667,   0.02777778,   // b          a            b             
+		   0.4,         0.5428572,   0.05714286,   // b          a            c             
+		   0.125,       0.75,        0.125,        // b          b            a             
+		   0.4107143,   0.5535714,   0.03571429,   // b          b            b             
+		   0.03571429,  0.5178571,   0.4464286,    // b          b            c             
+		   0.3333333,   0.3333333,   0.3333333,    // b          c            a             
+		   0.05,        0.55,        0.4,          // b          c            b             
+		   0.06666667,  0.1333333,   0.8,          // b          c            c             
+		   0.982906,    0.008547009, 0.008547009,  // c          a            a             
+		   0.8333333,   0.08333334,  0.08333334,   // c          a            b             
+		   0.2,         0.4,         0.4,          // c          a            c             
+		   0.5,         0.3333333,   0.1666667,    // c          b            a             
+		   0.4,         0.5,         0.1,          // c          b            b             
+		   0.08333334,  0.08333334,  0.8333333,    // c          b            c             
+		   0.03225806,  0.06451613,  0.9032258,    // c          c            a             
+		   0.08333334,  0.3333333,   0.5833333,    // c          c            b             
+		   0.03571429,  0.03571429,  0.9285714);   // c          c            c             ;
+	numcases = 
+		                 // http5xxNum httpHitsRate httpMeanTimes 
+		  (10,           // a          a            a             
+		   3,            // a          a            b             
+		   6,            // a          a            c             
+		   14,           // a          b            a             
+		   36,           // a          b            b             
+		   41,           // a          b            c             
+		   35,           // a          c            a             
+		   55,           // a          c            b             
+		   39,           // a          c            c             
+		   15,           // b          a            a             
+		   36,           // b          a            b             
+		   35,           // b          a            c             
+		   8,            // b          b            a             
+		   56,           // b          b            b             
+		   56,           // b          b            c             
+		   3,            // b          c            a             
+		   20,           // b          c            b             
+		   15,           // b          c            c             
+		   117,          // c          a            a             
+		   12,           // c          a            b             
+		   5,            // c          a            c             
+		   6,            // c          b            a             
+		   10,           // c          b            b             
+		   12,           // c          b            c             
+		   31,           // c          c            a             
+		   12,           // c          c            b             
+		   28);          // c          c            c             ;
+	whenchanged = 1495613081;
+	};
+
+node httpSystemErrors {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (httpMeanTimes);
+	probs = 
+		// a            b            c             // httpMeanTimes 
+		  (0.9627907,   0.02325581,  0.01395349,   // a             
+		   0.8564815,   0.1203704,   0.02314815,   // b             
+		   0.3286385,   0.2816902,   0.3896714);   // c             ;
+	numcases = 
+		                 // httpMeanTimes 
+		  (215,          // a             
+		   216,          // b             
+		   213);         // c             ;
+	whenchanged = 1495613081;
+	};
+
+node activeConnections {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (usedConnections);
+	probs = 
+		// a            b            c             // usedConnections 
+		  (0.990196,    0.004901961, 0.004901961,  // a               
+		   0.9847095,   0.01223242,  0.003058104,  // b               
+		   0.9469026,   0.01769911,  0.03539823);  // c               ;
+	numcases = 
+		                 // usedConnections 
+		  (204,          // a               
+		   327,          // b               
+		   113);         // c               ;
+	whenchanged = 1495613081;
+	};
+
+node tomcatBusyThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (activeConnections, threadCount, tomcatBytesSent);
+	probs = 
+		// a            b            c             // activeConnections threadCount tomcatBytesSent 
+		  (0.984,       0.008,       0.008,        // a                 a           a               
+		   0.3333333,   0.3333333,   0.3333333,    // a                 a           b               
+		   0.3333333,   0.3333333,   0.3333333,    // a                 a           c               
+		   0.8571429,   0.04761905,  0.0952381,    // a                 b           a               
+		   0.4051724,   0.3965517,   0.1982759,    // a                 b           b               
+		   0.1640625,   0.375,       0.4609375,    // a                 b           c               
+		   0.9027778,   0.08333334,  0.01388889,   // a                 c           a               
+		   0.6862745,   0.245098,    0.06862745,   // a                 c           b               
+		   0.4235294,   0.2352941,   0.3411765,    // a                 c           c               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 a           a               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 a           b               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 a           c               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 b           a               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 b           b               
+		   0.25,        0.25,        0.5,          // b                 b           c               
+		   0.25,        0.25,        0.5,          // b                 c           a               
+		   0.3333333,   0.3333333,   0.3333333,    // b                 c           b               
+		   0.2,         0.6,         0.2,          // b                 c           c               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 a           a               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 a           b               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 a           c               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 b           a               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 b           b               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 b           c               
+		   0.2,         0.2,         0.6,          // c                 c           a               
+		   0.3333333,   0.3333333,   0.3333333,    // c                 c           b               
+		   0.25,        0.25,        0.5);         // c                 c           c               ;
+	numcases = 
+		                 // activeConnections threadCount tomcatBytesSent 
+		  (125,          // a                 a           a               
+		   3,            // a                 a           b               
+		   3,            // a                 a           c               
+		   21,           // a                 b           a               
+		   116,          // a                 b           b               
+		   128,          // a                 b           c               
+		   72,           // a                 c           a               
+		   102,          // a                 c           b               
+		   85,           // a                 c           c               
+		   3,            // b                 a           a               
+		   3,            // b                 a           b               
+		   3,            // b                 a           c               
+		   3,            // b                 b           a               
+		   3,            // b                 b           b               
+		   4,            // b                 b           c               
+		   4,            // b                 c           a               
+		   3,            // b                 c           b               
+		   5,            // b                 c           c               
+		   3,            // c                 a           a               
+		   3,            // c                 a           b               
+		   3,            // c                 a           c               
+		   3,            // c                 b           a               
+		   3,            // c                 b           b               
+		   3,            // c                 b           c               
+		   5,            // c                 c           a               
+		   3,            // c                 c           b               
+		   4);           // c                 c           c               ;
+	whenchanged = 1495613081;
+	};
+
+node activeThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (httpSystemErrors, tomcatBusyThreads);
+	probs = 
+		// a            b            c             // httpSystemErrors tomcatBusyThreads 
+		  (0.9937107,   0.003144654, 0.003144654,  // a                a                 
+		   0.01123596,  0.9775281,   0.01123596,   // a                b                 
+		   0.01639344,  0.01639344,  0.9672131,    // a                c                 
+		   0.9230769,   0.03846154,  0.03846154,   // b                a                 
+		   0.1578947,   0.8157895,   0.02631579,   // b                b                 
+		   0.03030303,  0.09090909,  0.8787879,    // b                c                 
+		   0.9473684,   0.02631579,  0.02631579,   // c                a                 
+		   0.1666667,   0.7916667,   0.04166667,   // c                b                 
+		   0.02857143,  0.2571429,   0.7142857);   // c                c                 ;
+	numcases = 
+		                 // httpSystemErrors tomcatBusyThreads 
+		  (318,          // a                a                 
+		   89,           // a                b                 
+		   61,           // a                c                 
+		   26,           // b                a                 
+		   38,           // b                b                 
+		   33,           // b                c                 
+		   38,           // c                a                 
+		   24,           // c                b                 
+		   35);          // c                c                 ;
+	whenchanged = 1495613081;
+	};
+
+node deadLockThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (activeThreads, httpMeanTimes);
+	functable = 
+		                    // activeThreads httpMeanTimes 
+		  (a,               // a             a             
+		   a,               // a             b             
+		   a,               // a             c             
+		   a,               // b             a             
+		   a,               // b             b             
+		   a,               // b             c             
+		   a,               // c             a             
+		   a,               // c             b             
+		   a);              // c             c             ;
+	numcases = 
+		                 // activeThreads httpMeanTimes 
+		  (180,          // a             a             
+		   129,          // a             b             
+		   75,           // a             c             
+		   28,           // b             a             
+		   53,           // b             b             
+		   66,           // b             c             
+		   7,            // c             a             
+		   34,           // c             b             
+		   72);          // c             c             ;
+	whenchanged = 1495613081;
+	};
+
+node systemLoad {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (deadLockThreads, threadCount, usedNonHeapMemory);
+	probs = 
+		// a            b            c             // deadLockThreads threadCount usedNonHeapMemory 
+		  (0.25,        0.25,        0.5,          // a               a           a                 
+		   0.5,         0.25,        0.25,         // a               a           b                 
+		   0.9349594,   0.05691057,  0.008130081,  // a               a           c                 
+		   0.1308411,   0.4299065,   0.4392523,    // a               b           a                 
+		   0.5833333,   0.2083333,   0.2083333,    // a               b           b                 
+		   0.3214286,   0.6071429,   0.07142857,   // a               b           c                 
+		   0.3333333,   0.3333333,   0.3333333,    // a               c           a                 
+		   0.2020725,   0.3782384,   0.4196891,    // a               c           b                 
+		   0.1449275,   0.3188406,   0.5362319);   // a               c           c                 ;
+	numcases = 
+		                 // deadLockThreads threadCount usedNonHeapMemory 
+		  (4,            // a               a           a                 
+		   4,            // a               a           b                 
+		   123,          // a               a           c                 
+		   214,          // a               b           a                 
+		   24,           // a               b           b                 
+		   28,           // a               b           c                 
+		   3,            // a               c           a                 
+		   193,          // a               c           b                 
+		   69);          // a               c           c                 ;
+	whenchanged = 1495613081;
+	};
+
+node runningThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (cpu);
+	probs = 
+		// a            b            c             // cpu 
+		  (0.006622517, 0.986755,    0.006622517,  // a   
+		   0.003703704, 0.9814815,   0.01481481,   // b   
+		   0.00896861,  0.9058296,   0.08520179);  // c   ;
+	numcases = 
+		                 // cpu 
+		  (151,          // a   
+		   270,          // b   
+		   223);         // c   ;
+	whenchanged = 1495613081;
+	};
+
+node http_Durations_Sum {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (httpHitsRate);
+	functable = 
+		                    // httpHitsRate 
+		  (a,               // a            
+		   a,               // b            
+		   a);              // c            ;
+	numcases = 
+		                 // httpHitsRate 
+		  (213,          // a            
+		   213,          // b            
+		   212);         // c            ;
+	whenchanged = 1495613081;
 	};
 };

@@ -1,42 +1,272 @@
 // ~->[DNET-1]->~
 
-// File created by an unlicensed user using Netica 5.04 on Apr 28, 2017 at 17:34:12.
+// File created by WuB at DalianUTech using Netica 5.04 on May 24, 2017 at 16:04:41.
 
 bnet apm {
 autoupdate = FALSE;
+whenchanged = 1495613081;
 
-node used_memory {
+node gc {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
 	parents = ();
+	whenchanged = 1495613081;
 	};
 
-node session_count {
+node usedPhysicalMemorySize {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (used_memory);
+	parents = ();
+	whenchanged = 1495613081;
 	};
 
-node http_times {
+node http2xxNum {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (session_count, used_memory);
+	parents = (gc, usedPhysicalMemorySize);
+	whenchanged = 1495613081;
 	};
 
-node thread_count {
+node http5xxNum {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http_times, session_count, used_memory);
+	parents = (http2xxNum, usedPhysicalMemorySize);
+	whenchanged = 1495613081;
+	};
+
+node http_Error_Hits {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http5xxNum);
+	whenchanged = 1495613081;
+	};
+
+node http_Gobal_Hits {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http2xxNum, http5xxNum);
+	whenchanged = 1495613081;
+	};
+
+node free_disk_space {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http2xxNum, http_Gobal_Hits);
+	whenchanged = 1495613081;
+	};
+
+node usedConnections {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (free_disk_space);
+	whenchanged = 1495613081;
+	};
+
+node fileDescriptors {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http_Error_Hits, usedConnections);
+	whenchanged = 1495613081;
+	};
+
+node clients {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (fileDescriptors, http_Error_Hits);
+	whenchanged = 1495613081;
+	};
+
+node loadedClassesCount {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http_Gobal_Hits, usedConnections);
+	whenchanged = 1495613081;
+	};
+
+node httpSessions {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (clients, loadedClassesCount);
+	whenchanged = 1495613081;
+	};
+
+node httpMeanTimes {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (clients, loadedClassesCount);
+	whenchanged = 1495613081;
+	};
+
+node http4xxNum {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (httpMeanTimes, httpSessions, usedPhysicalMemorySize);
+	whenchanged = 1495613081;
+	};
+
+node usedMemory {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (clients, http4xxNum, http5xxNum);
+	whenchanged = 1495613081;
+	};
+
+node http_Cpu_Time_Sum {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http4xxNum, httpSessions, usedMemory);
+	whenchanged = 1495613081;
+	};
+
+node HTTP_SYSTEM_ERROR {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (httpSessions, http_Cpu_Time_Sum, usedPhysicalMemorySize);
+	whenchanged = 1495613081;
+	};
+
+node httpSessionsMeanAge {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (HTTP_SYSTEM_ERROR, clients, http4xxNum);
+	whenchanged = 1495613081;
 	};
 
 node cpu {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (session_count, thread_count, used_memory);
+	parents = (fileDescriptors, http_Error_Hits);
+	whenchanged = 1495613081;
+	};
+
+node usedSwapSpaceSize {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (HTTP_SYSTEM_ERROR, cpu);
+	whenchanged = 1495613081;
+	};
+
+node threadCount {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (fileDescriptors, http4xxNum, usedPhysicalMemorySize);
+	whenchanged = 1495613081;
+	};
+
+node tomcatBytesReceived {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (fileDescriptors, loadedClassesCount);
+	whenchanged = 1495613081;
+	};
+
+node usedNonHeapMemory {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http5xxNum, loadedClassesCount);
+	whenchanged = 1495613081;
+	};
+
+node httpHitsRate {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (cpu, http_Error_Hits, tomcatBytesReceived);
+	whenchanged = 1495613081;
+	};
+
+node tomcatBytesSent {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (http5xxNum, httpHitsRate, httpMeanTimes);
+	whenchanged = 1495613081;
+	};
+
+node httpSystemErrors {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (httpMeanTimes);
+	whenchanged = 1495613081;
+	};
+
+node activeConnections {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (usedConnections);
+	whenchanged = 1495613081;
+	};
+
+node tomcatBusyThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (activeConnections, threadCount, tomcatBytesSent);
+	whenchanged = 1495613081;
+	};
+
+node activeThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (httpSystemErrors, tomcatBusyThreads);
+	whenchanged = 1495613081;
+	};
+
+node deadLockThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (activeThreads, httpMeanTimes);
+	whenchanged = 1495613081;
+	};
+
+node systemLoad {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (deadLockThreads, threadCount, usedNonHeapMemory);
+	whenchanged = 1495613081;
+	};
+
+node runningThreads {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (cpu);
+	whenchanged = 1495613081;
+	};
+
+node http_Durations_Sum {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (httpHitsRate);
+	whenchanged = 1495613081;
 	};
 };

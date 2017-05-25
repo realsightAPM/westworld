@@ -24,7 +24,9 @@ public class NeticaApi {
 	public Map<String, String[]> rangeMap;
 	public Map<String, ArrayList<Double>> rangeDouble;
 	
-	public NeticaApi() throws Exception {}
+	public NeticaApi() throws Exception {
+		env = new Environ("+WuB/DalianUTech/310-7-A/9901");
+	}
 	
 	/************************************************************ ½¨Íø *********************************************************/
 	
@@ -50,7 +52,7 @@ public class NeticaApi {
 		}
 		
 //		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
-		env = new Environ(null);
+//		env = new Environ(null);
 		
 		net = new Net();
 		net.setName("apm");
@@ -95,7 +97,7 @@ public class NeticaApi {
 	/************************************************* loadÍøÂç *****************************************************/
 	
 	public void loadSimuNet() throws NeticaException, IOException {
-		env = new Environ(null);
+//		env = new Environ(null);
 		net = new Net(new Streamer ("netica_out_dir/Learned_netica.dne"));
 		net.setName("apm");
 		
@@ -109,7 +111,7 @@ public class NeticaApi {
 	}
 	
 	public void loadNet() throws NeticaException, IOException {
-		env = new Environ(null);
+//		env = new Environ(null);
 		net = new Net (new Streamer ("netica_out_dir/Learned_netica.dne"));
 		net.setName("apm");
 		loadRangeMap();
@@ -123,7 +125,7 @@ public class NeticaApi {
 	
 	public void loadNet(String dne_file, String cas_file) throws NeticaException, IOException {
 		
-		env = new Environ(null);
+//		env = new Environ(null);
 		net = new Net (new Streamer (dne_file));
 		net.setName("apm");
 		loadRangeMap();
@@ -137,7 +139,7 @@ public class NeticaApi {
 	
 	public void loadNet(String dne_file) throws NeticaException {
 		
-		env = new Environ(null);
+//		env = new Environ(null);
 		net = new Net (new Streamer (dne_file));
 		net.compile();
 	}

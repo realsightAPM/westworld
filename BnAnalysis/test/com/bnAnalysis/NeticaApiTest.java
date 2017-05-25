@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 
+import norsys.netica.NodeList;
+
 public class NeticaApiTest {
 
 //	@Test
@@ -26,11 +28,11 @@ public class NeticaApiTest {
 		NeticaApi netica = new NeticaApi();
 		
 		/*** begin: build netica. args: input_file, num_threads, num_bins ***/
-		netica.buildNet("inputjava_data1.csv", 2, 3);
+//		netica.buildNet("zheng.csv", 2, 3);//inputjava_data1
 		/*** end: build netica ***/
 		
 		/*** begin: load netica. the dne file must have been built ***/
-//		netica.loadNet();
+		netica.loadNet();
 		/*** end: load netica ***/
 		
 		netica.printRangeMap();
@@ -44,6 +46,11 @@ public class NeticaApiTest {
 //		
 //		res = netica.getInfer("cpu:c", "http_times:c");
 //		System.out.println("\n条件概率为：" + res);
+		System.out.println(netica.net.getNodes().size());
+		NodeList list = netica.net.getNodes();
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.getNode(i).getBelief("a"));
+		}
 		
 		System.out.println("\nFinish the test: if NeticaApi build Learned_netica.dne");
 	}
