@@ -48,7 +48,7 @@ public abstract class Observations implements ObservationsI {
 
     // The observationRowCount shows the number of rows that were loaded from
     // the associated data file(s) of an observations object
-    protected int observationRowCount;  
+    protected int observationRowCount;
     
     // The observationCount shows the number of actual observations used in computing
     // the score. Of course, for maxMarkovLag=0, both  observationCount and 
@@ -99,10 +99,10 @@ public abstract class Observations implements ObservationsI {
     // The (optional) names of the variables
     protected String[] variableNames;
     
-    public Observations( 
+    public Observations(
             final Settings _processData ) throws Exception {
 
-        processData = _processData; 
+        processData = _processData;
         
         varCount = Integer.parseInt( processData.getValidatedProcessParameter(
                 BANJO.SETTING_VARCOUNT ) );
@@ -170,12 +170,12 @@ public abstract class Observations implements ObservationsI {
         validValues.clear();
         validValues.add( BANJO.UI_VARIABLESAREINROWS_YES );
         validValues.add( BANJO.UI_VARIABLESAREINROWS_NO );
-        settingItem = processData.processSetting( settingNameCanonical, 
+        settingItem = processData.processSetting( settingNameCanonical,
                 settingNameDescriptive,
                 settingNameForDisplay,
                 settingDataType,
                 validationType,
-                validValues, 
+                validValues,
                 BANJO.DEFAULT_VARIABLESAREINROWS );
 
         // Validate:
@@ -215,7 +215,7 @@ public abstract class Observations implements ObservationsI {
             //    variable names (note: the length of the list needs to match the varCount,
             //    but we are lenient and fill in the names of variables that are left unassigned)
             
-            Pattern patternCheck1 = Pattern.compile( 
+            Pattern patternCheck1 = Pattern.compile(
                     BANJO.PATTERN_VARIABLENAMESCHECKFORCOLON );
             String strVariableNames = processData.getValidatedProcessParameter( 
                     BANJO.SETTING_VARIABLENAMES );

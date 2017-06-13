@@ -1,7 +1,7 @@
 
 digraph abstract { 
 
-label = "Banjo Version 2.2.0\nHigh scoring network, score: -3397.6475\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-898-observations"; 
+label = "Banjo Version 2.2.0\nHigh scoring network, score: -3436.4037\nProject: banjo apm data\nUser: wubin\nDataset: 5-vars-898-observations"; 
 labeljust="l"; 
 
     0 [label="cpu"];
@@ -10,14 +10,12 @@ labeljust="l";
     3 [label="thread"];
     4 [label="memory"];
 
-    2->0;
-    3->0;
-    4->0;
     2->1;
-    4->1;
-    4->2;
-    1->3;
-    2->3;
+    3->1;
+    0->2;
+    0->3;
     4->3;
+    0->4;
+    2->4;
 }
 

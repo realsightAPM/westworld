@@ -139,6 +139,7 @@ public class Banjo {
                 xmlProcessor.processXMLResultFiles( fileList );
             }
             else {
+//            	System.out.println("***************\n程序运行到了这里*********************\n");
                 //----------------------
                 //    "search" mode
                 //----------------------
@@ -178,7 +179,7 @@ public class Banjo {
             errorHandler.handleApplicationException( e, settings );
         }
         catch ( OutOfMemoryError e ) {
-                                    
+            
             errorHandler.handleOutOfMemoryError( e, settings );
         }
         catch ( Exception e ) {

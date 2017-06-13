@@ -2,102 +2,51 @@
 <html>
 
 <head xmlns:th="http://www.thymeleaf.org">
-<title>Spring Boot - POST-GET AJAXExample</title>
-<meta charset="utf-8"></meta>
-<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-<script src="/js/jquery-3.2.1.min.js"></script>
-<!-- <script src="/js/postrequest.js"></script> -->
-<script src="/js/get_response.js"></script>
-<script src="/js/d3.min.js"></script>
-<script src="/js/go.js"></script>
-<script src="/js/echarts.min.js"></script>
-
-<link rel='stylesheet' href='/css/dataInspector.css' />
-<script src="/js/dataInspector.js"></script>
-<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<title>Spring Boot - POST-GET AJAXExample</title>
+	<meta charset="utf-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/get_response.js"></script>
+	<script src="/js/d3.min.js"></script>
+	<script src="/js/go.js"></script>
+	<script src="/js/echarts.min.js"></script>
+	<script src="/js/dataInspector.js"></script>
+	
+	<link rel='stylesheet' href='/css/dataInspector.css' />
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
 </head>
 
 <body>
-<!-- <div id="getdiv0">
-	<button id="getBtn0">获得网络结构</button>
-</div>
- -->
-<div id="sample">
-    <span style="display: inline-block; vertical-align: top;">
-    	<div style="margin-left: 10px;">
-          <h2>Bayes Network</h2>
-        </div>
-        <div id="attrList2">
-        	<button type="submit" id="build_net" class="btn">Build</button>
-    		Select the target variable: 
-			<select id="set_value" class="list-group">
-			</select>
-			<button type="submit" id="set_target" class="btn btn-primary">Set</button>
-		</div>
-		<div id="target_list" style="width: 200px; height: 40px; margin-left: 50px;">
-		
-		</div>
-        <div style="margin-left: 10px;">
-          <div id="myDiagramDiv0" style="border: solid 1px black; width:600px; height:600px;"></div>
-        </div>
-    </span>
-    <span  style="display: inline-block; vertical-align: top;">
-    	<div id="history" style="width: 600px; height: 400px; margin-left: 50px;"></div>
-		<div id="main" style="width: 600px; height: 400px; margin-left: 50px;"></div>
-    </span>
-</div>
-
-<!-- <span id="perform_pie1" style="width: 100px; height: 400px;"></span>
-			<span id="perform_pie2" style="width: 100px; height: 400px;"></span> -->
-
-<div style="height: 600px;">
-	<div><h2>performance evaluation</h2></div>
-	<div id="performdiv">
-		<span id="perform_left" style="display: inline-block; vertical-align: top; width: 400px; height: 400px; margin-left: 50px;"></span>
-		<span id="perform_pie1" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
-		<span id="perform_pie2" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
-	</div>
-</div>
-
-<!-- 
-<div class="container">
-	<div id="CauseDiv">
-		<button id="CauseBtn">http根源性排序</button>
-	</div>
-	<div id="causeList">
-		<ul class="list-group"></ul>
-	</div>
-</div>
-
-<div class="container">
-	概率推理
-	<Form id="inferForm">
-			<div id="attrList">
-				<ul class="list-group"></ul>
+	<div>
+    	<span style="display: inline-block; vertical-align: top;">
+    		<div style="margin-left: 10px;">
+        		<h2>变量关系</h2>
+        	</div>
+        	<div id="pre_set">
+        		<button type="submit" id="build_net" class="btn">建立关系</button>
+    			选择目标变量
+				<select id="set_index" class="list-group"></select>
+				<button type="submit" id="submit_index" class="btn btn-primary">设置</button>
 			</div>
-			
-			<button type="submit" id="postInferBnt" class="btn btn-primary">Infer</button>
-	</Form>
-	
-	<div id="relief">
-		
+			<div id="index_list" style="width: 200px; height: 40px; margin-left: 50px;"></div>
+        	<div style="margin-left: 10px;">
+          		<div id="diagram_div" style="border: solid 1px black; width:600px; height:600px;"></div>
+        	</div>
+    	</span>
+	    <span  style="display: inline-block; vertical-align: top;">
+	    	<div id="history_chart" style="width: 600px; height: 400px; margin-left: 50px;"></div>
+			<div id="relation_chart" style="width: 600px; height: 400px; margin-left: 50px;"></div>
+	    </span>
 	</div>
-	
-</div>
 
-<div class="container">
-	时间序列预测
-	<br/>
-	<button id="predictBnt" class="btn btn-primary">Infer</button>
-	<div id="predictDiv">
-		
+	<div style="height: 600px;">
+		<div><h2>性能评价</h2></div>
+		<div id="performdiv">
+			<span id="perform_left" style="display: inline-block; vertical-align: top; width: 400px; height: 400px; margin-left: 50px;"></span>
+			<span id="perform_pie1" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
+			<span id="perform_pie2" style="display: inline-block; vertical-align: top; width: 400px; height: 400px;"></span>
+		</div>
 	</div>
-</div>
-
-<div class="container">
-	压力测试
-</div>
- -->
 
 </body>
 </html>

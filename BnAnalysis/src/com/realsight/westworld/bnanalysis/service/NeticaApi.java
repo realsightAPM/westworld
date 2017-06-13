@@ -26,6 +26,7 @@ public class NeticaApi {
 	
 	public NeticaApi() throws Exception {
 		env = new Environ("+WuB/DalianUTech/310-7-A/9901");
+//		env = new Environ(null);
 	}
 	
 	/************************************************************ 建网 *********************************************************/
@@ -66,7 +67,9 @@ public class NeticaApi {
 		/*** build nodes ***/
 		System.out.println("node的个数：" + nodeList.length);
 		for (int i = 0; i < separate.numAttr; i++) {
-//			System.out.println(getStates(mapList.get(i).length));
+			System.out.println(attrList[i]);
+			System.out.println(getStates(mapList.get(i).length));
+			
 			nodeList[i] = new Node(attrList[i], getStates(mapList.get(i).length), net);
 		}
 		

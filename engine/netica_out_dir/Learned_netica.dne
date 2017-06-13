@@ -1,42 +1,48 @@
 // ~->[DNET-1]->~
 
-// File created by an unlicensed user using Netica 5.04 on May 18, 2017 at 10:49:48.
+// File created by WuB at DalianUTech using Netica 5.04 on Jun 06, 2017 at 15:53:43.
 
 bnet apm {
 autoupdate = FALSE;
+whenchanged = 1496735623;
 
-node memory {
+node cpu {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
 	parents = ();
+	whenchanged = 1496735623;
 	};
 
 node session {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (memory);
+	parents = (cpu);
+	whenchanged = 1496735623;
 	};
 
-node http {
+node memory {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (session, memory);
+	parents = (cpu, session);
+	whenchanged = 1496735623;
 	};
 
 node thread {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http, session, memory);
+	parents = (cpu, memory);
+	whenchanged = 1496735623;
 	};
 
-node cpu {
+node http {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (session, thread, memory);
+	parents = (session, thread);
+	whenchanged = 1496735623;
 	};
 };

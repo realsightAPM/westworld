@@ -2,7 +2,9 @@ package com.realsight.westworld.engine.service;
 
 import com.google.common.collect.RangeMap;
 import com.realsight.westworld.bnanalysis.basic.Pair;
+import com.realsight.westworld.bnanalysis.io.WriteCSV;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
+import com.realsight.westworld.engine.io.ReadSolr;
 import com.realsight.westworld.engine.job.JobManager;
 import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
 import com.realsight.westworld.engine.model.Edge;
@@ -12,6 +14,7 @@ import com.realsight.westworld.tsp.test.TSPService;
 
 import norsys.netica.NeticaException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,6 +28,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class TimeSeriesPredictionService {
 
+	public ReadSolr readSolr;
+	
     public String get_version() throws Exception {
         return "1.0.0";
     }
@@ -127,6 +132,37 @@ public class TimeSeriesPredictionService {
     	List<Double> res = netica.getInfer(pairList, tar_var);
     	netica.finalize();
     	return res;
+    }
+    
+    public List<Pair<String, Integer>> getLogCount() throws IOException {
+    	readSolr = new ReadSolr();
+    	List<Pair<String, Integer>> list = new ArrayList<Pair<String, Integer>>();
+    	for (String it : readSolr.urlList) {
+    		list.add(new Pair<String, Integer> (it, readSolr.urlHashCount.get(it)));
+    	}
+    	WriteCSV writer = new WriteCSV();
+    	
+    	
+    	int m = readSolr.urlArray.size();
+    	int n = readSolr.urlArray.get(0).size();
+
+    	String[] attrList = new String[m];
+    	Double[][] matrix = new Double[m][n];
+    	
+    	for (int i = 0; i < m; i++) {
+    		for (int j = 0; j < n; j++) {
+    			matrix[i][j] = readSolr.urlArray.get(i).get(j);
+    		}
+    	}
+    	
+    	int cnt = 0;
+    	for (String key : readSolr.urlHash.keySet()) {
+    		attrList[cnt] = "node"+(new Integer(cnt)).toString();
+    		cnt++;
+    	}
+    	
+    	writer.writeArrayCSV(readSolr.urlArray, attrList, "./", "log.csv");
+    	return list; 
     }
     
 

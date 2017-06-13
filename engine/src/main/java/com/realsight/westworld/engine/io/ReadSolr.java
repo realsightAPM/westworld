@@ -3,6 +3,7 @@ package com.realsight.westworld.engine.io;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,14 +18,20 @@ import org.apache.solr.client.solrj.response.RangeFacet;
 
 
 public class ReadSolr {
+	public Map<String, Integer> urlHash;
+	public Map<String, Integer> urlHashCount;
+	public List<String> urlList;
+	public List<ArrayList<Double>> urlArray;
 
 	public ReadSolr() {
-		
+		getSolrArray();
 	}
 	
-	public List<ArrayList<Double>> getSolrArray() {
-		Map<String, Integer> urlHash = new LinkedHashMap<String, Integer> ();
-		List<ArrayList<Double>> urlArray = new ArrayList<ArrayList<Double>>();
+	public void getSolrArray() {
+		urlHash = new HashMap<String, Integer> ();
+		urlHashCount = new HashMap<String, Integer> ();
+		urlList = new ArrayList<String>();
+		urlArray = new ArrayList<ArrayList<Double>>();
 		String solrStr = "http://localhost:8080/solr/apm3";
 		SolrClient solr = new HttpSolrClient.Builder(solrStr).build();
 		
@@ -44,12 +51,14 @@ public class ReadSolr {
 		try {
 			QueryResponse response = solr.query(solrQuery);
 			FacetField facet = response.getFacetField("application_s");
-			List<Count> urlList = facet.getValues();
-			for (int i = 0; i < urlList.size(); i++) {
-				urlHash.put(urlList.get(i).getName(), i);
+			List<Count> urlCountList = facet.getValues();
+			for (int i = 0; i < urlCountList.size(); i++) {
+				urlHash.put(urlCountList.get(i).getName(), i);
+				urlHashCount.put(urlCountList.get(i).getName(), (int) urlCountList.get(i).getCount());
+				urlList.add(urlCountList.get(i).getName());
 			}
 			
-			for (String it : urlHash.keySet()) {
+			for (String it : urlList) {
 				ArrayList<Double> timeList = new ArrayList<Double>();
 				solrQuery.setFilterQueries("application_s:" + "\"" + it + "\"");
 				QueryResponse resp = solr.query(solrQuery);
@@ -73,12 +82,9 @@ public class ReadSolr {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return urlArray;
 	}
 	
 	public static void main(String[] args) {
 		ReadSolr solr = new ReadSolr();
-		solr.getSolrArray();
 	}
 }

@@ -551,19 +551,21 @@ public class FileUtil {
         // (ver 2.1) hjs 10/12/2007 MT-related change
         // Load the observations here to use a single copy in all threads
         if ( BANJO.CONFIG_OBSERVATIONS.equalsIgnoreCase( BANJO.UI_COMPACTOBSERVATIONS ) ) {
+        	
+//        	System.out.println("============================≤‚ ‘if");
 
             observations = new ObservationsAsArray( processData );
 
             (( ObservationsAsArray ) observations ).loadData( processData );
         }
         else if ( BANJO.CONFIG_OBSERVATIONS.equalsIgnoreCase( BANJO.UI_ORIGINALOBSERVATIONS ) ) {
-            
+//        	System.out.println("============================≤‚ ‘else if");
             observations = new ObservationsAsMatrix( processData );
 
             (( ObservationsAsMatrix ) observations ).loadData( processData );
         }
         else {
-            
+//        	System.out.println("============================≤‚ ‘else");
             throw new BanjoException( 
                     BANJO.ERROR_BANJO_DEV,
                     "(Settings constructor) " +

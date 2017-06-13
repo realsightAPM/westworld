@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head xmlns:th="http://www.thymeleaf.org">
+<title>Spring Boot - POST-GET AJAXExample</title>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<!-- <script src="/js/postrequest.js"></script> -->
+<script src="/js/get_response.js"></script>
+<script src="/js/d3.min.js"></script>
+<script src="/js/go.js"></script>
+<script src="/js/echarts.min.js"></script>
+
+<link rel='stylesheet' href='/css/dataInspector.css' />
+<script src="/js/dataInspector.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<script>
+	function goInfo() {
+		var nodes = [
+			{
+				key: "node35"
+				},
+				{
+				key: "node37"
+				},
+				{
+				key: "node36"
+				},
+				{
+				key: "node30"
+				},
+				{
+				key: "node17"
+				},
+				{
+				key: "node16"
+				},
+				{
+				key: "node18"
+				},
+				{
+				key: "node15"
+				},
+				{
+				key: "node9"
+				},
+				{
+				key: "node14"
+				},
+				{
+				key: "node4"
+				},
+				{
+				key: "node7"
+				},
+				{
+				key: "node8"
+				},
+				{
+				key: "node10"
+				},
+				{
+				key: "node6"
+				},
+				{
+				key: "node5"
+				},
+				{
+				key: "node20"
+				},
+				{
+				key: "node24"
+				},
+				{
+				key: "node12"
+				},
+				{
+				key: "node45"
+				},
+				{
+				key: "node26"
+				},
+				{
+				key: "node44"
+				},
+				{
+				key: "node1"
+				},
+				{
+				key: "node27"
+				},
+				{
+				key: "node0"
+				},
+				{
+				key: "node11"
+				},
+				{
+				key: "node47"
+				},
+				{
+				key: "node42"
+				},
+				{
+				key: "node21"
+				},
+				{
+				key: "node13"
+				},
+				{
+				key: "node2"
+				},
+				{
+				key: "node23"
+				},
+				{
+				key: "node48"
+				},
+				{
+				key: "node43"
+				},
+				{
+				key: "node3"
+				},
+				{
+				key: "node19"
+				},
+				{
+				key: "node29"
+				},
+				{
+				key: "node46"
+				},
+				{
+				key: "node49"
+				},
+				{
+				key: "node31"
+				},
+				{
+				key: "node34"
+				},
+				{
+				key: "node38"
+				},
+				{
+				key: "node28"
+				},
+				{
+				key: "node41"
+				},
+				{
+				key: "node32"
+				},
+				{
+				key: "node25"
+				},
+				{
+				key: "node33"
+				},
+				{
+				key: "node22"
+				},
+				{
+				key: "node40"
+				},
+				{
+				key: "node39"
+				}
+				];
+		links = [
+			{
+				from: "node35",
+				to: "node37"
+				},
+				{
+				from: "node35",
+				to: "node36"
+				},
+				{
+				from: "node37",
+				to: "node36"
+				},
+				{
+				from: "node37",
+				to: "node30"
+				},
+				{
+				from: "node36",
+				to: "node30"
+				},
+				{
+				from: "node30",
+				to: "node17"
+				},
+				{
+				from: "node17",
+				to: "node16"
+				},
+				{
+				from: "node17",
+				to: "node18"
+				},
+				{
+				from: "node17",
+				to: "node15"
+				},
+				{
+				from: "node16",
+				to: "node9"
+				},
+				{
+				from: "node18",
+				to: "node14"
+				},
+				{
+				from: "node18",
+				to: "node12"
+				},
+				{
+				from: "node9",
+				to: "node4"
+				},
+				{
+				from: "node9",
+				to: "node7"
+				},
+				{
+				from: "node9",
+				to: "node12"
+				},
+				{
+				from: "node9",
+				to: "node45"
+				},
+				{
+				from: "node14",
+				to: "node20"
+				},
+				{
+				from: "node4",
+				to: "node8"
+				},
+				{
+				from: "node4",
+				to: "node20"
+				},
+				{
+				from: "node4",
+				to: "node24"
+				},
+				{
+				from: "node7",
+				to: "node6"
+				},
+				{
+				from: "node7",
+				to: "node47"
+				},
+				{
+				from: "node8",
+				to: "node10"
+				},
+				{
+				from: "node8",
+				to: "node13"
+				},
+				{
+				from: "node10",
+				to: "node6"
+				},
+				{
+				from: "node10",
+				to: "node25"
+				},
+				{
+				from: "node6",
+				to: "node5"
+				},
+				{
+				from: "node6",
+				to: "node34"
+				},
+				{
+				from: "node5",
+				to: "node20"
+				},
+				{
+				from: "node5",
+				to: "node23"
+				},
+				{
+				from: "node20",
+				to: "node24"
+				},
+				{
+				from: "node20",
+				to: "node42"
+				},
+				{
+				from: "node20",
+				to: "node21"
+				},
+				{
+				from: "node20",
+				to: "node2"
+				},
+				{
+				from: "node24",
+				to: "node12"
+				},
+				{
+				from: "node24",
+				to: "node11"
+				},
+				{
+				from: "node24",
+				to: "node23"
+				},
+				{
+				from: "node24",
+				to: "node48"
+				},
+				{
+				from: "node12",
+				to: "node26"
+				},
+				{
+				from: "node12",
+				to: "node1"
+				},
+				{
+				from: "node12",
+				to: "node0"
+				},
+				{
+				from: "node12",
+				to: "node11"
+				},
+				{
+				from: "node26",
+				to: "node44"
+				},
+				{
+				from: "node26",
+				to: "node21"
+				},
+				{
+				from: "node44",
+				to: "node1"
+				},
+				{
+				from: "node1",
+				to: "node27"
+				},
+				{
+				from: "node1",
+				to: "node43"
+				},
+				{
+				from: "node27",
+				to: "node0"
+				},
+				{
+				from: "node27",
+				to: "node28"
+				},
+				{
+				from: "node27",
+				to: "node41"
+				},
+				{
+				from: "node0",
+				to: "node29"
+				},
+				{
+				from: "node0",
+				to: "node46"
+				},
+				{
+				from: "node0",
+				to: "node49"
+				},
+				{
+				from: "node11",
+				to: "node21"
+				},
+				{
+				from: "node11",
+				to: "node31"
+				},
+				{
+				from: "node47",
+				to: "node13"
+				},
+				{
+				from: "node42",
+				to: "node29"
+				},
+				{
+				from: "node21",
+				to: "node38"
+				},
+				{
+				from: "node13",
+				to: "node2"
+				},
+				{
+				from: "node3",
+				to: "node19"
+				},
+				{
+				from: "node19",
+				to: "node29"
+				},
+				{
+				from: "node29",
+				to: "node32"
+				},
+				{
+				from: "node34",
+				to: "node33"
+				},
+				{
+				from: "node28",
+				to: "node22"
+				},
+				{
+				from: "node28",
+				to: "node40"
+				},
+				{
+				from: "node41",
+				to: "node39"
+				}
+				];
+		var fun=init;
+		fun(nodes, links);
+	}
+	goInfo();
+</script>
+</head>
+
+<body>
+<div id="sample">
+     <div id="myDiagramDiv0" style="border: solid 1px black; width:600px; height:600px;"></div>
+</div>
+
+
+
+</body>
+</html>

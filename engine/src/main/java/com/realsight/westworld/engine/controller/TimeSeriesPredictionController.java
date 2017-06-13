@@ -14,6 +14,7 @@ import com.realsight.westworld.engine.model.PostItem;
 import com.realsight.westworld.engine.model.Vertice;
 import com.realsight.westworld.engine.service.TimeSeriesPredictionService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,6 +37,7 @@ public class TimeSeriesPredictionController {
 	@Autowired
 	TimeSeriesPredictionService tsps;
 	public String setTarget;
+	public String csvFile = "inputjava_data1.csv";//"log.csv";
 	
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String index() {
@@ -44,7 +46,12 @@ public class TimeSeriesPredictionController {
 	
 	@RequestMapping(value="/two",method = RequestMethod.GET)
 	public String index2() {
-		return "bn";
+		return "graph";
+	}
+	
+	@RequestMapping(value="/log",method = RequestMethod.GET)
+	public String log() {
+		return "log";
 	}
 	
 	@ResponseBody
@@ -65,7 +72,8 @@ public class TimeSeriesPredictionController {
 	@ResponseBody
 	public Response buildNet() throws Exception {
 		NeticaApi netica = new NeticaApi();
-		netica.buildNet("inputjava_data1.csv", 2, 3);
+		netica.buildNet(csvFile, 2, 3);
+//		netica.buildNet("log.csv", 2, 3);
 		netica.finalize();
 		return (new Response("Done", "Build OK"));
 	}
@@ -94,7 +102,7 @@ public class TimeSeriesPredictionController {
 		
 //		System.out.println(item);
 		
-		Pearson pearson = new Pearson("inputjava_data1.csv");
+		Pearson pearson = new Pearson(csvFile);
 		
 		Response response = new Response("Done", pearson.getRelationRanking(post_item.getItem()));
 		return response;
@@ -104,15 +112,16 @@ public class TimeSeriesPredictionController {
 	@ResponseBody
 	public Response getHistoryData(@RequestBody PostItem post_item) throws Exception {
 		
-		Pearson pearson = new Pearson("inputjava_data1.csv");
+		Pearson pearson = new Pearson(csvFile);
 		
 		Response response = new Response("Done", pearson.getHistoryData(post_item.getItem()));
 		return response;
 	}
 	
-	@PostMapping("/api/job/getCause")
+	@PostMapping("/api/job/getPerform")
 	@ResponseBody
-	public ResponseList getCause(@RequestBody PostItem postItem) throws Exception {
+	public ResponseList getPerform(@RequestBody PostItem postItem) throws Exception {
+		if (setTarget.equals("")) return (new ResponseList("No",(new ArrayList<Object>())));
 		List<Pair<String, Double>> list = new OriginRootCause().run(postItem.getItem());
 		
 		NeticaApi netica = new NeticaApi();
@@ -222,5 +231,19 @@ public class TimeSeriesPredictionController {
 		}
 		Response response = new Response("Done", res);
 		return response;
+	}
+
+	@GetMapping("/log/api/job/logList")
+	@ResponseBody
+	public Response getLogList() throws IOException {
+		System.out.print("日志列表测试");
+		return (new Response("Done", tsps.getLogCount()));
+	}
+	
+	public static void main(String[] args) throws Exception {
+		NeticaApi netica = new NeticaApi();
+//		netica.buildNet("inputjava_data1.csv", 2, 3);
+		netica.buildNet("log.csv", 2, 3);
+		netica.finalize();
 	}
 }

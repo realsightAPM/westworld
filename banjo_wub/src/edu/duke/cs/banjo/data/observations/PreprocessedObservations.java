@@ -172,6 +172,7 @@ public class PreprocessedObservations {
 				// ---------------------------------------
 				
                 textline = textline.trim();
+//                System.out.println("\n"+textline);
                 String[] lineComponents = pattern.split( textline );
                 int observedVarCountOnCurrentLine = lineComponents.length;
                 
@@ -252,7 +253,8 @@ public class PreprocessedObservations {
     					for ( int j=0; j<suppliedVarCount; j++ ) {
     					    
     					    strCurrentObsValue = lineComponents[j];
-    					    strRawObservationDataPoints[i][j] = strCurrentObsValue;
+//    					    System.out.print(strCurrentObsValue+" ");
+    					    strRawObservationDataPoints[i][j] = strCurrentObsValue; //======在这里存数据================================
     					    
     					    if ( strCurrentObsValue.length() == 0 || 
     					            strCurrentObsValue.equalsIgnoreCase( "" ) ) {

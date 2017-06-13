@@ -2337,7 +2337,7 @@ public class Settings {
 
             throw new BanjoException( e );
         }
-        catch ( Exception e ) { 
+        catch ( Exception e ) {
 
             throw new BanjoException( e, 
                     BANJO.ERROR_BANJO_XML, "Error while validating " +

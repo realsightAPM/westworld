@@ -186,7 +186,7 @@ public class ObservationsAsArray extends Observations {
         // Process potentially multiple files
         StringTokenizer obsFileTokenizer = 
             new StringTokenizer( strObservationsFile, BANJO.DELIMITER_DEFAULT_LIST );
-
+        
         String strNextFile;
         String[] strTempWildcardFiles;
         FilenameFilter filter;
@@ -195,7 +195,7 @@ public class ObservationsAsArray extends Observations {
         
         // Are wildcards used to describe the files?
         if ( strObservationsFile.indexOf( BANJO.DEFAULT_WILDCARDINDICATOR ) < 0 ) {
-            
+//        	System.out.println("============================²âÊÔif");
             // Without wildcards we have as many files as there are tokens
             obsFileCount = obsFileTokenizer.countTokens();
             

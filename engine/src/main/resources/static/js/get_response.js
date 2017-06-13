@@ -1,15 +1,17 @@
 var attrArray = new Array();
 var selected_var="";
+var target = "";
+
 $( document ).ready(function() {
 	var url = window.location;
 
-	$("#set_target").click(function(event) {
+	$("#submit_index").click(function(event) {
 		event.preventDefault();
-		var p = $("#set_value").val();
-		setajax(p);
+		var p = $("#set_index").val();
+		setIndexAjax(p);
 	});
 	
-	function setajax(p) {
+	function setIndexAjax(p) {
 		postData = {
 			item : p
 		};
@@ -21,7 +23,9 @@ $( document ).ready(function() {
 			dataType : 'json',
 			success : function(result) {
 				if (result.status == "Done") {
-					$("#target_list").html("<ul>"+"<li>"+result.data+"</li>"+"</ul>");
+//					$("#target_list").html("<ul>"+"<li>"+result.data+"</li>"+"</ul>");
+					$("#index_list").html(result.data);
+					window.target=result.data;
 					console.log("Success: ", result);
 				}
 				else {
@@ -33,18 +37,12 @@ $( document ).ready(function() {
 			}
 		});
 	}
-
-	// initailize bayes network
-//	$("#getBtn0").click(function(event) {
-//		event.preventDefault();
-//		getBnGraph();
-//	});
 	
 	$("#build_net").click(function(event) {
 		event.preventDefault();
 		ajaxBuildNet();
 	});
-	
+	 
 	function ajaxBuildNet() {
 		$.ajax({
 			type : "GET",
@@ -73,65 +71,62 @@ $( document ).ready(function() {
 				if (result.status == "Done") {
 					$.each(result.vertices, function(i, attr){
 //						window.attrArray.push(attr);
-						$('#attrList2 .list-group').append('<option value="' + attr.key + '">' + attr.key + '</option>');
+						$('#pre_set .list-group').append('<option value="' + attr.key + '">' + attr.key + '</option>');
 					});
 					init(result.vertices, result.edges);
 				}
 				else {
-					$("#myDiagramDiv0").html("<strong>Error</strong>");
 					console.log("Fail: ", result);
 				}
 			},
 			error : function(e) {
-				$("#getResultDiv0").html("<string>Error</strong>");
 				console.log("ERROR: ", e);
 			}
 		});
 	}
 	
-	  // This variation on ForceDirectedLayout does not move any selected
-		// Nodes
-	  // but does move all other nodes (vertexes).
-	  function ContinuousForceDirectedLayout() {
-	    go.ForceDirectedLayout.call(this);
+	// This variation on ForceDirectedLayout does not move any selected
+	// Nodes
+	// but does move all other nodes (vertexes).
+	function ContinuousForceDirectedLayout() {
+		go.ForceDirectedLayout.call(this);
 	    this._isObserving = false;
-	  }
-	  go.Diagram.inherit(ContinuousForceDirectedLayout, go.ForceDirectedLayout);
+	}
+	go.Diagram.inherit(ContinuousForceDirectedLayout, go.ForceDirectedLayout);
 
-	  /** @override */
-	  ContinuousForceDirectedLayout.prototype.isFixed = function(v) {
+	/** @override */
+	ContinuousForceDirectedLayout.prototype.isFixed = function(v) {
 	    return v.node.isSelected;
-	  }
+	}
 
-	  // optimization: reuse the ForceDirectedNetwork rather than re-create it
-		// each time
-	  /** @override */
-	  ContinuousForceDirectedLayout.prototype.doLayout = function(coll) {
-	    if (!this._isObserving) {
-	      this._isObserving = true;
-	      // cacheing the network means we need to recreate it if nodes or
-			// links have been added or removed or relinked,
-	      // so we need to track structural model changes to discard the saved
-			// network.
-	      var lay = this;
-	      this.diagram.addModelChangedListener(function (e) {
+	// optimization: reuse the ForceDirectedNetwork rather than re-create it
+	// each time
+	/** @override */
+	ContinuousForceDirectedLayout.prototype.doLayout = function(coll) {
+		if (!this._isObserving) {
+	    this._isObserving = true;
+	    // cacheing the network means we need to recreate it if nodes or
+		// links have been added or removed or relinked,
+        // so we need to track structural model changes to discard the saved
+		// network.
+	    var lay = this;
+	    this.diagram.addModelChangedListener(function (e) {
 	        // modelChanges include a few cases that we don't actually care
 			// about, such as
 	        // "nodeCategory" or "linkToPortId", but we'll go ahead and recreate
 			// the network anyway.
 	        // Also clear the network when replacing the model.
-	        if (e.modelChange !== "" ||
-	            (e.change === go.ChangedEvent.Transaction && e.propertyName === "StartingFirstTransaction")) {
+	        if (e.modelChange !== "" || (e.change === go.ChangedEvent.Transaction && e.propertyName === "StartingFirstTransaction")) {
 	          lay.network = null;
 	        }
 	      });
 	    }
 	    var net = this.network;
-	    if (net === null) {  // the first time, just create the network as
-								// normal
+	    if (net === null) {                                  // the first time, just create the network as
+						                                     // normal
 	      this.network = net = this.makeNetwork(coll);
-	    } else {  // but on reuse we need to update the LayoutVertex.bounds
-					// for selected nodes
+	    } else {                                             // but on reuse we need to update the LayoutVertex.bounds
+					                                         // for selected nodes
 	      this.diagram.nodes.each(function (n) {
 	        var v = net.findVertex(n);
 	        if (v !== null) v.bounds = n.actualBounds;
@@ -143,14 +138,14 @@ $( document ).ready(function() {
 		// Layout.network to null;
 	    // here we remember it for next time
 	    this.network = net;
-	  }
-	  // end ContinuousForceDirectedLayout
+	}
+	// end ContinuousForceDirectedLayout
 
 	function init(nodeDataArray,linkDataArray) {
 		var $ = go.GraphObject.make;  // for conciseness in defining templates
 		
 		myDiagram =
-			$(go.Diagram, "myDiagramDiv0",  // create a Diagram for the DIV HTML
+			$(go.Diagram, "diagram_div",  // create a Diagram for the DIV HTML
 											// element
 			{
 				 initialAutoScale: go.Diagram.Uniform,  // an initial automatic
@@ -159,7 +154,7 @@ $( document ).ready(function() {
 														// center of the
 														// viewport
 		          layout:
-		            $(ContinuousForceDirectedLayout,  // automatically spread
+		              $(ContinuousForceDirectedLayout,  // automatically spread
 														// nodes apart while
 														// dragging
 		              { defaultSpringLength: 30, defaultElectricalCharge: 100 }),
@@ -194,14 +189,14 @@ $( document ).ready(function() {
 		
 			    // The link shape and arrowhead have their stroke brush data
 				// bound to the "color" property
-			myDiagram.linkTemplate =
-			    $(go.Link,  // the whole link panel
-			      $(go.Shape,  // the link shape
-			    	{ stroke: "black" }),
-			      $(go.Shape,  // the arrowhead
-			    	{ toArrow: "standard", stroke: null })
-			     );
-			    myDiagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
+		myDiagram.linkTemplate =
+			$(go.Link,  // the whole link panel
+			  $(go.Shape,  // the link shape
+			    { stroke: "black" }),
+			  $(go.Shape,  // the arrowhead
+			    { toArrow: "standard", stroke: null })
+			  );
+		myDiagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
 	}
 	
 	function reload() {
@@ -218,7 +213,6 @@ $( document ).ready(function() {
 		ajaxPearson(s);
 		ajaxHistoryData(s);
 		ajaxPerform(s);
-//		ajaxOriDis(s);
 	}
 
 	// Get Pearson
@@ -238,23 +232,15 @@ $( document ).ready(function() {
 			
 			success: function(result) {
 				if (result.status == "Done") {
-					$('#pearsonList1 .list-group li').remove();
 					$.each(result.data.first, function(i, pair){
 						attr.push(pair.first);
 						values.push(pair.second);
-						var row = "(" + i +") " + pair.first + ": " + pair.second;
-						$('#pearsonList1 .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
 					});
-					$('#pearsonList2 .list-group li').remove();
 					$.each(result.data.second, function(i, pair){
 						attr.push(pair.first);
 						values.push(pair.second);
-						var row = "(" + i +") " + pair.first + ": " + pair.second;
-						$('#pearsonList2 .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
 					});
-//					alert(attr);
-//					alert(values);
-					drawMyChart(attr, values, "main", -1, 1, "Pearson Correlation");
+					drawRelationChart(attr, values, "relation_chart", -1, 1, "相关性");
 					console.log("Success: ", result);
 				}
 				else {
@@ -280,7 +266,6 @@ $( document ).ready(function() {
 			
 			success: function(result) {
 				if (result.status == "Done") {
-//					alert(result.data.first);
 					drawHistoryChart(result.data.first, result.data.second);
 					console.log("Success: ", result);
 				}
@@ -301,7 +286,7 @@ $( document ).ready(function() {
 		$.ajax({
 			type : "Post",
 			contentType : "application/json",
-			url : "/api/job/originalDistribute",
+			url : "/api/job/Distribute",
 			data : JSON.stringify(postData),
 			dataType : 'json',
 			
@@ -321,7 +306,6 @@ $( document ).ready(function() {
 	}
 	
 	$(document).on("click","#set_state1", function(){
-//		alert($("#select_state").val());
 		ajaxInfer($("#select_state").val());
 	});
 	
@@ -329,7 +313,7 @@ $( document ).ready(function() {
 		postData = {
 			item : window.selected_var+":"+state
 		};
-//		alert(postData.item);
+		var selected = $('#target_list').html();
 		$.ajax({
 			type : "Post",
 			contentType : "application/json",
@@ -338,7 +322,7 @@ $( document ).ready(function() {
 			dataType : 'json',
 			success : function(result) {
 				if (result.status == "Done") {
-					drawPieChart(result.data, "perform_pie2", "Inferential distribution of target");
+					drawPieChart(result.data, "perform_pie2", window.target+"推理分布");
 				}
 				else {
 					console.log("Fail: ", result);
@@ -351,7 +335,7 @@ $( document ).ready(function() {
 	}
 	
 	// draw my chart pearson
-	function drawMyChart(attr, values, locationId, lo, hi, title_name) {
+	function drawRelationChart(attr, values, locationId, lo, hi, title_name) {
 		var myChart = echarts.init(document.getElementById(locationId));
 		
 		var option = {
@@ -406,11 +390,11 @@ $( document ).ready(function() {
 	
 	// draw my chart history
 	function drawHistoryChart(data_x, data_y) {
-		var myChart = echarts.init(document.getElementById('history'));
+		var myChart = echarts.init(document.getElementById('history_chart'));
 		
 		var option = {
 			title: {
-				text: 'Historical Data'
+				text: '历史数据'
 			},
 			
 	        tooltip: {
@@ -440,7 +424,7 @@ $( document ).ready(function() {
 			yAxis: {},
 				
 			series: [{
-				name: 'History Data',
+				name: 'Historical Data',
 				type: 'line',
 				data: data_y
 			}]
@@ -491,15 +475,17 @@ $( document ).ready(function() {
 //	});
 	
 	function ajaxPerform(p) {
+//		alert(p);
 		postData = {
 			item : p
 		};
+		var selected = $("#target_list").html();
 		var attr = [];
 		var values = [];
 		$.ajax({
 			type : "Post",
 			contentType : "application/json",
-			url: url + "/api/job/getCause",
+			url: url + "/api/job/getPerform",
 			data : JSON.stringify(postData),
 			dataType : 'json',
 			success: function(result) {
@@ -507,21 +493,17 @@ $( document ).ready(function() {
 					$.each(result.data[0], function(i, pair){
 						attr.push(pair.first);
 						values.push(pair.second);
-//						var row = "(" + i +") " + pair.first + ": " + pair.second;
-//						$('#perform_left .list-group').append('<li><h4 class="list-group-item">'+row+'</h4></li>');
 					});
-//					alert(attr);
-//					alert(values);
-					drawMyChart(attr, values, "perform_left", 0, 2, "Root Cause");
-					drawPieChart(result.data[1], "perform_pie1", "Orginal Distribution");
+					drawRelationChart(attr, values, "perform_left", 0, 2, window.target+"根源问题");
+					drawPieChart(result.data[1], "perform_pie1", window.target+"原始分布");
 					$("#perform_pie2").html(
-							'<button type="submit" id="tspBtn" class="btn btn-primary">TSP</button>'
+							'<button type="submit" id="tspBtn" class="btn btn-primary">预测</button>'
 					);
 					console.log("Success: ", result);
 				}
 				else if (result.status == "Done1") {
 					$("#perform_left").html(
-							'Select the state of<br/>'
+							'选择'+p+'的状态<br/>'
 							+'<select id="select_state" class="list-group">'
 							+'<option value="a">low</option>'
 							+'<option value="b">medium</option>'
@@ -529,7 +511,7 @@ $( document ).ready(function() {
 							+'</select>'
 							+'<button type="submit" id="set_state1" class="btn btn-primary">Infer</button>'
 					);
-					drawPieChart(result.data[1], "perform_pie1", "Orginal Distribution");
+					drawPieChart(result.data[1], "perform_pie1", window.target+"原始分布");
 					console.log("Success: ", result);
 				}
 				else {
@@ -553,7 +535,7 @@ $( document ).ready(function() {
 			url : "/api/job/TSP",
 			success : function(result) {
 				if (result.status == "Done") {
-					drawPieChart(result.data, "perform_pie2", "TSP of target");
+					drawPieChart(result.data, "perform_pie2", "预测");
 				}
 				else {
 					console.log("Fail: ", result);
@@ -565,92 +547,4 @@ $( document ).ready(function() {
 		});
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	$("#postInferBnt").click(function(event) {
-		event.preventDefault();
-		postInfer();
-	});
-	
-	function postInfer() {
-		var list = new Array();
-		// alert(window.attrArray.length);
-		for (var i = 0; i < window.attrArray.length; i++) {
-			var tmp = $("#"+window.attrArray[i]+"_inf").val();
-			// alert(tmp);
-			var str = window.attrArray[i]+":"+tmp;
-			var jsonData = {
-				infer : str
-			};
-			list.push(jsonData);
-		}
-		
-		var tmp2 = $("#select_value").val();
-		var jsonData2 = {
-			infer : tmp2
-		};
-		list.push(jsonData2);
-		// alert(jsonData2.infer);
-		$.ajax({
-			type : "Post",
-			contentType : "application/json",
-			url : "/api/job/postInfer",
-			data : JSON.stringify(list),
-			dataType : 'json',
-			success : function(result) {
-				if (result.status == "Done") {
-					$("#relief").html("<strong>html报警概率：" + result.data + "</strong>");
-				}
-				else {
-					alert("错误");
-					console.log("Fail: ", result);
-				}
-				console.log(result);
-			},
-			error : function(e) {
-				alert("ERROR");
-				console.log("ERROR: ", e);
-			}
-		});
-	}
-	
-	$("#predictBnt").click(function(event) {
-		event.preventDefault();
-		predictAjax();
-	});
-	
-	function predictAjax() {
-		$.ajax({
-			type : "Get",
-			url : url+"/api/job/TSP",
-			success : function(result) {
-				if (result.status == "Done") {
-					$("#predictDiv").html("<strong>html报警预测：" + result.data + "</strong>")
-					console.log("Success: ", result);
-				}
-				else {
-					console.log("Fail: ", result);
-				}
-			},
-			error : function(e) {
-				console.log("ERROR: ", e);
-			}
-		});
-	}
 })
