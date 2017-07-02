@@ -31,6 +31,11 @@ public class Edge {
 		this.to = to;
 	}
 
+	@Override
+	public String toString() {
+		return "{\"from\": \"" + from + "\", \"to\": \"" + to + "\"}";
+	}
+
 	
 	
 	

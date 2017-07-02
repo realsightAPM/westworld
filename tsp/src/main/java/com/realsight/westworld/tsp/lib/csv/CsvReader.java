@@ -41,6 +41,8 @@ public class CsvReader {
 	private Reader inputStream = null;
 
 	private String fileName = null;
+	
+	private Long readedLine = 0L;
 
 	// this holds all the values for switches that the user is allowed to set
 	private UserSettings userSettings = new UserSettings();
@@ -575,6 +577,10 @@ public class CsvReader {
 		return new CsvReader(new StringReader(data));
 	}
 
+	public Long getReadedLine () {
+		return this.readedLine;
+	}
+	
 	/**
 	 * Reads another record.
 	 * 
@@ -585,7 +591,7 @@ public class CsvReader {
 	 */
 	public boolean readRecord() throws IOException {
 		checkClosed();
-
+		readedLine += 1;
 		columnsCount = 0;
 		rawBuffer.Position = 0;
 
@@ -1704,10 +1710,6 @@ public class CsvReader {
 	}
 
 	private class UserSettings {
-		// having these as publicly accessible members will prevent
-		// the overhead of the method call that exists on properties
-		public boolean CaseSensitive;
-
 		public char TextQualifier;
 
 		public boolean TrimWhitespace;
@@ -1731,7 +1733,6 @@ public class CsvReader {
 		public boolean CaptureRawRecord;
 
 		public UserSettings() {
-			CaseSensitive = true;
 			TextQualifier = Letters.QUOTE;
 			TrimWhitespace = true;
 			UseTextQualifier = true;
@@ -1751,12 +1752,12 @@ public class CsvReader {
 
 		public int Length;
 
-		public HashMap IndexByName;
+		public HashMap<String, Integer> IndexByName;
 
 		public HeadersHolder() {
 			Headers = null;
 			Length = 0;
-			IndexByName = new HashMap();
+			IndexByName = new HashMap<String, Integer>();
 		}
 	}
 

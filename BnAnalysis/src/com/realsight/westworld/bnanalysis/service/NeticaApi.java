@@ -19,13 +19,15 @@ import norsys.netica.*;
 public class NeticaApi {
 
 	public BanjoApi banjo;
-	public Environ env;
+	public static Environ env;
 	public Net net;
 	public Map<String, String[]> rangeMap;
 	public Map<String, ArrayList<Double>> rangeDouble;
 	
 	public NeticaApi() throws Exception {
-		env = new Environ("+WuB/DalianUTech/310-7-A/9901");
+		if (env == null) {
+			env = new Environ("+WuB/DalianUTech/310-7-A/9901");
+		}
 //		env = new Environ(null);
 	}
 	
@@ -244,16 +246,27 @@ public class NeticaApi {
 		return resList;
 	}
 	
-	/************************************************************* 获得结点  *************************************************************/
+	/************************************************************* 获得GoJs结点和连接  *************************************************************/
 	
 	public List<String> getGONodes() throws NeticaException {
-		
 		List<String> list = new ArrayList<String>();
 		NodeList nodeList = net.getNodes();
 		for (int i = 0; i < nodeList.size(); i++) {
-			list.add(nodeList.get(i).toString());
+			list.add("{\"key\": " + "\"" + nodeList.get(i).toString().substring(1) + "\"}");
 		}
-		
+		return list;
+	}
+	
+	public List<String> getGoLinks() throws NeticaException {
+		List<String> list = new ArrayList<String>();
+		NodeList nodes = net.getNodes();
+		for (int i = 0; i < nodes.size(); i++) {
+			Node tmp_node = nodes.getNode(i);
+			NodeList node_list = tmp_node.getChildren();
+			for (int j = 0; j < node_list.size(); j++) {
+				list.add("{\"from\": " + "\"" + nodes.get(i).toString().substring(1) + "\", " + "\"to\": " + "\"" + node_list.get(j).toString().substring(1) + "\"}");
+			}
+		}
 		return list;
 	}
 	
@@ -468,7 +481,7 @@ public class NeticaApi {
 	@Override
 	public void finalize() throws NeticaException {
 		net.finalize();   // not strictly necessary, but a good habit
-		env.finalize();
+//		env.finalize();
 	}
 	
 	public static void main(String[] args) throws Exception {

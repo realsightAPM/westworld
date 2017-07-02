@@ -57,7 +57,7 @@ public class Util {
         }
     }
 
-    public static Path writeCsv(MultipleDoubleSeries series, Path path) {
+    public static Path writeCsv(MultipleDoubleSeries series, Path dir) {
         StringBuffer data = new StringBuffer();
         data.append("timestamp");
         for(String name : series.getProperty_list()){
@@ -71,6 +71,7 @@ public class Util {
         	}
         	data.append("\n");
         }
+        Path path = Paths.get(dir.toString(), series.getName());
         return writeString(data.toString(), path);
     }
 

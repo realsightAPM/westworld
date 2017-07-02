@@ -3,7 +3,7 @@ package com.realsight.westworld.engine.job;
 import Jama.Matrix;
 import com.realsight.westworld.engine.io.MetricInputStream;
 import com.realsight.westworld.engine.io.MetricOutputStream;
-import com.realsight.westworld.tsp.api.PredictionAPI;
+//import com.realsight.westworld.tsp.api.PredictionAPI;
 import com.realsight.westworld.tsp.lib.series.DoubleSeries;
 import com.realsight.westworld.tsp.lib.series.MultipleDoubleSeries;
 import com.realsight.westworld.tsp.lib.series.TimeSeries;
@@ -18,16 +18,16 @@ import java.util.Random;
 
 public class TimeSeriesPredictionJob implements Job {
 	private DoubleSeries nSeries;
-    private PredictionAPI papi;
+//    private PredictionAPI papi;
 
 
     public void init() {
         if (nSeries == null) {
             nSeries = new DoubleSeries("");
         }
-        if(papi == null){
-            papi = new PredictionAPI(new MultipleDoubleSeries("", nSeries));
-        }
+//        if(papi == null){
+//            papi = new PredictionAPI(new MultipleDoubleSeries("", nSeries));
+//        }
     }
 
 
@@ -43,8 +43,8 @@ public class TimeSeriesPredictionJob implements Job {
             Long ts = Long.parseLong(String.valueOf(sd.get("rs_timestamp_l")));
             TimeSeries.Entry<Double> entry = new TimeSeries.Entry<Double>(metric, ts);
             Matrix value = Util.toVec(entry.getItem());
-            papi.todayValue(value, ts);
-            Double p_vlaue = papi.prediction();
+//            papi.todayValue(value, ts);
+            Double p_vlaue = null;
             if(p_vlaue == null){
                 continue;
             }

@@ -93,7 +93,7 @@ public class IntegerSeries extends TimeSeries<Integer> {
     public IntegerSeries subSeries(int l, int r) throws Exception {
     	if(l<0 || r>size())
     		throw new Exception("l<0 || r>size()");
-    	List<Entry<Integer>> newEntries = new ArrayList<>();
+    	List<Entry<Integer>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Integer>>();
     	for(int i = l; i < r; i++){
     		newEntries.add(new Entry<Integer>(mData.get(i).getItem(), this.mData.get(i).getInstant()));
     	}

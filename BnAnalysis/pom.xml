@@ -51,16 +51,7 @@
 			<artifactId>cloning</artifactId>
 			<version>1.9.3</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.2.1</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -70,12 +61,6 @@
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-util</artifactId>
 			<version>9.3.7.v20160115</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.5</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -97,11 +82,26 @@
 			<artifactId>rxjava-async-util</artifactId>
 			<version>0.21.0</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.4</version>
 		</dependency>
+		
+		<dependency>
+    		<groupId>org.apache.httpcomponents</groupId>
+    		<artifactId>httpcore</artifactId>
+    		<version>4.4</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.24</version>
+		</dependency> -->
 
 		<dependency>
 			<groupId>jfree</groupId>
@@ -119,21 +119,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 		</dependency>
-		<dependency>
-			<groupId>org.nd4j</groupId>
-			<artifactId>nd4j-jblas</artifactId>
-			<version>0.4-rc3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.6.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.6.1</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>

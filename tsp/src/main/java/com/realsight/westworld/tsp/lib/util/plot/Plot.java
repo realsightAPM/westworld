@@ -44,8 +44,7 @@ public class Plot {
 		List<Double> x = new ArrayList<Double>();
 		List<Double> y = new ArrayList<Double>();
     	for(int i = 0; i < subSeries[0].size(); i++){
-//    		x.add(0.0+subSeries[0].get(i).getInstant());
-    		x.add(i+0.0);
+    		x.add(0.0+subSeries[0].get(i).getInstant());
     		y.add(subSeries[0].get(i).getItem());
     	}
     	
@@ -56,20 +55,20 @@ public class Plot {
         	List<Double> p = new ArrayList<Double>();
         	for (int j = 0, k = 0; j < subSeries[0].size(); ) {
 //        		System.out.println(subSeries[i].size());
-        		p.add(subSeries[i].get(k).getItem());
-    			k++; j++;
-//        		if ( k >= subSeries[i].size() ) {
-//        			p.add(0.0);
-//        			j++;
-//        		} else if ( subSeries[i].get(k).getInstant().equals(subSeries[0].get(j).getInstant()) ) {
-//        			p.add(subSeries[i].get(k).getItem());
-//        			k++; j++;
-//        		} else if ( subSeries[i].get(k).getInstant() < subSeries[0].get(j).getInstant() ) {
-//        			k++;
-//        		} else {
-//        			p.add(0.0);
-//        			j++;
-//        		}
+//        		p.add(subSeries[i].get(k).getItem());
+//    			k++; j++;
+        		if ( k >= subSeries[i].size() ) {
+        			p.add(0.0);
+        			j++;
+        		} else if ( subSeries[i].get(k).getInstant().equals(subSeries[0].get(j).getInstant()) ) {
+        			p.add(subSeries[i].get(k).getItem());
+        			k++; j++;
+        		} else if ( subSeries[i].get(k).getInstant() < subSeries[0].get(j).getInstant() ) {
+        			k++;
+        		} else {
+        			p.add(0.0);
+        			j++;
+        		}
         	}
             addSeries(dataSet,x,p,subSeries[i].getName());
         }

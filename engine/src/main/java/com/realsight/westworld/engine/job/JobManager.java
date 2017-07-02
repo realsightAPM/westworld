@@ -1,6 +1,6 @@
 package com.realsight.westworld.engine.job;
 
-import com.realsight.westworld.engine.message.JobMessage;
+//import com.realsight.westworld.engine.message.JobMessage;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
@@ -43,7 +43,7 @@ public class JobManager {
 
     public String register_job(String jobType) {
         String jobID = UUID.randomUUID().toString();
-        JobMessage jm = new JobMessage(jobID, jobType);
+//        JobMessage jm = new JobMessage(jobID, jobType);
 
         //new File(String.format("job/%1$s", uniqueID)).mkdirs();
         try {
@@ -51,7 +51,7 @@ public class JobManager {
                     (Class<? extends Job>) Class.forName(JobManager.getInstance().getClass().getPackage().getName() + "." +jobType)
             ).withIdentity(jobID, jobType)
                     .usingJobData("jobType", jobType)
-                    .usingJobData("jobMessage", jm.get_message())
+//                    .usingJobData("jobMessage", jm.get_message())
                     .storeDurably()
                     .build();
             JobManager.getInstance().get_scheduler().addJob(jobDetail, true);
@@ -119,11 +119,11 @@ public class JobManager {
                                 .withIntervalInSeconds(600).repeatForever() // 时间间隔
                 ).build();
 
-        JobDetail jobDetail1 = JobBuilder.newJob(MetricFakeJob.class).withIdentity("Metric", "Fake").build();
-        JobDetail jobDetail2 = JobBuilder.newJob(LogFakeJob.class).withIdentity("Log", "Fake").build();
+//        JobDetail jobDetail1 = JobBuilder.newJob(MetricFakeJob.class).withIdentity("Metric", "Fake").build();
+//        JobDetail jobDetail2 = JobBuilder.newJob(LogFakeJob.class).withIdentity("Log", "Fake").build();
         try {
-            JobManager.getInstance().get_scheduler().scheduleJob(jobDetail1, trigger1);
-            JobManager.getInstance().get_scheduler().scheduleJob(jobDetail2, trigger2);
+//            JobManager.getInstance().get_scheduler().scheduleJob(jobDetail1, trigger1);
+//            JobManager.getInstance().get_scheduler().scheduleJob(jobDetail2, trigger2);
         } catch (Exception e){
             e.printStackTrace();
         }

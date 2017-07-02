@@ -1,9 +1,11 @@
 package com.realsight.westworld.engine.controller;
 
+import com.google.gson.JsonObject;
 import com.realsight.westworld.bnanalysis.algorithm.Pearson;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.service.OriginRootCause;
+import com.realsight.westworld.bnanalysis.solr.SolrResults;
 import com.realsight.westworld.engine.message.GraphResponse;
 import com.realsight.westworld.engine.message.Response;
 import com.realsight.westworld.engine.message.ResponseList;
@@ -16,6 +18,8 @@ import com.realsight.westworld.engine.service.TimeSeriesPredictionService;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +41,8 @@ public class TimeSeriesPredictionController {
 	@Autowired
 	TimeSeriesPredictionService tsps;
 	public String setTarget;
-	public String csvFile = "inputjava_data1.csv";//"log.csv";
+	public String csvFile = "log.csv";
+//	public String csvFile = "inputjava_data1.csv";
 	
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String index() {
@@ -84,6 +89,29 @@ public class TimeSeriesPredictionController {
 		setTarget = "";
 		Pair<ArrayList<Vertice>, ArrayList<Edge>> pair = tsps.getEdgeList();
 		GraphResponse response = new GraphResponse("Done", pair.first, pair.second);
+		List<String> node_list = new ArrayList<String> ();
+		List<String> edge_list = new ArrayList<String> ();
+		for (Vertice it : pair.first) {
+			node_list.add(it.toString());
+		}
+		for (Edge it : pair.second) {
+			edge_list.add(it.toString());
+		}
+		Calendar date = new GregorianCalendar(2016, 6, 20, 12, 0, 0);
+		tsps.getLogCount();
+//		for (int i = 0; i < 100; i++) {
+		SolrResults resulter = new SolrResults("http://10.4.45.114:19983/solr/rca");
+		//http://10.4.45.114:19983/solr/index.html
+		date.add(Calendar.DATE, 1);
+		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_"+0));
+		resulter.addResult(new Pair<String, Object> ("rs_timestamp", date.getTime()));
+		resulter.addResult(new Pair<String, Object> ("timestamp_l", date.getTimeInMillis()));
+		resulter.addResult(new Pair<String, Object> ("nodes_s", node_list.toString()));
+		resulter.addResult(new Pair<String, Object> ("edges_s", edge_list.toString()));
+		resulter.addResult(new Pair<String, Object> ("query_list", tsps.readSolr.urlList));
+		resulter.write();
+//		}
 		return response;
 	}
 	

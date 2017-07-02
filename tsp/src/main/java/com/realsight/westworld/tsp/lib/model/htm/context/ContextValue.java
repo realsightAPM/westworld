@@ -15,13 +15,18 @@ public class ContextValue implements Serializable{
 	private List<Integer> fromOrto;
 	private int lenFact;
 	private Map<Integer, Integer> contexIDs;
+	private List<Integer> facts;
 	
 	public ContextValue(int lenFact) {
 		this.fromOrto = new ArrayList<Integer>();
 		this.lenFact = lenFact;
 		this.setContexIDs(new HashMap<Integer, Integer>());
+		this.facts = new ArrayList<Integer>();
 	}
 	
+	public List<Integer> getFacts() {
+		return facts;
+	}
 	public List<Integer> getFromOrto() {
 		return fromOrto;
 	}
@@ -30,6 +35,9 @@ public class ContextValue implements Serializable{
 	}
 	public int getLenFact() {
 		return lenFact;
+	}
+	public void setFacts(List<Integer> facts) {
+		this.facts = facts;
 	}
 	public void setLenFact(int lenFact) {
 		this.lenFact = lenFact;

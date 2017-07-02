@@ -34,6 +34,7 @@ public class VolumeData {
 				throw new IOException("File not exists start_time.");
 			if(!name.equals("hour") && cr.getIndex(name)==-1)
 				throw new IOException("File not exists " + name + ".");
+			Long idx = 0L;
 			while(cr.readRecord()){
 				String time = cr.get("start_time").trim();
 				Date date = null;
@@ -46,16 +47,9 @@ public class VolumeData {
 				Long timestamp = date.getTime();
 				Calendar cal =  Calendar.getInstance();
 				cal.setTimeInMillis(timestamp);
-				double num = 0;
-				if (name.equals("hour")) {
-					num = cal.get(Calendar.HOUR_OF_DAY)*3+cal.get(Calendar.MINUTE)/20;
-//					num = cal.get(Calendar.HOUR_OF_DAY);
-				} else {
-					num = Double.parseDouble(cr.get(name));
-//					if (num > 75) continue;
-				}
-//				System.out.println(num);
-				res.add(new TimeSeries.Entry<Double>(num, timestamp));
+				double num = Double.parseDouble(cr.get(name));
+				res.add(new TimeSeries.Entry<Double>(num, idx));
+				idx = idx + 1L;
 			}
 			cr.close();
 		} catch (IOException e) {

@@ -4,15 +4,15 @@ import com.google.common.collect.RangeMap;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.io.WriteCSV;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
+import com.realsight.westworld.bnanalysis.service.TSPService;
 import com.realsight.westworld.engine.io.ReadSolr;
 import com.realsight.westworld.engine.job.JobManager;
 import com.realsight.westworld.engine.job.TimeSeriesPredictionJob;
 import com.realsight.westworld.engine.model.Edge;
 import com.realsight.westworld.engine.model.Inferance;
 import com.realsight.westworld.engine.model.Vertice;
-import com.realsight.westworld.tsp.test.TSPService;
 
-import norsys.netica.NeticaException;
+//import norsys.netica.NeticaException;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -157,7 +157,7 @@ public class TimeSeriesPredictionService {
     	
     	int cnt = 0;
     	for (String key : readSolr.urlHash.keySet()) {
-    		attrList[cnt] = "node"+(new Integer(cnt)).toString();
+    		attrList[cnt] = "_"+(new Integer(cnt)).toString()+"";
     		cnt++;
     	}
     	

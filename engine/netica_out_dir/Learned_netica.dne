@@ -1,48 +1,808 @@
 // ~->[DNET-1]->~
 
-// File created by WuB at DalianUTech using Netica 5.04 on Jun 06, 2017 at 15:53:43.
+// File created by WuB at DalianUTech using Netica 5.04 on Jun 22, 2017 at 17:36:24.
 
 bnet apm {
 autoupdate = FALSE;
-whenchanged = 1496735623;
+whenchanged = 1498124184;
 
-node cpu {
+node _17 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
 	parents = ();
-	whenchanged = 1496735623;
+	whenchanged = 1498124184;
 	};
 
-node session {
+node _13 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (cpu);
-	whenchanged = 1496735623;
+	parents = (_17);
+	whenchanged = 1498124184;
 	};
 
-node memory {
+node _59 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = ();
+	whenchanged = 1498124184;
+	};
+
+node _14 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (cpu, session);
-	whenchanged = 1496735623;
+	parents = (_13, _59);
+	whenchanged = 1498124184;
 	};
 
-node thread {
+node _30 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = ();
+	whenchanged = 1498124184;
+	};
+
+node _31 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_14, _30);
+	whenchanged = 1498124184;
+	};
+
+node _41 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_31);
+	whenchanged = 1498124184;
+	};
+
+node _40 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_31, _41);
+	whenchanged = 1498124184;
+	};
+
+node _38 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_31, _40);
+	whenchanged = 1498124184;
+	};
+
+node _89 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (cpu, memory);
-	whenchanged = 1496735623;
+	parents = (_38, _41);
+	whenchanged = 1498124184;
 	};
 
-node http {
+node _99 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (session, thread);
-	whenchanged = 1496735623;
+	parents = (_89);
+	whenchanged = 1498124184;
+	};
+
+node _96 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_89, _99);
+	whenchanged = 1498124184;
+	};
+
+node _19 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_96);
+	whenchanged = 1498124184;
+	};
+
+node _9 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_19);
+	whenchanged = 1498124184;
+	};
+
+node _62 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_9);
+	whenchanged = 1498124184;
+	};
+
+node _12 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_62);
+	whenchanged = 1498124184;
+	};
+
+node _67 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_19);
+	whenchanged = 1498124184;
+	};
+
+node _68 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_13, _67);
+	whenchanged = 1498124184;
+	};
+
+node _73 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_68);
+	whenchanged = 1498124184;
+	};
+
+node _1 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_12, _73);
+	whenchanged = 1498124184;
+	};
+
+node _5 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_1);
+	whenchanged = 1498124184;
+	};
+
+node _0 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_5);
+	whenchanged = 1498124184;
+	};
+
+node _2 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_0);
+	whenchanged = 1498124184;
+	};
+
+node _66 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_1);
+	whenchanged = 1498124184;
+	};
+
+node _6 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_12);
+	whenchanged = 1498124184;
+	};
+
+node _21 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_12);
+	whenchanged = 1498124184;
+	};
+
+node _34 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_30, _40);
+	whenchanged = 1498124184;
+	};
+
+node _32 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_12, _34);
+	whenchanged = 1498124184;
+	};
+
+node _90 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_12, _73);
+	whenchanged = 1498124184;
+	};
+
+node _42 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_21, _32);
+	whenchanged = 1498124184;
+	};
+
+node _33 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_30, _42);
+	whenchanged = 1498124184;
+	};
+
+node _35 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_31, _67);
+	whenchanged = 1498124184;
+	};
+
+node _36 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_33, _35);
+	whenchanged = 1498124184;
+	};
+
+node _37 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_31, _36);
+	whenchanged = 1498124184;
+	};
+
+node _44 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_37);
+	whenchanged = 1498124184;
+	};
+
+node _28 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_44, _73);
+	whenchanged = 1498124184;
+	};
+
+node _49 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_40);
+	whenchanged = 1498124184;
+	};
+
+node _76 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_49, _73);
+	whenchanged = 1498124184;
+	};
+
+node _3 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_6);
+	whenchanged = 1498124184;
+	};
+
+node _85 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_19, _42);
+	whenchanged = 1498124184;
+	};
+
+node _84 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_85);
+	whenchanged = 1498124184;
+	};
+
+node _8 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_6, _84);
+	whenchanged = 1498124184;
+	};
+
+node _11 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_6);
+	whenchanged = 1498124184;
+	};
+
+node _24 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_21);
+	whenchanged = 1498124184;
+	};
+
+node _18 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_28, _90);
+	whenchanged = 1498124184;
+	};
+
+node _63 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_68);
+	whenchanged = 1498124184;
+	};
+
+node _74 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_76);
+	whenchanged = 1498124184;
+	};
+
+node _69 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_9, _85);
+	whenchanged = 1498124184;
+	};
+
+node _4 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_3);
+	whenchanged = 1498124184;
+	};
+
+node _10 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_11);
+	whenchanged = 1498124184;
+	};
+
+node _23 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_24);
+	whenchanged = 1498124184;
+	};
+
+node _29 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_24);
+	whenchanged = 1498124184;
+	};
+
+node _98 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_96, _99);
+	whenchanged = 1498124184;
+	};
+
+node _88 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_98, _99);
+	whenchanged = 1498124184;
+	};
+
+node _94 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_88, _98);
+	whenchanged = 1498124184;
+	};
+
+node _16 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_42, _94);
+	whenchanged = 1498124184;
+	};
+
+node _7 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_31, _44);
+	whenchanged = 1498124184;
+	};
+
+node _45 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_7, _30);
+	whenchanged = 1498124184;
+	};
+
+node _47 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_7, _45);
+	whenchanged = 1498124184;
+	};
+
+node _43 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_44, _47);
+	whenchanged = 1498124184;
+	};
+
+node _27 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_43, _47);
+	whenchanged = 1498124184;
+	};
+
+node _60 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_27, _42);
+	whenchanged = 1498124184;
+	};
+
+node _64 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_63);
+	whenchanged = 1498124184;
+	};
+
+node _48 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_49);
+	whenchanged = 1498124184;
+	};
+
+node _82 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_27, _40);
+	whenchanged = 1498124184;
+	};
+
+node _81 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_82);
+	whenchanged = 1498124184;
+	};
+
+node _75 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_74, _81);
+	whenchanged = 1498124184;
+	};
+
+node _58 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_69);
+	whenchanged = 1498124184;
+	};
+
+node _83 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_48, _69);
+	whenchanged = 1498124184;
+	};
+
+node _86 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_69);
+	whenchanged = 1498124184;
+	};
+
+node _26 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_4);
+	whenchanged = 1498124184;
+	};
+
+node _61 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_60);
+	whenchanged = 1498124184;
+	};
+
+node _79 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_61, _84);
+	whenchanged = 1498124184;
+	};
+
+node _50 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_29);
+	whenchanged = 1498124184;
+	};
+
+node _52 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = ();
+	whenchanged = 1498124184;
+	};
+
+node _51 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_52);
+	whenchanged = 1498124184;
+	};
+
+node _92 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_16, _51);
+	whenchanged = 1498124184;
+	};
+
+node _25 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_30, _85);
+	whenchanged = 1498124184;
+	};
+
+node _56 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_85);
+	whenchanged = 1498124184;
+	};
+
+node _91 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_35, _98);
+	whenchanged = 1498124184;
+	};
+
+node _46 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_7, _43);
+	whenchanged = 1498124184;
+	};
+
+node _57 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_58);
+	whenchanged = 1498124184;
+	};
+
+node _20 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = ();
+	whenchanged = 1498124184;
+	};
+
+node _22 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_20, _83);
+	whenchanged = 1498124184;
+	};
+
+node _55 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_83);
+	whenchanged = 1498124184;
+	};
+
+node _39 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_79);
+	whenchanged = 1498124184;
+	};
+
+node _80 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_79);
+	whenchanged = 1498124184;
+	};
+
+node _54 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_61);
+	whenchanged = 1498124184;
+	};
+
+node _97 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_91);
+	whenchanged = 1498124184;
+	};
+
+node _87 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_91, _97);
+	whenchanged = 1498124184;
+	};
+
+node _93 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_91, _97);
+	whenchanged = 1498124184;
+	};
+
+node _65 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_46, _89);
+	whenchanged = 1498124184;
+	};
+
+node _95 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_98, _99);
+	whenchanged = 1498124184;
+	};
+
+node _72 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_39, _98);
+	whenchanged = 1498124184;
+	};
+
+node _53 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_80);
+	whenchanged = 1498124184;
+	};
+
+node _70 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a);
+	parents = (_80);
+	whenchanged = 1498124184;
+	};
+
+node _15 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_72);
+	whenchanged = 1498124184;
+	};
+
+node _78 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_72);
+	whenchanged = 1498124184;
+	};
+
+node _77 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_72, _78);
+	whenchanged = 1498124184;
+	};
+
+node _71 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = ();
+	whenchanged = 1498124184;
 	};
 };

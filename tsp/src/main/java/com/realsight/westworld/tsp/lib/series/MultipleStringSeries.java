@@ -13,12 +13,12 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
     String name;
 
     public MultipleStringSeries(String name, Collection<String> names) {
-        property_list = new ArrayList<>(names);
+        property_list = new ArrayList<String>(names);
         this.name = name;
     }
 
     public MultipleStringSeries(String name, StringSeries... series) {
-        property_list = new ArrayList<>();
+        property_list = new ArrayList<String>();
         this.name = name;
         for (int i = 0; i < series.length; i++) {
             if (i == 0) {
@@ -31,7 +31,7 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
     
     public MultipleStringSeries(String name, List<StringSeries> series) {
     	this.name = name;
-        property_list = new ArrayList<>();
+        property_list = new ArrayList<String>();
         for (int i = 0; i < series.size(); i++) {
             if (i == 0) {
                 _init(series.get(i));
@@ -42,14 +42,14 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
     }
 
     public MultipleStringSeries(List<Entry<LinkedList<String>>> data, Collection<String> names) {
-        property_list = new ArrayList<>(names);
+        property_list = new ArrayList<String>(names);
         mData = data;
     }
 
 	void _init(StringSeries series) {
-        mData = new ArrayList<>();
+        mData = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<String>>>();
         for (Entry<String> entry : series) {
-            LinkedList<String> list = new LinkedList<>();
+            LinkedList<String> list = new LinkedList<String>();
             list.add(entry.mT);
             add(new Entry<LinkedList<String>>(list, entry.mInstant));
         }
@@ -62,7 +62,7 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
         Iterator<Entry<LinkedList<String>>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = series.iterator();
 
-        List<Entry<LinkedList<String>>> newEntries = new ArrayList<>();
+        List<Entry<LinkedList<String>>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<String>>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<LinkedList<String>> n1 = i1.next();
@@ -100,7 +100,7 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
     	
     	if(l<0 || r>size())
     		throw new Exception("l<0 || r>size()");
-    	List<Entry<LinkedList<String>>> newEntries = new ArrayList<>();
+    	List<Entry<LinkedList<String>>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<String>>>();
     	for(int i = l; i < r; i++){
     		LinkedList<String> t = new LinkedList<String>();
     		for(int j = 0; j < this.mData.get(i).getItem().size(); j++)
@@ -110,22 +110,41 @@ public class MultipleStringSeries extends TimeSeries<LinkedList<String>> {
     	return new MultipleStringSeries(newEntries, property_list);
     }
     
-    public StringSeries getColumn(String name) {
-        int index = getProperty_list().indexOf(name);
-        List<Entry<String>> entries = new ArrayList<>();
+    
+    
+    public StringSeries getColumn(int col_index) {
+    	List<Entry<String>> entries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<String>>();
         for(int i = 0; i < this.getData().size(); i++){
-        	entries.add(new Entry<String>(this.getData().get(i).getItem().get(index), 
+        	entries.add(new Entry<String>(this.getData().get(i).getItem().get(col_index), 
         			this.getData().get(i).getInstant()));
         }
         return new StringSeries(entries, name);
     }
+    
+    public StringSeries getColumn(String col_name) {
+        int col_index = getProperty_list().indexOf(col_name);
+        return getColumn(col_index);
+    }
+    
+    public String getValue(int col_index, int row_index) {
+        return this.mData.get(row_index).getItem().get(col_index);
+    }
+    
+    public String getValue(String col_name, int row_index) {
+        int col_index = getProperty_list().indexOf(col_name);
+        return getValue(col_index, row_index);
+    }
 
-    public int indexOf(String name) {
-        return property_list.indexOf(name);
+    public int indexOf(String col_name) {
+        return property_list.indexOf(col_name);
     }
 
     public List<String> getProperty_list() {
         return property_list;
+    }
+    
+    public int getColumnNum() {
+        return this.property_list.size();
     }
     
     public String getName() {

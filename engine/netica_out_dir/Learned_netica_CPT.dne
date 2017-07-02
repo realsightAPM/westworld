@@ -1,12 +1,12 @@
 // ~->[DNET-1]->~
 
-// File created by WuB at DalianUTech using Netica 5.04 on Jun 06, 2017 at 15:53:43.
+// File created by WuB at DalianUTech using Netica 5.04 on Jun 22, 2017 at 17:36:24.
 
 bnet apm {
 autoupdate = FALSE;
-whenchanged = 1496735623;
+whenchanged = 1498124184;
 
-node cpu {
+node _17 {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
@@ -14,120 +14,2154 @@ node cpu {
 	parents = ();
 	probs = 
 		// a            b            c            
-		  (0.3806881,   0.3318535,   0.2874584);
-	numcases = 901;
-	whenchanged = 1496735623;
+		  (0.2439024,   0.2845528,   0.4715447);
+	numcases = 123;
+	whenchanged = 1498124184;
 	};
 
-node session {
+node _13 {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (cpu);
+	parents = (_17);
 	probs = 
-		// a            b            c             // cpu 
-		  (0.6086956,   0.3710145,   0.02028986,   // a   
-		   0.1627907,   0.1960133,   0.641196,     // b   
-		   0.164751,    0.394636,    0.440613);    // c   ;
+		// a            b            c             // _17 
+		  (0.625,       0.34375,     0.03125,      // a   
+		   0.5945946,   0.3513514,   0.05405406,   // b   
+		   0.1833333,   0.7833334,   0.03333334);  // c   ;
 	numcases = 
-		                 // cpu 
-		  (345,          // a   
-		   301,          // b   
-		   261);         // c   ;
-	whenchanged = 1496735623;
+		                 // _17 
+		  (32,           // a   
+		   37,           // b   
+		   60);          // c   ;
+	whenchanged = 1498124184;
 	};
 
-node memory {
+node _59 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = ();
+	functable = 
+		  (a);
+	numcases = 121;
+	whenchanged = 1498124184;
+	};
+
+node _14 {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (cpu, session);
+	parents = (_13, _59);
 	probs = 
-		// a            b            c             // cpu session 
-		  (0.5943396,   0.4009434,   0.004716981,  // a   a       
-		   0.523077,    0.4230769,   0.05384615,   // a   b       
-		   0.1111111,   0.7777778,   0.1111111,    // a   c       
-		   0.372549,    0.6078432,   0.01960784,   // b   a       
-		   0.6721311,   0.2131148,   0.1147541,    // b   b       
-		   0.005128205, 0.03589744,  0.9589744,    // b   c       
-		   0.4222222,   0.5555556,   0.02222222,   // c   a       
-		   0.1904762,   0.6857143,   0.1238095,    // c   b       
-		   0.1111111,   0.1111111,   0.7777778);   // c   c       ;
+		// a            b            c             // _13 _59 
+		  (0.5471698,   0.4150943,   0.03773585,   // a   a   
+		   0.1126761,   0.8732395,   0.01408451,   // b   a   
+		   0.2,         0.4,         0.4);         // c   a   ;
 	numcases = 
-		                 // cpu session 
-		  (212,          // a   a       
-		   130,          // a   b       
-		   9,            // a   c       
-		   51,           // b   a       
-		   61,           // b   b       
-		   195,          // b   c       
-		   45,           // c   a       
-		   105,          // c   b       
-		   117);         // c   c       ;
-	whenchanged = 1496735623;
+		                 // _13 _59 
+		  (53,           // a   a   
+		   71,           // b   a   
+		   5);           // c   a   ;
+	whenchanged = 1498124184;
 	};
 
-node thread {
+node _30 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = ();
+	probs = 
+		// a            b            
+		  (0.05737705,  0.942623);
+	numcases = 122;
+	whenchanged = 1498124184;
+	};
+
+node _31 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_14, _30);
+	probs = 
+		// a            b             // _14 _30 
+		  (0.25,        0.75,         // a   a   
+		   0.02857143,  0.9714286,    // a   b   
+		   0.8333333,   0.1666667,    // b   a   
+		   0.02469136,  0.9753087,    // b   b   
+		   0.5,         0.5,          // c   a   
+		   0.5,         0.5);         // c   b   ;
+	numcases = 
+		                 // _14 _30 
+		  (4,            // a   a   
+		   35,           // a   b   
+		   6,            // b   a   
+		   81,           // b   b   
+		   2,            // c   a   
+		   4);           // c   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _41 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_31);
+	probs = 
+		// a            b             // _31 
+		  (0.625,       0.375,        // a   
+		   0.2068966,   0.7931035);   // b   ;
+	numcases = 
+		                 // _31 
+		  (8,            // a   
+		   116);         // b   ;
+	whenchanged = 1498124184;
+	};
+
+node _40 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_31, _41);
+	probs = 
+		// a            b             // _31 _41 
+		  (0.8333333,   0.1666667,    // a   a   
+		   0.25,        0.75,         // a   b   
+		   0.32,        0.68,         // b   a   
+		   0.1397849,   0.8602151);   // b   b   ;
+	numcases = 
+		                 // _31 _41 
+		  (6,            // a   a   
+		   4,            // a   b   
+		   25,           // b   a   
+		   93);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _38 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_31, _40);
+	probs = 
+		// a            b             // _31 _40 
+		  (0.8333333,   0.1666667,    // a   a   
+		   0.25,        0.75,         // a   b   
+		   0.0952381,   0.9047619,    // b   a   
+		   0.1443299,   0.8556701);   // b   b   ;
+	numcases = 
+		                 // _31 _40 
+		  (6,            // a   a   
+		   4,            // a   b   
+		   21,           // b   a   
+		   97);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _89 {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (cpu, memory);
+	parents = (_38, _41);
 	probs = 
-		// a            b            c             // cpu memory 
-		  (0.9897436,   0.005128205, 0.005128205,  // a   a      
-		   0.9863946,   0.006802721, 0.006802721,  // a   b      
-		   0.1111111,   0.1111111,   0.7777778,    // a   c      
-		   0.8688524,   0.1147541,   0.01639344,   // b   a      
-		   0.4901961,   0.372549,    0.1372549,    // b   b      
-		   0.09230769,  0.2820513,   0.625641,     // b   c      
-		   0.6153846,   0.25,        0.1346154,    // c   a      
-		   0.2818182,   0.5545455,   0.1636364,    // c   b      
-		   0.00952381,  0.4095238,   0.5809524);   // c   c      ;
+		// a            b            c             // _38 _41 
+		  (0.7777778,   0.1111111,   0.1111111,    // a   a   
+		   0.7333333,   0.2,         0.06666667,   // a   b   
+		   0.8333333,   0.04166667,  0.125,        // b   a   
+		   0.9761904,   0.01190476,  0.01190476);  // b   b   ;
 	numcases = 
-		                 // cpu memory 
-		  (195,          // a   a      
-		   147,          // a   b      
-		   9,            // a   c      
-		   61,           // b   a      
-		   51,           // b   b      
-		   195,          // b   c      
-		   52,           // c   a      
-		   110,          // c   b      
-		   105);         // c   c      ;
-	whenchanged = 1496735623;
+		                 // _38 _41 
+		  (9,            // a   a   
+		   15,           // a   b   
+		   24,           // b   a   
+		   84);          // b   b   ;
+	whenchanged = 1498124184;
 	};
 
-node http {
+node _99 {
 	kind = NATURE;
 	discrete = TRUE;
 	chance = CHANCE;
 	states = (a, b, c);
-	parents = (session, thread);
+	parents = (_89);
 	probs = 
-		// a            b            c             // session thread 
-		  (0.2293233,   0.7443609,   0.02631579,   // a       a      
-		   0.5757576,   0.3939394,   0.03030303,   // a       b      
-		   0.1111111,   0.7777778,   0.1111111,    // a       c      
-		   0.7435898,   0.2205128,   0.03589744,   // b       a      
-		   0.4492754,   0.2753623,   0.2753623,    // b       b      
-		   0.03125,     0.9375,      0.03125,      // b       c      
-		   0.02631579,  0.02631579,  0.9473684,    // c       a      
-		   0.1919192,   0.01010101,  0.7979798,    // c       b      
-		   0.1413043,   0.005434783, 0.8532609);   // c       c      ;
+		// a            b            c             // _89 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   
+		   0.2,         0.6,         0.2,          // b   
+		   0.2,         0.2,         0.6);         // c   ;
 	numcases = 
-		                 // session thread 
-		  (266,          // a       a      
-		   33,           // a       b      
-		   9,            // a       c      
-		   195,          // b       a      
-		   69,           // b       b      
-		   32,           // b       c      
-		   38,           // c       a      
-		   99,           // c       b      
-		   184);         // c       c      ;
-	whenchanged = 1496735623;
+		                 // _89 
+		  (119,          // a   
+		   5,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _96 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_89, _99);
+	probs = 
+		// a            b            c             // _89 _99 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _89 _99 
+		  (119,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   5,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _19 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_96);
+	probs = 
+		// a            b            c             // _96 
+		  (0.4201681,   0.3109244,   0.2689076,    // a   
+		   0.2,         0.2,         0.6,          // b   
+		   0.2,         0.2,         0.6);         // c   ;
+	numcases = 
+		                 // _96 
+		  (119,          // a   
+		   5,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _9 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_19);
+	probs = 
+		// a            b            c             // _19 
+		  (0.7692308,   0.2115385,   0.01923077,   // a   
+		   0.02564103,  0.7179487,   0.2564103,    // b   
+		   0.02631579,  0.1052632,   0.8684211);   // c   ;
+	numcases = 
+		                 // _19 
+		  (52,           // a   
+		   39,           // b   
+		   38);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _62 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_9);
+	probs = 
+		// a            b            c             // _9 
+		  (0.4047619,   0.4285714,   0.1666667,    // a  
+		   0.5348837,   0.4186046,   0.04651163,   // b  
+		   0.06818182,  0.1818182,   0.75);        // c  ;
+	numcases = 
+		                 // _9 
+		  (42,           // a  
+		   43,           // b  
+		   44);          // c  ;
+	whenchanged = 1498124184;
+	};
+
+node _12 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_62);
+	probs = 
+		// a            b            c             // _62 
+		  (0.6744186,   0.2325581,   0.09302326,   // a   
+		   0.2272727,   0.3181818,   0.4545455,    // b   
+		   0.0952381,   0.4761905,   0.4285714);   // c   ;
+	numcases = 
+		                 // _62 
+		  (43,           // a   
+		   44,           // b   
+		   42);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _67 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_19);
+	probs = 
+		// a            b            c             // _19 
+		  (0.9615384,   0.01923077,  0.01923077,   // a   
+		   0.948718,    0.02564103,  0.02564103,   // b   
+		   0.5526316,   0.1842105,   0.2631579);   // c   ;
+	numcases = 
+		                 // _19 
+		  (52,           // a   
+		   39,           // b   
+		   38);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _68 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_13, _67);
+	probs = 
+		// a            b            c             // _13 _67 
+		  (0.9574468,   0.0212766,   0.0212766,    // a   a   
+		   0.1666667,   0.3333333,   0.5,          // a   b   
+		   0.1666667,   0.6666667,   0.1666667,    // a   c   
+		   0.9677419,   0.01612903,  0.01612903,   // b   a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   b   
+		   0.1111111,   0.2222222,   0.6666667,    // b   c   
+		   0.6,         0.2,         0.2,          // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.3333333,   0.3333333,   0.3333333);   // c   c   ;
+	numcases = 
+		                 // _13 _67 
+		  (47,           // a   a   
+		   6,            // a   b   
+		   6,            // a   c   
+		   62,           // b   a   
+		   6,            // b   b   
+		   9,            // b   c   
+		   5,            // c   a   
+		   3,            // c   b   
+		   3);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _73 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_68);
+	probs = 
+		// a            b            c             // _68 
+		  (0.9814815,   0.009259259, 0.009259259,  // a   
+		   0.09090909,  0.4545455,   0.4545455,    // b   
+		   0.1,         0.1,         0.8);         // c   ;
+	numcases = 
+		                 // _68 
+		  (108,          // a   
+		   11,           // b   
+		   10);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _1 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_12, _73);
+	probs = 
+		// a            b            c             // _12 _73 
+		  (0.6744186,   0.2790698,   0.04651163,   // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.2857143,   0.4857143,   0.2285714,    // b   a   
+		   0.1666667,   0.1666667,   0.6666667,    // b   b   
+		   0.1111111,   0.1111111,   0.7777778,    // b   c   
+		   0.1111111,   0.4166667,   0.4722222,    // c   a   
+		   0.25,        0.25,        0.5,          // c   b   
+		   0.125,       0.125,       0.75);        // c   c   ;
+	numcases = 
+		                 // _12 _73 
+		  (43,           // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   35,           // b   a   
+		   6,            // b   b   
+		   9,            // b   c   
+		   36,           // c   a   
+		   4,            // c   b   
+		   8);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _5 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_1);
+	probs = 
+		// a            b            c             // _1 
+		  (0.8372093,   0.1395349,   0.02325581,   // a  
+		   0.1590909,   0.7272727,   0.1136364,    // b  
+		   0.02380952,  0.0952381,   0.8809524);   // c  ;
+	numcases = 
+		                 // _1 
+		  (43,           // a  
+		   44,           // b  
+		   42);          // c  ;
+	whenchanged = 1498124184;
+	};
+
+node _0 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_5);
+	probs = 
+		// a            b            c             // _5 
+		  (0.7727273,   0.2045455,   0.02272727,   // a  
+		   0.1904762,   0.6904762,   0.1190476,    // b  
+		   0.02325581,  0.1162791,   0.8604651);   // c  ;
+	numcases = 
+		                 // _5 
+		  (44,           // a  
+		   42,           // b  
+		   43);          // c  ;
+	whenchanged = 1498124184;
+	};
+
+node _2 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_0);
+	probs = 
+		// a            b            c             // _0 
+		  (0.8604651,   0.1162791,   0.02325581,   // a  
+		   0.1162791,   0.744186,    0.1395349,    // b  
+		   0.02325581,  0.1627907,   0.8139535);   // c  ;
+	numcases = 43;
+	whenchanged = 1498124184;
+	};
+
+node _66 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_1);
+	functable = 
+		                    // _1 
+		  (a,               // a  
+		   a,               // b  
+		   a);              // c  ;
+	numcases = 
+		                 // _1 
+		  (41,           // a  
+		   42,           // b  
+		   40);          // c  ;
+	whenchanged = 1498124184;
+	};
+
+node _6 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_12);
+	probs = 
+		// a            b            c             // _12 
+		  (0.744186,    0.2093023,   0.04651163,   // a   
+		   0.2272727,   0.6136364,   0.1590909,    // b   
+		   0.02380952,  0.1666667,   0.8095238);   // c   ;
+	numcases = 
+		                 // _12 
+		  (43,           // a   
+		   44,           // b   
+		   42);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _21 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_12);
+	probs = 
+		// a            b            c             // _12 
+		  (0.2093023,   0.1162791,   0.6744186,    // a   
+		   0.1818182,   0.2954545,   0.5227273,    // b   
+		   0.4285714,   0.3809524,   0.1904762);   // c   ;
+	numcases = 
+		                 // _12 
+		  (43,           // a   
+		   44,           // b   
+		   42);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _34 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_30, _40);
+	probs = 
+		// a            b             // _30 _40 
+		  (0.8,         0.2,          // a   a   
+		   0.2,         0.8,          // a   b   
+		   0.04545455,  0.9545454,    // b   a   
+		   0.05208333,  0.9479167);   // b   b   ;
+	numcases = 
+		                 // _30 _40 
+		  (5,            // a   a   
+		   5,            // a   b   
+		   22,           // b   a   
+		   96);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _32 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_12, _34);
+	probs = 
+		// a            b             // _12 _34 
+		  (0.25,        0.75,         // a   a   
+		   0.025,       0.975,        // a   b   
+		   0.5,         0.5,          // b   a   
+		   0.1219512,   0.8780488,    // b   b   
+		   0.8,         0.2,          // c   a   
+		   0.02631579,  0.9736842);   // c   b   ;
+	numcases = 
+		                 // _12 _34 
+		  (4,            // a   a   
+		   40,           // a   b   
+		   4,            // b   a   
+		   41,           // b   b   
+		   5,            // c   a   
+		   38);          // c   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _90 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_12, _73);
+	probs = 
+		// a            b            c             // _12 _73 
+		  (0.5813953,   0.3953488,   0.02325581,   // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.2571429,   0.6571429,   0.08571429,   // b   a   
+		   0.1666667,   0.1666667,   0.6666667,    // b   b   
+		   0.3333333,   0.1111111,   0.5555556,    // b   c   
+		   0.1666667,   0.08333334,  0.75,         // c   a   
+		   0.5,         0.25,        0.25,         // c   b   
+		   0.125,       0.125,       0.75);        // c   c   ;
+	numcases = 
+		                 // _12 _73 
+		  (43,           // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   35,           // b   a   
+		   6,            // b   b   
+		   9,            // b   c   
+		   36,           // c   a   
+		   4,            // c   b   
+		   8);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _42 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_21, _32);
+	probs = 
+		// a            b             // _21 _32 
+		  (0.25,        0.75,         // a   a   
+		   0.5625,      0.4375,       // a   b   
+		   0.8,         0.2,          // b   a   
+		   0.2333333,   0.7666667,    // b   b   
+		   0.8,         0.2,          // c   a   
+		   0.1785714,   0.8214286);   // c   b   ;
+	numcases = 
+		                 // _21 _32 
+		  (4,            // a   a   
+		   32,           // a   b   
+		   5,            // b   a   
+		   30,           // b   b   
+		   5,            // c   a   
+		   56);          // c   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _33 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_30, _42);
+	probs = 
+		// a            b             // _30 _42 
+		  (0.8571429,   0.1428571,    // a   a   
+		   0.3333333,   0.6666667,    // a   b   
+		   0.02857143,  0.9714286,    // b   a   
+		   0.04819277,  0.9518072);   // b   b   ;
+	numcases = 
+		                 // _30 _42 
+		  (7,            // a   a   
+		   3,            // a   b   
+		   35,           // b   a   
+		   83);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _35 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_31, _67);
+	probs = 
+		// a            b             // _31 _67 
+		  (0.625,       0.375,        // a   a   
+		   0.5,         0.5,          // a   b   
+		   0.5,         0.5,          // a   c   
+		   0.00990099,  0.990099,     // b   a   
+		   0.25,        0.75,         // b   b   
+		   0.4545455,   0.5454546);   // b   c   ;
+	numcases = 
+		                 // _31 _67 
+		  (8,            // a   a   
+		   2,            // a   b   
+		   2,            // a   c   
+		   101,          // b   a   
+		   8,            // b   b   
+		   11);          // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _36 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_33, _35);
+	probs = 
+		// a            b             // _33 _35 
+		  (0.8333333,   0.1666667,    // a   a   
+		   0.3333333,   0.6666667,    // a   b   
+		   0.1428571,   0.8571429,    // b   a   
+		   0.05504587,  0.9449542);   // b   b   ;
+	numcases = 
+		                 // _33 _35 
+		  (6,            // a   a   
+		   6,            // a   b   
+		   7,            // b   a   
+		   109);         // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _37 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_31, _36);
+	probs = 
+		// a            b             // _31 _36 
+		  (0.8333333,   0.1666667,    // a   a   
+		   0.25,        0.75,         // a   b   
+		   0.125,       0.875,        // b   a   
+		   0.1,         0.9);         // b   b   ;
+	numcases = 
+		                 // _31 _36 
+		  (6,            // a   a   
+		   4,            // a   b   
+		   8,            // b   a   
+		   110);         // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _44 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_37);
+	probs = 
+		// a            b             // _37 
+		  (0.6875,      0.3125,       // a   
+		   0.3425926,   0.6574074);   // b   ;
+	numcases = 
+		                 // _37 
+		  (16,           // a   
+		   108);         // b   ;
+	whenchanged = 1498124184;
+	};
+
+node _28 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_44, _73);
+	probs = 
+		// a            b             // _44 _73 
+		  (0.02325581,  0.9767442,    // a   a   
+		   0.6666667,   0.3333333,    // a   b   
+		   0.1666667,   0.8333333,    // a   c   
+		   0.01515152,  0.9848485,    // b   a   
+		   0.2,         0.8,          // b   b   
+		   0.1111111,   0.8888889);   // b   c   ;
+	numcases = 
+		                 // _44 _73 
+		  (43,           // a   a   
+		   3,            // a   b   
+		   6,            // a   c   
+		   66,           // b   a   
+		   5,            // b   b   
+		   9);           // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _49 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_40);
+	probs = 
+		// a            b            c             // _40 
+		  (0.2307692,   0.6923077,   0.07692308,   // a   
+		   0.5,         0.49,        0.01);        // b   ;
+	numcases = 
+		                 // _40 
+		  (26,           // a   
+		   100);         // b   ;
+	whenchanged = 1498124184;
+	};
+
+node _76 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_49, _73);
+	probs = 
+		// a            b            c             // _49 _73 
+		  (0.96,        0.02,        0.02,         // a   a   
+		   0.25,        0.5,         0.25,         // a   b   
+		   0.1111111,   0.6666667,   0.2222222,    // a   c   
+		   0.9666666,   0.01666667,  0.01666667,   // b   a   
+		   0.1666667,   0.5,         0.3333333,    // b   b   
+		   0.125,       0.125,       0.75,         // b   c   
+		   0.5,         0.25,        0.25,         // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.3333333,   0.3333333,   0.3333333);   // c   c   ;
+	numcases = 
+		                 // _49 _73 
+		  (50,           // a   a   
+		   4,            // a   b   
+		   9,            // a   c   
+		   60,           // b   a   
+		   6,            // b   b   
+		   8,            // b   c   
+		   4,            // c   a   
+		   3,            // c   b   
+		   3);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _3 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_6);
+	probs = 
+		// a            b            c             // _6 
+		  (0.7209302,   0.255814,    0.02325581,   // a  
+		   0.255814,    0.627907,    0.1162791,    // b  
+		   0.02325581,  0.1395349,   0.8372093);   // c  ;
+	numcases = 43;
+	whenchanged = 1498124184;
+	};
+
+node _85 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_19, _42);
+	probs = 
+		// a            b            c             // _19 _42 
+		  (0.8823529,   0.05882353,  0.05882353,   // a   a   
+		   0.9473684,   0.02631579,  0.02631579,   // a   b   
+		   0.7692308,   0.1538462,   0.07692308,   // b   a   
+		   0.4827586,   0.03448276,  0.4827586,    // b   b   
+		   0.8235294,   0.05882353,  0.1176471,    // c   a   
+		   0.7083333,   0.125,       0.1666667);   // c   b   ;
+	numcases = 
+		                 // _19 _42 
+		  (17,           // a   a   
+		   38,           // a   b   
+		   13,           // b   a   
+		   29,           // b   b   
+		   17,           // c   a   
+		   24);          // c   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _84 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_85);
+	probs = 
+		// a            b            c             // _85 
+		  (0.9805825,   0.009708738, 0.009708738,  // a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   
+		   0.05,        0.05,        0.9);         // c   ;
+	numcases = 
+		                 // _85 
+		  (103,          // a   
+		   6,            // b   
+		   20);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _8 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_6, _84);
+	probs = 
+		// a            b            c             // _6 _84 
+		  (0.8823529,   0.0882353,   0.02941176,   // a  a   
+		   0.3333333,   0.3333333,   0.3333333,    // a  b   
+		   0.3333333,   0.3333333,   0.3333333,    // a  c   
+		   0.2702703,   0.6486486,   0.08108108,   // b  a   
+		   0.3333333,   0.3333333,   0.3333333,    // b  b   
+		   0.1111111,   0.3333333,   0.5555556,    // b  c   
+		   0.02631579,  0.1578947,   0.8157895,    // c  a   
+		   0.1666667,   0.6666667,   0.1666667,    // c  b   
+		   0.2,         0.4,         0.4);         // c  c   ;
+	numcases = 
+		                 // _6 _84 
+		  (34,           // a  a   
+		   3,            // a  b   
+		   12,           // a  c   
+		   37,           // b  a   
+		   3,            // b  b   
+		   9,            // b  c   
+		   38,           // c  a   
+		   6,            // c  b   
+		   5);           // c  c   ;
+	whenchanged = 1498124184;
+	};
+
+node _11 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_6);
+	probs = 
+		// a            b            c             // _6 
+		  (0.7906977,   0.1860465,   0.02325581,   // a  
+		   0.1860465,   0.6046512,   0.2093023,    // b  
+		   0.02325581,  0.2093023,   0.7674419);   // c  ;
+	numcases = 43;
+	whenchanged = 1498124184;
+	};
+
+node _24 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_21);
+	probs = 
+		// a            b            c             // _21 
+		  (0.7714286,   0.1428571,   0.08571429,   // a   
+		   0.5,         0.1764706,   0.3235294,    // b   
+		   0.2,         0.2333333,   0.5666667);   // c   ;
+	numcases = 
+		                 // _21 
+		  (35,           // a   
+		   34,           // b   
+		   60);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _18 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_28, _90);
+	probs = 
+		// a            b            c             // _28 _90 
+		  (0.3333333,   0.3333333,   0.3333333,    // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.25,        0.25,        0.5,          // a   c   
+		   0.9534883,   0.02325581,  0.02325581,   // b   a   
+		   0.02325581,  0.9534883,   0.02325581,   // b   b   
+		   0.02380952,  0.02380952,  0.952381);    // b   c   ;
+	numcases = 
+		                 // _28 _90 
+		  (3,            // a   a   
+		   3,            // a   b   
+		   4,            // a   c   
+		   43,           // b   a   
+		   43,           // b   b   
+		   42);          // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _63 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_68);
+	probs = 
+		// a            b            c             // _68 
+		  (0.3518519,   0.3518519,   0.2962963,    // a   
+		   0.09090909,  0.6363636,   0.2727273,    // b   
+		   0.1,         0.2,         0.7);         // c   ;
+	numcases = 
+		                 // _68 
+		  (108,          // a   
+		   11,           // b   
+		   10);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _74 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_76);
+	probs = 
+		// a            b            c             // _76 
+		  (0.9814815,   0.009259259, 0.009259259,  // a   
+		   0.09090909,  0.8181818,   0.09090909,   // b   
+		   0.1,         0.1,         0.8);         // c   ;
+	numcases = 
+		                 // _76 
+		  (108,          // a   
+		   11,           // b   
+		   10);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _69 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_9, _85);
+	probs = 
+		// a            b            c             // _9 _85 
+		  (0.6190476,   0.3571429,   0.02380952,   // a  a   
+		   0.3333333,   0.3333333,   0.3333333,    // a  b   
+		   0.3333333,   0.3333333,   0.3333333,    // a  c   
+		   0.5666667,   0.4,         0.03333334,   // b  a   
+		   0.3333333,   0.3333333,   0.3333333,    // b  b   
+		   0.0625,      0.375,       0.5625,       // b  c   
+		   0.1891892,   0.1621622,   0.6486486,    // c  a   
+		   0.1666667,   0.3333333,   0.5,          // c  b   
+		   0.1428571,   0.4285714,   0.4285714);   // c  c   ;
+	numcases = 
+		                 // _9 _85 
+		  (42,           // a  a   
+		   3,            // a  b   
+		   3,            // a  c   
+		   30,           // b  a   
+		   3,            // b  b   
+		   16,           // b  c   
+		   37,           // c  a   
+		   6,            // c  b   
+		   7);           // c  c   ;
+	whenchanged = 1498124184;
+	};
+
+node _4 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_3);
+	probs = 
+		// a            b            c             // _3 
+		  (0.9534883,   0.02325581,  0.02325581,   // a  
+		   0.02272727,  0.9090909,   0.06818182,   // b  
+		   0.02380952,  0.04761905,  0.9285714);   // c  ;
+	numcases = 
+		                 // _3 
+		  (43,           // a  
+		   44,           // b  
+		   42);          // c  ;
+	whenchanged = 1498124184;
+	};
+
+node _10 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_11);
+	probs = 
+		// a            b            c             // _11 
+		  (0.8139535,   0.1627907,   0.02325581,   // a   
+		   0.1395349,   0.6976744,   0.1627907,    // b   
+		   0.02325581,  0.1627907,   0.8139535);   // c   ;
+	numcases = 43;
+	whenchanged = 1498124184;
+	};
+
+node _23 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_24);
+	probs = 
+		// a            b            c             // _24 
+		  (0.6607143,   0.2321429,   0.1071429,    // a   
+		   0.28,        0.48,        0.24,         // b   
+		   0.1458333,   0.1041667,   0.75);        // c   ;
+	numcases = 
+		                 // _24 
+		  (56,           // a   
+		   25,           // b   
+		   48);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _29 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_24);
+	probs = 
+		// a            b             // _24 
+		  (0.1272727,   0.8727273,    // a   
+		   0.08333334,  0.9166667,    // b   
+		   0.0212766,   0.9787234);   // c   ;
+	numcases = 
+		                 // _24 
+		  (55,           // a   
+		   24,           // b   
+		   47);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _98 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_96, _99);
+	probs = 
+		// a            b            c             // _96 _99 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _96 _99 
+		  (119,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   5,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _88 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_98, _99);
+	probs = 
+		// a            b            c             // _98 _99 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _98 _99 
+		  (119,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   5,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _94 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_88, _98);
+	probs = 
+		// a            b            c             // _88 _98 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _88 _98 
+		  (119,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   5,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _16 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_42, _94);
+	probs = 
+		// a            b            c             // _42 _94 
+		  (0.1794872,   0.7948718,   0.02564103,   // a   a   
+		   0.25,        0.25,        0.5,          // a   b   
+		   0.5,         0.25,        0.25,         // a   c   
+		   0.3614458,   0.626506,    0.01204819,   // b   a   
+		   0.25,        0.5,         0.25,         // b   b   
+		   0.25,        0.5,         0.25);        // b   c   ;
+	numcases = 
+		                 // _42 _94 
+		  (39,           // a   a   
+		   4,            // a   b   
+		   4,            // a   c   
+		   83,           // b   a   
+		   4,            // b   b   
+		   4);           // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _7 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_31, _44);
+	probs = 
+		// a            b            c             // _31 _44 
+		  (0.7142857,   0.1428571,   0.1428571,    // a   a   
+		   0.6,         0.2,         0.2,          // a   b   
+		   0.7777778,   0.08888889,  0.1333333,    // b   a   
+		   0.01333333,  0.4533333,   0.5333334);   // b   b   ;
+	numcases = 
+		                 // _31 _44 
+		  (7,            // a   a   
+		   5,            // a   b   
+		   45,           // b   a   
+		   75);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _45 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_7, _30);
+	probs = 
+		// a            b             // _7 _30 
+		  (0.3333333,   0.6666667,    // a  a   
+		   0.9736842,   0.02631579,   // a  b   
+		   0.3333333,   0.6666667,    // b  a   
+		   0.1081081,   0.8918919,    // b  b   
+		   0.6666667,   0.3333333,    // c  a   
+		   0.04444445,  0.9555556);   // c  b   ;
+	numcases = 
+		                 // _7 _30 
+		  (6,            // a  a   
+		   38,           // a  b   
+		   3,            // b  a   
+		   37,           // b  b   
+		   3,            // c  a   
+		   45);          // c  b   ;
+	whenchanged = 1498124184;
+	};
+
+node _47 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_7, _45);
+	probs = 
+		// a            b             // _7 _45 
+		  (0.974359,    0.02564103,   // a  a   
+		   0.2,         0.8,          // a  b   
+		   0.4,         0.6,          // b  a   
+		   0.1142857,   0.8857143,    // b  b   
+		   0.25,        0.75,         // c  a   
+		   0.1136364,   0.8863636);   // c  b   ;
+	numcases = 
+		                 // _7 _45 
+		  (39,           // a  a   
+		   5,            // a  b   
+		   5,            // b  a   
+		   35,           // b  b   
+		   4,            // c  a   
+		   44);          // c  b   ;
+	whenchanged = 1498124184;
+	};
+
+node _43 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_44, _47);
+	probs = 
+		// a            b             // _44 _47 
+		  (0.9512195,   0.04878049,   // a   a   
+		   0.1111111,   0.8888889,    // a   b   
+		   0.25,        0.75,         // b   a   
+		   0.04285714,  0.9571428);   // b   b   ;
+	numcases = 
+		                 // _44 _47 
+		  (41,           // a   a   
+		   9,            // a   b   
+		   8,            // b   a   
+		   70);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _27 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_43, _47);
+	probs = 
+		// a            b             // _43 _47 
+		  (0.02439024,  0.9756098,    // a   a   
+		   0.25,        0.75,         // a   b   
+		   0.5,         0.5,          // b   a   
+		   0.09333333,  0.9066667);   // b   b   ;
+	numcases = 
+		                 // _43 _47 
+		  (41,           // a   a   
+		   4,            // a   b   
+		   8,            // b   a   
+		   75);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _60 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_27, _42);
+	probs = 
+		// a            b            c             // _27 _42 
+		  (0.625,       0.125,       0.25,         // a   a   
+		   0.1428571,   0.5714286,   0.2857143,    // a   b   
+		   0.9444444,   0.02777778,  0.02777778,   // b   a   
+		   0.9753087,   0.01234568,  0.01234568);  // b   b   ;
+	numcases = 
+		                 // _27 _42 
+		  (8,            // a   a   
+		   7,            // a   b   
+		   36,           // b   a   
+		   81);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _64 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_63);
+	probs = 
+		// a            b            c             // _63 
+		  (0.7,         0.25,        0.05,         // a   
+		   0.2340426,   0.5531915,   0.212766,     // b   
+		   0.1190476,   0.1904762,   0.6904762);   // c   ;
+	numcases = 
+		                 // _63 
+		  (40,           // a   
+		   47,           // b   
+		   42);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _48 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_49);
+	probs = 
+		// a            b            c             // _49 
+		  (0.8596491,   0.122807,    0.01754386,   // a   
+		   0.02941176,  0.9558824,   0.01470588,   // b   
+		   0.25,        0.25,        0.5);         // c   ;
+	numcases = 
+		                 // _49 
+		  (57,           // a   
+		   68,           // b   
+		   4);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _82 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_27, _40);
+	probs = 
+		// a            b            c             // _27 _40 
+		  (0.2,         0.6,         0.2,          // a   a   
+		   0.1,         0.2,         0.7,          // a   b   
+		   0.125,       0.5,         0.375,        // b   a   
+		   0.4301075,   0.2795699,   0.2903226);   // b   b   ;
+	numcases = 
+		                 // _27 _40 
+		  (5,            // a   a   
+		   10,           // a   b   
+		   24,           // b   a   
+		   93);          // b   b   ;
+	whenchanged = 1498124184;
+	};
+
+node _81 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_82);
+	probs = 
+		// a            b            c             // _82 
+		  (0.7272727,   0.2272727,   0.04545455,   // a   
+		   0.04761905,  0.8095238,   0.1428571,    // b   
+		   0.02325581,  0.1162791,   0.8604651);   // c   ;
+	numcases = 
+		                 // _82 
+		  (44,           // a   
+		   42,           // b   
+		   43);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _75 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_74, _81);
+	probs = 
+		// a            b            c             // _74 _81 
+		  (0.9393939,   0.03030303,  0.03030303,   // a   a   
+		   0.9534883,   0.02325581,  0.02325581,   // a   b   
+		   0.9473684,   0.02631579,  0.02631579,   // a   c   
+		   0.25,        0.5,         0.25,         // b   a   
+		   0.1428571,   0.2857143,   0.5714286,    // b   b   
+		   0.1666667,   0.6666667,   0.1666667,    // b   c   
+		   0.25,        0.5,         0.25,         // c   a   
+		   0.2,         0.2,         0.6,          // c   b   
+		   0.1428571,   0.1428571,   0.7142857);   // c   c   ;
+	numcases = 
+		                 // _74 _81 
+		  (33,           // a   a   
+		   43,           // a   b   
+		   38,           // a   c   
+		   4,            // b   a   
+		   7,            // b   b   
+		   6,            // b   c   
+		   4,            // c   a   
+		   5,            // c   b   
+		   7);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _58 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_69);
+	probs = 
+		// a            b            c             // _69 
+		  (0.42,        0.56,        0.02,         // a   
+		   0.3414634,   0.4878049,   0.1707317,    // b   
+		   0.368421,    0.07894737,  0.5526316);   // c   ;
+	numcases = 
+		                 // _69 
+		  (50,           // a   
+		   41,           // b   
+		   38);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _83 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_48, _69);
+	functable = 
+		                    // _48 _69 
+		  (a,               // a   a   
+		   a,               // a   b   
+		   a,               // a   c   
+		   a,               // b   a   
+		   a,               // b   b   
+		   a,               // b   c   
+		   a,               // c   a   
+		   a,               // c   b   
+		   a);              // c   c   ;
+	numcases = 
+		                 // _48 _69 
+		  (23,           // a   a   
+		   16,           // a   b   
+		   13,           // a   c   
+		   26,           // b   a   
+		   24,           // b   b   
+		   23,           // b   c   
+		   1,            // c   a   
+		   1,            // c   b   
+		   2);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _86 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_69);
+	functable = 
+		                    // _69 
+		  (a,               // a   
+		   a,               // b   
+		   a);              // c   ;
+	numcases = 
+		                 // _69 
+		  (48,           // a   
+		   39,           // b   
+		   36);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _26 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_4);
+	probs = 
+		// a            b            c             // _4 
+		  (0.5813953,   0.3023256,   0.1162791,    // a  
+		   0.3488372,   0.4186046,   0.2325581,    // b  
+		   0.04651163,  0.3255814,   0.627907);    // c  ;
+	numcases = 43;
+	whenchanged = 1498124184;
+	};
+
+node _61 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_60);
+	probs = 
+		// a            b            c             // _60 
+		  (0.9830508,   0.008474576, 0.008474576,  // a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   
+		   0.2,         0.2,         0.6);         // c   ;
+	numcases = 
+		                 // _60 
+		  (118,          // a   
+		   6,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _79 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_61, _84);
+	probs = 
+		// a            b            c             // _61 _84 
+		  (0.979798,    0.01010101,  0.01010101,   // a   a   
+		   0.6666667,   0.1666667,   0.1666667,    // a   b   
+		   0.8947368,   0.05263158,  0.05263158,   // a   c   
+		   0.2,         0.2,         0.6,          // b   a   
+		   0.3333333,   0.3333333,   0.3333333,    // b   b   
+		   0.25,        0.5,         0.25,         // b   c   
+		   0.2,         0.6,         0.2,          // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.3333333,   0.3333333,   0.3333333);   // c   c   ;
+	numcases = 
+		                 // _61 _84 
+		  (99,           // a   a   
+		   6,            // a   b   
+		   19,           // a   c   
+		   5,            // b   a   
+		   3,            // b   b   
+		   4,            // b   c   
+		   5,            // c   a   
+		   3,            // c   b   
+		   3);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _50 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_29);
+	probs = 
+		// a            b            c             // _29 
+		  (0.5,         0.4,         0.1,          // a   
+		   0.1637931,   0.3017241,   0.5344828);   // b   ;
+	numcases = 
+		                 // _29 
+		  (10,           // a   
+		   116);         // b   ;
+	whenchanged = 1498124184;
+	};
+
+node _52 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = ();
+	probs = 
+		// a            b            c            
+		  (0.3414634,   0.300813,    0.3577236);
+	numcases = 123;
+	whenchanged = 1498124184;
+	};
+
+node _51 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_52);
+	probs = 
+		// a            b            c             // _52 
+		  (0.4090909,   0.4318182,   0.1590909,    // a   
+		   0.1794872,   0.4102564,   0.4102564,    // b   
+		   0.02173913,  0.2608696,   0.7173913);   // c   ;
+	numcases = 
+		                 // _52 
+		  (44,           // a   
+		   39,           // b   
+		   46);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _92 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_16, _51);
+	functable = 
+		                    // _16 _51 
+		  (a,               // a   a   
+		   a,               // a   b   
+		   a,               // a   c   
+		   a,               // b   a   
+		   a,               // b   b   
+		   a,               // b   c   
+		   a,               // c   a   
+		   a,               // c   b   
+		   a);              // c   c   ;
+	numcases = 
+		                 // _16 _51 
+		  (7,            // a   a   
+		   13,           // a   b   
+		   19,           // a   c   
+		   18,           // b   a   
+		   32,           // b   b   
+		   36,           // b   c   
+		   1,            // c   a   
+		   2,            // c   b   
+		   1);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _25 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_30, _85);
+	probs = 
+		// a            b            c             // _30 _85 
+		  (0.1428571,   0.1428571,   0.7142857,    // a   a   
+		   0.5,         0.25,        0.25,         // a   b   
+		   0.5,         0.25,        0.25,         // a   c   
+		   0.2424242,   0.4040404,   0.3535354,    // b   a   
+		   0.2,         0.2,         0.6,          // b   b   
+		   0.7368421,   0.05263158,  0.2105263);   // b   c   ;
+	numcases = 
+		                 // _30 _85 
+		  (7,            // a   a   
+		   4,            // a   b   
+		   4,            // a   c   
+		   99,           // b   a   
+		   5,            // b   b   
+		   19);          // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _56 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_85);
+	probs = 
+		// a            b            c             // _85 
+		  (0.2912621,   0.3398058,   0.368932,     // a   
+		   0.6666667,   0.1666667,   0.1666667,    // b   
+		   0.9,         0.05,        0.05);        // c   ;
+	numcases = 
+		                 // _85 
+		  (103,          // a   
+		   6,            // b   
+		   20);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _91 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_35, _98);
+	probs = 
+		// a            b            c             // _35 _98 
+		  (0.75,        0.1666667,   0.08333334,   // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.9818182,   0.009090909, 0.009090909,  // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.2,         0.2,         0.6);         // b   c   ;
+	numcases = 
+		                 // _35 _98 
+		  (12,           // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   110,          // b   a   
+		   5,            // b   b   
+		   5);           // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _46 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_7, _43);
+	probs = 
+		// a            b             // _7 _43 
+		  (0.974359,    0.02564103,   // a  a   
+		   0.2,         0.8,          // a  b   
+		   0.6,         0.4,          // b  a   
+		   0.05714286,  0.9428571,    // b  b   
+		   0.3333333,   0.6666667,    // c  a   
+		   0.1111111,   0.8888889);   // c  b   ;
+	numcases = 
+		                 // _7 _43 
+		  (39,           // a  a   
+		   5,            // a  b   
+		   5,            // b  a   
+		   35,           // b  b   
+		   3,            // c  a   
+		   45);          // c  b   ;
+	whenchanged = 1498124184;
+	};
+
+node _57 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_58);
+	probs = 
+		// a            b            c             // _58 
+		  (0.877551,    0.1020408,   0.02040816,   // a   
+		   0.01960784,  0.9607843,   0.01960784,   // b   
+		   0.03448276,  0.06896552,  0.8965517);   // c   ;
+	numcases = 
+		                 // _58 
+		  (49,           // a   
+		   51,           // b   
+		   29);          // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _20 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = ();
+	probs = 
+		// a            b            c            
+		  (0.3739837,   0.2601626,   0.3658537);
+	numcases = 123;
+	whenchanged = 1498124184;
+	};
+
+node _22 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_20, _83);
+	probs = 
+		// a            b            c             // _20 _83 
+		  (0.375,       0.4166667,   0.2083333,    // a   a   
+		   0.1470588,   0.3529412,   0.5,          // b   a   
+		   0.106383,    0.1489362,   0.7446808);   // c   a   ;
+	numcases = 
+		                 // _20 _83 
+		  (48,           // a   a   
+		   34,           // b   a   
+		   47);          // c   a   ;
+	whenchanged = 1498124184;
+	};
+
+node _55 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_83);
+	probs = 
+		// a            b            c             // _83 
+		  (0.398374,    0.2601626,   0.3414634);   // a   ;
+	numcases = 123;
+	whenchanged = 1498124184;
+	};
+
+node _39 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b);
+	parents = (_79);
+	probs = 
+		// a            b             // _79 
+		  (0.2307692,   0.7692308,    // a   
+		   0.2,         0.8,          // b   
+		   0.75,        0.25);        // c   ;
+	numcases = 
+		                 // _79 
+		  (117,          // a   
+		   5,            // b   
+		   4);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _80 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_79);
+	probs = 
+		// a            b            c             // _79 
+		  (0.9830508,   0.008474576, 0.008474576,  // a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   
+		   0.2,         0.2,         0.6);         // c   ;
+	numcases = 
+		                 // _79 
+		  (118,          // a   
+		   6,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _54 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_61);
+	probs = 
+		// a            b            c             // _61 
+		  (0.2542373,   0.2966102,   0.4491525,    // a   
+		   0.1666667,   0.1666667,   0.6666667,    // b   
+		   0.2,         0.6,         0.2);         // c   ;
+	numcases = 
+		                 // _61 
+		  (118,          // a   
+		   6,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _97 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_91);
+	probs = 
+		// a            b            c             // _91 
+		  (0.9830508,   0.008474576, 0.008474576,  // a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   
+		   0.2,         0.2,         0.6);         // c   ;
+	numcases = 
+		                 // _91 
+		  (118,          // a   
+		   6,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _87 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_91, _97);
+	probs = 
+		// a            b            c             // _91 _97 
+		  (0.9830508,   0.008474576, 0.008474576,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _91 _97 
+		  (118,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   6,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _93 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_91, _97);
+	probs = 
+		// a            b            c             // _91 _97 
+		  (0.9830508,   0.008474576, 0.008474576,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _91 _97 
+		  (118,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   6,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _65 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_46, _89);
+	functable = 
+		                    // _46 _89 
+		  (a,               // a   a   
+		   a,               // a   b   
+		   a,               // a   c   
+		   a,               // b   a   
+		   a,               // b   b   
+		   a);              // b   c   ;
+	numcases = 
+		                 // _46 _89 
+		  (44,           // a   a   
+		   2,            // a   b   
+		   1,            // a   c   
+		   74,           // b   a   
+		   2,            // b   b   
+		   3);           // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _95 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_98, _99);
+	probs = 
+		// a            b            c             // _98 _99 
+		  (0.9831933,   0.008403362, 0.008403362,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.2,         0.6,         0.2,          // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.2,         0.2,         0.6);         // c   c   ;
+	numcases = 
+		                 // _98 _99 
+		  (119,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   5,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   5);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _72 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_39, _98);
+	probs = 
+		// a            b            c             // _39 _98 
+		  (0.9,         0.03333334,  0.06666667,   // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.25,        0.5,         0.25,         // a   c   
+		   0.9782609,   0.01086957,  0.01086957,   // b   a   
+		   0.6,         0.2,         0.2,          // b   b   
+		   0.5,         0.25,        0.25);        // b   c   ;
+	numcases = 
+		                 // _39 _98 
+		  (30,           // a   a   
+		   3,            // a   b   
+		   4,            // a   c   
+		   92,           // b   a   
+		   5,            // b   b   
+		   4);           // b   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _53 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_80);
+	probs = 
+		// a            b            c             // _80 
+		  (0.2542373,   0.5254237,   0.220339,     // a   
+		   0.1666667,   0.6666667,   0.1666667,    // b   
+		   0.6,         0.2,         0.2);         // c   ;
+	numcases = 
+		                 // _80 
+		  (118,          // a   
+		   6,            // b   
+		   5);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _70 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = DETERMIN;
+	states = (a);
+	parents = (_80);
+	functable = 
+		                    // _80 
+		  (a,               // a   
+		   a,               // b   
+		   a);              // c   ;
+	numcases = 
+		                 // _80 
+		  (116,          // a   
+		   4,            // b   
+		   3);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _15 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_72);
+	probs = 
+		// a            b            c             // _72 
+		  (0.2561983,   0.7272727,   0.01652892,   // a   
+		   0.25,        0.25,        0.5,          // b   
+		   0.5,         0.25,        0.25);        // c   ;
+	numcases = 
+		                 // _72 
+		  (121,          // a   
+		   4,            // b   
+		   4);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _78 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_72);
+	probs = 
+		// a            b            c             // _72 
+		  (0.9834711,   0.008264462, 0.008264462,  // a   
+		   0.25,        0.5,         0.25,         // b   
+		   0.25,        0.25,        0.5);         // c   ;
+	numcases = 
+		                 // _72 
+		  (121,          // a   
+		   4,            // b   
+		   4);           // c   ;
+	whenchanged = 1498124184;
+	};
+
+node _77 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = (_72, _78);
+	probs = 
+		// a            b            c             // _72 _78 
+		  (0.9834711,   0.008264462, 0.008264462,  // a   a   
+		   0.3333333,   0.3333333,   0.3333333,    // a   b   
+		   0.3333333,   0.3333333,   0.3333333,    // a   c   
+		   0.3333333,   0.3333333,   0.3333333,    // b   a   
+		   0.25,        0.5,         0.25,         // b   b   
+		   0.3333333,   0.3333333,   0.3333333,    // b   c   
+		   0.3333333,   0.3333333,   0.3333333,    // c   a   
+		   0.3333333,   0.3333333,   0.3333333,    // c   b   
+		   0.25,        0.25,        0.5);         // c   c   ;
+	numcases = 
+		                 // _72 _78 
+		  (121,          // a   a   
+		   3,            // a   b   
+		   3,            // a   c   
+		   3,            // b   a   
+		   4,            // b   b   
+		   3,            // b   c   
+		   3,            // c   a   
+		   3,            // c   b   
+		   4);           // c   c   ;
+	whenchanged = 1498124184;
+	};
+
+node _71 {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, b, c);
+	parents = ();
+	probs = 
+		// a            b            c            
+		  (0.3821138,   0.2601626,   0.3577236);
+	numcases = 123;
+	whenchanged = 1498124184;
 	};
 };

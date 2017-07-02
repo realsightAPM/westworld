@@ -1,272 +1,304 @@
 // ~->[DNET-1]->~
 
-// File created by WuB at DalianUTech using Netica 5.04 on May 24, 2017 at 16:04:41.
+// File created by WuB at DalianUTech using Netica 5.04 on Jun 30, 2017 at 15:43:32.
 
 bnet apm {
 autoupdate = FALSE;
-whenchanged = 1495613081;
+whenchanged = 1498808612;
 
-node gc {
+node _17 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
 	parents = ();
-	whenchanged = 1495613081;
+	whenchanged = 1498808612;
 	};
 
-node usedPhysicalMemorySize {
+node _0 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = ();
-	whenchanged = 1495613081;
+	parents = (_17);
+	whenchanged = 1498808612;
 	};
 
-node http2xxNum {
+node _10 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (gc, usedPhysicalMemorySize);
-	whenchanged = 1495613081;
+	parents = (_0);
+	whenchanged = 1498808612;
 	};
 
-node http5xxNum {
+node _30 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http2xxNum, usedPhysicalMemorySize);
-	whenchanged = 1495613081;
+	parents = (_17);
+	whenchanged = 1498808612;
 	};
 
-node http_Error_Hits {
+node _22 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http5xxNum);
-	whenchanged = 1495613081;
+	parents = (_30);
+	whenchanged = 1498808612;
 	};
 
-node http_Gobal_Hits {
+node _14 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http2xxNum, http5xxNum);
-	whenchanged = 1495613081;
+	parents = (_22);
+	whenchanged = 1498808612;
 	};
 
-node free_disk_space {
+node _7 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http2xxNum, http_Gobal_Hits);
-	whenchanged = 1495613081;
+	parents = (_14);
+	whenchanged = 1498808612;
 	};
 
-node usedConnections {
+node _4 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (free_disk_space);
-	whenchanged = 1495613081;
+	parents = (_7, _30);
+	whenchanged = 1498808612;
 	};
 
-node fileDescriptors {
+node _23 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http_Error_Hits, usedConnections);
-	whenchanged = 1495613081;
+	parents = (_30);
+	whenchanged = 1498808612;
 	};
 
-node clients {
+node _5 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (fileDescriptors, http_Error_Hits);
-	whenchanged = 1495613081;
+	parents = (_14);
+	whenchanged = 1498808612;
 	};
 
-node loadedClassesCount {
+node _6 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http_Gobal_Hits, usedConnections);
-	whenchanged = 1495613081;
+	parents = (_5);
+	whenchanged = 1498808612;
 	};
 
-node httpSessions {
+node _2 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (clients, loadedClassesCount);
-	whenchanged = 1495613081;
+	parents = (_6);
+	whenchanged = 1498808612;
 	};
 
-node httpMeanTimes {
+node _11 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (clients, loadedClassesCount);
-	whenchanged = 1495613081;
+	parents = (_2);
+	whenchanged = 1498808612;
 	};
 
-node http4xxNum {
+node _20 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (httpMeanTimes, httpSessions, usedPhysicalMemorySize);
-	whenchanged = 1495613081;
+	parents = (_22);
+	whenchanged = 1498808612;
 	};
 
-node usedMemory {
+node _31 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (clients, http4xxNum, http5xxNum);
-	whenchanged = 1495613081;
+	parents = (_11, _20);
+	whenchanged = 1498808612;
 	};
 
-node http_Cpu_Time_Sum {
+node _29 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http4xxNum, httpSessions, usedMemory);
-	whenchanged = 1495613081;
+	parents = (_7, _31);
+	whenchanged = 1498808612;
 	};
 
-node HTTP_SYSTEM_ERROR {
+node _3 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (httpSessions, http_Cpu_Time_Sum, usedPhysicalMemorySize);
-	whenchanged = 1495613081;
+	parents = (_29);
+	whenchanged = 1498808612;
 	};
 
-node httpSessionsMeanAge {
+node _24 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (HTTP_SYSTEM_ERROR, clients, http4xxNum);
-	whenchanged = 1495613081;
+	parents = (_3, _30);
+	whenchanged = 1498808612;
 	};
 
-node cpu {
+node _19 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (fileDescriptors, http_Error_Hits);
-	whenchanged = 1495613081;
+	parents = (_3, _23);
+	whenchanged = 1498808612;
 	};
 
-node usedSwapSpaceSize {
-	kind = NATURE;
-	discrete = TRUE;
-	states = (a);
-	parents = (HTTP_SYSTEM_ERROR, cpu);
-	whenchanged = 1495613081;
-	};
-
-node threadCount {
+node _27 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (fileDescriptors, http4xxNum, usedPhysicalMemorySize);
-	whenchanged = 1495613081;
+	parents = (_14);
+	whenchanged = 1498808612;
 	};
 
-node tomcatBytesReceived {
-	kind = NATURE;
-	discrete = TRUE;
-	states = (a);
-	parents = (fileDescriptors, loadedClassesCount);
-	whenchanged = 1495613081;
-	};
-
-node usedNonHeapMemory {
+node _13 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http5xxNum, loadedClassesCount);
-	whenchanged = 1495613081;
+	parents = (_20);
+	whenchanged = 1498808612;
 	};
 
-node httpHitsRate {
+node _9 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (cpu, http_Error_Hits, tomcatBytesReceived);
-	whenchanged = 1495613081;
+	parents = (_3, _19);
+	whenchanged = 1498808612;
 	};
 
-node tomcatBytesSent {
+node _18 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (http5xxNum, httpHitsRate, httpMeanTimes);
-	whenchanged = 1495613081;
+	parents = (_19);
+	whenchanged = 1498808612;
 	};
 
-node httpSystemErrors {
+node _28 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (httpMeanTimes);
-	whenchanged = 1495613081;
+	parents = (_19);
+	whenchanged = 1498808612;
 	};
 
-node activeConnections {
+node _25 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (usedConnections);
-	whenchanged = 1495613081;
+	parents = (_3, _5);
+	whenchanged = 1498808612;
 	};
 
-node tomcatBusyThreads {
+node _36 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (activeConnections, threadCount, tomcatBytesSent);
-	whenchanged = 1495613081;
+	parents = (_3);
+	whenchanged = 1498808612;
 	};
 
-node activeThreads {
+node _15 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (httpSystemErrors, tomcatBusyThreads);
-	whenchanged = 1495613081;
+	parents = (_29);
+	whenchanged = 1498808612;
 	};
 
-node deadLockThreads {
-	kind = NATURE;
-	discrete = TRUE;
-	states = (a);
-	parents = (activeThreads, httpMeanTimes);
-	whenchanged = 1495613081;
-	};
-
-node systemLoad {
+node _32 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (deadLockThreads, threadCount, usedNonHeapMemory);
-	whenchanged = 1495613081;
+	parents = (_5, _29);
+	whenchanged = 1498808612;
 	};
 
-node runningThreads {
+node _35 {
 	kind = NATURE;
 	discrete = TRUE;
 	states = (a, b, c);
-	parents = (cpu);
-	whenchanged = 1495613081;
+	parents = (_11);
+	whenchanged = 1498808612;
 	};
 
-node http_Durations_Sum {
+node _1 {
 	kind = NATURE;
 	discrete = TRUE;
-	states = (a);
-	parents = (httpHitsRate);
-	whenchanged = 1495613081;
+	states = (a, b, c);
+	parents = (_31, _35);
+	whenchanged = 1498808612;
+	};
+
+node _16 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_31);
+	whenchanged = 1498808612;
+	};
+
+node _21 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_15);
+	whenchanged = 1498808612;
+	};
+
+node _26 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b);
+	parents = (_6, _35);
+	whenchanged = 1498808612;
+	};
+
+node _8 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_11);
+	whenchanged = 1498808612;
+	};
+
+node _34 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_11);
+	whenchanged = 1498808612;
+	};
+
+node _12 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_1);
+	whenchanged = 1498808612;
+	};
+
+node _33 {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (a, b, c);
+	parents = (_12);
+	whenchanged = 1498808612;
 	};
 };

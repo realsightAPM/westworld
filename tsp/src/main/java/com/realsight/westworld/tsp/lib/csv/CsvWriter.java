@@ -415,7 +415,6 @@ public class CsvWriter {
 			for (int i = 0; i < values.length; i++) {
 				write(values[i], preserveSpaces);
 			}
-
 			endRecord();
 		}
 	}

@@ -35,7 +35,7 @@ public class StringSeries extends TimeSeries<String> {
         Iterator<Entry<String>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = other.iterator();
 
-        List<Entry<String>> newEntries = new ArrayList<>();
+        List<Entry<String>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<String>>();
 
         Entry<String> n1 = null;
         Entry<String> n2 = null;
@@ -75,7 +75,7 @@ public class StringSeries extends TimeSeries<String> {
         Iterator<Entry<String>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = other.iterator();
 
-        List<Entry<String>> newEntries = new ArrayList<>();
+        List<Entry<String>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<String>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<String> n1 = i1.next();
@@ -114,7 +114,7 @@ public class StringSeries extends TimeSeries<String> {
         Iterator<Entry<String>> i1 = this.iterator();
         Iterator<Entry<String>> i2 = other.iterator();
 
-        List<Entry<String>> newEntries = new ArrayList<>();
+        List<Entry<String>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<String>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<String> n1 = i1.next();
@@ -182,7 +182,7 @@ public class StringSeries extends TimeSeries<String> {
     	if(l<0) l = 0;
     	if(r>size()) r = size();
     	Util.check(l<=r, "DoubleSeries.subSeries error l > r,"+"l="+l+",r="+r);
-    	List<Entry<String>> newEntries = new ArrayList<>();
+    	List<Entry<String>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<String>>();
     	for(int i = l; i < r; i++){
     		newEntries.add(new Entry<String>(mData.get(i).getItem(), this.mData.get(i).getInstant()));
     	}

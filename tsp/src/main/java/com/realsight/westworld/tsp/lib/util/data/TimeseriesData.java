@@ -1,13 +1,11 @@
 package com.realsight.westworld.tsp.lib.util.data;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import com.realsight.westworld.tsp.lib.csv.CsvReader;
@@ -20,52 +18,26 @@ import com.realsight.westworld.tsp.lib.series.TimeSeries;
 public class TimeseriesData {
 	private char delimiter = ',';
 	private Charset charset = null;
-	private String csvFilePath = null;
-	public TimeseriesData(char delimiter, Charset charset, String coalFilePath){
+	private Path path = null;
+	
+	public TimeseriesData(char delimiter, Charset charset, String path){
 		this.delimiter = delimiter;
 		this.charset = charset;
-		this.csvFilePath = coalFilePath;
+		this.path = Paths.get(path);
 	}
 	
-	public TimeseriesData(String coalFilePath){
-		this(',', Charset.forName("ISO-8859-1"), coalFilePath);
+	public TimeseriesData(String path){
+		this(',', Charset.forName("ISO-8859-1"), path);
 	}
 	
-	public DoubleSeries getPropertyDoubleSeries(String name, SimpleDateFormat sdf){
-		DoubleSeries res = new DoubleSeries(name);
-		try {
-			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
-			cr.readHeaders();
-			if(cr.getIndex("timestamp") == -1)
-				throw new IOException("File not exists timestamp.");
-			if(cr.getIndex(name) == -1)
-				throw new IOException("File not exists " + name + ".");
-			while(cr.readRecord()){
-				String time = cr.get("timestamp");
-				Date date = null;
-				try {
-					date = sdf.parse(time);
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				Long timestamp = date.getTime();
-				double num = Double.parseDouble(cr.get(name));
-				res.add(new TimeSeries.Entry<Double>(num, timestamp));
-			}
-			cr.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return res;
+	public TimeseriesData(Path path){
+		this(',', Charset.forName("ISO-8859-1"), path.toString());
 	}
 	
 	public DoubleSeries getPropertyDoubleSeries(String name){
-		DoubleSeries res = new DoubleSeries(name);
-		long id = 0L;
+		DoubleSeries res = new DoubleSeries(this.path.getFileName().toString().split(".csv")[0]);
 		try {
-			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
+			CsvReader cr = new CsvReader(path.toString(), delimiter, charset);
 			cr.readHeaders();
 			if(cr.getIndex("timestamp") == -1)
 				throw new IOException("File not exists timestamp.");
@@ -73,10 +45,15 @@ public class TimeseriesData {
 				throw new IOException("File not exists " + name + ".");
 			while(cr.readRecord()){
 				String time = cr.get("timestamp");
-				Long timestamp = id;
-				double num = Double.parseDouble(cr.get(name));
-				res.add(new TimeSeries.Entry<Double>(num, timestamp));
-				id = id + 1;
+				Long timestamp = cr.getReadedLine();
+				Double value = 0.0;
+				try {
+					value = Double.parseDouble(cr.get(name));
+					timestamp = Long.parseLong(time.trim());
+				} catch (NumberFormatException e) { 
+					// passed 
+				}
+				res.add(new TimeSeries.Entry<Double>(value, timestamp));
 			}
 			cr.close();
 		} catch (IOException e) {
@@ -86,10 +63,18 @@ public class TimeseriesData {
 		return res;
 	}
 	
+	public DoubleSeries getPropertyDoubleSeries(int columnIndex) throws IOException{
+		CsvReader cr = new CsvReader(path.toString(), delimiter, charset);
+		cr.readHeaders();
+		String name = cr.get(columnIndex);
+		cr.close();
+		return getPropertyDoubleSeries(name);
+	}
+	
 	public StringSeries getPropertyStringSeries(String name){
-		StringSeries res = new StringSeries(name);
+		StringSeries res = new StringSeries(this.path.getFileName().toString().split(".csv")[0]);
 		try {
-			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
+			CsvReader cr = new CsvReader(path.toString(), delimiter, charset);
 			cr.readHeaders();
 			if(cr.getIndex("timestamp") == -1)
 				throw new IOException("File not exists timestamp.");
@@ -112,7 +97,7 @@ public class TimeseriesData {
 		Collection<String> names = new ArrayList<String>();
 		MultipleStringSeries res = null;
 		try {
-			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
+			CsvReader cr = new CsvReader(path.toString(), delimiter, charset);
 			cr.readHeaders();
 			for ( int i = 0; i < cr.getHeaderCount(); i++ ) {
 				if (cr.getHeader(i).equals("timestamp")) continue;
@@ -133,8 +118,7 @@ public class TimeseriesData {
 					j++;
 				}
 			}
-			System.out.println((new File(csvFilePath)).getName().split(".").length);
-			res = new MultipleStringSeries((new File(csvFilePath)).getName(),datas);
+			res = new MultipleStringSeries((this.path.toFile()).getName().split(".csv")[0],datas);
 			cr.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -147,7 +131,7 @@ public class TimeseriesData {
 		Collection<String> names = new ArrayList<String>();
 		MultipleDoubleSeries res = null;
 		try {
-			CsvReader cr = new CsvReader(csvFilePath, delimiter, charset);
+			CsvReader cr = new CsvReader(path.toString(), delimiter, charset);
 			cr.readHeaders();
 			for ( int i = 0; i < cr.getHeaderCount(); i++ ) {
 				if (cr.getHeader(i).equals("timestamp")) continue;
@@ -162,14 +146,18 @@ public class TimeseriesData {
 				for ( int i = 0, j = 0; i < cr.getHeaderCount(); i++ ) {
 					if (cr.getHeader(i).equals("timestamp")) continue;
 					Long timestamp = Long.parseLong(cr.get(cr.getIndex("timestamp")).trim());
-					Double value = Double.parseDouble(cr.get(cr.getHeader(i)));
+					Double value = 0.0;
+					try {
+						value = Double.parseDouble(cr.get(cr.getHeader(i)));
+					} catch (NumberFormatException e) {
+						// passed
+					}
 					datas.get(j).add(
 						new TimeSeries.Entry<Double> (value, timestamp));
 					j++;
 				}
 			}
-//			System.out.println((new File(csvFilePath)).getName().split(".").length);
-			res = new MultipleDoubleSeries((new File(csvFilePath)).getName(),datas);
+			res = new MultipleDoubleSeries((this.path.toFile()).getName().split(".csv")[0],datas);
 			cr.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

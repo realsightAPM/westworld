@@ -30,12 +30,16 @@ public abstract class Hierarchy implements Serializable{
 	
 	public double learn(Matrix value){
 		List<Integer> sensFacts = value2SensFacts(value);
-		return this.neuroGroup.learn(sensFacts);
+		return this.neuroGroup.learnSeries(sensFacts);
 	}
 	
 	public double predict(Matrix value) {
 		List<Integer> sensFacts = value2SensFacts(value);
 		return this.neuroGroup.predict(sensFacts);
+	}
+	
+	public void sleep() {
+		this.neuroGroup.sleep();
 	}
 }
 

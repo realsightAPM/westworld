@@ -77,6 +77,7 @@ public class WriteCSV {
         
 		for (int i = 0; i < len; i++) {
 			for (int j = 0; j < numAttr; j++) {
+//				System.out.println(array.get(j).get(i));
 				stmp[j] = array.get(j).get(i).toString();
 			}
 			csvWriter.writeNext(stmp);

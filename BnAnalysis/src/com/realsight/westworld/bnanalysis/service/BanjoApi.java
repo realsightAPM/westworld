@@ -64,13 +64,15 @@ public class BanjoApi {
 		
 		String pathname = "banjo_out_dir/topGraph.txt"; // absolute dir or relative dit
         File filename = new File(pathname);  
-        InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // create an input stream object: reader  
-        BufferedReader br = new BufferedReader(reader); // build an object which translates the data to that computer can read
-   
         parentMap = new ArrayList<ArrayList<Integer>>(separate.numAttr);
         for (int i = 0; i < separate.numAttr; i++) {
         	parentMap.add(new ArrayList<Integer>());
         }
+        
+        if (!filename.exists()) return;
+        
+        InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // create an input stream object: reader  
+        BufferedReader br = new BufferedReader(reader); // build an object which translates the data to that computer can read
         
         String line = "";
         while ((line = br.readLine()) != null) {

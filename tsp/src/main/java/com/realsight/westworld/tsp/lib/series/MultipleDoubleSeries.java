@@ -13,12 +13,12 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     String name;
 
     public MultipleDoubleSeries(String name, Collection<String> names) {
-        property_list = new ArrayList<>(names);
+        property_list = new ArrayList<String>(names);
         this.name = name;
     }
 
     public MultipleDoubleSeries(String name, DoubleSeries... series) {
-        property_list = new ArrayList<>();
+        property_list = new ArrayList<String>();
         this.name = name;
         for (int i = 0; i < series.length; i++) {
             if (i == 0) {
@@ -31,7 +31,7 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     
     public MultipleDoubleSeries(String name, List<DoubleSeries> series) {
     	this.name = name;
-        property_list = new ArrayList<>();
+        property_list = new ArrayList<String>();
         for (int i = 0; i < series.size(); i++) {
             if (i == 0) {
                 _init(series.get(i));
@@ -42,14 +42,14 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     }
 
     public MultipleDoubleSeries(List<Entry<LinkedList<Double>>> data, Collection<String> names) {
-        property_list = new ArrayList<>(names);
+        property_list = new ArrayList<String>(names);
         mData = data;
     }
 
 	void _init(DoubleSeries series) {
-        mData = new ArrayList<>();
+        mData = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<Double>>>();
         for (Entry<Double> entry : series) {
-            LinkedList<Double> list = new LinkedList<>();
+            LinkedList<Double> list = new LinkedList<Double>();
             list.add(entry.mT);
             add(new Entry<LinkedList<Double>>(list, entry.mInstant));
         }
@@ -61,7 +61,7 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
         Iterator<Entry<LinkedList<Double>>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = series.iterator();
 
-        List<Entry<LinkedList<Double>>> newEntries = new ArrayList<>();
+        List<Entry<LinkedList<Double>>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<Double>>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<LinkedList<Double>> n1 = i1.next();
@@ -92,7 +92,7 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     	
     	if(l<0 || r>size())
     		throw new Exception("l<0 || r>size()");
-    	List<Entry<LinkedList<Double>>> newEntries = new ArrayList<>();
+    	List<Entry<LinkedList<Double>>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<LinkedList<Double>>>();
     	for(int i = l; i < r; i++){
     		LinkedList<Double> t = new LinkedList<Double>();
     		for(int j = 0; j < this.mData.get(i).getItem().size(); j++)
@@ -102,27 +102,35 @@ public class MultipleDoubleSeries extends TimeSeries<LinkedList<Double>> {
     	return new MultipleDoubleSeries(newEntries, property_list);
     }
     
-    public DoubleSeries getColumn(String name) {
-        int index = getProperty_list().indexOf(name);
-        List<Entry<Double>> entries = new ArrayList<>();
+    public DoubleSeries getColumn(int col_index) {
+        List<Entry<Double>> entries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
         for(int i = 0; i < this.getData().size(); i++){
-        	entries.add(new Entry<Double>(this.getData().get(i).getItem().get(index), 
+        	entries.add(new Entry<Double>(this.getData().get(i).getItem().get(col_index), 
         			this.getData().get(i).getInstant()));
         }
-        return new DoubleSeries(entries, name);
+        return new DoubleSeries(entries, getProperty_list().get(col_index));
     }
     
-    public DoubleSeries getColumn(int index) {
-        List<Entry<Double>> entries = new ArrayList<>();
-        for(int i = 0; i < this.getData().size(); i++){
-        	entries.add(new Entry<Double>(this.getData().get(i).getItem().get(index), 
-        			this.getData().get(i).getInstant()));
-        }
-        return new DoubleSeries(entries, getProperty_list().get(index));
+    public DoubleSeries getColumn(String col_name) {
+        int col_index = getProperty_list().indexOf(col_name);
+        return getColumn(col_index);
+    }
+    
+    public Double getValue(int col_index, int row_index) {
+        return this.mData.get(row_index).getItem().get(col_index);
+    }
+    
+    public Double getValue(String col_name, int row_index) {
+        int col_index = getProperty_list().indexOf(col_name);
+        return getValue(col_index, row_index);
+    }
+    
+    public int getColumnNum() {
+        return this.property_list.size();
     }
 
-    public int indexOf(String name) {
-        return property_list.indexOf(name);
+    public int indexOf(String col_name) {
+        return property_list.indexOf(col_name);
     }
 
     public List<String> getProperty_list() {

@@ -50,7 +50,6 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
                 '}';
         }
         
-		@Override
 		public int compareTo(Entry<T> arg) {
 			// TODO Auto-generated method stub
 			if(this.getInstant() > arg.getInstant())
@@ -64,7 +63,7 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     List<Entry<T>> mData;
 
     public TimeSeries() {
-        mData = new ArrayList<>();
+        mData = new ArrayList<Entry<T>>();
     }
 
     protected TimeSeries(List<Entry<T>> data) {
@@ -96,7 +95,6 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         return res.iterator();
     }
 
-    @Override
     public Iterator<Entry<T>> iterator() {
         return mData.iterator();
     }
@@ -138,9 +136,9 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
     }
 
     public TimeSeries<T> reverse() {
-        ArrayList<Entry<T>> entries = new ArrayList<>(mData);
+        ArrayList<Entry<T>> entries = new ArrayList<Entry<T>>(mData);
         Collections.reverse(entries);
-        return new TimeSeries<>(entries);
+        return new TimeSeries<T>(entries);
     }
 
     public TimeSeries<T> lag(int k) {
@@ -151,18 +149,18 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         check(k > 0);
         check(mData.size() >= k);
 
-        ArrayList<Entry<T>> entries = new ArrayList<>(addEmpty ? mData.size() : mData.size() - k);
+        ArrayList<Entry<T>> entries = new ArrayList<Entry<T>>(addEmpty ? mData.size() : mData.size() - k);
         if (addEmpty) {
             for (int i = 0; i < k; i++) {
-                entries.add(new Entry<>(emptyVal, mData.get(i).mInstant));
+                entries.add(new Entry<T>(emptyVal, mData.get(i).mInstant));
             }
         }
 
         for (int i = k; i < size(); i++) {
-            entries.add(new Entry<>(mData.get(i - k).getItem(), mData.get(i).getInstant()));
+            entries.add(new Entry<T>(mData.get(i - k).getItem(), mData.get(i).getInstant()));
         }
 
-        return new TimeSeries<>(entries);
+        return new TimeSeries<T>(entries);
     }
 
     @SuppressWarnings("unchecked")
@@ -173,7 +171,7 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         Iterator<Entry<T1>> i1 = t1.iterator();
         Iterator<Entry<T2>> i2 = t2.iterator();
 
-        List<Entry<F>> newEntries = new ArrayList<>();
+        List<Entry<F>> newEntries = new ArrayList<Entry<F>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<T1> n1 = i1.next();
@@ -202,7 +200,7 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
             }
         }
 
-        return new TimeSeries<>(newEntries);
+        return new TimeSeries<F>(newEntries);
     }
 
     @SuppressWarnings("unchecked")
@@ -213,7 +211,7 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
         Iterator<Entry<T1>> i1 = t1.iterator();
         Iterator<Entry<T2>> i2 = t2.iterator();
 
-        List<Entry<F>> newEntries = new ArrayList<>();
+        List<Entry<F>> newEntries = new ArrayList<Entry<F>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<T1> n1 = i1.next();
@@ -244,7 +242,7 @@ public class TimeSeries<T> implements Iterable<TimeSeries.Entry<T>>{
             }
         }
 
-        return new TimeSeries<>(newEntries);
+        return new TimeSeries<F>(newEntries);
     }
     
     public void sort() {

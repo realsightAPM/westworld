@@ -38,7 +38,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         Entry<Double> n1 = null;
         Entry<Double> n2 = null;
@@ -78,7 +78,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -117,7 +117,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -158,7 +158,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -195,7 +195,7 @@ public class DoubleSeries extends TimeSeries<Double> {
 
         Iterator<Entry<Double>> i1 = this.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -212,7 +212,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -249,7 +249,7 @@ public class DoubleSeries extends TimeSeries<Double> {
 
         Iterator<Entry<Double>> i1 = this.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -266,7 +266,7 @@ public class DoubleSeries extends TimeSeries<Double> {
         Iterator<Entry<Double>> i1 = this.iterator();
         Iterator<Entry<Double>> i2 = other.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext() && i2.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -303,7 +303,7 @@ public class DoubleSeries extends TimeSeries<Double> {
 
         Iterator<Entry<Double>> i1 = this.iterator();
 
-        List<Entry<Double>> newEntries = new ArrayList<>();
+        List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
 
         while (i1.hasNext()) {
             Entry<Double> n1 = i1.next();
@@ -373,7 +373,7 @@ public class DoubleSeries extends TimeSeries<Double> {
     	if(l<0) l = 0;
     	if(r>size()) r = size();
     	Util.check(l<=r, "DoubleSeries.subSeries error l > r,"+"l="+l+",r="+r);
-    	List<Entry<Double>> newEntries = new ArrayList<>();
+    	List<Entry<Double>> newEntries = new ArrayList<com.realsight.westworld.tsp.lib.series.TimeSeries.Entry<Double>>();
     	for(int i = l; i < r; i++){
     		newEntries.add(new Entry<Double>(mData.get(i).getItem(), this.mData.get(i).getInstant()));
     	}
@@ -473,7 +473,8 @@ public class DoubleSeries extends TimeSeries<Double> {
     	}
     }
     
-    public void smooth(int len) {
+    public DoubleSeries smooth(int len) {
+    	DoubleSeries res = new DoubleSeries(this.mName);
     	Queue<Double> que = new LinkedList<Double>();
     	double sum = 0.0;
     	for ( Entry<Double> entry : this.getData()) {
@@ -482,8 +483,23 @@ public class DoubleSeries extends TimeSeries<Double> {
     		while(que.size() > len) {
     			sum -= que.poll();
     		}
-    		entry.mT = sum/len;
+    		res.add(new Entry<Double>(sum/que.size(), entry.getInstant()));
     	}
+    	return res;
+    }
+    
+    public DoubleSeries diff() {
+    	DoubleSeries res = new DoubleSeries(this.mName);
+    	double pre = Double.NaN;
+    	for ( Entry<Double> entry : this.getData()) {
+    		double value = 0;
+    		if (!Double.isNaN(pre)) {
+    			value = entry.mT - pre;
+    		}
+    		res.add(new Entry<Double>(value, entry.getInstant()));
+    		pre = entry.mT;
+    	}
+    	return res;
     }
     
     public List<Double> getTData() {
@@ -499,6 +515,16 @@ public class DoubleSeries extends TimeSeries<Double> {
     	for ( Entry<Double> entry : this.mData) {
     		res.add(new Entry<Double>(entry.getItem(), entry.getInstant()));
     	}
+    	return res;
+    }
+    
+    public DoubleSeries getIndexSeries() {
+    	DoubleSeries res = new DoubleSeries(this.getName() + " index");
+    	Double index = 0.0;
+		for (Entry<Double> entry : mData){
+			index += 1.0;
+			res.add(new Entry<Double>(index, entry.mInstant));
+		}
     	return res;
     }
     

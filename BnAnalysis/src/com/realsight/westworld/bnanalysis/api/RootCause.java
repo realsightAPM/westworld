@@ -27,9 +27,9 @@ public class RootCause {
 	}
 	
 	private void getCauseRankOf(String target_var, NeticaApi netica) throws Exception {
-//		netica = new NeticaApi();
+		netica = new NeticaApi();
 //		netica.buildNet(original_csv, 2, 3);
-//		netica.loadNet();
+		netica.loadNet();
 		netica.loadRangeMap();
 		
 		if (!netica.rangeMap.containsKey(target_var)) {
@@ -46,13 +46,13 @@ public class RootCause {
 			}
 			//设为最高状态
 			double belief = netica.getExeption(tmpNode.toString()+":"+netica.getState(tmpNode.getNumStates()-1), target_var);
-			rankMap.put(-belief, tmpNode.toString());
+			rankMap.put(belief, tmpNode.toString());
 		}
 		
 		causeRank = new ArrayList<Pair<String, Double>>();
 		
 		for (Double it : rankMap.keySet()) {
-			causeRank.add(new Pair<String, Double> (rankMap.get(it), -it));
+			causeRank.add(new Pair<String, Double> (rankMap.get(it), it));
 		}
 	}
 	

@@ -1,6 +1,8 @@
 package com.realsight.westworld.tsp.lib.model.htm.context;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActiveContext implements Comparable<ActiveContext>, Serializable {
 	/**
@@ -11,12 +13,27 @@ public class ActiveContext implements Comparable<ActiveContext>, Serializable {
 	private double numActivate;
 	private int leftHash;
 	private int rightHash;
-	
+	private List<Integer> leftFacts;
+	private List<Integer> rightFacts;
+
 	public ActiveContext(int contextID, double numActivate, int leftHash, int rightHash) {
+		this(contextID, numActivate, leftHash, rightHash, new ArrayList<Integer>(), new ArrayList<Integer>());
+	}
+	
+	public ActiveContext(int contextID, double numActivate, int leftHash, int rightHash, List<Integer> leftFacts, List<Integer> rightFacts) {
 		this.setContextID(contextID);
 		this.numActivate = numActivate;
 		this.leftHash = leftHash;
 		this.rightHash = rightHash;
+		this.leftFacts = leftFacts;
+		this.rightFacts = rightFacts;
+	}
+	
+	public List<Integer> getLeftFacts() {
+		return leftFacts;
+	}
+	public List<Integer> getRightFacts() {
+		return rightFacts;
 	}
 	public double getNumActivate() {
 		return numActivate;
@@ -43,7 +60,6 @@ public class ActiveContext implements Comparable<ActiveContext>, Serializable {
 		this.contextID = contextID;
 	}
 	
-	@Override
 	public int compareTo(ActiveContext o) {
 		// TODO Auto-generated method stub
 		if ( this.numActivate > ((ActiveContext) o).getNumActivate() )
@@ -51,5 +67,9 @@ public class ActiveContext implements Comparable<ActiveContext>, Serializable {
 		if ( this.numActivate < ((ActiveContext) o).getNumActivate() )
 			return 1;
 		return 0;
+	}
+	
+	public String toString() {
+		return String.valueOf(this.contextID);
 	}
 }

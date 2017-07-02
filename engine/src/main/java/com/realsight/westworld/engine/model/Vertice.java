@@ -21,5 +21,10 @@ public class Vertice {
 		this.key = key;
 	}
 
+	@Override
+	public String toString() {
+		return "{\"key\": \"" + key + "\"}";
+	}
+
 	
 }

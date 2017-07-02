@@ -22,7 +22,7 @@ public class ReadSolr {
 	public Map<String, Integer> urlHashCount;
 	public List<String> urlList;
 	public List<ArrayList<Double>> urlArray;
-
+	
 	public ReadSolr() {
 		getSolrArray();
 	}
@@ -32,35 +32,37 @@ public class ReadSolr {
 		urlHashCount = new HashMap<String, Integer> ();
 		urlList = new ArrayList<String>();
 		urlArray = new ArrayList<ArrayList<Double>>();
-		String solrStr = "http://localhost:8080/solr/apm3";
+		String solrStr = "http://10.4.55.171:8983/solr/test";
 		SolrClient solr = new HttpSolrClient.Builder(solrStr).build();
 		
 		SolrQuery solrQuery = new SolrQuery();
 		solrQuery.setQuery("*:*");
-		solrQuery.setFields("rs_timestamp");
+		solrQuery.setFields("rs_timestamp_tdt");
 		solrQuery.setRows(1);
 		solrQuery.setFacet(true);
-		solrQuery.addFacetField("application_s");
-		solrQuery.setFacetLimit(50);
-		Calendar start = new GregorianCalendar(2017, 3, 20, 1, 31, 30);
+		solrQuery.addFacetField("query_s");
+		solrQuery.setFacetLimit(100);
+		Calendar start = new GregorianCalendar(2017, 5, 17, 0, 0, 0);
 		start.add(Calendar.HOUR, 8);
-		Calendar end = new GregorianCalendar(2017,3,25,1,46,30);
+		Calendar end = new GregorianCalendar(2017, 5, 22, 0, 0, 0);
 		end.add(Calendar.HOUR, 8);
-		solrQuery.addDateRangeFacet("rs_timestamp", start.getTime(), end.getTime(), "+1HOUR");
+		solrQuery.addDateRangeFacet("rs_timestamp_tdt", start.getTime(), end.getTime(), "+1HOUR");
 		
 		try {
 			QueryResponse response = solr.query(solrQuery);
-			FacetField facet = response.getFacetField("application_s");
+			FacetField facet = response.getFacetField("query_s");
 			List<Count> urlCountList = facet.getValues();
 			for (int i = 0; i < urlCountList.size(); i++) {
 				urlHash.put(urlCountList.get(i).getName(), i);
 				urlHashCount.put(urlCountList.get(i).getName(), (int) urlCountList.get(i).getCount());
 				urlList.add(urlCountList.get(i).getName());
 			}
-			
+			int cnt = 0;
 			for (String it : urlList) {
+				cnt++;
+				System.out.println("count: " + cnt);
 				ArrayList<Double> timeList = new ArrayList<Double>();
-				solrQuery.setFilterQueries("application_s:" + "\"" + it + "\"");
+				solrQuery.setFilterQueries("query_s:" + "\"" + it + "\"");
 				QueryResponse resp = solr.query(solrQuery);
 				List<RangeFacet> facet_date = resp.getFacetRanges();
 				RangeFacet range = facet_date.get(0);
@@ -73,6 +75,7 @@ public class ReadSolr {
 			}
 			
 			for (int i = 0; i < urlArray.size(); i++) {
+				System.out.print("("+i+"): " );
 				for (int j = 0; j < urlArray.get(i).size(); j++) {
 					System.out.print(urlArray.get(i).get(j)+" ");
 				}

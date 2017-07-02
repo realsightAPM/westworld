@@ -12,7 +12,8 @@ import java.util.Set;
 import com.realsight.westworld.tsp.lib.model.htm.context.ActiveContext;
 import com.realsight.westworld.tsp.lib.model.htm.context.ContextValue;
 import com.realsight.westworld.tsp.lib.model.htm.context.CrossedContext;
-import com.realsight.westworld.tsp.lib.util.Pair;
+import com.realsight.westworld.tsp.lib.util.Entry;
+import com.realsight.westworld.tsp.lib.util.Triple;
 
 public class NeuroGroupOperator implements Serializable{
 	/**
@@ -21,6 +22,7 @@ public class NeuroGroupOperator implements Serializable{
 	private static final long serialVersionUID = 1721446875428083924L;
 	
 	private int maxLeftSemiContextsLenght;
+	private int maxValidActiveNeuronsNum;
 	private Map<Integer,List<ContextValue>>[] factsDics;
 	private List<ContextValue>[] semiContextValuesLists;
 	private Map<Integer,Integer>[] semiContextDics;
@@ -29,13 +31,10 @@ public class NeuroGroupOperator implements Serializable{
 	private int newContextID;
 	private List<ActiveContext> activeContexts;
 	private double numSelectedContext = 0;
-	private List<Pair<List<Integer>, List<Integer>>> potentialNewContextList;
+	private List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> potentialNewContextList;
 	private int numAddedContexts;
-//	private List<Long> beActivatedList;
-	private Long timestamp;
-	private Map<Long, Integer> history;
 	private Double sumActiveContextsValue;
-	private Double sumSelectedContextValue;
+	private int right_size = 0;
 	
 	public int getMaxLeftSemiContextsLenght() {
 		return maxLeftSemiContextsLenght;
@@ -64,71 +63,7 @@ public class NeuroGroupOperator implements Serializable{
 	public int getNewContextID() {
 		return newContextID;
 	}
-
-	public Long getTimestamp() {
-		return timestamp;
-	}
-
-	public Map<Long, Integer> getHistory() {
-		return history;
-	}
-
-	public void setMaxLeftSemiContextsLenght(int maxLeftSemiContextsLenght) {
-		this.maxLeftSemiContextsLenght = maxLeftSemiContextsLenght;
-	}
-
-	public void setFactsDics(Map<Integer, List<ContextValue>>[] factsDics) {
-		this.factsDics = factsDics;
-	}
-
-	public void setSemiContextValuesLists(List<ContextValue>[] semiContextValuesLists) {
-		this.semiContextValuesLists = semiContextValuesLists;
-	}
-
-	public void setSemiContextDics(Map<Integer, Integer>[] semiContextDics) {
-		this.semiContextDics = semiContextDics;
-	}
-
-	public void setCrossedSemiContextsLists(List<ContextValue>[] crossedSemiContextsLists) {
-		this.crossedSemiContextsLists = crossedSemiContextsLists;
-	}
-
-	public void setContextsValuesList(List<CrossedContext> contextsValuesList) {
-		this.contextsValuesList = contextsValuesList;
-	}
-
-	public void setNewContextID(int newContextID) {
-		this.newContextID = newContextID;
-	}
-
-	public void setActiveContexts(List<ActiveContext> activeContexts) {
-		this.activeContexts = activeContexts;
-	}
-
-	public void setNumSelectedContext(double numSelectedContext) {
-		this.numSelectedContext = numSelectedContext;
-	}
-
-	public void setPotentialNewContextList(List<Pair<List<Integer>, List<Integer>>> potentialNewContextList) {
-		this.potentialNewContextList = potentialNewContextList;
-	}
-
-	public void setNumAddedContexts(int numAddedContexts) {
-		this.numAddedContexts = numAddedContexts;
-	}
-
-	public void setHistory(Map<Long, Integer> history) {
-		this.history = history;
-	}
-
-	public void setSumActiveContextsValue(Double sumActiveContextsValue) {
-		this.sumActiveContextsValue = sumActiveContextsValue;
-	}
-
-	public void setSumSelectedContextValue(Double sumSelectedContextValue) {
-		this.sumSelectedContextValue = sumSelectedContextValue;
-	}
-
+	
 	public List<ActiveContext> getActiveContexts() {
 		return activeContexts;
 	}
@@ -137,7 +72,7 @@ public class NeuroGroupOperator implements Serializable{
 		return numSelectedContext;
 	}
 
-	public List<Pair<List<Integer>, List<Integer>>> getPotentialNewContextList() {
+	public List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> getPotentialNewContextList() {
 		return potentialNewContextList;
 	}
 
@@ -150,12 +85,9 @@ public class NeuroGroupOperator implements Serializable{
 		return this.sumActiveContextsValue;
 	}
 	
-	public Double getSumSelectedContextValue() {
-		return this.sumSelectedContextValue;
-	}
-	
 	@SuppressWarnings("unchecked")
-	public NeuroGroupOperator(int maxLeftSemiContextsLenght) {
+	public NeuroGroupOperator(int maxLeftSemiContextsLenght, 
+			int maxValidActiveNeuronsNum) {
 		this.maxLeftSemiContextsLenght = maxLeftSemiContextsLenght;
 		this.factsDics = new Map[2];
 		this.factsDics[0] = new HashMap<Integer, List<ContextValue>>();
@@ -170,21 +102,22 @@ public class NeuroGroupOperator implements Serializable{
 		this.crossedSemiContextsLists[0] = new ArrayList<ContextValue>();
 		this.crossedSemiContextsLists[1] = new ArrayList<ContextValue>();
 		this.contextsValuesList = new ArrayList<CrossedContext>();
+		this.maxValidActiveNeuronsNum = maxValidActiveNeuronsNum;
 		this.newContextID = -1;
-		this.history = new HashMap<Long, Integer>();
 	}
 	
-	public int getNewContextList(List<Pair<List<Integer>, List<Integer>>> newContexts) {
-		Set<Pair<List<Integer>, List<Integer>>> newContextsSet = new HashSet<Pair<List<Integer>, List<Integer>>>();
+	public int getNewContextList(List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> newContexts) {
+		Set<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> newContextsSet = 
+				new HashSet<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>>();
 		newContextsSet.addAll(newContexts);
 		return getNewContextList(newContextsSet);
 	}
 	
-	public int getNewContextList(Set<Pair<List<Integer>, List<Integer>>> newContexts) {
+	public int getNewContextList(Set<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> newContexts) {
 		int numAddedContexts = 0;
-		for (Pair<List<Integer>, List<Integer>> activeContext : newContexts) {
-			List<Integer> leftFacts = activeContext.getA();
-			List<Integer> rightFacts = activeContext.getB();
+		for (Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> activeContext : newContexts) {
+			List<Integer> leftFacts = activeContext.getFirst().getFirst();
+			List<Integer> rightFacts = activeContext.getFirst().getSecond();
 			Collections.sort(leftFacts);
 			Collections.sort(rightFacts);
 			int leftHash = leftFacts.hashCode();
@@ -208,11 +141,13 @@ public class NeuroGroupOperator implements Serializable{
 		return numAddedContexts;
 	}
 	
-	public int getContextByFacts(List<Pair<List<Integer>, List<Integer>>> newContextsList, int zeroLevel){
+	public int getContextByFacts(
+			List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> newContextsList, 
+			int zeroLevel){
 		int numAddedContexts = 0;
-		for(Pair<List<Integer>, List<Integer>> activeContext : newContextsList){
-			List<Integer> leftFacts = activeContext.getA();
-			List<Integer> rightFacts = activeContext.getB();
+		for(Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> activeContext : newContextsList){
+			List<Integer> leftFacts = activeContext.getFirst().getFirst();
+			List<Integer> rightFacts = activeContext.getFirst().getSecond();
 			Collections.sort(leftFacts);
 			Collections.sort(rightFacts);
 			int leftHash = leftFacts.hashCode();
@@ -242,6 +177,7 @@ public class NeuroGroupOperator implements Serializable{
 			int rightSemiContextID = this.semiContextDics[1].get(rightHash);
 			if (rightSemiContextID == nextRightSemiContextNumber){
 				ContextValue rightSemiContextValues = new ContextValue(rightFacts.size());
+				rightSemiContextValues.setFacts(rightFacts);
 				semiContextValuesLists[1].add(rightSemiContextValues);
 				for(Integer fact : rightFacts){
 					if(!this.factsDics[1].containsKey(fact)){
@@ -257,7 +193,7 @@ public class NeuroGroupOperator implements Serializable{
 			}
 		    int contextID = this.semiContextValuesLists[0].get(leftSemiContextID).getContexIDs().get(rightSemiContextID);
 		    if (contextID == nextFreeContextIDNumber){
-//		    	System.out.println("new contextID = " + contextID);
+//		    	System.out.println("new contextID = " + (contextID+(1<<30)));
 //			    	System.out.print((contextID+(1<<30)) + " : ");
 //			    	for(int ii = 0; ii < leftFacts.size(); ii++)
 //						System.out.print(leftFacts.get(ii) + " ");
@@ -266,7 +202,10 @@ public class NeuroGroupOperator implements Serializable{
 //						System.out.print(rightFacts.get(ii) + " ");
 //					System.out.print("\n");
 		    	numAddedContexts += 1;
-		    	CrossedContext crossedContexts = new CrossedContext(1.0, 1.0, zeroLevel, leftHash, rightHash);
+		    	Double T = activeContext.getSecond().getFirst() + 1;
+		    	Double F = activeContext.getSecond().getSecond();
+		    	Integer level = (int) Math.round(activeContext.getThird().getOrDefault("level", 0.0));
+		    	CrossedContext crossedContexts = new CrossedContext(T, F, zeroLevel, level, leftHash, rightHash, rightFacts, activeContext.getThird());
 		    	this.contextsValuesList.add(crossedContexts);
 		    	if (zeroLevel > 0) {
 		    		this.newContextID = contextID;
@@ -288,8 +227,15 @@ public class NeuroGroupOperator implements Serializable{
 		this.crossedSemiContextsLists[1].clear();
 	}
 	
-	public void contextCrosser(int leftOrRight, List<Integer> factsList, boolean newContextFlag, boolean learnFlag, List<Pair<List<Integer>, List<Integer>>> potentialNewContexts) {
+	public void contextCrosser(int leftOrRight, 
+			List<Integer> factsList, 
+			boolean newContextFlag, 
+			boolean learnFlag, 
+			List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> potentialNewContexts) {
 		
+		if (leftOrRight == 1) {
+			right_size = factsList.size();
+		}
 		if (leftOrRight == 0) {
 			if ( potentialNewContexts.size() > 0 && learnFlag){
 				this.numAddedContexts = this.getContextByFacts (potentialNewContexts, 0);
@@ -324,14 +270,66 @@ public class NeuroGroupOperator implements Serializable{
 		}
 	}
 	
+	public int getLevelFromContextID(int contextID) {
+		if (contextID < (1<<30)) return 0;
+		if (contextID >= this.contextsValuesList.size()+(1<<30)) return 0;
+		return this.contextsValuesList.get(contextID-(1<<30)).getLevel();
+	}
+	
+	public int getActivedNumberFromContextID(int contextID) {
+		if (contextID < (1<<30)) return 0;
+		if (contextID >= this.contextsValuesList.size()+(1<<30)) return 0;
+		return (int) this.contextsValuesList.get(contextID-(1<<30)).getTP();
+	}
+	
+	public List<ActiveContext> getPotentialActiveContexts() {
+		List<ActiveContext> activeContexts = new ArrayList<ActiveContext>();
+		for ( int i = 0; i < this.crossedSemiContextsLists[0].size(); i++) {
+			ContextValue leftSemiContextValues = this.crossedSemiContextsLists[0].get(i);
+			for (Map.Entry<Integer, Integer> entry : leftSemiContextValues.getContexIDs().entrySet()) {
+				int rightSemiContextID = entry.getKey();
+				int contextID = entry.getValue();
+				if ( this.newContextID != contextID ) {
+					ContextValue rightSemiContextValue = this.semiContextValuesLists[1].get(rightSemiContextID);
+					if ( leftSemiContextValues.getFromOrto().size() == leftSemiContextValues.getLenFact() ) {
+						if (this.contextsValuesList.get(contextID).getTP() + this.contextsValuesList.get(contextID).getFP() < maxValidActiveNeuronsNum) continue;
+						activeContexts.add(new ActiveContext(contextID, this.contextsValuesList.get(contextID).getNumActivate(), 
+								this.contextsValuesList.get(contextID).getLeftHash(), this.contextsValuesList.get(contextID).getRightHash(), 
+								leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFacts()));
+      				}
+      			}
+      		}
+      	}
+		return activeContexts;
+	}
+	
+	public double activeLogLikelihood(List<Integer> currSensFacts) {
+		double activeNum = 0.0;
+		List<ActiveContext> activeContexts = getPotentialActiveContexts();
+		for (ActiveContext activeContext : activeContexts) {
+			int contextID = activeContext.getContextID();
+			double numActive = this.contextsValuesList.get(contextID).getNumActivate();
+			boolean flag = true;
+			for (Integer fact : activeContext.getRightFacts()) {
+				if (currSensFacts.contains(fact)) continue;
+				flag = false;
+				break;
+			}
+			if (flag)
+				activeNum += numActive;
+		}
+		return activeNum;
+	}
+	
 	public void updateContextsAndGetActive(boolean newContextFlag) {
 
         List<ActiveContext> activeContexts = new ArrayList<ActiveContext>();
 //        List<Long> beActivatedList = new ArrayList<Long>();
         double numSelectedContext = 0;
-        this.sumSelectedContextValue = 0.0;
         this.sumActiveContextsValue = 0.0;
-        List<Pair<List<Integer>, List<Integer>>> potentialNewContextList = new ArrayList<Pair<List<Integer>, List<Integer>>>();
+        int sumSize = 0;
+        List<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>> potentialNewContextList = 
+        		new ArrayList<Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>>>();
 
         for ( int i = 0; i < this.crossedSemiContextsLists[0].size(); i++) {
         	ContextValue leftSemiContextValues = this.crossedSemiContextsLists[0].get(i);
@@ -339,51 +337,63 @@ public class NeuroGroupOperator implements Serializable{
         		int rightSemiContextID = entry.getKey();
         		int contextID = entry.getValue();
 //        		if (this.contextsValuesList.get(contextID).getNumActivate() < 0.1) continue;
-//        		System.out.println(contextID + " " + this.contextsValuesList.get(contextID).getNumActivate());
+//        		System.err.println(contextID + " " + this.contextsValuesList.get(contextID).getNumActivate());
 //        		if (this.contextsValuesList.get(contextID).getNumActivate() <= 0) continue;
         		if ( this.newContextID != contextID ) {
         			ContextValue rightSemiContextValue = this.semiContextValuesLists[1].get(rightSemiContextID);
         			if ( leftSemiContextValues.getFromOrto().size() == leftSemiContextValues.getLenFact() ) {
         				numSelectedContext += 1;
-        				this.sumSelectedContextValue += this.contextsValuesList.get(contextID).getNumActivate();
+//        				System.out.println(Math.log(this.contextsValuesList.get(contextID).getNumActivate()));
+//        				this.sumSelectedContextValue += this.contextsValuesList.get(contextID).getTP();
+//        				this.sumSelectedContextValue += this.contextsValuesList.get(contextID).getFP();
+//        				System.out.println(this.contextsValuesList.get(contextID).getNumActivate());
         				if ( rightSemiContextValue.getFromOrto().size() > 0 ) {
         					if ( rightSemiContextValue.getFromOrto().size() == rightSemiContextValue.getLenFact() ) {
-//        						System.out.println(this.contextsValuesList.get(contextID).getNumActivate());
-        						this.sumActiveContextsValue += (this.contextsValuesList.get(contextID).getNumActivate());
-        						if (newContextFlag) this.contextsValuesList.get(contextID).addNumActivate();
-        						activeContexts.add(new ActiveContext(contextID, this.contextsValuesList.get(contextID).getNumActivate(), 
+        						if(rightSemiContextValue.getFromOrto().size() >= right_size) {
+        							sumSize += 1;
+        							this.sumActiveContextsValue += (this.contextsValuesList.get(contextID).getNumActivate());
+        						}
+     							if (newContextFlag) this.contextsValuesList.get(contextID).addNumActivate();
+        						activeContexts.add(new ActiveContext(contextID, this.contextsValuesList.get(contextID).getTP(), 
         								this.contextsValuesList.get(contextID).getLeftHash(), this.contextsValuesList.get(contextID).getRightHash()));
         					} else if ( this.contextsValuesList.get(contextID).getZeroLevel()==1 && 
         							leftSemiContextValues.getFromOrto().size()<=this.maxLeftSemiContextsLenght ){
-        						Pair<List<Integer>, List<Integer>> p = 
-        								new Pair<List<Integer>, List<Integer>>(leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFromOrto());
-        						potentialNewContextList.add(p);
+        						Entry<List<Integer>, List<Integer>> p_1 = 
+        								new Entry<List<Integer>, List<Integer>>(leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFromOrto());
+                				Entry<Double, Double> p_2 = 
+                						new Entry<Double, Double>(this.contextsValuesList.get(contextID).getTP(), this.contextsValuesList.get(contextID).getFP());
+                				Map<String, Double> p_3 = new HashMap<String, Double>();
+                				p_3.putAll(this.contextsValuesList.get(contextID).getRewards());
+                				Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> p = 
+                						new Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> (p_1, p_2, p_3);
+                				potentialNewContextList.add(p);
         					}
-        				}
-        				if ( rightSemiContextValue.getFromOrto().size()!=rightSemiContextValue.getLenFact() ) {
-        					this.sumActiveContextsValue += (1.0-this.contextsValuesList.get(contextID).getNumActivate());
         				}
         				if ( newContextFlag && rightSemiContextValue.getFromOrto().size()!=rightSemiContextValue.getLenFact() ) {
         					this.contextsValuesList.get(contextID).subNumActivate();
         				}
         			} else if ( this.contextsValuesList.get(contextID).getZeroLevel()==1 && rightSemiContextValue.getFromOrto().size()>0 && 
-							 leftSemiContextValues.getFromOrto().size()<=this.maxLeftSemiContextsLenght ) {
-        				Pair<List<Integer>, List<Integer>> p = 
-								new Pair<List<Integer>, List<Integer>>(leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFromOrto());
-						potentialNewContextList.add(p);
+        					leftSemiContextValues.getFromOrto().size()>0 && leftSemiContextValues.getFromOrto().size()<=this.maxLeftSemiContextsLenght ) {
+        				Entry<List<Integer>, List<Integer>> p_1 = 
+								new Entry<List<Integer>, List<Integer>>(leftSemiContextValues.getFromOrto(), rightSemiContextValue.getFromOrto());
+        				Entry<Double, Double> p_2 = 
+        						new Entry<Double, Double>(this.contextsValuesList.get(contextID).getTP(), this.contextsValuesList.get(contextID).getFP());
+        				Map<String, Double> p_3 = new HashMap<String, Double>();
+        				p_3.putAll(this.contextsValuesList.get(contextID).getRewards());
+        				Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> p = 
+        						new Triple<Entry<List<Integer>, List<Integer>>, Entry<Double, Double>, Map<String, Double>> (p_1, p_2, p_3);
+        				potentialNewContextList.add(p);
         			}
-//        			if ( newContextFlag && leftSemiContextValues.getFromOrto().size()!=leftSemiContextValues.getLenFact() ) {
-//        				double tmp = this.contextsValuesList.get(contextID).getNumActivate();
-//						tmp = tmp*rate;
-//    					this.contextsValuesList.get(contextID).setNumActivate(tmp);
-//        			}
         		}
         	}
         }
-        
+        if (activeContexts.size() == 0) 
+        	this.sumActiveContextsValue = Double.NEGATIVE_INFINITY;
         if (newContextFlag) this.newContextID = -1;
         this.activeContexts = activeContexts;
         this.numSelectedContext = numSelectedContext;
         this.potentialNewContextList = potentialNewContextList;
+        if (sumSize > 0)
+        	this.sumActiveContextsValue /= sumSize;
 	}
 }
