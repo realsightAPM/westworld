@@ -21,7 +21,7 @@ public class SorlReaderSingle extends SolrReaderObject {
 	public SorlReaderSingle(){};
 	
 	@Override
-	public void runRead(SolrDocument option, long start, long end, Statistic stat, String... fq) {
+	public void runRead(SolrDocument option, String time_field, long start, long end, Statistic stat, String... fq) {
 		// TODO Auto-generated method stub
 		System.out.println("SolrReaderSingle");
 		
@@ -86,13 +86,20 @@ public class SorlReaderSingle extends SolrReaderObject {
 			} catch (Exception e) {
 				System.out.print("ÍøÂçreadÒì³£");
 				try {
-					Thread.sleep(5000);
+					Thread.sleep(6000);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				e.printStackTrace();
 			}
+		}
+		
+		try {
+			solr.close();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		
 		docs = response.getResults();
@@ -119,6 +126,14 @@ public class SorlReaderSingle extends SolrReaderObject {
 				tmp_double = (Float) docs.get(i).get(value_field);
 			} else if (docs.get(i).get(value_field) instanceof Integer) {
 				tmp_double = (Integer) docs.get(i).get(value_field);
+			} else if (docs.get(i).get(value_field) instanceof Long) {
+				tmp_double = (Long) docs.get(i).get(value_field);
+			} else if (docs.get(i).get(value_field) instanceof String){
+				try {
+					tmp_double = Double.parseDouble((String) docs.get(i).get(value_field));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 			if (x >= group_num) continue;
 			resource.get(var).get(x).add(tmp_double);
@@ -130,18 +145,18 @@ public class SorlReaderSingle extends SolrReaderObject {
 			}
 		}
 		
-		String[] attrList = new String[var_list.length];
+		attrList = new String[var_list.length];
 		for (int i = 0; i < var_list.length; i++) {
 			attrList[i] = "_" + (new Integer(i)).toString();
 		}
 		
-		WriteCSV writer = new WriteCSV();
-		try {
-			writer.writeArrayCSV(queryArray, attrList, ".", "log.csv");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		WriteCSV writer = new WriteCSV();
+//		try {
+//			writer.writeArrayCSV(queryArray, attrList, ".", "data.csv");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 
 	

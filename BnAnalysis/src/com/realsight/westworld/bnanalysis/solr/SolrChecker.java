@@ -1,5 +1,7 @@
 package com.realsight.westworld.bnanalysis.solr;
 
+import java.io.IOException;
+
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrQuery.ORDER;
@@ -14,7 +16,7 @@ public class SolrChecker {
 		
 	}
 	
-	public int check(SolrDocument option, long end, String... fq) {
+	public int check(SolrDocument option, String time_field, long end, String... fq) {
 		
 		SolrClient solr = new HttpSolrClient.Builder((String) option.get("solr_reader_url_s")).build();
 		SolrQuery solrQuery = new SolrQuery();
@@ -25,7 +27,9 @@ public class SolrChecker {
 		for (int j = 0; j < fq.length; j++) {
 			fq_list[j] = fq[j];
 		}
-		fq_list[fq.length] = "timestamp_l:[" + end + " TO " + " *]";
+		String rs_end = TimeUtil.formatUnixtime2(end);
+		fq_list[fq.length] = time_field + ":[" + rs_end + " TO " + " *]";
+		
 		solrQuery.setFilterQueries(fq_list);
 		QueryResponse response = new QueryResponse();
 		SolrDocumentList docs = new SolrDocumentList();
@@ -36,8 +40,22 @@ public class SolrChecker {
 			} catch (Exception e) {
 				System.out.print("ÍøÂçcheckÒì³£");
 				e.printStackTrace();
+				try {
+					Thread.sleep(6000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		}
+		
+		try {
+			solr.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		docs = response.getResults();
 	
 		return docs.size();

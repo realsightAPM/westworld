@@ -6,13 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
 import com.realsight.westworld.bnanalysis.basic.Pair;
-import com.realsight.westworld.bnanalysis.basic.SimuLoad;
 import com.realsight.westworld.bnanalysis.io.ReadCSV;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
-import com.realsight.westworld.bnanalysis.service.SimuCPT;
-
 import norsys.netica.*;
 
 public class RootCause {
@@ -58,40 +54,6 @@ public class RootCause {
 	
 	
 	public static void main (String[] args) throws Throwable{
-		NeticaApi netica = new NeticaApi();
-		netica.loadNet();
-	    RootCause rootCause = new RootCause("http_times", netica);
-	    
-		
-//		System.out.println("\n输出根源性的期望值：");
-		List<Pair<String, Double>> rank = rootCause.causeRank;
-//		for (int i = 0; i < rank.size(); i++) {
-//			System.out.println(rank.get(i).first + "\t" + rank.get(i).second);
-//		}
-//		
-		System.out.println("\nhttp_times期望：");
-		for (int i = 0; i < rank.size(); i++) {
-			System.out.println(rank.get(i).first + "\t" + rank.get(i).second);
-		}
-		
-		netica.finalize();
-		
-		String simuStr = "session_count";
-		double times = 20;
-		
-		SimuLoad simu = new SimuLoad("inputjava_data1.csv", simuStr, times);   // 只是用来生成模拟的.tsv文件
-//		netica.loadSimuNet();
-		SimuCPT simuCPT = new SimuCPT();
-		simuCPT.setSimuCPT(simuStr);
-		netica = simuCPT.loadSimuCPT();
-	    RootCause simuCause = new RootCause("http_times", netica);
-	    
-		rank = simuCause.causeRank;
-		System.out.println("\nsimu："+ simuStr + "*" + times + "后http_times期望：");
-		for (int i = 0; i < rank.size(); i++) {
-			System.out.println(rank.get(i).first + "\t" + rank.get(i).second);
-		}
-		netica.finalize();
 		
 	}
 }

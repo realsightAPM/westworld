@@ -3,6 +3,7 @@ package com.realsight.westworld.bnanalysis.solr;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
@@ -28,9 +29,9 @@ public class SolrReader extends SolrReaderObject {
 	
 	public SolrReader(){}
 	
-	public void runRead(SolrDocument option, long start, long end, Statistic stat, String... fq) {
+	public void runRead(SolrDocument option, String time_field, long start, long end, Statistic stat, String... fq) {
 		
-		SolrClient solr = new HttpSolrClient.Builder((String) option.get("solr_reader_url_s")).build();
+		SolrClient solr = new HttpSolrClient.Builder(option.get("solr_reader_url_s").toString()).build();
 		
 		String[] res_list = option.get("res_list_s").toString().split(",");
 		String[] var_list = option.get("indexList_s").toString().split(",");
@@ -61,12 +62,21 @@ public class SolrReader extends SolrReaderObject {
 			for (int j = 0; j < fq.length; j++) {
 				fq_list[j] = fq[j];
 			}
-			fq_list[fq.length] = "timestamp_l:[" + start + " TO " + end + "]";
+			
+			String rs_start = TimeUtil.formatUnixtime2(start);
+			String rs_end = TimeUtil.formatUnixtime2(end);
+			
+			fq_list[fq.length] = time_field + ":[" + rs_start + " TO " + rs_end + "]";
+			
+			System.out.println("fq=" + fq_list[fq.length]);
+			
 			fq_list[fq.length+1] = "res_id:" + res_list[i];
 			solrQuery[i].setFilterQueries(fq_list);
 			solrQuery[i].setRows(2000000);
-			solrQuery[i].setSort("timestamp_l", ORDER.asc);
+//			solrQuery[i].setSort("timestamp_l", ORDER.asc);
+			solrQuery[i].setSort(time_field, ORDER.asc);
 		}
+		
 		
 		queryList = new ArrayList<String>();
 		queryMap = new HashMap<String, Integer>();
@@ -95,26 +105,47 @@ public class SolrReader extends SolrReaderObject {
 			} catch (Exception e) {
 				System.out.print("Õ¯¬Áread“Ï≥£");
 				e.printStackTrace();
+				try {
+					Thread.sleep(6000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
+		}
+		try {
+			solr.close();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		
 		for (int i = 0; i < docs.length; i++) {
 			docs[i] = response[i].getResults();
-//			System.out.println(docs[i].size());
-//			System.out.println(start + "->" + end);
+			System.out.println("docs.size(): " + docs[i].size());
 			for (int j = 0; j < docs[i].size(); j++) {
-//				System.out.println(docs[i].get(j).get("res_id") + " " + docs[i].get(j).get("timestamp_l"));
-				long timestamp_tmp = (long) docs[i].get(j).get("timestamp_l");
+//				long timestamp_tmp = (long) docs[i].get(j).get("timestamp_l");
+				
+				long timestamp_tmp = ((Date) docs[i].get(j).get(time_field)).getTime(); 
 				int x = (int) ((timestamp_tmp-start)/interval);
-//				System.out.println(x + "––");
 				for (String it : resource.get(res_list[i]).keySet()) {
 					double tmp_double = 0;
+					
 					if (docs[i].get(j).get(it) instanceof Double) {
 						tmp_double = (Double) docs[i].get(j).get(it);
 					} else if (docs[i].get(j).get(it) instanceof Float) {
-						tmp_double = (Double) docs[i].get(j).get(it);
+						tmp_double = (Float) docs[i].get(j).get(it);
 					} else if (docs[i].get(j).get(it) instanceof Integer) {
-						tmp_double = (Double) docs[i].get(j).get(it);
+						tmp_double = (Integer) docs[i].get(j).get(it);
+					}
+					else if (docs[i].get(j).get(it) instanceof Long) {
+							tmp_double = (Long) docs[i].get(j).get(it);
+					} else if (docs[i].get(j).get(it) instanceof String){
+						try {
+							tmp_double = Double.parseDouble(docs[i].get(j).get(it).toString());
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
 					}
 					if (x >= group_num) continue;
 					resource.get(res_list[i]).get(it).get(x).add(tmp_double);
@@ -123,15 +154,9 @@ public class SolrReader extends SolrReaderObject {
 		}
 		
 		for (String it : resource.keySet()) {
-//			System.out.println("resouce: " + it);
-//			Thread.sleep(1000);
 			int cnt_1 = 0;
 			for (String it2 : resource.get(it).keySet()) {
-//				System.out.println("var: " + cnt_1);
-//				Thread.sleep(1000);
 				String tmp_str = it + ":" + it2;
-//				System.out.println(tmp_str);
-//				System.out.println(queryMap.get(tmp_str));
 				for (int i = 0; i < group_num; i++) {
 					
 					queryArray.get(queryMap.get(tmp_str)).add(stat.run(resource.get(it).get(it2).get(i)));
@@ -141,18 +166,19 @@ public class SolrReader extends SolrReaderObject {
 			
 		}
 		
-		String[] attrList = new String[var_list.length];
+		attrList = new String[var_list.length];
 		for (int i = 0; i < var_list.length; i++) {
 			attrList[i] = "_" + (new Integer(i)).toString();
 		}
 		
-		WriteCSV writer = new WriteCSV();
-		try {
-			writer.writeArrayCSV(queryArray, attrList, ".", "log.csv");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		WriteCSV writer = new WriteCSV();
+//		try {
+//			writer.writeArrayCSV(queryArray, attrList, ".", "data.csv");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 	}
 	
 	public static void main(String[] args) throws IOException {

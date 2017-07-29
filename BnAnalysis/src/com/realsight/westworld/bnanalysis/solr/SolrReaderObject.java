@@ -13,6 +13,7 @@ public abstract class SolrReaderObject {
 	public List<String> queryList;
 	public HashMap<String, Integer> queryMap;
 	public List<ArrayList<Double>> queryArray;
+	public String[] attrList;
 	
-	public abstract void runRead(SolrDocument option, long start, long end, Statistic stat, String... fq);
+	public abstract void runRead(SolrDocument option, String time_field, long start, long end, Statistic stat, String... fq);
 }

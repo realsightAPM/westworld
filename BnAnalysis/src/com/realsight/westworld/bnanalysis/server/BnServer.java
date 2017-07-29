@@ -13,21 +13,26 @@ import org.slf4j.LoggerFactory;
 
 import com.realsight.westworld.bnanalysis.api.RootCause;
 import com.realsight.westworld.bnanalysis.basic.Pair;
+import com.realsight.westworld.bnanalysis.io.WriteCSV;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.solr.SolrReader;
+import com.realsight.westworld.bnanalysis.solr.SolrReaderNapm;
 import com.realsight.westworld.bnanalysis.solr.SolrReaderObject;
 import com.realsight.westworld.bnanalysis.solr.SolrChecker;
 import com.realsight.westworld.bnanalysis.solr.SolrConfigReader;
+import com.realsight.westworld.bnanalysis.solr.SolrInitResult;
 import com.realsight.westworld.bnanalysis.solr.SolrResults;
 import com.realsight.westworld.bnanalysis.solr.SorlReaderSingle;
 import com.realsight.westworld.bnanalysis.statistic.Mean;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
+import norsys.netica.NeticaException;
 
 public class BnServer implements Runnable{
 	
-	public static String url;    //配置文件路径
+	public static String url = null;             // 配置文件路径
+	public static String time_field = null;      // 时间域
 	public String bn_name;
 	public SolrReaderObject reader;
 	public NeticaApi netica;
@@ -38,12 +43,12 @@ public class BnServer implements Runnable{
 		root.setLevel(Level.WARN);
 	}
 	
-	
-	public BnServer() {}
+	private BnServer() {}
 	
 	public BnServer(String bn_name, SolrReaderObject reader) {
 		this.bn_name = bn_name;          // 用于找配置
-		this.reader = reader;    
+		this.reader = reader;   
+//		Thread.currentThread().setName(bn_name);
 	}
 	
 	public void run() {
@@ -57,60 +62,65 @@ public class BnServer implements Runnable{
 	
 	public void runBuild() throws Exception {
 		SolrConfigReader conf = new SolrConfigReader();
-		conf.runRead(url, bn_name); // 同步
+		conf.runRead(BnServer.url, bn_name); // 同步
+		long cnt = 0, start, end;
 		
-		SolrDocument option = conf.option;
-		long start_time = (long) option.get("starttime_l"), cnt = 0, gap = (long) option.get("gap_l"), start, end;
-		String fq_str = (String) option.get("fq_s");
-		String[] fq = fq_str.split(",");
+		SolrInitResult initResult = new SolrInitResult();       // 推初始数据没有边
+		initResult.runInit(conf.option, conf.start_time);
 		
 		SolrChecker checker = new SolrChecker();
-		
 		while (true) {
-			start = start_time + gap*cnt;
-			end = start + gap;
-			int res = checker.check(option, end, fq);
+			start = conf.start_time + conf.gap*cnt;
+			end = start + conf.gap;
+			int res = checker.check(conf.option, BnServer.time_field, end, conf.fq);
 			
-			System.out.println("数据判断：" + res);
+			System.out.println("阶段 " + cnt + " 数据判断：" + res);
 			Thread.sleep(2000);
 			if (res > 0) {
 				Mean mean = new Mean();
-				reader.runRead(option, start, end, mean, fq); // 同步
-				writeSolr(buildNet(netica), option, start);
+				reader.runRead(conf.option, time_field, start, end, mean, conf.fq); // 同步
+				netica = buildNet(reader);
+				writeSolr(conf.option, start);
 				System.out.println("这是第"+cnt+"段");
 			} else {
-				System.out.println("等待积累" + (gap/1000/3600) + "小时的数据: " + bn_name);
+				System.out.println("等待积累" + (conf.gap/1000/3600) + "小时的数据: " + bn_name);
 				Thread.sleep(1800*1000);
 			}
 			cnt++;
 		}
 	}
 	
-	private static synchronized Pair<List<String>, List<String>> buildNet(NeticaApi netica) throws Exception {
-		
-		netica = new NeticaApi();
-		netica.buildNet("log.csv", 2, 3);
-//		netica.loadNet();
-		Pair<List<String>, List<String>> pair = new Pair<List<String>, List<String>> (netica.getGONodes(), netica.getGoLinks());
-		netica.finalize();
-		return pair;
+	private static synchronized NeticaApi buildNet(SolrReaderObject readObj) throws Exception {
+		WriteCSV writer = new WriteCSV();
+		try {
+			writer.writeArrayCSV(readObj.queryArray, readObj.attrList, ".", "data.csv");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		NeticaApi netica_obj = new NeticaApi();
+		netica_obj.buildNet("data.csv", 1, 3);
+		return netica_obj;
 	}
 	
-	private void writeSolr(Pair<List<String>, List<String>> pair, SolrDocument option, long start) throws SolrServerException, IOException {
+	private void writeSolr(SolrDocument option, long start) throws SolrServerException, IOException, NeticaException {
 		SolrResults resulter = new SolrResults((String) option.get("solr_writer_url_s"));
+		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", option.get("bn_name_s")));
 //		resulter.addResult(new Pair<String, Object> ("rs_timestamp", date.getTime()));
+		long time_now = Calendar.getInstance().getTimeInMillis();
+		resulter.addResult(new Pair<String, Object> ("timestamp_l", time_now));
 		resulter.addResult(new Pair<String, Object> ("start_timestamp_l", start));
-		resulter.addResult(new Pair<String, Object> ("nodes_s", pair.first.toString()));
-		resulter.addResult(new Pair<String, Object> ("edges_s", pair.second.toString()));
+		resulter.addResult(new Pair<String, Object> ("nodes_s", netica.getGONodes().toString()));
+		resulter.addResult(new Pair<String, Object> ("edges_s", netica.getGoLinks().toString()));
 		String str = "";
 		
 		for (int i = 0; i < reader.queryList.size(); i++) {
-			str += "^"+reader.queryList.get(i);
+			str += "^"+reader.queryList.get(i).split(":")[1];
 			try {
-				List<Pair<String, Double>> cause = (new RootCause("_"+i, netica)).causeRank;
-				System.out.println("规模： " + cause.size());
+				List<Pair<String, Double>> cause = netica.getCauseRankOf("_"+i);
+				System.out.println(i+"的根源： " + cause.size() + "个");
 				String commit_str = "";
 				for (Pair<String, Double> it : cause) {
 					String tmp_str = it.first.substring(1)+":"+it.second.toString();
@@ -130,14 +140,17 @@ public class BnServer implements Runnable{
 	public static void main(String[] args) throws Exception {
 
 //		BnServer.url = "http://10.4.45.114:19983/solr/option";
-//		Thread thread1 = new Thread(new BnServer("bn_test", new SolrReader()));
-//		thread1.start();
+		BnServer.url = "http://10.4.53.205:9983/solr/option";
+		BnServer.time_field = "rs_timestamp_tdt";
+//		Thread thread1 = new Thread(new BnServer("bn_show", new SolrReader()));
+		Thread thread1 = new Thread(new BnServer("bn_napm", new SolrReaderNapm()));
+		thread1.start();
 		
 		
 		
-		BnServer.url = "http://10.4.55.171:8983/solr/option/";
-		Thread thread2 = new Thread(new BnServer("bn_test", new SorlReaderSingle()));
-		thread2.start();
+//		BnServer.url = "http://10.4.55.171:8983/solr/option/";
+//		Thread thread2 = new Thread(new BnServer("bn_test", new SorlReaderSingle()));
+//		thread2.start();
 		
 		
 	}

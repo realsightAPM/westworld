@@ -1,0 +1,756 @@
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:14:46]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:15:41]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:16:19]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:16:25]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:17:09]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           2-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-12 16:17:15]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='2') needs to be less than the variable count (='2').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:15:09]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:15:11]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:15:14]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:15:16]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:15:19]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:26:20]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:26:23]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:26:25]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:26:27]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------
+                                 ERROR DETAILS
+-----------------------------------------------------------------------------
+- Banjo                        Bayesian Network Inference with Java Objects -
+- Release 2.2.0                                                 15 Apr 2008 -
+- Licensed from Duke University                                             -
+- Copyright (c) 2005-08 by Alexander J. Hartemink                           -
+- All rights reserved                                                       -
+-----------------------------------------------------------------------------
+- Project:                                                     banjo apm data
+- User:                                                                 wubin
+- Dataset:                                           3-vars-1440-observations
+- Notes:                                    static bayesian network inference
+-----------------------------------------------------------------------------
+
+[ERROR: Banjo 2.2.0, 17-7-19 16:26:29]
+The following info is provided to assist in trouble-shooting: 
+(Checkpoint) Banjo performed a set of validation checks, and discovered the following issues which prevented further program execution:
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Value out of accepted range) The value of the setting 'maxParentCount' (='3') needs to be less than the variable count (='3').
+
+(Alert: default applied.) Default value ('banjo.properties') applied to 'settingsFile' parameter.
+(Alert: unknown setting.) No settings file ('settingsFile' parameter) supplied via command line argument?!
+
+Supplied command line arguments:
+"threads=1"
+
+Stack trace info:
+
+edu.duke.cs.banjo.application.Banjo.execute(Banjo.java:154)
+com.realsight.westworld.bnanalysis.service.BanjoApi.train(BanjoApi.java:37)
+com.realsight.westworld.bnanalysis.service.BanjoApi.<init>(BanjoApi.java:25)
+com.realsight.westworld.bnanalysis.service.NeticaApi.buildNet(NeticaApi.java:43)
+com.realsight.westworld.bnanalysis.server.BnServer.buildNet(BnServer.java:102)
+com.realsight.westworld.bnanalysis.server.BnServer.runBuild(BnServer.java:82)
+com.realsight.westworld.bnanalysis.server.BnServer.run(BnServer.java:56)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+java.lang.Thread.run(Thread.java:745)
+
+-----------------------------------------------------------------------------
+                           End of error notification
+-----------------------------------------------------------------------------
+

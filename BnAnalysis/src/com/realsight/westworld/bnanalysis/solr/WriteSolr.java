@@ -35,9 +35,16 @@ public class WriteSolr {
 			} catch (Exception e) {
 				System.out.println("网络commit异常");
 				e.printStackTrace();
+				try {
+					Thread.sleep(6000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		}
 		
+		solr.close();
 		System.out.println("上传完成");
 	}
 	

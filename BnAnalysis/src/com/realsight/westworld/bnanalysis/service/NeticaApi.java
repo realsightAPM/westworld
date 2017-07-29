@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import com.realsight.westworld.bnanalysis.basic.Pair;
@@ -24,21 +25,22 @@ public class NeticaApi {
 	public Map<String, String[]> rangeMap;
 	public Map<String, ArrayList<Double>> rangeDouble;
 	
-	public NeticaApi() throws Exception {
-		if (env == null) {
+	static {
+		try {
 			env = new Environ("+WuB/DalianUTech/310-7-A/9901");
+		} catch (NeticaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-//		env = new Environ(null);
 	}
+	
+	public NeticaApi() {}
 	
 	/************************************************************ 建网 *********************************************************/
 	
 	public void buildNet(String original_csv, int num_thread, int num_bins) throws Exception {
 		
 		banjo = new BanjoApi(original_csv, num_thread, num_bins);
-		
-		System.out.println("========================\nnetica的.dne：\n");
-		
 		File outfile = new File("netica_out_dir");
 		if(outfile.exists()) {
             System.out.println("目标文件已存在！");
@@ -53,13 +55,8 @@ public class NeticaApi {
 			outfile.mkdir();
 			System.out.println("创建目录成功！");
 		}
-		
-//		Node.setConstructorClass("norsys.neticaEx.aliases.Node");
-//		env = new Environ(null);
-		
 		net = new Net();
 		net.setName("apm");
-		
 		Separate separate = banjo.separate;
 		Node[] nodeList = new Node[separate.numAttr];
 		String[] attrList = separate.attrList;
@@ -69,9 +66,6 @@ public class NeticaApi {
 		/*** build nodes ***/
 		System.out.println("node的个数：" + nodeList.length);
 		for (int i = 0; i < separate.numAttr; i++) {
-			System.out.println(attrList[i]);
-			System.out.println(getStates(mapList.get(i).length));
-			
 			nodeList[i] = new Node(attrList[i], getStates(mapList.get(i).length), net);
 		}
 		
@@ -83,8 +77,6 @@ public class NeticaApi {
 		}
 		
 		/*** counting case ***/
-		
-		
 		net.write(new Streamer("netica_out_dir/Learned_netica.dne"));
 
 		WriteCSV writeCSV = new WriteCSV();
@@ -96,24 +88,10 @@ public class NeticaApi {
 		Streamer caseFile = new Streamer("separate_out_dir/separated.cas");
 		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
 		net.write(new Streamer("netica_out_dir/Learned_netica_CPT.dne"));
-//		net.compile();
+		net.compile();
 	}
 	
 	/************************************************* load网络 *****************************************************/
-	
-	public void loadSimuNet() throws NeticaException, IOException {
-//		env = new Environ(null);
-		net = new Net(new Streamer ("netica_out_dir/Learned_netica.dne"));
-		net.setName("apm");
-		
-		NodeList nodes = net.getNodes();
-		Streamer caseFile = new Streamer("simuLoad_out_dir/simuLoad.cas");
-		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
-		
-		net.write(new Streamer("simuTest.dne"));
-		
-		net.compile();
-	}
 	
 	public void loadNet() throws NeticaException, IOException {
 //		env = new Environ(null);
@@ -476,6 +454,34 @@ public class NeticaApi {
 		}
 		
 		return res;
+	}
+	
+	/**************************************** 根源性排序 *******************************************/
+	public List<Pair<String, Double>> getCauseRankOf(String target_var) throws Exception {
+		
+		if (!rangeMap.containsKey(target_var)) {
+			System.out.println("target_var if not exist");
+			return null;
+		}
+		
+		Map<Double, String> rankMap = new TreeMap<Double, String> ();
+		NodeList nodeList = net.getNodes();
+		for (int i = 0; i < nodeList.size(); i++) {
+			Node tmpNode = nodeList.getNode(i);
+			if (tmpNode.toString().equals(target_var)) {
+				continue;
+			}
+			//设为最高状态
+			double belief = getExeption(tmpNode.toString()+":"+getState(tmpNode.getNumStates()-1), target_var);
+			rankMap.put(belief, tmpNode.toString());
+		}
+		
+		List<Pair<String, Double>>causeRank = new ArrayList<Pair<String, Double>>();
+		
+		for (Double it : rankMap.keySet()) {
+			causeRank.add(new Pair<String, Double> (rankMap.get(it), it));
+		}
+		return causeRank;
 	}
 	
 	@Override
