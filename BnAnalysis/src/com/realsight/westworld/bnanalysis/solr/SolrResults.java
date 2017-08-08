@@ -47,7 +47,7 @@ public class SolrResults {
 //		resulter.addResult(new Pair<String, Object> ("bn_name_s", "8a8a83a95cc8a3d4015cc8a985190003.19f750081da1104aa21ecb78d800a889"));
 //		resulter.addResult(new Pair<String, Object> ("bn_name_s", "8a8a83a95cc9eba1015cc9ff60a00002.0e47e96277ef71f02e469e33e4cd0d5a"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_test"));
-				
+		
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "nifi/"));
 		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", solr_url + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
@@ -170,7 +170,7 @@ public class SolrResults {
 		String rs_start = "2017-07-05T08:23:01Z";
 		start_time = TimeUtil.timeConversion2(rs_start);
 		
-		String solr_url = "http://10.0.67.21:8080/solr/";
+		String solr_url = "http://10.0.67.14:8080/solr/";
 		
 		SolrResults resulter = new SolrResults(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
@@ -193,6 +193,9 @@ public class SolrResults {
 		resulter.addResult(new Pair<String, Object> ("index_ss", list));
 		
 		List<String> val_list = new ArrayList<String> ();
+		
+		
+		/***********************资源指标：对应属性值************************/
 		val_list.add("memory:system_memory_actual_used_bytes_f");
 		val_list.add("diskio:system_diskio_read_bytes_f");
 		val_list.add("cpu:system_cpu_system_pct_f");
@@ -201,21 +204,21 @@ public class SolrResults {
 		val_list.add("load:metricset_rtt_f");
 		val_list.add("process:system_process_memory_share_f");
 		resulter.addResult(new Pair<String, Object> ("value_ss", val_list));
+		
 		resulter.write();
 	}
 	
 	private void metricbeatOption() throws SolrServerException, IOException {
-		long start_time = 1498449060017L;
-		start_time = 1499937900881L;
-		long gap = (long) (1000*3600*24);
-		String rs_start = "2017-07-05T08:23:01Z";
+		long start_time;
+		long gap = (long) (1000*3600*3);
+		String rs_start = "2017-08-08T02:30:00Z";
 		start_time = TimeUtil.timeConversion2(rs_start);
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
 		SolrResults resulter = new SolrResults(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_beat"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics2"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
 		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", solr_url + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
@@ -224,28 +227,43 @@ public class SolrResults {
 		resulter.addResult(new Pair<String, Object> ("fq_s", "type_s:metricsets"));
 		
 		List<String> list = new ArrayList<String> ();
-		list.add("metricset_name_s:diskio");
-		list.add("metricset_name_s:memory");
-		list.add("metricset_name_s:cpu");
-		list.add("metricset_name_s:filesystem");
-		list.add("metricset_name_s:network");
+		
 		list.add("metricset_name_s:load");
-		list.add("metricset_name_s:process");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:cpu");
+		list.add("metricset_name_s:memory");
+//		list.add("metricset_name_s:process");
 		resulter.addResult(new Pair<String, Object> ("index_ss", list));
 		
 		List<String> val_list = new ArrayList<String> ();
-		val_list.add("memory:system_memory_actual_used_bytes_f");
-		val_list.add("diskio:system_diskio_read_bytes_f");
+		
+		val_list.add("load:system_load_norm_1_f");
+		val_list.add("cpu:system_cpu_user_pct_f");
 		val_list.add("cpu:system_cpu_system_pct_f");
-		val_list.add("filesystem:system_filesystem_used_pct_f");
-		val_list.add("network:system_network_in_packets_f");
-		val_list.add("load:metricset_rtt_f");
-		val_list.add("process:system_process_memory_share_f");
+		val_list.add("cpu:system_cpu_idle_pct_f");
+		val_list.add("cpu:system_cpu_iowait_pct_f");
+		val_list.add("cpu:system_cpu_nice_pct_f");
+		val_list.add("cpu:system_cpu_irq_pct_f");
+		val_list.add("memory:system_memory_actual_used_pct_f");
+//		val_list.add("process:system_process_cpu_total_pct_f");
 		resulter.addResult(new Pair<String, Object> ("value_ss", val_list));
+		
+		List<String> processControl_ss = new ArrayList<String>();
+		processControl_ss.add("system_process_name_s");
+		processControl_ss.add("system_process_cpu_total_pct_f");
+		resulter.addResult(new Pair<String, Object> ("processControl_ss", processControl_ss));
+		
 		resulter.write();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SolrServerException, IOException {
 		
+		SolrResults solr = new SolrResults();
+		
+		solr.metricbeatOption();
 	}
 }

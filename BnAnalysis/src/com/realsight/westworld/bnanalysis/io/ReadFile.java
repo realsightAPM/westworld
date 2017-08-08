@@ -40,9 +40,9 @@ public class ReadFile {
 
 	private void getData(String original_csv) throws Exception {
 		
-		System.out.println("========================\n读取原始csv数据：\n" + original_csv);
+		System.out.println("========================\n璇诲彇csv\n" + original_csv);
 		
-		/***读取数据***/
+		/***璇诲彇csv***/
 		File file_read = new File(original_csv);
         FileReader fReader = new FileReader(file_read);
         CSVReader csvReader = new CSVReader(fReader);
@@ -73,7 +73,7 @@ public class ReadFile {
 	public static void main(String[] args) throws Exception {
 		ReadFile read = new ReadFile();
 		
-		System.out.println("读取测试： ");
+		System.out.println("璇诲彇csv");
 		
 		for (int i = 0 ; i < read.attrList.length; i++)
 			System.out.println(read.attrList[i]);

@@ -27,21 +27,21 @@ public class Separate {
 	
 	private void initailize(String original_csv, int num_bins) throws Exception {
 		
-		System.out.println("========================\nÀëÉ¢»¯£º\n" + original_csv);
+		System.out.println("========================\nç¦»æ•£åŒ–\n" + original_csv);
 		
 		File outfile = new File("separate_out_dir");
 		if(outfile.exists()) {
-            System.out.println("Ä¿±êÎÄ¼şÒÑ´æÔÚ£¡");
+            System.out.println("ç›®æ ‡æ–‡ä»¶å·²å­˜åœ¨!");
             String[] file_list = outfile.list();
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
             	delfile.delete();
-                System.out.println("ÒÑÉ¾³ı" + file_list[i]);  
+                System.out.println("å·²åˆ é™¤" + file_list[i]);  
             }
         }
 		else {
 			outfile.mkdir();
-			System.out.println("´´½¨Ä¿Â¼³É¹¦£¡");
+			System.out.println("åˆ›å»ºç›®å½•æˆåŠŸ!");
 		}
 		
 		/*** load csv ***/
@@ -94,7 +94,7 @@ public class Separate {
 	
 	private void getInterval() {
 		
-//		System.out.println("»ñµÃÀëÉ¢Çø¼ä");
+//		System.out.println("è·å¾—ç¦»æ•£åŒºé—´");
 		
 //		for (int i = 0; i < numAttr; i++) {
 //			System.out.println(newData.attribute(i).toString());
@@ -130,7 +130,7 @@ public class Separate {
 	
 	public void writeCSV(String write_csv) throws Exception {
 		
-		System.out.println("========================\nÊä³öÀëÉ¢»¯CSVÎÄ¼ş£º\n");
+		System.out.println("========================\nè¾“å‡ºç¦»æ•£åŒ–CSVæ–‡ä»¶ï¼š\n");
 		
 		/*** output separated csv file ***/
 		File write_separatedFile = new File("separate_out_dir/" + write_csv);
@@ -154,7 +154,7 @@ public class Separate {
 	
 	public void writeTSV(String write_tsv) throws Exception {
 		
-		System.out.println("========================\nÊä³öÀëÉ¢»¯TSVÎÄ¼ş£º\n");
+		System.out.println("========================\nè¾“å‡ºç¦»æ•£åŒ–TSVæ–‡ä»¶ï¼š\n");
 		
 		/*** output separated csv file ***/
 		File write_separatedFile = new File("separate_out_dir/" + write_tsv);
@@ -166,7 +166,7 @@ public class Separate {
 				if (j < numAttr-1)
 					out_separatedFile.write("\t");
 			}
-			out_separatedFile.write("\r\n");
+			out_separatedFile.write("\n");
 			out_separatedFile.flush(); // push data in cache into file
 		}
 		out_separatedFile.close(); // close the file
@@ -177,7 +177,7 @@ public class Separate {
 	}
 	
 	public void writeCAS(String write_cas) throws IOException {
-		System.out.println("========================\nÊä³öÀëÉ¢»¯CASÎÄ¼ş£º\n");
+		System.out.println("========================\nè¾“å‡ºç¦»æ•£åŒ–CASæ–‡ä»¶ï¼š\n");
 		
 		/*** output separated cas file ***/
 		File write_separatedFile = new File("separate_out_dir/" + write_cas);
@@ -189,7 +189,7 @@ public class Separate {
 				out_separatedFile.write("\t");
 		}
 		
-		out_separatedFile.write("\r\n");
+		out_separatedFile.write("\n");
 		
 		for (int i = 0; i < numInst; i++) {
 			for (int j = 0; j < numAttr; j++) {
@@ -197,7 +197,7 @@ public class Separate {
 				if (j < numAttr-1)
 					out_separatedFile.write("\t");
 			}
-			out_separatedFile.write("\r\n");
+			out_separatedFile.write("\n");
 			out_separatedFile.flush(); // push data in cache into file
 		}
 		out_separatedFile.close(); // close the file

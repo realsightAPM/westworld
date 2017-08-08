@@ -35,6 +35,6 @@ public class SolrInitResult {
 		}
 		resulter.addResult(new Pair<String, Object> ("nodes_s", "[" + node_str.substring(1) + "]"));
 		resulter.addResult(new Pair<String, Object> ("query_list_s", str.substring(1)));
-		resulter.write(); // Í¬²½
+		resulter.write(); // å†™å…¥
 	}
 }

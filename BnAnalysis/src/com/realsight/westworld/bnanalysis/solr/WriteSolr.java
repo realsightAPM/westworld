@@ -33,7 +33,7 @@ public class WriteSolr {
 				solr.commit();
 				break;
 			} catch (Exception e) {
-				System.out.println("网络commit异常");
+				System.out.println("缃戠粶commit寮傚父");
 				e.printStackTrace();
 				try {
 					Thread.sleep(6000);
@@ -45,7 +45,7 @@ public class WriteSolr {
 		}
 		
 		solr.close();
-		System.out.println("上传完成");
+		System.out.println("鍐欏叆瀹屾垚");
 	}
 	
 	public static void main(String[] args) throws SolrServerException, IOException {

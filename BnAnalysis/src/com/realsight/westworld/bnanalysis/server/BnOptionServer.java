@@ -37,17 +37,17 @@ public class BnOptionServer {
 		ExecutorService threadPool = Executors.newCachedThreadPool();
 
 		while (true) {
-			System.out.println("Ã¿·ÖÖÓ¼ì²âÒ»´ÎÅäÖÃ£º" + BnServer.url);
+			System.out.println("æ¯åˆ†é’Ÿæ£€æµ‹ä¸€æ¬¡é…ç½®ï¼š" + BnServer.url);
 			try {
 				Thread.sleep(60000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("½áÊøË¯Ãß");
+			System.out.println("ç»“æŸç¡çœ ");
 			String bn_name = keeper.runKeeper();
-//			System.out.println("ÅäÖÃ¼ì²â½áÊø ");
-			System.out.println("ÔËĞĞÅäÖÃ£º" + bn_name);
+//			System.out.println("é…ç½®æ£€æµ‹ç»“æŸ ");
+			System.out.println("è¿è¡Œé…ç½®ï¼š" + bn_name);
 			if (bn_name != null) {
 				threadPool.execute(new BnServer(bn_name, new SolrReader()));
 			}
@@ -83,8 +83,7 @@ public class BnOptionServer {
 		String query_list = "JAVAEE_Durations_sum^JAVAEE_Memory_used^JAVAEE_Http_global^JAVAEE_Cpu_time^PHP_memory_cacheuse^PHP_disk_use^PHP_CPU_used^PHP_disk_percent^PHP_memory_use^DOTNET_User_Time^DOTNET_Disk_Time^DOTNET_Bytes_Total_sec";
 		
 		resulter.addResult(new Pair<String, Object> ("query_list_s", query_list));
-		resulter.write(); // Í¬²½
-		
+		resulter.write(); // åŒæ­¥		
 	}
 
 	public static void main(String[] args) {

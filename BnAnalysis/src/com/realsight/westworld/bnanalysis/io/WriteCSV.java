@@ -16,8 +16,8 @@ public class WriteCSV {
 	}
 	
 	public void writeMapList(List<String[]> mapList, String[] attrList, String dir, String file) throws IOException {
-		/*** 输出数据 ***/
-		System.out.println("输出" + dir + "/" + file);
+		/*** 杈撳嚭鏁版嵁 ***/
+		System.out.println("杈撳嚭" + dir + "/" + file);
 		
 		File file_write = new File(dir + "/" + file);
 		Writer writer = new FileWriter(file_write);
@@ -37,8 +37,8 @@ public class WriteCSV {
 	public void writeMatrixCSV(Double[][] matrix, String[] attrList, String dir, String file) throws IOException {
 		int numAttr = attrList.length;
 		
-		/***导出数据***/
-		System.out.println("输出" + dir + "/" + file);
+		/***瀵煎嚭鏁版嵁***/
+		System.out.println("瀵煎嚭" + dir + "/" + file);
 		
 		File file_write = new File(dir+ "/" +file);
         Writer writer = new FileWriter(file_write);
@@ -65,8 +65,8 @@ public class WriteCSV {
 		int numAttr = attrList.length;
 		int len = array.get(0).size();
 		
-		/***导出数据***/
-		System.out.println("输出" + dir + "/" + file);
+		/***瀵煎嚭鏁版嵁***/
+		System.out.println("杈撳嚭" + dir + "/" + file);
 		
 		File file_write = new File(dir+ "/" +file);
         Writer writer = new FileWriter(file_write);

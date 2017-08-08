@@ -36,24 +36,28 @@ public class NeticaApi {
 	
 	public NeticaApi() {}
 	
-	/************************************************************ ½¨Íø *********************************************************/
+	/************************************************************ å»ºç½‘  *********************************************************/
+	
+	public void buildByHand(String original_csv) {
+		
+	}
 	
 	public void buildNet(String original_csv, int num_thread, int num_bins) throws Exception {
 		
 		banjo = new BanjoApi(original_csv, num_thread, num_bins);
 		File outfile = new File("netica_out_dir");
 		if(outfile.exists()) {
-            System.out.println("Ä¿±êÎÄ¼şÒÑ´æÔÚ£¡");
+            System.out.println("ç›®æ ‡æ–‡ä»¶å·²å­˜åœ¨");
             String[] file_list = outfile.list();
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
             	delfile.delete();
-                System.out.println("ÒÑÉ¾³ı" + file_list[i]);  
+                System.out.println("å·²åˆ é™¤" + file_list[i]);  
             }
         }
 		else {
 			outfile.mkdir();
-			System.out.println("´´½¨Ä¿Â¼³É¹¦£¡");
+			System.out.println("åˆ›å»ºç›®å½•æˆåŠŸ");
 		}
 		net = new Net();
 		net.setName("apm");
@@ -64,7 +68,7 @@ public class NeticaApi {
 		int numAttr = separate.numAttr, numInst = separate.numInst;
 		
 		/*** build nodes ***/
-		System.out.println("nodeµÄ¸öÊı£º" + nodeList.length);
+		System.out.println("nodeçš„ä¸ªæ•°ï¼š" + nodeList.length);
 		for (int i = 0; i < separate.numAttr; i++) {
 			nodeList[i] = new Node(attrList[i], getStates(mapList.get(i).length), net);
 		}
@@ -91,7 +95,7 @@ public class NeticaApi {
 		net.compile();
 	}
 	
-	/************************************************* loadÍøÂç *****************************************************/
+	/************************************************* loadç½‘ç»œ *****************************************************/
 	
 	public void loadNet() throws NeticaException, IOException {
 //		env = new Environ(null);
@@ -127,7 +131,7 @@ public class NeticaApi {
 		net.compile();
 	}
 	
-	/******************************************************** ½«Êı×Ö×ª»¯³É×ÖÄ¸×´Ì¬ *******************************************/
+	/******************************************************** å°†æ•°å­—è½¬åŒ–æˆå­—æ¯çŠ¶æ€ *******************************************/
 	
 	private String getStates(int numstate) {
 		String str = "";
@@ -154,7 +158,7 @@ public class NeticaApi {
 		return ""+((char)('a'+pos));
 	}
 	
-	/************************************************************ ±äÁ¿¼°Æä¶ÔÓ¦µÄÀëÉ¢Çø¼ä 
+	/************************************************************ å˜é‡åŠå…¶å¯¹åº”çš„ç¦»æ•£åŒºé—´
 	 * @throws IOException **************************************************/
 	
 	public void loadRangeDouble() throws IOException {
@@ -208,7 +212,7 @@ public class NeticaApi {
 		}
 	}
 	
-	/***************************************************************** »ñµÃ±äÁ¿¸ÅÂÊ·Ö²¼ ***************************************************/
+	/***************************************************************** è·å¾—å˜é‡æ¦‚ç‡åˆ†å¸ƒ ***************************************************/
 	
 	public List<Double> getDistribution(String strVar) throws NeticaException {
 		Node node = net.getNode(strVar);
@@ -224,7 +228,7 @@ public class NeticaApi {
 		return resList;
 	}
 	
-	/************************************************************* »ñµÃGoJs½áµãºÍÁ¬½Ó  *************************************************************/
+	/************************************************************* è·å¾—GoJsç»“ç‚¹å’Œè¿æ¥  *************************************************************/
 	
 	public List<String> getGONodes() throws NeticaException {
 		List<String> list = new ArrayList<String>();
@@ -248,7 +252,7 @@ public class NeticaApi {
 		return list;
 	}
 	
-	/************************************************************* »ñµÃ¸¸½áµã  ***************************************************/
+	/************************************************************* è·å¾—çˆ¶ç»“ç‚¹  ***************************************************/
 	
 	public List<String> getParents(Node node) throws NeticaException {
 		return getParents(node.toString());
@@ -273,7 +277,7 @@ public class NeticaApi {
 	}
 	
 	
-	/************************************************************* »ñµÃº¢×Ó½áµã ********************************************************/
+	/************************************************************* è·å¾—å­©å­ç»“ç‚¹ ********************************************************/
 	
 	public List<String> getChildren(Node node) throws NeticaException {
 		return getChildren(node.toString());
@@ -309,7 +313,7 @@ public class NeticaApi {
 		}
 	}
 	
-	/******************************************************** ¸ÅÂÊÍÆÀí ***************************************************/
+	/******************************************************** æ¦‚ç‡æ¨ç† ***************************************************/
 	
 	public double getInfer(List<Pair<String, String>> conds, Pair<String, String> target) throws NeticaException {
 		
@@ -419,7 +423,7 @@ public class NeticaApi {
 		return getInfer(condsList, pairTarget);
 	}
 	
-	/************************************************************* ÆÚÍûÍÆÀí *********************************************************/
+	/************************************************************* æœŸæœ›æ¨ç† *********************************************************/
 	
 	public double getExeption(String conds, String target) throws NeticaException {
 		String[] strConds = conds.split(",");
@@ -456,7 +460,7 @@ public class NeticaApi {
 		return res;
 	}
 	
-	/**************************************** ¸ùÔ´ĞÔÅÅĞò *******************************************/
+	/**************************************** æ ¹æºæ€§æ’åº *******************************************/
 	public List<Pair<String, Double>> getCauseRankOf(String target_var) throws Exception {
 		
 		if (!rangeMap.containsKey(target_var)) {
@@ -471,7 +475,7 @@ public class NeticaApi {
 			if (tmpNode.toString().equals(target_var)) {
 				continue;
 			}
-			//ÉèÎª×î¸ß×´Ì¬
+			// è®¾ä¸ºæœ€é«˜
 			double belief = getExeption(tmpNode.toString()+":"+getState(tmpNode.getNumStates()-1), target_var);
 			rankMap.put(belief, tmpNode.toString());
 		}
@@ -494,7 +498,7 @@ public class NeticaApi {
 		
 		NeticaApi netica = new NeticaApi();
 		
-		System.out.println("Êä³öneticaÑ§Ï°µÄÍøÂç½á¹û");
+		System.out.println("è¾“å‡ºneticaå­¦ä¹ çš„ç½‘ç»œç»“æ„");
 	}
 	
 }

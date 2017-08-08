@@ -16,7 +16,7 @@ import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.io.WriteCSV;
 import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.solr.SolrReader;
-import com.realsight.westworld.bnanalysis.solr.SolrReaderNapm;
+import com.realsight.westworld.bnanalysis.solr.SolrReaderMetricBeat;
 import com.realsight.westworld.bnanalysis.solr.SolrReaderObject;
 import com.realsight.westworld.bnanalysis.solr.SolrChecker;
 import com.realsight.westworld.bnanalysis.solr.SolrConfigReader;
@@ -31,8 +31,8 @@ import norsys.netica.NeticaException;
 
 public class BnServer implements Runnable{
 	
-	public static String url = null;             // ÅäÖÃÎÄ¼şÂ·¾¶
-	public static String time_field = null;      // Ê±¼äÓò
+	public static String url = null;             // é…ç½®æ–‡ä»¶è·¯å¾„
+	public static String time_field = null;      // æ—¶é—´åŸŸ
 	public String bn_name;
 	public SolrReaderObject reader;
 	public NeticaApi netica;
@@ -46,7 +46,7 @@ public class BnServer implements Runnable{
 	private BnServer() {}
 	
 	public BnServer(String bn_name, SolrReaderObject reader) {
-		this.bn_name = bn_name;          // ÓÃÓÚÕÒÅäÖÃ
+		this.bn_name = bn_name;          // ç”¨äºæ‰¾é…ç½®
 		this.reader = reader;   
 //		Thread.currentThread().setName(bn_name);
 	}
@@ -62,10 +62,10 @@ public class BnServer implements Runnable{
 	
 	public void runBuild() throws Exception {
 		SolrConfigReader conf = new SolrConfigReader();
-		conf.runRead(BnServer.url, bn_name); // Í¬²½
+		conf.runRead(BnServer.url, bn_name); // åŒæ­¥
 		long cnt = 0, start, end;
 		
-		SolrInitResult initResult = new SolrInitResult();       // ÍÆ³õÊ¼Êı¾İÃ»ÓĞ±ß
+		SolrInitResult initResult = new SolrInitResult();       // æ¨åˆå§‹æ•°æ®æ²¡æœ‰è¾¹
 		initResult.runInit(conf.option, conf.start_time);
 		
 		SolrChecker checker = new SolrChecker();
@@ -74,16 +74,16 @@ public class BnServer implements Runnable{
 			end = start + conf.gap;
 			int res = checker.check(conf.option, BnServer.time_field, end, conf.fq);
 			
-			System.out.println("½×¶Î " + cnt + " Êı¾İÅĞ¶Ï£º" + res);
+			System.out.println("é˜¶æ®µ" + cnt + "æ•°æ®åˆ¤æ–­ï¼š" + res);
 			Thread.sleep(2000);
 			if (res > 0) {
 				Mean mean = new Mean();
-				reader.runRead(conf.option, time_field, start, end, mean, conf.fq); // Í¬²½
+				reader.runRead(conf.option, time_field, start, end, mean, conf.fq); // åŒæ­¥
 				netica = buildNet(reader);
 				writeSolr(conf.option, start);
-				System.out.println("ÕâÊÇµÚ"+cnt+"¶Î");
+				System.out.println("è¿™æ˜¯ç¬¬"+cnt+"æ®µ");
 			} else {
-				System.out.println("µÈ´ı»ıÀÛ" + (conf.gap/1000/3600) + "Ğ¡Ê±µÄÊı¾İ: " + bn_name);
+				System.out.println("ç­‰å¾…ç§¯ç´¯" + (conf.gap/1000/3600) + "å°æ—¶çš„æ•°æ®ï¼š" + bn_name);
 				Thread.sleep(1800*1000);
 			}
 			cnt++;
@@ -120,7 +120,7 @@ public class BnServer implements Runnable{
 			str += "^"+reader.queryList.get(i).split(":")[1];
 			try {
 				List<Pair<String, Double>> cause = netica.getCauseRankOf("_"+i);
-				System.out.println(i+"µÄ¸ùÔ´£º " + cause.size() + "¸ö");
+				System.out.println(i+"çš„æ ¹æº" + cause.size() + "ä¸ª");
 				String commit_str = "";
 				for (Pair<String, Double> it : cause) {
 					String tmp_str = it.first.substring(1)+":"+it.second.toString();
@@ -133,7 +133,7 @@ public class BnServer implements Runnable{
 			}
 		}
 		resulter.addResult(new Pair<String, Object> ("query_list_s", str.substring(1)));
-		resulter.write(); // Í¬²½
+		resulter.write(); // åŒæ­¥
 	}
 	
 	
@@ -143,7 +143,7 @@ public class BnServer implements Runnable{
 		BnServer.url = "http://10.4.53.205:9983/solr/option";
 		BnServer.time_field = "rs_timestamp_tdt";
 //		Thread thread1 = new Thread(new BnServer("bn_show", new SolrReader()));
-		Thread thread1 = new Thread(new BnServer("bn_napm", new SolrReaderNapm()));
+		Thread thread1 = new Thread(new BnServer("bn_napm", new SolrReaderMetricBeat()));
 		thread1.start();
 		
 		

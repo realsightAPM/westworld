@@ -103,7 +103,7 @@ public class SolrReader extends SolrReaderObject {
 				}
 				break;
 			} catch (Exception e) {
-				System.out.print("ÍøÂçreadÒì³£");
+				System.out.print("ç½‘ç»œreadå¼‚å¸¸");
 				e.printStackTrace();
 				try {
 					Thread.sleep(6000);
