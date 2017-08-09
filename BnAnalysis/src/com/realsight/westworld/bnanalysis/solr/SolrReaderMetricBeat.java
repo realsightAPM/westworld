@@ -176,7 +176,7 @@ public class SolrReaderMetricBeat extends SolrReaderObject {
 		
 		/********************获取应用进程资源消耗**********************/
 		
-		List<String> app_list = new FacetApplication().getApp();          // 获取的应用列表
+		List<String> app_list = new FacetApplication("http://10.0.67.14:8080/solr/metrics").appList;          // 获取的应用列表
 		
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		

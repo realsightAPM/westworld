@@ -62,8 +62,6 @@ public class WriteCSV {
 	}
 	
 	public void writeArrayCSV(List<ArrayList<Double>> array, String[] attrList, String dir, String file) throws IOException {
-		int numAttr = attrList.length;
-		int len = array.get(0).size();
 		
 		/***导出数据***/
 		System.out.println("输出" + dir + "/" + file);
@@ -72,9 +70,16 @@ public class WriteCSV {
         Writer writer = new FileWriter(file_write);
         CSVWriter csvWriter = new CSVWriter(writer, ',');
         
-        String[] stmp = new String[numAttr];
         csvWriter.writeNext(attrList);
         
+        if (array == null || array.size() == 0) {
+        	csvWriter.close();
+        	return;
+        }
+        
+        int numAttr = attrList.length;
+		int len = array.get(0).size();
+        String[] stmp = new String[numAttr];
 		for (int i = 0; i < len; i++) {
 			for (int j = 0; j < numAttr; j++) {
 //				System.out.println(array.get(j).get(i));
@@ -83,5 +88,14 @@ public class WriteCSV {
 			csvWriter.writeNext(stmp);
 		}
 		csvWriter.close();
+	}
+	
+	public void writeArrayCSV(List<ArrayList<Double>> array, List<String> attrList, String dir, String file) throws IOException {
+		String[] attrList2 = new String[attrList.size()];
+		for (int i = 0; i < attrList.size(); i++) {
+			attrList2[i] = attrList.get(i);
+		}
+		
+		writeArrayCSV(array, attrList2, dir, file);
 	}
 }

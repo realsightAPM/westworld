@@ -30,7 +30,7 @@ public class SolrConfigReader {
 				option = docs.get(0);
 				break;
 			} catch (Exception e) {
-				System.out.println("网络异常或没有option数据");
+				System.out.println("璇诲彇option寮傚父");
 				e.printStackTrace();
 				try {
 					Thread.sleep(6000);
