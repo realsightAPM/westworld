@@ -14,28 +14,24 @@ import org.apache.solr.common.SolrDocumentList;
 import org.slf4j.LoggerFactory;
 
 import com.realsight.westworld.bnanalysis.Dao.Statistic;
+import com.realsight.westworld.bnanalysis.basic.Discretization;
 import com.realsight.westworld.bnanalysis.statistic.Mean;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 
 public class SolrMetricCpu {
-	
-	private static Logger root = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-	
-	static {
-		root.setLevel(Level.WARN);
-	}
 
 	public List<Double> cpu;
-	public List<String> cpuSeparate;
+	public List<String> cpuDisc;
+	public int stateNum;
 	
 	private SolrMetricCpu() {}
 	
 	public SolrMetricCpu(long start, Statistic stat, MetricOption option) {
 		
 		cpu = new ArrayList<Double>();
-		cpuSeparate = new ArrayList<String>();
+		cpuDisc = new ArrayList<String>();
 		
 		SolrClient solr = new HttpSolrClient.Builder(option.readUrl).build();
 		
@@ -52,7 +48,7 @@ public class SolrMetricCpu {
 		String rs_start = TimeUtil.formatUnixtime2(start);
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
-		List<String> fq = option.fq;
+		List<String> fq = new ArrayList<String>(option.fq);
 		fq.add("metricset_name_s:cpu");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		
@@ -93,6 +89,7 @@ public class SolrMetricCpu {
 		}
 		
 		SolrDocumentList docs = response.getResults();
+		System.out.println("cpu docs.size: " + docs.size());
 		for (int i = 0; i < docs.size(); i++) {
 			long timestamp_tmp = ((Date) docs.get(i).get("rs_timestamp_tdt")).getTime();
 			int x = (int) ((timestamp_tmp-start)/option.interval);
@@ -103,6 +100,14 @@ public class SolrMetricCpu {
 		
 		for (int i = 0; i < group_num; i++) {
 			cpu.add(stat.run(data.get(i)));
+		}
+		
+		Discretization disc = new Discretization();
+		stateNum = 0;
+		for (int i = 0; i < group_num; i++) {
+			int pos = disc.run(cpu.get(i), 0.2, 0.4, 0.6, 0.8);
+			if (pos > stateNum) stateNum = pos;
+			cpuDisc.add("" + ((char)('a'+pos)));
 		}
 	}
 	

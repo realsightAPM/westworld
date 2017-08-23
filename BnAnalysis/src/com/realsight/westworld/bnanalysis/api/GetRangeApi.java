@@ -2,8 +2,6 @@ package com.realsight.westworld.bnanalysis.api;
 
 import java.util.Map;
 
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
-
 public class GetRangeApi {
 	
 	public GetRangeApi() throws Exception {

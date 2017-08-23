@@ -18,6 +18,7 @@ public class MetricOption {
 	public long startTime;
 	public long interval;
 	public long gap;
+	public long core;
 	public List<String>fq;
 	
 	private MetricOption() {}
@@ -59,6 +60,7 @@ public class MetricOption {
 		interval = (long) doc.get("interval_l");
 		gap = (long) doc.get("gap_l");
 		fq = (List<String>) doc.get("fq_ss");
+		core = (long) doc.get("core_l");
 	}
 	
 	public static void main(String[] args) {

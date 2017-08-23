@@ -1,4 +1,4 @@
-package com.realsight.westworld.bnanalysis.service;
+package com.realsight.westworld.bnanalysis.api;
 
 /*** BinWu 2017/1/8 ***/
 

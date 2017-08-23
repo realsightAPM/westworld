@@ -1,7 +1,5 @@
 package com.realsight.westworld.bnanalysis.api;
 
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
-
 public class NeticaBuild {
 
 	public NeticaBuild() {

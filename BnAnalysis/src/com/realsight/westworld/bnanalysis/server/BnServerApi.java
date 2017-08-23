@@ -6,8 +6,8 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrDocument;
 
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.solr.SolrResults;
 
 public class BnServerApi implements Runnable{
@@ -46,7 +46,7 @@ public class BnServerApi implements Runnable{
 		
 		netica = new NeticaApi();
 		netica.buildNet(csv_file, 2, 3);
-		Pair<List<String>, List<String>> pair = new Pair<List<String>, List<String>> (netica.getGONodes(), netica.getGoLinks());
+		Pair<List<String>, List<String>> pair = new Pair<List<String>, List<String>> (netica.getGoNodes(), netica.getGoLinks());
 		netica.finalize();
 		return pair;
 	}

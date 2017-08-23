@@ -1,4 +1,4 @@
-package com.realsight.westworld.bnanalysis.service;
+package com.realsight.westworld.bnanalysis.api;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,8 +38,27 @@ public class NeticaApi {
 	
 	/************************************************************ 建网  *********************************************************/
 	
-	public void buildByHand(String original_csv) {
+	public void buildMetricBeat(MetricBeatApi metric) throws Exception {
+		net = new Net();
+		net.setName("apm");
+		Node[] nodeList = new Node[metric.attrList_.size()];
+		/*** build nodes ***/
+		for (int i = 0; i < metric.attrList_.size(); i++) {
+			nodeList[i] = new Node(metric.attrList_.get(i), getStates(metric.states.get(i)), net);
+		}
+		/*** build links ***/
+		for (int i = 0 ; i < metric.parentMap.size(); i++) {
+			for (int j = 0; j < metric.parentMap.get(i).size(); j++) {
+				nodeList[i].addLink(nodeList[metric.parentMap.get(i).get(j).intValue()]);
+			}
+		}
 		
+		/*** counting case ***/
+		NodeList nodes = net.getNodes();
+		Streamer caseFile = new Streamer("metric.cas");
+		net.reviseCPTsByCaseFile(caseFile, nodes, 1.0);
+//		net.write(new Streamer("metric_CPT.dne"));
+		net.compile();
 	}
 	
 	public void buildNet(String original_csv, int num_thread, int num_bins) throws Exception {
@@ -52,7 +71,7 @@ public class NeticaApi {
             for (int i = 0; i < file_list.length; i++) {
             	File delfile = new File(outfile+"/"+file_list[i]);
             	delfile.delete();
-                System.out.println("已删除" + file_list[i]);  
+                System.out.println("已删除" + file_list[i]);
             }
         }
 		else {
@@ -230,7 +249,7 @@ public class NeticaApi {
 	
 	/************************************************************* 获得GoJs结点和连接  *************************************************************/
 	
-	public List<String> getGONodes() throws NeticaException {
+	public List<String> getGoNodes() throws NeticaException {
 		List<String> list = new ArrayList<String>();
 		NodeList nodeList = net.getNodes();
 		for (int i = 0; i < nodeList.size(); i++) {
@@ -423,7 +442,21 @@ public class NeticaApi {
 		return getInfer(condsList, pairTarget);
 	}
 	
-	/************************************************************* 期望推理 *********************************************************/
+	/************************************************************* 期望推理 
+	 * @throws NeticaException *********************************************************/
+	
+	public double getTheExpeption(String node_name, int state, String target_node) throws NeticaException {
+		Node node = net.getNode(node_name);
+		node.finding().enterState(state);
+		Node target = net.getNode(target_node);
+		float[] beliefs = target.getBeliefs();
+		double res = 0;
+		for (int i = 0; i < beliefs.length; i++) {
+			res += i * beliefs[i];
+		}
+		node.finding().clear();
+		return res;
+	}
 	
 	public double getExeption(String conds, String target) throws NeticaException {
 		String[] strConds = conds.split(",");

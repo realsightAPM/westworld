@@ -8,12 +8,12 @@ import java.util.Map;
 import java.util.TreeMap;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.io.ReadCSV;
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
+
 import norsys.netica.*;
 
 public class RootCause {
 	
-	// ÔØÈëµÄneticaÊÇÄÄÒ»¸öÍøÂç£¬¾Í½øÐÐÄÇ¸ö·ÖÎö¡£
+	// ï¿½ï¿½ï¿½ï¿½ï¿½neticaï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½Í½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public List<Pair<String, Double>> causeRank;
 
 	public RootCause() {}
@@ -40,7 +40,7 @@ public class RootCause {
 			if (tmpNode.toString().equals(target_var)) {
 				continue;
 			}
-			//ÉèÎª×î¸ß×´Ì¬
+			//ï¿½ï¿½Îªï¿½ï¿½ï¿½×´Ì¬
 			double belief = netica.getExeption(tmpNode.toString()+":"+netica.getState(tmpNode.getNumStates()-1), target_var);
 			rankMap.put(belief, tmpNode.toString());
 		}

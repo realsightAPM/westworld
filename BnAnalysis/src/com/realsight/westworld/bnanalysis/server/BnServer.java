@@ -11,10 +11,10 @@ import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrDocument;
 import org.slf4j.LoggerFactory;
 
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.api.RootCause;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.io.WriteCSV;
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.solr.SolrReader;
 import com.realsight.westworld.bnanalysis.solr.SolrReaderMetricBeat;
 import com.realsight.westworld.bnanalysis.solr.SolrReaderObject;
@@ -112,7 +112,7 @@ public class BnServer implements Runnable{
 		long time_now = Calendar.getInstance().getTimeInMillis();
 		resulter.addResult(new Pair<String, Object> ("timestamp_l", time_now));
 		resulter.addResult(new Pair<String, Object> ("start_timestamp_l", start));
-		resulter.addResult(new Pair<String, Object> ("nodes_s", netica.getGONodes().toString()));
+		resulter.addResult(new Pair<String, Object> ("nodes_s", netica.getGoNodes().toString()));
 		resulter.addResult(new Pair<String, Object> ("edges_s", netica.getGoLinks().toString()));
 		String str = "";
 		

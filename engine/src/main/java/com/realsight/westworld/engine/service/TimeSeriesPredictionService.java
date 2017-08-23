@@ -1,9 +1,9 @@
 package com.realsight.westworld.engine.service;
 
 import com.google.common.collect.RangeMap;
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.io.WriteCSV;
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.service.TSPService;
 import com.realsight.westworld.engine.io.ReadSolr;
 import com.realsight.westworld.engine.job.JobManager;
@@ -61,7 +61,7 @@ public class TimeSeriesPredictionService {
 		NeticaApi netica = new NeticaApi();
 		netica.loadNet();
 		
-		List<String> list =  netica.getGONodes();
+		List<String> list =  netica.getGoNodes();
 		
 		for (int i = 0; i < list.size(); i++) {
 			vertice_list.add(new Vertice(list.get(i)));

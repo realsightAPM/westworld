@@ -261,20 +261,21 @@ public class SolrResults {
 	}
 	
 	public void metricOption() throws SolrServerException, IOException {
-		long gap = (long) (1000*3600*3);
-		String rs_start = "2017-08-08T02:30:00Z";
+		long gap = (long) (1000*3600*13);
+		String rs_start = "2017-08-21T16:00:00Z";
 		long start_time = TimeUtil.timeConversion2(rs_start);
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
 		SolrResults resulter = new SolrResults(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics3"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics7"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
-		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", solr_url + "rca/"));
+		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.21:8080/solr/" + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
 		resulter.addResult(new Pair<String, Object> ("gap_l", gap));
 		resulter.addResult(new Pair<String, Object> ("interval_l", 60000));
+		resulter.addResult(new Pair<String, Object> ("core_l", 4));
 		List fqList = new ArrayList<String>();
 		fqList.add("type_s:metricsets");
 		resulter.addResult(new Pair<String, Object> ("fq_ss", fqList));

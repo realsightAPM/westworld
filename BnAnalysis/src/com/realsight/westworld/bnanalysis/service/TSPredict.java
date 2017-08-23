@@ -2,6 +2,7 @@ package com.realsight.westworld.bnanalysis.service;
 
 import java.util.List;
 
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 
 import norsys.netica.NeticaException;
@@ -25,9 +26,9 @@ public class TSPredict {
 		}
 	}
 	
-	public double getBeliefOf(String var_state) throws NeticaException {  //Ã°ºÅ·Ö¸î  "http_times:c"
+	public double getBeliefOf(String var_state) throws NeticaException {  //Ã°ï¿½Å·Ö¸ï¿½  "http_times:c"
 		String[] strList = var_state.split(":");
-		Node node = netica.net.getNode(strList[0]); //ÕâÀïÓ¦ÓÐÒ»¸ö¼ì²éº¯Êý 1)ÓÐÁ½ÏîÂð£»2)varÓÐÂð£»3)stateÓÐÂð
+		Node node = netica.net.getNode(strList[0]); //ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½éº¯ï¿½ï¿½ 1)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2)varï¿½ï¿½ï¿½ï¿½3)stateï¿½ï¿½ï¿½ï¿½
 		double belief = node.getBelief(strList[1]);
 		return belief;
 	}

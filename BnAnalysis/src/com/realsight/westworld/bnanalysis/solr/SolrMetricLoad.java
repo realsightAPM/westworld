@@ -15,28 +15,25 @@ import org.apache.solr.common.SolrDocumentList;
 import org.slf4j.LoggerFactory;
 
 import com.realsight.westworld.bnanalysis.Dao.Statistic;
+import com.realsight.westworld.bnanalysis.basic.Discretization;
 import com.realsight.westworld.bnanalysis.statistic.Mean;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 
 public class SolrMetricLoad {
-	
-	private static Logger root = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-	
-	static {
-		root.setLevel(Level.WARN);
-	}
 
 
 	public List<Double> load;
-	public List<String> loadSeparate;
+	public List<String> loadDisc;
+	public int stateNum;
 	
 	private SolrMetricLoad() {}
 	
 	public SolrMetricLoad(long start, Statistic stat, MetricOption option) {
 		
 		load = new ArrayList<Double>();
+		loadDisc = new ArrayList<String>();
 		List<String> loadSeparate = new ArrayList<String>();
 		
 		SolrClient solr = new HttpSolrClient.Builder(option.readUrl).build();
@@ -54,7 +51,7 @@ public class SolrMetricLoad {
 		String rs_start = TimeUtil.formatUnixtime2(start);
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
-		List<String> fq = option.fq;
+		List<String> fq = new ArrayList<String>(option.fq);
 		fq.add("metricset_name_s:load");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		
@@ -95,7 +92,7 @@ public class SolrMetricLoad {
 		}
 		
 		SolrDocumentList docs = response.getResults();
-		System.out.println("docs.size(): " + docs.size());
+		System.out.println("load docs.size(): " + docs.size());
 		for (int i = 0; i < docs.size(); i++) {
 			long timestamp_tmp = ((Date) docs.get(i).get("rs_timestamp_tdt")).getTime();
 			int x = (int) ((timestamp_tmp-start)/option.interval);
@@ -108,8 +105,13 @@ public class SolrMetricLoad {
 			load.add(stat.run(data.get(i)));
 		}
 		
-		
-		
+		Discretization disc = new Discretization();
+		stateNum = 0;
+		for (int i = 0; i < group_num; i++) {
+			int pos = disc.run(load.get(i), 0.5, 2);
+			if (pos > stateNum) stateNum = pos;
+			loadDisc.add("" + ((char) ('a'+pos)));
+		}
 	}
 	
 	public static void main(String[] args) {

@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 
 import norsys.netica.NodeList;
 
@@ -42,10 +42,10 @@ public class NeticaApiTest {
 //		}
 //		
 //		double res = netica.getInfer("session_count:c,cpu:c", "http_times:c");
-//		System.out.println("\nÌõ¼þ¸ÅÂÊÎª£º" + res);
+//		System.out.println("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" + res);
 //		
 //		res = netica.getInfer("cpu:c", "http_times:c");
-//		System.out.println("\nÌõ¼þ¸ÅÂÊÎª£º" + res);
+//		System.out.println("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" + res);
 		System.out.println(netica.net.getNodes().size());
 		NodeList list = netica.net.getNodes();
 		for (int i = 0; i < list.size(); i++) {

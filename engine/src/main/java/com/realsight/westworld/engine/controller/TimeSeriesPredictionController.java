@@ -2,8 +2,8 @@ package com.realsight.westworld.engine.controller;
 
 import com.google.gson.JsonObject;
 import com.realsight.westworld.bnanalysis.algorithm.Pearson;
+import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
-import com.realsight.westworld.bnanalysis.service.NeticaApi;
 import com.realsight.westworld.bnanalysis.service.OriginRootCause;
 import com.realsight.westworld.bnanalysis.solr.SolrResults;
 import com.realsight.westworld.engine.message.GraphResponse;
