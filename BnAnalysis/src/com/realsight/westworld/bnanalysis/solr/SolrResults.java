@@ -269,9 +269,9 @@ public class SolrResults {
 		
 		SolrResults resulter = new SolrResults(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics7"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics8"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
-		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.21:8080/solr/" + "rca/"));
+		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.14:8080/solr/" + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
 		resulter.addResult(new Pair<String, Object> ("gap_l", gap));
 		resulter.addResult(new Pair<String, Object> ("interval_l", 60000));

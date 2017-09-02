@@ -20,12 +20,15 @@ import com.realsight.westworld.bnanalysis.Dao.Statistic;
 import com.realsight.westworld.bnanalysis.basic.Discretization;
 
 public class SolrMetricPid {
-	public List<ArrayList<Double>> pid;
-	public List<ArrayList<String>> pidDisc;
-	public List<String> attrList;
+	public List<ArrayList<Double>> pidCPU;
+	public List<ArrayList<Double>> pidMem;
 	public List<String> app_list, pid_list;
 	public Map<String, HashSet<String>> pidMap;
 	public Map<String, Integer> map;
+	public List<Boolean> flag;
+	List<ArrayList<Double>> app_cpu_tmp;
+	List<ArrayList<Double>> app_mem_tmp;
+	public int group_num;
 	
 	private SolrMetricPid() {}
 	
@@ -33,7 +36,7 @@ public class SolrMetricPid {
 		app_list = new FacetApplication(option.readUrl).appList;
 		pid_list = new FacetPid(option.readUrl).pidList;
 		pidMap = new HashMap<String, HashSet<String>> ();
-		for (String it : app_list) {
+		for (String it : app_list) {                                    // 每个应用所对应的进程集
 			pidMap.put(it, new HashSet<String> ());
 		}
 		
@@ -42,20 +45,24 @@ public class SolrMetricPid {
 			map.put(pid_list.get(i), i);
 		}
 		
-		pid = new ArrayList<ArrayList<Double>>();
-		pidDisc = new ArrayList<ArrayList<String>>();
+		pidCPU = new ArrayList<ArrayList<Double>>();
+		pidMem = new ArrayList<ArrayList<Double>>();
 		for (int i = 0; i < pid_list.size(); i++) {
-			pid.add(new ArrayList<Double>());
+			pidCPU.add(new ArrayList<Double>());
+			pidMem.add(new ArrayList<Double>());
 		}
 		
 		SolrClient solr = new HttpSolrClient.Builder(option.readUrl).build();
-		int group_num = (int) (option.gap/option.interval);
+		group_num = (int) (option.gap/option.interval);
 		
-		List<ArrayList<ArrayList<Double>>> data = new ArrayList<ArrayList<ArrayList<Double>>>();    // 原始数据
+		List<ArrayList<ArrayList<Double>>> dataCPU = new ArrayList<ArrayList<ArrayList<Double>>>();    // 原始数据
+		List<ArrayList<ArrayList<Double>>> dataMem = new ArrayList<ArrayList<ArrayList<Double>>>();    // 原始数据
 		for (int i = 0; i < pid_list.size(); i++) {
-			data.add(new ArrayList<ArrayList<Double>> ());
+			dataCPU.add(new ArrayList<ArrayList<Double>> ());
+			dataMem.add(new ArrayList<ArrayList<Double>> ());
 			for (int j= 0; j < group_num; j++) {
-				data.get(i).add(new ArrayList<Double> ());
+				dataCPU.get(i).add(new ArrayList<Double> ());
+				dataMem.get(i).add(new ArrayList<Double> ());
 			}
 		}
 		
@@ -75,7 +82,11 @@ public class SolrMetricPid {
 		}
 		
 		solrQuery.setFilterQueries(fq_str);
-		solrQuery.setFields("system_process_pid_f", "system_process_name_s", "system_process_cpu_total_pct_f", "rs_timestamp_tdt");
+		solrQuery.setFields("system_process_pid_f",
+				            "system_process_name_s",
+				            "system_process_cpu_total_pct_f",
+				            "system_process_memory_rss_pct_f",
+				            "rs_timestamp_tdt");
 		
 		solrQuery.setRows(2000000);
 		solrQuery.setSort("rs_timestamp_tdt", ORDER.asc);
@@ -119,27 +130,57 @@ public class SolrMetricPid {
 			
 			int x = (int) ((timestamp_tmp-start)/option.interval);
 			if (x >= group_num) continue;
-			double tmp_double = (Float) docs.get(j).get("system_process_cpu_total_pct_f");
+			double cpu_double = (Float) docs.get(j).get("system_process_cpu_total_pct_f");
+			double mem_double = (Float) docs.get(j).get("system_process_memory_rss_pct_f");
 //				System.out.println(val_name+" "+map.get(val_name)+" "+x);
-			data.get(map.get(val_name)).get(x).add(tmp_double);
+			dataCPU.get(map.get(val_name)).get(x).add(cpu_double);
+			dataMem.get(map.get(val_name)).get(x).add(mem_double);
 		}
 		
-		for (int i = 0; i < data.size(); i++) {
+		for (int i = 0; i < pid_list.size(); i++) {
 			for (int j = 0; j < group_num; j++) {
-				pid.get(i).add(stat.run(data.get(i).get(j)));
+				pidCPU.get(i).add(stat.run(dataCPU.get(i).get(j)));
+				pidMem.get(i).add(stat.run(dataMem.get(i).get(j)));
 			}
 		}
 		
-		Discretization disc = new Discretization();
+		app_cpu_tmp = new ArrayList<ArrayList<Double>>();
 		
-		for (int i = 0; i < data.size(); i++) {
-			pidDisc.add(new ArrayList<String> ());
+		for (int i = 0; i < app_list.size(); i++) {
+			app_cpu_tmp.add(new ArrayList<Double>());
+		}
+		
+		flag = new ArrayList<Boolean>();
+		for (int i = 0; i < app_list.size(); i++) {
+			flag.add(false);
+		}
+		
+		for (int i = 0; i < app_list.size(); i++) {
 			for (int j = 0; j < group_num; j++) {
-				int pos = disc.run(pid.get(i).get(j), 0.05, 0.10, 0.2);
-				pidDisc.get(i).add(""+((char)('a'+pos)));
+				double sum = 0;
+				for (String it : pidMap.get(app_list.get(i))) {
+					sum += pidCPU.get(map.get(it)).get(j);
+				}
+				if (sum/option.core > 0.001) flag.set(i, true);
+				app_cpu_tmp.get(i).add(sum/option.core);
 			}
 		}
 		
+		app_mem_tmp = new ArrayList<ArrayList<Double>>();
+		for (int i = 0; i < app_list.size(); i++) {
+			app_mem_tmp.add(new ArrayList<Double>());
+		}
+		
+		for (int i = 0; i < app_list.size(); i++) {
+			for (int j = 0; j < group_num; j++) {
+				double sum = 0;
+				for (String it : pidMap.get(app_list.get(i))) {
+					sum += pidMem.get(map.get(it)).get(j);
+				}
+				if (sum > 0.001) flag.set(i, true);
+				app_mem_tmp.get(i).add(sum);
+			}
+		}
 	}
 	
 }

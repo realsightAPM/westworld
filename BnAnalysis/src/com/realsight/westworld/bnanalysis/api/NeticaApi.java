@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -251,9 +252,15 @@ public class NeticaApi {
 	
 	public List<String> getGoNodes() throws NeticaException {
 		List<String> list = new ArrayList<String>();
+		Set<String> set = new HashSet<String>();
 		NodeList nodeList = net.getNodes();
 		for (int i = 0; i < nodeList.size(); i++) {
-			list.add("{\"key\": " + "\"" + nodeList.get(i).toString().substring(1) + "\"}");
+			String str = nodeList.get(i).toString().substring(1);
+			if (!set.contains(str)) {
+				list.add("{\"key\": " + "\"" + str + "\"}");
+				set.add(str);
+			}
+			
 		}
 		return list;
 	}
