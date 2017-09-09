@@ -1,6 +1,8 @@
 package com.realsight.westworld.bnanalysis.solr;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.solr.client.solrj.SolrClient;
@@ -64,9 +66,13 @@ public class MetricOption {
 	}
 	
 	public static void main(String[] args) {
-		MetricOption option = new MetricOption("http://10.0.67.14:8080/solr/option", "bn_metrics3");
-		System.out.println(option.fq.size());
-		System.out.println(option.fq.get(0));
+		MetricOption option = new MetricOption("http://10.0.67.14:8080/solr/option", "bn_metrics11");
+//		System.out.println(option.fq.size());
+//		System.out.println(option.fq.get(0));
+		Calendar rightNow = Calendar.getInstance();
+		rightNow.setTimeInMillis(option.startTime);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(sdf.format(rightNow.getTime()));
 	}
 	
 }

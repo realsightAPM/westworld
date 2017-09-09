@@ -261,15 +261,15 @@ public class SolrResults {
 	}
 	
 	public void metricOption() throws SolrServerException, IOException {
-		long gap = (long) (1000*3600*13);
-		String rs_start = "2017-08-21T16:00:00Z";
+		long gap = (long) (1000*3600*24);
+		String rs_start = "2017-09-03T16:00:00Z";
 		long start_time = TimeUtil.timeConversion2(rs_start);
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
 		SolrResults resulter = new SolrResults(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics8"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics11"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
 		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.14:8080/solr/" + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));

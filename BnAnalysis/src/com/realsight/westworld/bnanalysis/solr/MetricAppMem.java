@@ -41,7 +41,7 @@ public class MetricAppMem {
 			appDisc.add(new ArrayList<String> ());
 			stateNums.add(0);
 			for (int j = 0; j < metricPid.group_num; j++) {
-				int pos = disc.run(app.get(i).get(j), 0.1, 0.2);
+				int pos = disc.run(app.get(i).get(j), 0.05, 0.15);
 				if (pos > stateNums.get(i)) stateNums.set(i, pos);
 				appDisc.get(i).add(""+((char)('a'+pos)));
 			}

@@ -1,8 +1,10 @@
 package com.realsight.westworld.bnanalysis.service;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.LoggerFactory;
@@ -44,7 +46,7 @@ public class MetricBeatService {
 		SolrResults resulter = new SolrResults(option.writeUrl);
 		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "example1"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "example2"));
 		long time_now = Calendar.getInstance().getTimeInMillis();
 		resulter.addResult(new Pair<String, Object> ("timestamp_l", time_now));
 		resulter.addResult(new Pair<String, Object> ("start_timestamp_l", time_now));
@@ -93,6 +95,7 @@ public class MetricBeatService {
 		}
 		SortPairList sort = new SortPairList();
 		sort.sort(pointCpuList);
+		sort.sort(pointMemList);
 		
 //		for (int i = 0; i < pointPairList.size(); i++) {
 //			System.out.println(pointPairList.get(i).first + ": " + pointPairList.get(i).second);
@@ -120,16 +123,25 @@ public class MetricBeatService {
 		
 		List<String> stampList = new ArrayList<String>();
 		
+		Calendar rightNow = Calendar.getInstance();
+		rightNow.setTimeInMillis(option.startTime);
+		
 		for (int i = 0; i < group_num; i++) {
-			stampList.add("" + i);
+			stampList.add(rightNow.getTime().toLocaleString());
+			rightNow.add(Calendar.MINUTE, 1);
+			
 		}
 		
 		resulter.addResult(new Pair<String, Object> ("stamp_list_ss", stampList));
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		resulter.addResult(new Pair<String, Object> ("data_s", sdf.format(rightNow.getTime())));
 		
 		resulter.write(); // 同步
 	}
 	
 	public static void main(String[] args) throws Exception {
-		MetricBeatService service = new MetricBeatService("http://10.0.67.14:8080/solr/option", "bn_metrics8");
+		MetricBeatService service = new MetricBeatService("http://10.0.67.14:8080/solr/option", "bn_metrics11");
+		
 	}
 }
