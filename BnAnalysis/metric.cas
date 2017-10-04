@@ -1,1441 +1,1441 @@
-_0	_1	_2	c3	c4	c5	c6	c7	c8	c9	c10	c11	c12	c13	c14	c15	c16	c17	c18	c19	m3	m4	m5	m6	m7	m8	m9	m10	m11	m12	m13	m14	m15	m16	m17	m18	m19
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	b	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	b	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	b	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	b	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	b	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	b	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	b	a
-b	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	b	a
-b	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	b	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	c	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-b	b	c	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	b	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	b	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
-a	a	c	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	a	c	a	a	a	a	a	a	a	a	a	b	a	a	a	a	a
+_0	_1	_2	c3	c4	c5	c6	c7	c8	c9	m3	m4	m5	m6	m7	m8	m9
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	c	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	c	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	c	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	c	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+b	b	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	b	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	a	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a
+a	b	c	a	a	a	a	a	a	a	c	a	a	a	a	b	a

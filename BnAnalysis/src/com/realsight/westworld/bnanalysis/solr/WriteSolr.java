@@ -14,7 +14,7 @@ import com.realsight.westworld.bnanalysis.basic.Pair;
 
 public class WriteSolr {
 	
-	public WriteSolr() throws SolrServerException, IOException {
+	public WriteSolr() {
 
 	}
 
@@ -25,7 +25,7 @@ public class WriteSolr {
 		SolrInputDocument doc = new SolrInputDocument();
 		for (int i = 0; i < conf_list.size(); i++) {
 			doc.addField(conf_list.get(i).first, conf_list.get(i).second);
-		}
+		}  
 		
 		while (true) {
 			try {
@@ -47,6 +47,11 @@ public class WriteSolr {
 		solr.close();
 		System.out.println("写入完成");
 	}
+	
+	public void writeDocs(List<SolrOneDoc> docs) {
+		
+	}
+	
 	
 	public static void main(String[] args) throws SolrServerException, IOException {
 		

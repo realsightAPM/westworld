@@ -8,7 +8,7 @@ import org.apache.solr.common.SolrDocument;
 
 import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 
 public class BnServerApi implements Runnable{
 	
@@ -52,7 +52,7 @@ public class BnServerApi implements Runnable{
 	}
 	
 	private void writeSolr(Pair<List<String>, List<String>> pair) throws SolrServerException, IOException {
-		SolrResults resulter = new SolrResults(solr_url);
+		SolrOneDoc resulter = new SolrOneDoc(solr_url);
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_name_s"));
 		resulter.addResult(new Pair<String, Object> ("nodes_s", pair.first.toString()));

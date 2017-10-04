@@ -18,7 +18,7 @@ import org.apache.solr.client.solrj.SolrServerException;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.solr.SolrOptionKeeper;
 import com.realsight.westworld.bnanalysis.solr.SolrReader;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 
 public class BnOptionServer {
 
@@ -55,7 +55,7 @@ public class BnOptionServer {
 	}
 	
 	private void writeExample(String rca_url) throws SolrServerException, IOException {
-		SolrResults resulter = new SolrResults(rca_url);
+		SolrOneDoc resulter = new SolrOneDoc(rca_url);
 		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", "example"));

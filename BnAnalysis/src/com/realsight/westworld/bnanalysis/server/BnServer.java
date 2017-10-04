@@ -21,7 +21,7 @@ import com.realsight.westworld.bnanalysis.solr.SolrReaderObject;
 import com.realsight.westworld.bnanalysis.solr.SolrChecker;
 import com.realsight.westworld.bnanalysis.solr.SolrConfigReader;
 import com.realsight.westworld.bnanalysis.solr.SolrInitResult;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 import com.realsight.westworld.bnanalysis.solr.SorlReaderSingle;
 import com.realsight.westworld.bnanalysis.statistic.Mean;
 
@@ -104,7 +104,7 @@ public class BnServer implements Runnable{
 	}
 	
 	private void writeSolr(SolrDocument option, long start) throws SolrServerException, IOException, NeticaException {
-		SolrResults resulter = new SolrResults((String) option.get("solr_writer_url_s"));
+		SolrOneDoc resulter = new SolrOneDoc((String) option.get("solr_writer_url_s"));
 		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", option.get("bn_name_s")));

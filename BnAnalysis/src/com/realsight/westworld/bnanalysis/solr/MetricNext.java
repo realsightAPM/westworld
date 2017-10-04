@@ -4,33 +4,30 @@ import java.io.IOException;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrQuery.ORDER;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 
-public class SolrChecker {
+public class MetricNext {
 
-	public SolrChecker() {
-		
-	}
+	public MetricNext() {}
 	
-	public int check(SolrDocument option, String time_field, long end, String... fq) {
+	public boolean goNext(MetricOption option, long end) {
 		
-		SolrClient solr = new HttpSolrClient.Builder((String) option.get("solr_reader_url_s")).build();
+		SolrClient solr = new HttpSolrClient.Builder(option.readUrl).build();
 		SolrQuery solrQuery = new SolrQuery();
-		
-		
+
 		solrQuery.setQuery("*:*");
-		String[] fq_list = new String[fq.length+1];
-		for (int j = 0; j < fq.length; j++) {
-			fq_list[j] = fq[j];
+		String[] fq_list = new String[option.fq.size()+1];
+		for (int j = 0; j < option.fq.size(); j++) {
+			fq_list[j] = option.fq.get(j);
 		}
 		String rs_end = TimeUtil.formatUnixtime2(end);
-		fq_list[fq.length] = time_field + ":[" + rs_end + " TO " + " *]";
+		fq_list[option.fq.size()] = "rs_timestamp_tdt" + ":[" + rs_end + " TO " + " *]";
 		
 		solrQuery.setFilterQueries(fq_list);
+		solrQuery.setFields("rs_timestamp_tdt");
 		QueryResponse response = new QueryResponse();
 		SolrDocumentList docs = new SolrDocumentList();
 		while (true) {
@@ -58,7 +55,6 @@ public class SolrChecker {
 		
 		docs = response.getResults();
 	
-		return docs.size();
+		return docs.size() > 0;
 	}
-	
 }

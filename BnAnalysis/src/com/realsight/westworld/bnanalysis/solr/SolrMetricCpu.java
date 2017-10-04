@@ -28,7 +28,7 @@ public class SolrMetricCpu {
 	
 	private SolrMetricCpu() {}
 	
-	public SolrMetricCpu(long start, Statistic stat, MetricOption option) {
+	public SolrMetricCpu(long start, Statistic stat, MetricOption option, String hostname) {
 		
 		cpu = new ArrayList<Double>();
 		cpuDisc = new ArrayList<String>();
@@ -49,6 +49,7 @@ public class SolrMetricCpu {
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
 		List<String> fq = new ArrayList<String>(option.fq);
+		fq.add("beat_name_s:"+hostname);
 		fq.add("metricset_name_s:cpu");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		
@@ -113,11 +114,11 @@ public class SolrMetricCpu {
 	
 	public static void main(String[] args) {
 		MetricOption option = new MetricOption("http://10.0.67.14:8080/solr/option", "bn_metrics3");
-		SolrMetricCpu metricCpu = new SolrMetricCpu(option.startTime, new Mean(), option);
+//		SolrMetricCpu metricCpu = new SolrMetricCpu(option.startTime, new Mean(), option);
 		
-		for (Double it : metricCpu.cpu) {
-			System.out.println(it);
-		}
+//		for (Double it : metricCpu.cpu) {
+//			System.out.println(it);
+//		}
 	}
 	
 }

@@ -14,7 +14,7 @@ import com.realsight.westworld.bnanalysis.api.MetricBeatApi;
 import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.solr.MetricOption;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
@@ -33,22 +33,23 @@ public class MetricBeatService {
 	public List<Pair<String, Double>> pointCpuList;
 	public List<Pair<String, Double>> pointMemList;
 	
-	private MetricBeatService() {}
+	public MetricBeatService() {}
 
-	public MetricBeatService(String sorl_url, String bn_name) throws Exception {
-		MetricOption option = new MetricOption(sorl_url, bn_name);
+	public void runService(long start, MetricOption option, String hostname, Date myDate) throws Exception {
 		netica = new NeticaApi();
-		metric = new MetricBeatApi(option);
+		metric = new MetricBeatApi(start, option, hostname);
 		netica.buildMetricBeat(metric);
 		pointCpuList = new ArrayList<Pair<String, Double>>();
 		pointMemList = new ArrayList<Pair<String, Double>>();
 		
-		SolrResults resulter = new SolrResults(option.writeUrl);
+		SolrOneDoc resulter = new SolrOneDoc(option.writeUrl);
 		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "example2"));
-		long time_now = Calendar.getInstance().getTimeInMillis();
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", hostname));
+		Calendar cal = Calendar.getInstance();
+		long time_now = cal.getTimeInMillis();
 		resulter.addResult(new Pair<String, Object> ("timestamp_l", time_now));
+		resulter.addResult(new Pair<String, Object> ("time_s", (1900+myDate.getYear())+"/"+(1+myDate.getMonth())+"/"+myDate.getDate()));
 		resulter.addResult(new Pair<String, Object> ("start_timestamp_l", time_now));
 		resulter.addResult(new Pair<String, Object> ("nodes_s", netica.getGoNodes().toString()));
 		resulter.addResult(new Pair<String, Object> ("edges_s", netica.getGoLinks().toString()));
@@ -134,14 +135,18 @@ public class MetricBeatService {
 		
 		resulter.addResult(new Pair<String, Object> ("stamp_list_ss", stampList));
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		resulter.addResult(new Pair<String, Object> ("data_s", sdf.format(rightNow.getTime())));
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//		resulter.addResult(new Pair<String, Object> ("data_s", sdf.format(rightNow.getTime())));
 		
 		resulter.write(); // 同步
 	}
 	
 	public static void main(String[] args) throws Exception {
-		MetricBeatService service = new MetricBeatService("http://10.0.67.14:8080/solr/option", "bn_metrics11");
+//		MetricBeatService service = new MetricBeatService("http://10.0.67.14:8080/solr/option", "bn_metrics11");
+		Calendar cal= Calendar.getInstance();
+		cal.add(Calendar.DATE, -1);
+		Date myDate = cal.getTime();
+		System.out.println(myDate.getYear() + ":" + myDate.getMonth() + ":" + myDate.getDate());
 		
 	}
 }

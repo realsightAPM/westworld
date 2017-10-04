@@ -5,7 +5,7 @@ import com.realsight.westworld.bnanalysis.algorithm.Pearson;
 import com.realsight.westworld.bnanalysis.api.NeticaApi;
 import com.realsight.westworld.bnanalysis.basic.Pair;
 import com.realsight.westworld.bnanalysis.service.OriginRootCause;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 import com.realsight.westworld.engine.message.GraphResponse;
 import com.realsight.westworld.engine.message.Response;
 import com.realsight.westworld.engine.message.ResponseList;
@@ -100,7 +100,7 @@ public class TimeSeriesPredictionController {
 		Calendar date = new GregorianCalendar(2016, 6, 20, 12, 0, 0);
 		tsps.getLogCount();
 //		for (int i = 0; i < 100; i++) {
-		SolrResults resulter = new SolrResults("http://10.4.45.114:19983/solr/rca");
+		SolrOneDoc resulter = new SolrOneDoc("http://10.4.45.114:19983/solr/rca");
 		//http://10.4.45.114:19983/solr/index.html
 		date.add(Calendar.DATE, 1);
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));

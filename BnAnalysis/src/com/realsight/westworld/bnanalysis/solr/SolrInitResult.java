@@ -14,7 +14,7 @@ public class SolrInitResult {
 	public SolrInitResult() {}
 	
 	public void runInit(SolrDocument option, long start) throws SolrServerException, IOException {
-		SolrResults resulter = new SolrResults((String) option.get("solr_writer_url_s"));
+		SolrOneDoc resulter = new SolrOneDoc((String) option.get("solr_writer_url_s"));
 		
 		resulter.addResult(new Pair<String, Object> ("result_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", option.get("bn_name_s")));

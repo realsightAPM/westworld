@@ -21,7 +21,8 @@ public class MetricOption {
 	public long interval;
 	public long gap;
 	public long core;
-	public List<String>fq;
+	public List<String> fq;
+	public List<String> hostNames;
 	
 	private MetricOption() {}
 	
@@ -63,6 +64,7 @@ public class MetricOption {
 		gap = (long) doc.get("gap_l");
 		fq = (List<String>) doc.get("fq_ss");
 		core = (long) doc.get("core_l");
+		hostNames = (List<String>) doc.get("hostname_ss");
 	}
 	
 	public static void main(String[] args) {

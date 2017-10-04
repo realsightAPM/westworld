@@ -32,7 +32,7 @@ public class SolrMetricPid {
 	
 	private SolrMetricPid() {}
 	
-	public SolrMetricPid(long start, Statistic stat, MetricOption option) {
+	public SolrMetricPid(long start, Statistic stat, MetricOption option, String hostname) {
 		app_list = new FacetApplication(option.readUrl).appList;
 		pid_list = new FacetPid(option.readUrl).pidList;
 		pidMap = new HashMap<String, HashSet<String>> ();
@@ -73,6 +73,7 @@ public class SolrMetricPid {
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
 		List<String> fq = new ArrayList<String>(option.fq);
+		fq.add("beat_name_s:"+hostname);
 		fq.add("metricset_name_s:process");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		

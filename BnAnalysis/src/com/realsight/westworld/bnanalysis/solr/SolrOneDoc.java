@@ -8,13 +8,15 @@ import org.apache.solr.client.solrj.SolrServerException;
 
 import com.realsight.westworld.bnanalysis.basic.Pair;
 
-public class SolrResults {
+public class SolrOneDoc {
 
 	public List<Pair<String, Object>> conf_list;
 	public String solr_url;
-	public SolrResults() {}
+	public SolrOneDoc() {
+		conf_list = new ArrayList<Pair<String, Object>> ();
+	}
 	
-	public SolrResults(String _solr_url) {
+	public SolrOneDoc(String _solr_url) {
 		solr_url = _solr_url;
 		conf_list = new ArrayList<Pair<String, Object>> ();
 	}
@@ -41,7 +43,7 @@ public class SolrResults {
 		String res_id3 = "ff8080815d0dac94015d10aa99520019.7ed159cb462eced8257a4d712a8e659c:";
 		String solr_url = "http://10.0.67.21:8080/solr/";
 		
-		SolrResults resulter = new SolrResults(solr_url + "option/");
+		SolrOneDoc resulter = new SolrOneDoc(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
 		
 //		resulter.addResult(new Pair<String, Object> ("bn_name_s", "8a8a83a95cc8a3d4015cc8a985190003.19f750081da1104aa21ecb78d800a889"));
@@ -172,7 +174,7 @@ public class SolrResults {
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
-		SolrResults resulter = new SolrResults(solr_url + "option/");
+		SolrOneDoc resulter = new SolrOneDoc(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_napm"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "napm/"));
@@ -208,15 +210,15 @@ public class SolrResults {
 		resulter.write();
 	}
 	
-	private void metricbeatOption() throws SolrServerException, IOException {
+	public void metricbeatOption() throws SolrServerException, IOException {
 		long start_time;
 		long gap = (long) (1000*3600*3);
 		String rs_start = "2017-08-08T02:30:00Z";
 		start_time = TimeUtil.timeConversion2(rs_start);
 		
-		String solr_url = "http://10.0.67.14:8080/solr/";
+		String solr_url = "http://10.0.67.31:8983/solr/";
 		
-		SolrResults resulter = new SolrResults(solr_url + "option/");
+		SolrOneDoc resulter = new SolrOneDoc(solr_url + "metrics3/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
 		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics2"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
@@ -262,30 +264,35 @@ public class SolrResults {
 	
 	public void metricOption() throws SolrServerException, IOException {
 		long gap = (long) (1000*3600*24);
-		String rs_start = "2017-09-03T16:00:00Z";
+		String rs_start = "2017-09-11T16:00:00Z";
 		long start_time = TimeUtil.timeConversion2(rs_start);
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
-		SolrResults resulter = new SolrResults(solr_url + "option/");
+		SolrOneDoc resulter = new SolrOneDoc(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics11"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics16"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
 		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.14:8080/solr/" + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
 		resulter.addResult(new Pair<String, Object> ("gap_l", gap));
 		resulter.addResult(new Pair<String, Object> ("interval_l", 60000));
 		resulter.addResult(new Pair<String, Object> ("core_l", 4));
-		List fqList = new ArrayList<String>();
+		List<String> fqList = new ArrayList<String>();
 		fqList.add("type_s:metricsets");
 		resulter.addResult(new Pair<String, Object> ("fq_ss", fqList));
+		
+		List<String> hostNames = new ArrayList<String>();
+		hostNames.add("BC-VM-1418df5b51e34dfabcc357c96cce26b5");
+		resulter.addResult(new Pair<String, Object> ("hostname_ss", hostNames));
+		
 		resulter.write();
 		
 	}
 	
 	public static void main(String[] args) throws SolrServerException, IOException {
 		
-		SolrResults solr = new SolrResults();
+		SolrOneDoc solr = new SolrOneDoc();
 		
 		solr.metricOption();
 	}

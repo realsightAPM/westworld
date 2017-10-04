@@ -23,7 +23,7 @@ public class SolrMetricMem {
 	
 	private SolrMetricMem() {}
 	
-	public SolrMetricMem(long start, Statistic stat, MetricOption option) {
+	public SolrMetricMem(long start, Statistic stat, MetricOption option, String hostname) {
 		
 		mem = new ArrayList<Double>();
 		memDisc = new ArrayList<String>();
@@ -44,6 +44,7 @@ public class SolrMetricMem {
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
 		List<String> fq = new ArrayList<String>(option.fq);
+		fq.add("beat_name_s:"+hostname);
 		fq.add("metricset_name_s:memory");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		

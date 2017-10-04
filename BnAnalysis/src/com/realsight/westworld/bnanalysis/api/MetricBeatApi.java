@@ -18,7 +18,7 @@ import com.realsight.westworld.bnanalysis.solr.SolrMetricCpu;
 import com.realsight.westworld.bnanalysis.solr.SolrMetricLoad;
 import com.realsight.westworld.bnanalysis.solr.SolrMetricMem;
 import com.realsight.westworld.bnanalysis.solr.SolrMetricPid;
-import com.realsight.westworld.bnanalysis.solr.SolrResults;
+import com.realsight.westworld.bnanalysis.solr.SolrOneDoc;
 import com.realsight.westworld.bnanalysis.statistic.Mean;
 
 import ch.qos.logback.classic.Level;
@@ -35,15 +35,15 @@ public class MetricBeatApi {
 	public List<Integer> states;
 	public List<Pair<String, Double>> averPairList;
 	
-	public MetricBeatApi(MetricOption option) throws IOException {
+	public MetricBeatApi(long start, MetricOption option, String hostname) throws IOException {
 		data = new ArrayList<ArrayList<Double>>();
 		dataDisc = new ArrayList<ArrayList<String>>();
 		attrList = new ArrayList<String>();
 		states = new ArrayList<Integer>();
-		SolrMetricLoad metricLoad = new SolrMetricLoad(option.startTime, new Mean(), option);
-		SolrMetricCpu metricCpu = new SolrMetricCpu(option.startTime, new Mean(), option);
-		SolrMetricMem metricMem = new SolrMetricMem(option.startTime, new Mean(), option);
-		SolrMetricPid metricPid = new SolrMetricPid(option.startTime, new Mean(), option);
+		SolrMetricLoad metricLoad = new SolrMetricLoad(start, new Mean(), option, hostname);
+		SolrMetricCpu metricCpu = new SolrMetricCpu(start, new Mean(), option, hostname);
+		SolrMetricMem metricMem = new SolrMetricMem(start, new Mean(), option, hostname);
+		SolrMetricPid metricPid = new SolrMetricPid(start, new Mean(), option, hostname);
 		MetricAppCpu metricAppCpu = new MetricAppCpu(metricPid);
 		MetricAppMem metricAppMem = new MetricAppMem(metricPid);
 		

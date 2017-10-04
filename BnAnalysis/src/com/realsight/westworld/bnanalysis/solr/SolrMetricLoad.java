@@ -30,7 +30,7 @@ public class SolrMetricLoad {
 	
 	private SolrMetricLoad() {}
 	
-	public SolrMetricLoad(long start, Statistic stat, MetricOption option) {
+	public SolrMetricLoad(long start, Statistic stat, MetricOption option, String hostname) {
 		
 		load = new ArrayList<Double>();
 		loadDisc = new ArrayList<String>();
@@ -52,6 +52,7 @@ public class SolrMetricLoad {
 		String rs_end = TimeUtil.formatUnixtime2(start+option.gap);
 		
 		List<String> fq = new ArrayList<String>(option.fq);
+		fq.add("beat_name_s:"+hostname);
 		fq.add("metricset_name_s:load");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		
@@ -116,11 +117,11 @@ public class SolrMetricLoad {
 	
 	public static void main(String[] args) {
 		MetricOption option = new MetricOption("http://10.0.67.14:8080/solr/option", "bn_metrics3");
-		SolrMetricLoad metricLoad = new SolrMetricLoad(option.startTime, new Mean(), option);
-		
-		for (Double it : metricLoad.load) {
-			System.out.println(it);
-		}
+//		SolrMetricLoad metricLoad = new SolrMetricLoad(option.startTime, new Mean(), option);
+//		
+//		for (Double it : metricLoad.load) {
+//			System.out.println(it);
+//		}
 	}
 	
 }
