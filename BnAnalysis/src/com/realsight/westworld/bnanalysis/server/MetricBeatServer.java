@@ -15,7 +15,7 @@ public class MetricBeatServer {
 	public MetricBeatServer(String sorl_url, String bn_name) {
 		
 		MetricOption option = new MetricOption(sorl_url, bn_name);
-		MetricNext next = new MetricNext();
+//		MetricNext next = new MetricNext();
 		MetricBeatService service = new MetricBeatService();
 		long start = option.startTime;
 		while (true) {
