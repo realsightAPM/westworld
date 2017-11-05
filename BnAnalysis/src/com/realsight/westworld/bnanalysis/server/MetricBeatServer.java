@@ -44,7 +44,7 @@ public class MetricBeatServer {
 	}
 	
 	public static void main(String[] args) {
-		MetricBeatServer server = new MetricBeatServer("http://10.0.67.14:8080/solr/option", "bn_metrics15");
+		MetricBeatServer server = new MetricBeatServer("http://10.0.67.14:8080/solr/option", "bn_metrics19");
 	}
 	
 }

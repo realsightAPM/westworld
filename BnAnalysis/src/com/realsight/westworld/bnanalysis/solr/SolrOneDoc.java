@@ -264,14 +264,14 @@ public class SolrOneDoc {
 	
 	public void metricOption() throws SolrServerException, IOException {
 		long gap = (long) (1000*3600*24);
-		String rs_start = "2017-09-11T16:00:00Z";
+		String rs_start = "2017-10-09T06:45:00Z";
 		long start_time = TimeUtil.timeConversion2(rs_start);
 		
 		String solr_url = "http://10.0.67.14:8080/solr/";
 		
 		SolrOneDoc resulter = new SolrOneDoc(solr_url + "option/");
 		resulter.addResult(new Pair<String, Object> ("option_s", "bn"));
-		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics16"));
+		resulter.addResult(new Pair<String, Object> ("bn_name_s", "bn_metrics19"));
 		resulter.addResult(new Pair<String, Object> ("solr_reader_url_s", solr_url + "metrics/"));
 		resulter.addResult(new Pair<String, Object> ("solr_writer_url_s", "http://10.0.67.14:8080/solr/" + "rca/"));
 		resulter.addResult(new Pair<String, Object> ("starttime_l", start_time));
@@ -287,7 +287,6 @@ public class SolrOneDoc {
 		resulter.addResult(new Pair<String, Object> ("hostname_ss", hostNames));
 		
 		resulter.write();
-		
 	}
 	
 	public static void main(String[] args) throws SolrServerException, IOException {

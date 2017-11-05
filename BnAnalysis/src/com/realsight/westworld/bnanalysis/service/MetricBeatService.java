@@ -34,7 +34,7 @@ public class MetricBeatService {
 	public List<Pair<String, Double>> pointMemList;
 	
 	public MetricBeatService() {}
-
+	
 	public void runService(long start, MetricOption option, String hostname, Date myDate) throws Exception {
 		netica = new NeticaApi();
 		metric = new MetricBeatApi(start, option, hostname);
@@ -143,10 +143,11 @@ public class MetricBeatService {
 	
 	public static void main(String[] args) throws Exception {
 //		MetricBeatService service = new MetricBeatService("http://10.0.67.14:8080/solr/option", "bn_metrics11");
-		Calendar cal= Calendar.getInstance();
-		cal.add(Calendar.DATE, -1);
-		Date myDate = cal.getTime();
-		System.out.println(myDate.getYear() + ":" + myDate.getMonth() + ":" + myDate.getDate());
+		
+//		Calendar cal= Calendar.getInstance();
+//		cal.add(Calendar.DATE, -1);
+//		Date myDate = cal.getTime();
+//		System.out.println(myDate.getYear() + ":" + myDate.getMonth() + ":" + myDate.getDate());
 		
 	}
 }

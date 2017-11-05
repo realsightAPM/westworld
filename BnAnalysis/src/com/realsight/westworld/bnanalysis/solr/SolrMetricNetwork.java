@@ -24,24 +24,25 @@ import com.realsight.westworld.bnanalysis.statistic.Mean;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 
-public class SolrMetricDisk {
-	
+public class SolrMetricNetwork {
+
+
 	private static Logger root = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 	
 	static {
 		root.setLevel(Level.WARN);
 	}
 
-	public List<Double> disk;
-	public List<String> diskDisc;
+	public List<Double> net;
+	public List<String> netDisc;
 	public int stateNum;
 	
-	private SolrMetricDisk() {}
+	private SolrMetricNetwork() {}
 	
-	public SolrMetricDisk(long start, Statistic stat, MetricOption option, String hostname) {
+	public SolrMetricNetwork(long start, Statistic stat, MetricOption option, String hostname) {
 		
-		disk = new ArrayList<Double>();
-		diskDisc = new ArrayList<String>();
+		net = new ArrayList<Double>();
+		netDisc = new ArrayList<String>();
 		
 		SolrClient solr = new HttpSolrClient.Builder(option.readUrl).build();
 		
@@ -57,7 +58,7 @@ public class SolrMetricDisk {
 		
 		List<String> fq = new ArrayList<String>(option.fq);
 		fq.add("beat_name_s:"+hostname);
-		fq.add("metricset_name_s:diskio");
+		fq.add("metricset_name_s:network");
 		fq.add("rs_timestamp_tdt:[" + rs_start + " TO " + rs_end + "]");
 		
 		String[] fq_str = new String[fq.size()];
@@ -66,13 +67,13 @@ public class SolrMetricDisk {
 		}
 		
 		solrQuery.setFilterQueries(fq_str);
-		solrQuery.setFields("system_diskio_name_s" ,"system_diskio_write_bytes_f", "system_diskio_read_bytes_f", "rs_timestamp_tdt");
+		solrQuery.setFields("system_network_name_s" ,"system_network_in_bytes_f", "system_network_out_bytes_f", "rs_timestamp_tdt");
 		
 		solrQuery.setRows(2000000);
 		solrQuery.setSort("rs_timestamp_tdt", ORDER.asc);
 		
 		solrQuery.setFacet(true);
-		solrQuery.addFacetField("system_diskio_name_s");
+		solrQuery.addFacetField("system_network_name_s");
 		solrQuery.setFacetLimit(1000);
 		
 		QueryResponse response = null;
@@ -100,7 +101,7 @@ public class SolrMetricDisk {
 			e1.printStackTrace();
 		}
 		
-		FacetField facet = response.getFacetField("system_diskio_name_s");
+		FacetField facet = response.getFacetField("system_network_name_s");
 		List<Count> diskList = facet.getValues();
 		
 		Map<String, Integer> diskMap = new HashMap<String, Integer>();
@@ -120,22 +121,22 @@ public class SolrMetricDisk {
 		}
 				
 		for (Count it : diskList) {
-			System.out.println("磁盘名："+it.getName());
+			System.out.println("网络名："+it.getName());
 		}
 		
 		SolrDocumentList docs = response.getResults();
-		System.out.println("diskio docs.size: " + docs.size());
+		System.out.println("network docs.size: " + docs.size());
 		
 		
 		
 		for (int i = 0; i < docs.size(); i++) {
 			long timestamp_tmp = ((Date) docs.get(i).get("rs_timestamp_tdt")).getTime();
-			String disk_str = (String) docs.get(0).get("system_diskio_name_s");
+			String disk_str = (String) docs.get(0).get("system_network_name_s");
 			int x = (int) ((timestamp_tmp-start)/option.interval);
 			if (x >= group_num) continue;
 			
-			double tmp_double = (Float) docs.get(i).get("system_diskio_write_bytes_f")
-			          + (Float) docs.get(i).get("system_diskio_read_bytes_f");
+			double tmp_double = (Float) docs.get(i).get("system_network_in_bytes_f")
+			          + (Float) docs.get(i).get("system_network_out_bytes_f");
 			
 			data.get(diskMap.get(disk_str)).get(x).add(tmp_double);
 		}
@@ -146,35 +147,35 @@ public class SolrMetricDisk {
 			for (int j = 0; j < diskList.size(); j++) {
 				tmp += stat.run(data.get(j).get(i));
 			}
-			disk.add(tmp);
+			net.add(tmp);
 		}
 		
-		for (int i = disk.size()-1; i > 0; i--) {
-			double tmp = disk.get(i);
-			disk.set(i, tmp - disk.get(i-1));
+		for (int i = net.size()-1; i > 0; i--) {
+			double tmp = net.get(i);
+			net.set(i, tmp - net.get(i-1));
 		}
 		
-		if (disk.size() > 1) {
-			disk.set(0, disk.get(1));
+		if (net.size() > 1) {
+			net.set(0, net.get(1));
 		}
 		
 		Discretization disc = new Discretization();
 		stateNum = 0;
 		for (int i = 0; i < group_num; i++) {
-			int pos = disc.run(disk.get(i), 1000000, 2000000, 3000000);
+			int pos = disc.run(net.get(i), 1000000, 2000000, 3000000);
 			if (pos > stateNum) stateNum = pos;
-			diskDisc.add("" + ((char)('a'+pos)));
+			netDisc.add("" + ((char)('a'+pos)));
 		}
 	}
 	
 	public static void main(String[] args) {
 		MetricOption option = new MetricOption("http://10.0.67.14:8080/solr/option", "bn_metrics15");
-		SolrMetricDisk metric = new SolrMetricDisk(option.startTime, new Mean(), option, option.hostNames.get(0));
+		SolrMetricNetwork metric = new SolrMetricNetwork(option.startTime, new Mean(), option, option.hostNames.get(0));
 		
-		for (Double it : metric.disk) {
+		for (Double it : metric.net) {
 			System.out.println(it);
 		}
 		
 	}
-
+	
 }
